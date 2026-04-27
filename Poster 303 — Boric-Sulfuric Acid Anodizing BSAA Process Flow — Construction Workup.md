@@ -183,7 +183,7 @@ Standard arrows and vertical connector per Poster #279 pattern.
 *Box 6 -- BSAA Anodize (Main Tank):*
 - Badge: `STAGE 6`, fill `#27AE60`
 - Name: `BSAA Anodize` / Subtitle: `Main Tank`
-- Parameters: `H2SO4 30--50 g/L + H3BO3 5--10 g/L` / `70--90 F (21--32 C)` / `15V max, 20--30 min`
+- Parameters: `H2SO4 40--100 g/L + H3BO3 5--10 g/L` / `70--90 F (21--32 C)` / `15V max, 20--30 min`
 - Purpose: `Grow thin, dense oxide (200--700 mg/ft2)`
 - Check: `Low voltage, low acid = precise control needed` (Emerald `#27AE60`)
 
@@ -219,7 +219,7 @@ Standard pattern per Poster #279. Add `#27AE60` swatch labeled `Cr(VI)-FREE PROC
 | 3. Etch (Light) | NaOH 22--45 g/L | 130--150 F | 30--60 sec | Short -- fatigue retention |
 | 4. Desmut | HNO3 or ferric sulfate (NO Cr) | Ambient | 30--120 sec | Chromate-free throughout |
 | 5. Rinse (Pre-Anodize) | DI water | Ambient | 60--120 sec | <100 uS/cm |
-| 6. BSAA Anodize | H2SO4 30--50 g/L + H3BO3 5--10 g/L | 70--90 F | 20--30 min | Coating weight 200--700 mg/ft2 |
+| 6. BSAA Anodize | H2SO4 40--100 g/L + H3BO3 5--10 g/L | 70--90 F | 20--30 min | Coating weight 200--700 mg/ft2 |
 | 7. Rinse (Post-Anodize) | DI water | Ambient | 30--60 sec | Standard |
 | 8. Seal | Hot DI or Ni acetate (NO dichromate) | 180--212 F | 15--20 min | Cr-free seal mandatory |
 

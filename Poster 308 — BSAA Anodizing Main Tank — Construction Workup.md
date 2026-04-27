@@ -208,7 +208,7 @@ Section label: `BSAA vs. TYPE I CHEMISTRY` Barlow Condensed ExtraBold 20 pt `#F0
 
 | Parameter | Type I (Chromic) | BSAA (Type IC) |
 |---|---|---|
-| Electrolyte | CrO3 50 g/L | H2SO4 30--50 g/L + H3BO3 5--10 g/L |
+| Electrolyte | CrO3 50 g/L | H2SO4 40--100 g/L + H3BO3 5--10 g/L |
 | Temperature | 90--100 F | 70--90 F |
 | Voltage | 40V (ramp cycle) | ~15V (ramp) |
 | CD | 5--10 ASF | Max ~10 ASF |
