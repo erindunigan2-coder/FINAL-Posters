@@ -127,8 +127,9 @@ Right side (X: 15.0", Y: 7.0"):
 - `Sn2+: 35--55 g/L (60/40) / 50--70 g/L (90/10)` JetBrains Mono 13 pt `#27AE60`
 - `Pb2+: 15--25 g/L (60/40) / 5--10 g/L (90/10)` JetBrains Mono 13 pt `#E05C5C`
 - `Free MSA: 100--200 g/L` JetBrains Mono 13 pt `#2EC4B6`
-- `Temp: 75--85 F (24--29 C)` JetBrains Mono 14 pt `#F0EDE8`
-- `CD: 15--25 ASF rack / 5--15 ASF barrel` JetBrains Mono 13 pt `#E8A020`
+- `Temp: 60--100 F (16--38 C)` JetBrains Mono 14 pt `#F0EDE8`
+- `Voltage: 1--6 V` JetBrains Mono 13 pt `#F0EDE8`
+- `CD: 10--40 ASF rack / 5--15 ASF barrel` JetBrains Mono 13 pt `#E8A020`
 
 Left side (X: 4.0", Y: 7.0"):
 - `Cathode eff: 90--98%` JetBrains Mono 12 pt `#F0EDE8` at 70%

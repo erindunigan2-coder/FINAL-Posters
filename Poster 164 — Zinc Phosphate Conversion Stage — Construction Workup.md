@@ -104,7 +104,7 @@ Y: 5.0" to 14.0".
 - Label above: `Ti-CONDITIONED STEEL WORKPIECE` Barlow SemiBold 14 pt `#F0EDE8`
 
 **Solution parameters (left side of tank):**
-- `pH: 2.5--3.5` JetBrains Mono 14 pt `#E8A020`
+- `pH: 2.8--3.5 (spray) / 2.5--3.5 (immersion)` JetBrains Mono 14 pt `#E8A020`
 - `Temp: 95--200 F (35--93 C)` JetBrains Mono 14 pt `#F0EDE8`
 - `Free acid: 0.5--2.0 pts` JetBrains Mono 13 pt `#F0EDE8`
 - `Total acid: 15--40 pts` JetBrains Mono 13 pt `#F0EDE8`
