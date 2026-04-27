@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poster #29 — Anode Chemistry and Maintenance — Dark Edition | Plating Posters Inc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,800;0,900;1,800;1,900&family=Barlow:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/*EDITMODE-BEGIN*/{"edition":"dark","grid":false}/*EDITMODE-END*/
+
+:root {
+  --bg: #1A1F2E;
+  --navy: #0D1020;
+  --text: #F0EDE8;
+  --amber: #E8A020;
+  --teal: #2EC4B6;
+  --emerald: #27AE60;
+  --coral: #E05C5C;
+  --slate: #3A4055;
+  --callout: #1E2435;
+  --altrow: #252B3D;
+  --silver: #C8D0D8;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: #111;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   LIGHT EDITION OVERRIDES
+   ============================================ */
+body[data-edition="light"] {
+  --bg: #F5F4F0;
+  --navy: #1A1F2E;
+  --text: #1A1F2E;
+  --callout: #ECEEF4;
+  --altrow: #E8E8F0;
+  --slate: #D0D4DE;
+  --amber: #C8860A;
+  --teal: #1A8C82;
+  --emerald: #1E7A47;
+  --coral: #B83E3E;
+  --silver: #3A4055;
+}
+body[data-edition="light"] .poster {
+  background:
+    radial-gradient(1200px 800px at 15% 8%, rgba(26,140,130,.10), transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%, rgba(200,134,10,.09), transparent 55%),
+    radial-gradient(900px 900px at 50% 80%, rgba(184,62,62,.07), transparent 60%),
+    var(--bg);
+}
+body[data-edition="light"] .glass,
+body[data-edition="light"] .anode-panel,
+body[data-edition="light"] .type-card,
+body[data-edition="light"] .process-table,
+body[data-edition="light"] .pass-card,
+body[data-edition="light"] .pill-banner,
+body[data-edition="light"] .bag-card,
+body[data-edition="light"] .trouble-table,
+body[data-edition="light"] .zone-foot,
+body[data-edition="light"] .rule-card {
+  background-color: rgba(236,238,244,.65);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.35), rgba(255,255,255,.10));
+  border-color: rgba(0,0,0,.08);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.6), inset 0 -1px 0 rgba(0,0,0,.04), 0 4px 12px rgba(0,0,0,.06);
+}
+body[data-edition="light"] .rule-card {
+  background-color: rgba(184,62,62,.08);
+  border-color: rgba(184,62,62,.2);
+}
+body[data-edition="light"] .pill-banner {
+  background-color: rgba(200,134,10,.08);
+  border-color: rgba(200,134,10,.2);
+}
+body[data-edition="light"] .process-table thead th,
+body[data-edition="light"] .bag-table thead th,
+body[data-edition="light"] .trouble-table thead th {
+  background-color: rgba(208,212,222,.7);
+  color: #1A1F2E;
+}
+body[data-edition="light"] .process-table tbody tr:nth-child(even) td,
+body[data-edition="light"] .bag-table tbody tr:nth-child(even) td,
+body[data-edition="light"] .trouble-table tbody tr:nth-child(even) td {
+  background-color: rgba(0,0,0,.03);
+}
+body[data-edition="light"] .zone-foot {
+  background-color: rgba(26,31,46,.06);
+}
+body[data-edition="light"] .footer-disclaimer,
+body[data-edition="light"] .footer-meta {
+  color: rgba(26,31,46,.5);
+}
+body[data-edition="light"] .eyebrow::before {
+  background: var(--amber);
+}
+body[data-edition="light"] .sublabel {
+  color: rgba(26,31,46,.5);
+}
+body[data-edition="light"] .tagline {
+  color: rgba(26,31,46,.55);
+}
+body[data-edition="light"] .big-label {
+  color: rgba(26,31,46,.6);
+}
+body[data-edition="light"] .panel-sub {
+  color: rgba(26,31,46,.55);
+}
+body[data-edition="light"] .half-reaction {
+  border-color: rgba(0,0,0,.06);
+}
+body[data-edition="light"] .type-used {
+  color: rgba(26,31,46,.5);
+}
+body[data-edition="light"] .anode-panel.soluble { border-color: rgba(200,134,10,.3); }
+body[data-edition="light"] .anode-panel.insoluble { border-color: rgba(26,140,130,.3); }
+body[data-edition="light"] .warning-callout {
+  background-color: rgba(184,62,62,.08);
+  border-color: rgba(184,62,62,.2);
+}
+body[data-edition="light"] .poster::before {
+  background-image:
+    linear-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,.04) 1px, transparent 1px);
+}
+
+/* ============================================
+   STAGE / SCALE WRAPPER
+   ============================================ */
+.stage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  overflow: auto;
+}
+
+.poster-wrap {
+  transform-origin: top center;
+}
+
+.poster {
+  width: 1200px;
+  height: 1800px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(1200px 800px at 15% 8%, rgba(46,196,182,.14), transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%, rgba(232,160,32,.12), transparent 55%),
+    radial-gradient(900px 900px at 50% 80%, rgba(224,92,92,.10), transparent 60%),
+    var(--bg);
+  padding: 24px 25px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Faint grid overlay */
+.poster::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(200,208,216,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,208,216,.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+.poster.no-grid::before { display: none; }
+
+.poster > * { position: relative; z-index: 1; }
+
+/* ============================================
+   GLASS MIXIN
+   ============================================ */
+.glass {
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 14px;
+}
+
+/* ============================================
+   SECTION LABEL (shared)
+   ============================================ */
+.section-label {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.section-label h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+.section-label .sublabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(240,237,232,.55);
+}
+
+/* ============================================
+   ZONE 1 — HEADER
+   ============================================ */
+.zone-header {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.header-left .eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.header-left .eyebrow::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: var(--amber);
+  border-radius: 2px;
+}
+
+.header-left h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 0.95;
+  color: var(--text);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.header-left h1 em {
+  font-style: italic;
+  color: var(--amber);
+}
+
+.header-left .subheading {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--amber);
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+
+.header-left .tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 16px;
+  color: rgba(240,237,232,.65);
+}
+
+.rule-card {
+  background-color: rgba(224,92,92,.12);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.015));
+  border: 1px solid rgba(224,92,92,.3);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 16px;
+  padding: 22px 18px;
+  text-align: center;
+  align-self: start;
+}
+.rule-card .big-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 78px;
+  line-height: 1;
+  color: var(--coral);
+}
+.rule-card .big-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(240,237,232,.70);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 6px;
+  line-height: 1.35;
+}
+
+/* ============================================
+   ZONE 2 — HERO: SOLUBLE VS INSOLUBLE
+   ============================================ */
+.zone-hero { margin-bottom: 14px; }
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.anode-panel {
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 2px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 14px;
+  padding: 16px 18px 14px;
+}
+.anode-panel.soluble { border-color: rgba(232,160,32,.40); }
+.anode-panel.insoluble { border-color: rgba(46,196,182,.40); }
+
+.panel-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+.anode-panel.soluble .panel-title { color: var(--amber); }
+.anode-panel.insoluble .panel-title { color: var(--teal); }
+
+.panel-sub {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(240,237,232,.60);
+  margin-bottom: 10px;
+}
+
+.half-reaction {
+  text-align: center;
+  padding: 8px 0;
+  margin-bottom: 10px;
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.half-reaction code {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.anode-panel.soluble .half-reaction code { color: var(--amber); font-size: 18px; }
+.anode-panel.insoluble .half-reaction code { color: var(--teal); font-size: 16px; }
+
+.anode-panel ul {
+  list-style: none;
+  padding: 0;
+}
+.anode-panel ul li {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 3px;
+}
+.anode-panel ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+.anode-panel.soluble ul li::before { background: var(--amber); }
+.anode-panel.insoluble ul li::before { background: var(--teal); }
+
+/* Anode Type Gallery */
+.type-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.type-card {
+  background-color: rgba(30,36,53,.45);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 2px 8px rgba(0,0,0,.2);
+  border-radius: 10px;
+  padding: 12px 8px 10px;
+  text-align: center;
+}
+
+.type-card .shape-area {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.type-card .type-name {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 3px;
+  line-height: 1.3;
+}
+.type-card.soluble .type-name { color: var(--amber); }
+.type-card.insoluble .type-name { color: var(--teal); }
+
+.type-card .type-used {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: rgba(240,237,232,.50);
+  line-height: 1.3;
+}
+
+/* ============================================
+   ZONE 3 — PROCESS TABLE
+   ============================================ */
+.zone-process { margin-bottom: 14px; }
+
+.process-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+}
+
+.process-table thead th {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--amber);
+  background: rgba(58,64,85,.6);
+  padding: 9px 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.process-table tbody td {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--text);
+  padding: 7px 10px;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+  line-height: 1.4;
+  vertical-align: top;
+}
+
+.process-table tbody tr:nth-child(even) td {
+  background: rgba(37,43,61,.35);
+}
+
+.process-table .type-soluble { color: var(--amber); font-weight: 500; }
+.process-table .type-insoluble { color: var(--teal); font-weight: 500; }
+.process-table .type-na { color: rgba(200,208,216,.5); font-weight: 500; }
+.process-table .ac-ratio {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--emerald);
+}
+
+.process-table .highlight-row td {
+  background: rgba(232,160,32,.06);
+}
+.process-table .highlight-row td:first-child {
+  font-weight: 600;
+}
+
+/* ============================================
+   ZONE 4 — PASSIVATION
+   ============================================ */
+.zone-passivation { margin-bottom: 12px; }
+
+.passivation-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.pass-card {
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 14px;
+  padding: 14px 16px 14px 20px;
+  position: relative;
+}
+.pass-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 4px;
+  border-radius: 2px;
+}
+.pass-card.causes::before { background: var(--coral); }
+.pass-card.recovery::before { background: var(--emerald); }
+
+.pass-card .card-title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+.pass-card.causes .card-title { color: var(--coral); }
+.pass-card.recovery .card-title { color: var(--emerald); }
+
+.pass-card .card-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.pass-card .card-body p { margin-bottom: 6px; }
+
+.pass-card .sub-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+  margin-top: 6px;
+}
+.pass-card.causes .sub-heading { color: var(--coral); }
+.pass-card.recovery .sub-heading { color: var(--emerald); }
+
+.pass-card .card-body ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 3px;
+}
+.pass-card .card-body ul li {
+  padding-left: 12px;
+  position: relative;
+  margin-bottom: 2px;
+  font-size: 11px;
+}
+.pass-card .card-body ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+.pass-card.causes .card-body ul li::before { background: var(--coral); }
+.pass-card.recovery .card-body ul li::before { background: var(--emerald); }
+
+.causes-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 10.5px;
+  color: var(--coral);
+  line-height: 1.5;
+  list-style: none;
+  padding: 0;
+}
+.causes-mono li {
+  margin-bottom: 2px;
+  padding-left: 12px;
+  position: relative;
+}
+.causes-mono li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.pill-banner {
+  background-color: rgba(232,160,32,.12);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.015));
+  border: 1px solid rgba(232,160,32,.25);
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  border-radius: 999px;
+  padding: 9px 28px;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 11.5px;
+  color: var(--amber);
+  letter-spacing: 0.3px;
+}
+
+/* ============================================
+   ZONE 5 — ANODE BAGS
+   ============================================ */
+.zone-bags { margin-bottom: 12px; }
+
+.bags-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+
+.bag-card {
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 14px;
+  padding: 14px 16px;
+  position: relative;
+}
+.bag-card.materials { border-left: 3px solid var(--teal); }
+.bag-card.maintenance { border-left: 3px solid var(--amber); }
+
+.bag-card .card-title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.bag-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+}
+.bag-table thead th {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--teal);
+  text-align: left;
+  padding: 5px 6px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.bag-table tbody td {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10.5px;
+  color: var(--text);
+  padding: 4px 6px;
+  border-bottom: 1px solid rgba(255,255,255,.03);
+  line-height: 1.4;
+}
+.bag-table tbody tr:nth-child(even) td {
+  background: rgba(37,43,61,.3);
+}
+
+.bag-callout {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 10.5px;
+  color: var(--teal);
+  line-height: 1.4;
+  padding: 6px 0 0;
+}
+
+.maint-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.freq-label {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+.freq-label:first-child { margin-top: 0; }
+
+.maint-body ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2px;
+}
+.maint-body ul li {
+  padding-left: 12px;
+  position: relative;
+  margin-bottom: 2px;
+  font-size: 10.5px;
+}
+.maint-body ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--amber);
+}
+
+.warning-callout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: rgba(224,92,92,.10);
+  border: 1px solid rgba(224,92,92,.25);
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 10.5px;
+  color: var(--coral);
+  line-height: 1.4;
+}
+
+/* ============================================
+   ZONE 6 — TROUBLESHOOTING TABLE
+   ============================================ */
+.zone-trouble { margin-bottom: 12px; }
+
+.trouble-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+}
+
+.trouble-table thead th {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--coral);
+  background: rgba(58,64,85,.6);
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.trouble-table tbody td {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10.5px;
+  color: var(--text);
+  padding: 6px 10px;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+  line-height: 1.4;
+  vertical-align: top;
+}
+
+.trouble-table tbody tr:nth-child(even) td {
+  background: rgba(37,43,61,.35);
+}
+
+.trouble-table .symptom {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--coral);
+}
+
+/* ============================================
+   ZONE 7 — FOOTER
+   ============================================ */
+.zone-foot {
+  background-color: rgba(13,16,32,.7);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 14px 20px 12px;
+  margin-top: auto;
+}
+
+.footer-disclaimer {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 9px;
+  color: rgba(240,237,232,.45);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.pp-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--amber), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: #0D1020;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+.footer-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 10px;
+  color: rgba(240,237,232,.4);
+  letter-spacing: 0.5px;
+}
+
+/* ============================================
+   TWEAKS PANEL
+   ============================================ */
+.tweaks {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: rgba(13,16,32,.9);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 14px;
+  padding: 16px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  min-width: 160px;
+}
+.tweaks .tw-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 10px;
+  color: rgba(240,237,232,.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  margin-top: 10px;
+}
+.tweaks .tw-label:first-child { margin-top: 0; }
+.tweaks .tw-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.tweaks button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: rgba(240,237,232,.6);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.tweaks button:hover {
+  background: rgba(255,255,255,.12);
+  color: var(--text);
+}
+.tweaks button.active {
+  background: rgba(232,160,32,.2);
+  border-color: rgba(232,160,32,.4);
+  color: var(--amber);
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@page {
+  size: 12.5in 18.75in;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    background: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .stage {
+    position: static;
+    padding: 0;
+    display: block;
+    overflow: visible;
+    min-height: auto;
+  }
+  .poster-wrap {
+    transform: none !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  .poster {
+    box-shadow: none !important;
+    width: 1200px !important;
+    height: 1800px !important;
+    overflow: hidden !important;
+    transform: none !important;
+  }
+  .glass, .anode-panel, .type-card, .process-table, .pass-card,
+  .pill-banner, .bag-card, .trouble-table, .zone-foot, .rule-card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .tweaks { display: none !important; }
+}
+</style>
+</head>
+<body data-edition="dark">
+
+<div class="stage">
+<div class="poster-wrap">
+<div class="poster" id="poster">
+
+  <!-- ============================================
+       ZONE 1 — HEADER
+       ============================================ -->
+  <div class="zone-header">
+    <div class="header-left">
+      <div class="eyebrow">Poster #29</div>
+      <h1><em>Anode</em> Chemistry<br>and Maintenance</h1>
+      <div class="subheading">Soluble, Insoluble, and Everything Between</div>
+      <div class="tagline">When the deposit goes wrong, check the anodes before you blame the bath.</div>
+    </div>
+    <div class="rule-card">
+      <div class="big-num">7</div>
+      <div class="big-label">Anode-Related<br>Defects Diagnosed<br>Below</div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       ZONE 2 — HERO: SOLUBLE VS INSOLUBLE
+       ============================================ -->
+  <div class="zone-hero">
+    <div class="section-label">
+      <h2 style="font-size:28px;">The Two Families of Anodes</h2>
+      <div class="sublabel">Every anode is one or the other &mdash; know the difference</div>
+    </div>
+
+    <div class="comparison-row">
+      <!-- SOLUBLE -->
+      <div class="anode-panel soluble">
+        <div class="panel-title">Soluble Anodes</div>
+        <div class="panel-sub">The anode dissolves to replenish metal in the bath</div>
+        <div class="half-reaction"><code>M &rarr; M&sup2;&#8314; + 2e&minus;</code></div>
+        <ul>
+          <li>Anode metal dissolves during plating &mdash; replenishes bath concentration</li>
+          <li>Metal balance: dissolution rate ideally matches deposition rate</li>
+          <li>Produces sludge/fines &mdash; MUST use anode bags</li>
+          <li>Purity matters &mdash; impurities dissolve into the bath</li>
+          <li>Requires chloride (in nickel) to prevent passivation</li>
+        </ul>
+      </div>
+
+      <!-- INSOLUBLE -->
+      <div class="anode-panel insoluble">
+        <div class="panel-title">Insoluble Anodes</div>
+        <div class="panel-sub">The anode conducts current but does not dissolve</div>
+        <div class="half-reaction"><code>2H&sub2;O &rarr; O&sub2; + 4H&#8314; + 4e&minus;</code></div>
+        <ul>
+          <li>Anode does NOT dissolve &mdash; no sludge, no anode bags needed</li>
+          <li>Metal replenished by chemical addition (salts) or proprietary replenishers</li>
+          <li>Bath chemistry requires more active management (metal level drops during plating)</li>
+          <li>Generates O&#8322; and acid at the anode &mdash; must account for pH drift</li>
+          <li>Longer life but higher initial cost</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Anode Type Gallery -->
+    <div class="type-gallery">
+      <!-- 1. Solid Bars -->
+      <div class="type-card soluble">
+        <div class="shape-area">
+          <svg width="28" height="42" viewBox="0 0 28 42">
+            <rect x="4" y="2" width="20" height="38" rx="2" fill="none" stroke="#E8A020" stroke-width="2"/>
+            <rect x="8" y="6" width="12" height="30" rx="1" fill="rgba(232,160,32,.15)"/>
+          </svg>
+        </div>
+        <div class="type-name">Solid Bars /<br>Slabs</div>
+        <div class="type-used">Zinc, copper, tin</div>
+      </div>
+      <!-- 2. S-Rounds -->
+      <div class="type-card soluble">
+        <div class="shape-area">
+          <svg width="44" height="42" viewBox="0 0 44 42">
+            <rect x="6" y="2" width="32" height="38" rx="3" fill="none" stroke="rgba(232,160,32,.4)" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <circle cx="16" cy="14" r="5" fill="rgba(232,160,32,.25)" stroke="#E8A020" stroke-width="1.5"/>
+            <circle cx="28" cy="14" r="5" fill="rgba(232,160,32,.25)" stroke="#E8A020" stroke-width="1.5"/>
+            <circle cx="22" cy="24" r="5" fill="rgba(232,160,32,.25)" stroke="#E8A020" stroke-width="1.5"/>
+            <circle cx="16" cy="33" r="5" fill="rgba(232,160,32,.25)" stroke="#E8A020" stroke-width="1.5"/>
+            <circle cx="28" cy="33" r="5" fill="rgba(232,160,32,.25)" stroke="#E8A020" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="type-name">S-Rounds /<br>Chips</div>
+        <div class="type-used">Nickel (in Ti baskets)</div>
+      </div>
+      <!-- 3. Cast / Rolled -->
+      <div class="type-card soluble">
+        <div class="shape-area">
+          <svg width="44" height="42" viewBox="0 0 44 42">
+            <rect x="3" y="12" width="38" height="18" rx="2" fill="none" stroke="#E8A020" stroke-width="2"/>
+            <rect x="7" y="15" width="30" height="12" rx="1" fill="rgba(232,160,32,.12)"/>
+          </svg>
+        </div>
+        <div class="type-name">Cast / Rolled<br>Sheet</div>
+        <div class="type-used">Copper, tin</div>
+      </div>
+      <!-- 4. Platinized Ti -->
+      <div class="type-card insoluble">
+        <div class="shape-area">
+          <svg width="30" height="42" viewBox="0 0 30 42">
+            <rect x="3" y="2" width="24" height="38" rx="2" fill="none" stroke="#2EC4B6" stroke-width="2"/>
+            <rect x="3" y="2" width="24" height="38" rx="2" fill="rgba(46,196,182,.08)"/>
+            <rect x="6" y="5" width="18" height="32" rx="1" fill="none" stroke="rgba(46,196,182,.5)" stroke-width="1" stroke-dasharray="2 2"/>
+          </svg>
+        </div>
+        <div class="type-name">Platinized<br>Titanium</div>
+        <div class="type-used">Precious metals, EN</div>
+      </div>
+      <!-- 5. DSA -->
+      <div class="type-card insoluble">
+        <div class="shape-area">
+          <svg width="30" height="42" viewBox="0 0 30 42">
+            <rect x="3" y="2" width="24" height="38" rx="2" fill="none" stroke="#2EC4B6" stroke-width="2"/>
+            <line x1="3" y1="12" x2="27" y2="12" stroke="rgba(46,196,182,.4)" stroke-width="1.5"/>
+            <line x1="3" y1="22" x2="27" y2="22" stroke="rgba(46,196,182,.4)" stroke-width="1.5"/>
+            <line x1="3" y1="32" x2="27" y2="32" stroke="rgba(46,196,182,.4)" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="type-name">DSA (Mixed<br>Oxide)</div>
+        <div class="type-used">Hard chrome, electrogalv</div>
+      </div>
+      <!-- 6. Lead Alloy -->
+      <div class="type-card insoluble">
+        <div class="shape-area">
+          <svg width="28" height="42" viewBox="0 0 28 42">
+            <rect x="4" y="2" width="20" height="38" rx="2" fill="rgba(46,196,182,.12)" stroke="#2EC4B6" stroke-width="2"/>
+            <rect x="8" y="6" width="12" height="30" rx="1" fill="rgba(46,196,182,.18)"/>
+          </svg>
+        </div>
+        <div class="type-name">Lead / Lead<br>Alloy</div>
+        <div class="type-used">Hard chrome (trad.)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       ZONE 3 — PROCESS-TO-ANODE TABLE
+       ============================================ -->
+  <div class="zone-process">
+    <div class="section-label">
+      <h2 style="font-size:28px;">Which Anode for Which Process?</h2>
+      <div class="sublabel">9 processes, 9 anode specifications</div>
+    </div>
+
+    <table class="process-table">
+      <thead>
+        <tr>
+          <th style="width:16%">Process</th>
+          <th style="width:10%">Anode Type</th>
+          <th style="width:28%">Material</th>
+          <th style="width:10%">A:C Ratio</th>
+          <th style="width:36%">Key Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Watts nickel (bright)</td>
+          <td class="type-soluble">Soluble</td>
+          <td>Electrolytic Ni S-Rounds in Ti baskets + PP bags</td>
+          <td class="ac-ratio">2:1</td>
+          <td>Chloride prevents passivation; S-Rounds dissolve evenly</td>
+        </tr>
+        <tr>
+          <td>Acid copper sulfate</td>
+          <td class="type-soluble">Soluble</td>
+          <td>OFHC copper (P-deoxidized, 0.04&ndash;0.06% P)</td>
+          <td class="ac-ratio">1:1</td>
+          <td>P content controls dissolution rate</td>
+        </tr>
+        <tr>
+          <td>Acid zinc (chloride)</td>
+          <td class="type-soluble">Soluble</td>
+          <td>SHG zinc slabs</td>
+          <td class="ac-ratio">1:1 to 2:1</td>
+          <td>Zinc dissolves readily; watch sludge buildup</td>
+        </tr>
+        <tr class="highlight-row">
+          <td>Alkaline zinc (non-CN)</td>
+          <td class="type-soluble">Soluble</td>
+          <td><strong>SHG zinc in steel baskets</strong></td>
+          <td class="ac-ratio">1:1</td>
+          <td><strong>Steel baskets &mdash; NOT titanium (zinc attacks Ti)</strong></td>
+        </tr>
+        <tr>
+          <td>Hard chrome</td>
+          <td class="type-insoluble">Insoluble</td>
+          <td>Lead-antimony (6&ndash;8% Sb) or DSA</td>
+          <td class="ac-ratio">N/A</td>
+          <td>Chromic acid replenished by chemical addition</td>
+        </tr>
+        <tr>
+          <td>Gold (acid)</td>
+          <td class="type-insoluble">Insoluble</td>
+          <td>Platinized titanium</td>
+          <td class="ac-ratio">Per spec</td>
+          <td>Gold replenished by gold salt addition</td>
+        </tr>
+        <tr>
+          <td>Silver (cyanide)</td>
+          <td class="type-soluble">Soluble</td>
+          <td>Fine silver (99.9%) bars</td>
+          <td class="ac-ratio">2:1</td>
+          <td>Anode bags critical &mdash; silver sludge is expensive</td>
+        </tr>
+        <tr>
+          <td>Tin (acid)</td>
+          <td class="type-soluble">Soluble</td>
+          <td>Pure tin bars or balls</td>
+          <td class="ac-ratio">1:1 to 2:1</td>
+          <td>Tin passivates easily &mdash; maintain Sn&#178;&#8314;</td>
+        </tr>
+        <tr>
+          <td>Electroless nickel</td>
+          <td class="type-na">N/A</td>
+          <td>None (chemical reduction &mdash; no external anode)</td>
+          <td class="ac-ratio">N/A</td>
+          <td>Reducing agent (NaH&#8322;PO&#8322;) provides electrons</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================
+       ZONE 4 — ANODE PASSIVATION
+       ============================================ -->
+  <div class="zone-passivation">
+    <div class="section-label">
+      <h2 style="font-size:26px;">Anode Passivation &mdash; The Silent Bath Killer</h2>
+      <div class="sublabel">It looks like a chemistry problem. It's an electrode problem.</div>
+    </div>
+
+    <div class="passivation-row">
+      <!-- WHAT HAPPENS AND WHY -->
+      <div class="pass-card causes">
+        <div class="card-title">What Happens and Why</div>
+        <div class="card-body">
+          <p>A passive anode develops an oxide film that blocks metal dissolution. Current still flows &mdash; but it goes to oxygen evolution instead of metal dissolution. The bath slowly starves of metal ions while the operator sees normal amperage on the meter.</p>
+
+          <div class="sub-heading">Symptoms</div>
+          <ul>
+            <li>Rising bath voltage (same amps, higher volts)</li>
+            <li>Declining metal concentration despite normal plating load</li>
+            <li>Darkening or filming on anode surface</li>
+            <li>Gray or black sludge on anode surface</li>
+            <li>pH drop (acid generation from O&#8322; evolution)</li>
+          </ul>
+
+          <div class="sub-heading">Causes</div>
+          <ul class="causes-mono">
+            <li>Low chloride (nickel) &mdash; below 30 g/L NiCl&#8322;</li>
+            <li>Excessive current density on anode (too small anode area)</li>
+            <li>Contaminated anode surface (oil, grease, oxide)</li>
+            <li>Wrong anode composition (carbonyl vs. electrolytic matters)</li>
+            <li>Stagnant solution at anode surface (poor agitation)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PREVENTION AND RECOVERY -->
+      <div class="pass-card recovery">
+        <div class="card-title">Prevention and Recovery</div>
+        <div class="card-body">
+          <div class="sub-heading">Prevention</div>
+          <ul>
+            <li>Maintain chloride at or above minimum (nickel: 30+ g/L NiCl&#8322;)</li>
+            <li>Size anodes to maintain proper A:C ratio &mdash; never run undersized</li>
+            <li>Use correct anode composition for the bath</li>
+            <li>Ensure solution circulation reaches anode surface</li>
+            <li>Keep anodes clean &mdash; remove buildup during scheduled maintenance</li>
+          </ul>
+
+          <div class="sub-heading">Recovery</div>
+          <ul>
+            <li>Remove anodes from tank</li>
+            <li>Scrub or acid-dip to remove oxide/film (10% HCl for nickel anodes)</li>
+            <li>Inspect for unusual corrosion patterns &mdash; pitting means impure anode</li>
+            <li>Verify chloride level before re-installing</li>
+            <li>Consider activating anodes in a &ldquo;break-in&rdquo; period at low current</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pill-banner">
+      Prevention is cheaper than recovery &mdash; a $5 chloride addition prevents a $500 bath adjustment
+    </div>
+  </div>
+
+  <!-- ============================================
+       ZONE 5 — ANODE BAGS
+       ============================================ -->
+  <div class="zone-bags">
+    <div class="section-label">
+      <h2>Anode Bags &mdash; Your First Line of Filtration</h2>
+      <div class="sublabel">The cheapest component that causes the most expensive defects when neglected</div>
+    </div>
+
+    <div class="bags-row">
+      <!-- MATERIALS TABLE -->
+      <div class="bag-card materials">
+        <div class="card-title">Anode Bag Materials</div>
+        <table class="bag-table">
+          <thead>
+            <tr>
+              <th>Material</th>
+              <th>Used For</th>
+              <th>Micron</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Polypropylene (PP)</td>
+              <td>Nickel, copper, general</td>
+              <td>1&ndash;10 &micro;m</td>
+              <td>Most common; chemical-resistant; heat-resistant to 200&deg;F</td>
+            </tr>
+            <tr>
+              <td>Polyester (PE)</td>
+              <td>General, lower-temp baths</td>
+              <td>1&ndash;10 &micro;m</td>
+              <td>Less heat-resistant than PP; good for acid zinc</td>
+            </tr>
+            <tr>
+              <td>Cotton / Dynel</td>
+              <td>Traditional; being phased out</td>
+              <td>Variable</td>
+              <td>Can shed fibers &mdash; not for critical applications</td>
+            </tr>
+            <tr>
+              <td>Nylon</td>
+              <td>Acid baths</td>
+              <td>5&ndash;25 &micro;m</td>
+              <td>Good strength; not suitable for strong alkali</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="bag-callout">Double-bag anodes in bright nickel &mdash; the inner bag catches fines, the outer catches what the inner misses</div>
+      </div>
+
+      <!-- MAINTENANCE SCHEDULE -->
+      <div class="bag-card maintenance">
+        <div class="card-title">Anode Bag Maintenance</div>
+        <div class="maint-body">
+          <div class="freq-label">Daily</div>
+          <ul>
+            <li>Visual check &mdash; bags submerged, no tears, no collapse</li>
+          </ul>
+
+          <div class="freq-label">Weekly</div>
+          <ul>
+            <li>Remove and inspect for discoloration, holes, or clogging</li>
+            <li>Check for sludge buildup inside bags &mdash; if heavy, clean or replace</li>
+            <li>Verify bag is not restricting solution flow around anode</li>
+          </ul>
+
+          <div class="freq-label">Monthly or as Needed</div>
+          <ul>
+            <li>Replace bags showing discoloration, reduced porosity, or physical damage</li>
+            <li>Rinse new bags in DI water before use (removes sizing compounds)</li>
+            <li>Replace ALL bags at the same time &mdash; mixing old and new changes flow distribution</li>
+          </ul>
+
+          <div class="warning-callout">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span>If you see black or gray particles on plated parts, check anode bags FIRST.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       ZONE 6 — TROUBLESHOOTING TABLE
+       ============================================ -->
+  <div class="zone-trouble">
+    <div class="section-label">
+      <h2 style="font-size:26px;">Anode-Related Defects &mdash; Diagnosis Table</h2>
+      <div class="sublabel">7 symptoms, 7 anode causes &mdash; check here before you blame the chemistry</div>
+    </div>
+
+    <table class="trouble-table">
+      <thead>
+        <tr>
+          <th style="width:18%">Symptom</th>
+          <th style="width:24%">Anode Cause</th>
+          <th style="width:26%">Check</th>
+          <th style="width:32%">Fix</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="symptom">Rough deposits / particles</td>
+          <td>Torn anode bags; anode sludge in bath</td>
+          <td>Inspect bags; check bath clarity</td>
+          <td>Replace bags; filter bath; clean anodes</td>
+        </tr>
+        <tr>
+          <td class="symptom">Thin deposits / slow plating</td>
+          <td>Passivated anodes; insufficient anode area</td>
+          <td>Check voltage (rising?); check metal level</td>
+          <td>Activate anodes; add anode area; replenish chloride</td>
+        </tr>
+        <tr>
+          <td class="symptom">Uneven thickness</td>
+          <td>Poor anode placement; mismatched A:C ratio</td>
+          <td>Compare HCD/LCD; check anode positioning</td>
+          <td>Reposition anodes; adjust A:C ratio</td>
+        </tr>
+        <tr>
+          <td class="symptom">High voltage / high power</td>
+          <td>Passivated anodes; poor connection</td>
+          <td>Check bus bar contacts; check anode surface</td>
+          <td>Clean contacts; de-passivate anodes</td>
+        </tr>
+        <tr>
+          <td class="symptom">Dark deposits at LCD</td>
+          <td>Anode impurities dissolving into bath</td>
+          <td>Analyze bath for contaminants; check purity cert</td>
+          <td>Dummy plate; switch to higher-purity anodes</td>
+        </tr>
+        <tr>
+          <td class="symptom">pH dropping unexpectedly</td>
+          <td>Passivated anodes (O&#8322; evolution generates acid)</td>
+          <td>Check dissolution rate vs. deposition rate</td>
+          <td>De-passivate; correct metal balance</td>
+        </tr>
+        <tr>
+          <td class="symptom">Excessive anode sludge</td>
+          <td>Wrong composition; CD too high on anode</td>
+          <td>Check anode spec sheet; check A:C ratio</td>
+          <td>Use correct anode type; increase anode area</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================
+       ZONE 7 — FOOTER
+       ============================================ -->
+  <div class="zone-foot">
+    <div class="footer-disclaimer">
+      This poster is an educational reference tool. Anode types, compositions, and maintenance procedures are typical industry values. Specific anode requirements vary by bath chemistry, proprietary formulation, and application. Consult your anode supplier and process chemical supplier for application-specific guidance.
+    </div>
+    <div class="footer-brand">
+      <div class="pp-mark">PP</div>
+      <div class="brand-text">Anode Chemistry and Maintenance &mdash; Soluble, Insoluble, and Everything Between &nbsp;|&nbsp; Plating Posters Inc</div>
+    </div>
+    <div class="footer-meta">v1.0 &mdash; 2026 &nbsp;|&nbsp; Poster #29 &mdash; Anode Chemistry and Maintenance &nbsp;|&nbsp; Plating Posters Inc</div>
+  </div>
+
+</div><!-- .poster -->
+</div><!-- .poster-wrap -->
+</div><!-- .stage -->
+
+<!-- ============================================
+     TWEAKS PANEL
+     ============================================ -->
+<div class="tweaks" id="tweaks">
+  <div class="tw-label">Edition</div>
+  <div class="tw-row">
+    <button id="tw-dark" class="active" onclick="setEdition('dark')">Dark</button>
+    <button id="tw-light" onclick="setEdition('light')">Light</button>
+  </div>
+  <div class="tw-label">Grid</div>
+  <div class="tw-row">
+    <button id="tw-grid-on" onclick="toggleGrid(true)">On</button>
+    <button id="tw-grid-off" class="active" onclick="toggleGrid(false)">Off</button>
+  </div>
+  <div class="tw-label">Export</div>
+  <button onclick="window.print()">Print / PDF</button>
+</div>
+
+<script>
+// --- Scale to fit ---
+function scalePoster() {
+  var wrap = document.querySelector('.poster-wrap');
+  var stage = document.querySelector('.stage');
+  if (!wrap || !stage) return;
+  var sw = stage.clientWidth - 40;
+  var sh = stage.clientHeight - 80;
+  var scale = Math.min(sw / 1200, sh / 1800, 1);
+  wrap.style.width = (1200 * scale) + 'px';
+  wrap.style.height = (1800 * scale) + 'px';
+  var poster = wrap.querySelector('.poster');
+  poster.style.transform = 'scale(' + scale + ')';
+  poster.style.transformOrigin = 'top left';
+}
+window.addEventListener('resize', scalePoster);
+window.addEventListener('load', scalePoster);
+
+// --- Edition toggle ---
+function setEdition(ed) {
+  document.body.setAttribute('data-edition', ed);
+  document.getElementById('tw-dark').classList.toggle('active', ed === 'dark');
+  document.getElementById('tw-light').classList.toggle('active', ed === 'light');
+}
+
+// --- Grid toggle ---
+function toggleGrid(on) {
+  document.getElementById('poster').classList.toggle('no-grid', !on);
+  document.getElementById('tw-grid-on').classList.toggle('active', on);
+  document.getElementById('tw-grid-off').classList.toggle('active', !on);
+}
+
+// Init grid off
+document.getElementById('poster').classList.add('no-grid');
+
+// --- EditMode protocol ---
+window.addEventListener('message', function(e) {
+  if (e.data === '__edit_mode_available') {
+    window.parent.postMessage('__activate_edit_mode', '*');
+  }
+});
+</script>
+
+</body>
+</html>

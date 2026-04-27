@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poster #24 — Rectifier Fundamentals — Plating Posters Inc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,800;0,900;1,800;1,900&family=Barlow:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   POSTER #24 — RECTIFIER FUNDAMENTALS
+   Plating Posters Inc — Metal Finishing Reference Series
+   Dark Edition (flagship) + Light Edition (CSS toggle)
+   1200 x 1800 CSS px — iOS 18 Liquid Glass aesthetic
+   ============================================================ */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #1A1F2E;
+  --navy: #0D1020;
+  --text: #F0EDE8;
+  --amber: #E8A020;
+  --teal: #2EC4B6;
+  --emerald: #27AE60;
+  --coral: #E05C5C;
+  --slate: #3A4055;
+  --callout: #1E2435;
+  --altrow: #252B3D;
+  --silver: #C8D0D8;
+  --glass-bg: rgba(30,36,53,.55);
+  --glass-grad: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  --glass-border: 1px solid rgba(255,255,255,.12);
+  --glass-blur: blur(18px) saturate(140%);
+  --glass-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+}
+
+html, body {
+  background: #111;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* === STAGE — viewport-fit scaling wrapper === */
+.stage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 24px;
+}
+.poster-wrap {
+  transform-origin: top center;
+}
+.poster {
+  position: relative;
+  width: 1200px;
+  height: 1800px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0,0,0,.5);
+  /* Ambient orbs + grid */
+  background:
+    radial-gradient(1200px 800px at 15% 8%, rgba(46,196,182,.14), transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%, rgba(232,160,32,.12), transparent 55%),
+    radial-gradient(900px 900px at 50% 80%, rgba(224,92,92,.10), transparent 60%),
+    var(--bg);
+}
+.poster::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,0,0,.5), transparent);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,0,0,.5), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+.poster > * { position: relative; z-index: 1; }
+
+/* Grid overlay toggle */
+.poster.show-grid::before {
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+  background-image:
+    linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px) !important;
+}
+
+/* === GLASS MIXIN === */
+.glass {
+  background-color: var(--glass-bg);
+  background-image: var(--glass-grad);
+  border: var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  border-radius: 14px;
+}
+
+/* === TYPOGRAPHY === */
+.font-headline { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; }
+.font-headline-8 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; }
+.font-sub { font-family: 'Barlow', sans-serif; font-weight: 700; }
+.font-sub-6 { font-family: 'Barlow', sans-serif; font-weight: 600; }
+.font-body { font-family: 'Inter', sans-serif; font-weight: 400; }
+.font-body-5 { font-family: 'Inter', sans-serif; font-weight: 500; }
+.font-body-6 { font-family: 'Inter', sans-serif; font-weight: 600; }
+.font-mono { font-family: 'JetBrains Mono', monospace; font-weight: 400; }
+.font-mono-5 { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+
+/* === POSTER CONTENT CONTAINER === */
+.poster-content {
+  padding: 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   ZONE 1 — HEADER
+   ============================================================ */
+.zone-header {
+  padding-bottom: 16px;
+}
+.headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 1.0;
+  letter-spacing: -2px;
+  color: var(--text);
+  text-transform: uppercase;
+}
+.subheading {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 27px;
+  color: var(--amber);
+  margin-top: 6px;
+  line-height: 1.2;
+}
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text);
+  opacity: 0.65;
+  margin-top: 8px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   ZONE 2 — WAVEFORM COMPARISON PANEL (HERO)
+   ============================================================ */
+.zone-waveforms {
+  flex: 0 0 auto;
+  padding-bottom: 14px;
+}
+.section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--text);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+.section-sublabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text);
+  opacity: 0.5;
+  text-align: center;
+  margin-top: -6px;
+  margin-bottom: 10px;
+}
+.waveform-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.wf-card {
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.wf-card-inner {
+  padding: 14px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.wf-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.wf-diagram {
+  background: var(--altrow);
+  border-radius: 8px;
+  height: 100px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.wf-diagram svg {
+  width: 100%;
+  height: 100%;
+}
+.wf-desc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--text);
+  margin-bottom: 8px;
+  flex: 1;
+}
+.wf-stat {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+/* Characteristics strip */
+.char-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.char-col {
+  background-color: rgba(37,43,61,.7);
+  background-image: var(--glass-grad);
+  border: var(--glass-border);
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+.char-col-header {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.char-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 0;
+}
+.char-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--text);
+  opacity: 0.6;
+}
+.char-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--text);
+}
+
+/* ============================================================
+   ZONE 3 — RIPPLE: THE HIDDEN ENEMY
+   ============================================================ */
+.zone-ripple {
+  flex: 0 0 auto;
+  padding-bottom: 14px;
+}
+.ripple-gauge-wrap {
+  margin-bottom: 6px;
+}
+.ripple-gauge {
+  display: flex;
+  height: 36px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+}
+.ripple-seg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.ripple-seg-green {
+  width: 40%;
+  background-color: rgba(39,174,96,.25);
+}
+.ripple-seg-yellow {
+  width: 30%;
+  background-color: rgba(232,160,32,.25);
+}
+.ripple-seg-red {
+  width: 30%;
+  background-color: rgba(224,92,92,.25);
+}
+.ripple-seg-label {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.ripple-seg-range {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 9px;
+  color: var(--text);
+  opacity: 0.8;
+}
+.ripple-labels {
+  display: flex;
+  margin-top: 4px;
+}
+.ripple-label-seg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ripple-label-seg:nth-child(1) { width: 40%; }
+.ripple-label-seg:nth-child(2) { width: 30%; }
+.ripple-label-seg:nth-child(3) { width: 30%; }
+.ripple-label-name {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ripple-label-range {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 9px;
+  color: var(--text);
+  opacity: 0.7;
+}
+.ripple-callout {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12.5px;
+  color: var(--coral);
+  text-align: center;
+  margin: 8px 0 10px;
+  line-height: 1.4;
+}
+.ripple-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.ripple-card {
+  border-radius: 14px;
+  padding: 14px 14px;
+  border-left: 4px solid transparent;
+  position: relative;
+}
+.ripple-card-title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.ripple-card ul {
+  list-style: none;
+  padding: 0;
+}
+.ripple-card li {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--text);
+  padding-left: 12px;
+  position: relative;
+  margin-bottom: 2px;
+}
+.ripple-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--silver);
+}
+
+/* ============================================================
+   ZONE 4 — APPLICATION SELECTION MATRIX
+   ============================================================ */
+.zone-matrix {
+  flex: 0 0 auto;
+  padding-bottom: 14px;
+}
+.matrix-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: var(--glass-border);
+  background-color: var(--glass-bg);
+  background-image: var(--glass-grad);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+}
+.matrix-table th {
+  background: var(--slate);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  padding: 8px 8px;
+  text-align: left;
+}
+.matrix-table th:first-child { padding-left: 14px; }
+.matrix-table td {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11.5px;
+  color: var(--text);
+  padding: 7px 8px;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+.matrix-table td:first-child {
+  font-weight: 500;
+  padding-left: 14px;
+}
+.matrix-table tr:nth-child(odd) td { background: var(--callout); }
+.matrix-table tr:nth-child(even) td { background: var(--altrow); }
+.matrix-table tr:last-child td { border-bottom: none; }
+.matrix-table td.notes-col {
+  font-size: 10.5px;
+  opacity: 0.8;
+  font-style: italic;
+}
+.c-emerald { color: var(--emerald); font-weight: 500; }
+.c-amber { color: var(--amber); font-weight: 500; }
+.c-teal { color: var(--teal); font-weight: 500; }
+.c-coral { color: var(--coral); font-weight: 500; }
+
+/* ============================================================
+   ZONE 5 — PULSE AND PR DEEP DIVE
+   ============================================================ */
+.zone-deepdive {
+  flex: 0 0 auto;
+  padding-bottom: 14px;
+}
+.deepdive-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.pr-diagram {
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.pr-diagram-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.pr-svg-wrap {
+  background: var(--altrow);
+  border-radius: 10px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  min-height: 140px;
+}
+.pr-svg-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+.pr-formulas {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 10.5px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.pr-formulas span { opacity: 0.8; }
+
+.benefits-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.benefit-card {
+  border-radius: 14px;
+  padding: 14px 14px 14px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.benefit-card-pulse {
+  border-left: 4px solid var(--amber);
+}
+.benefit-card-pr {
+  border-left: 4px solid var(--teal);
+}
+.benefit-title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.benefit-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.benefit-card li {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text);
+  padding-left: 12px;
+  position: relative;
+  margin-bottom: 2px;
+}
+.benefit-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+.benefit-card-pulse li::before { background: var(--amber); }
+.benefit-card-pr li::before { background: var(--teal); }
+
+/* ============================================================
+   ZONE 6 — MAINTENANCE AND TROUBLESHOOTING
+   ============================================================ */
+.zone-maint {
+  flex: 0 0 auto;
+  padding-bottom: 0;
+}
+.maint-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.maint-card {
+  border-radius: 14px;
+  padding: 14px 14px 14px 18px;
+}
+.maint-card-check {
+  border-left: 4px solid var(--emerald);
+}
+.maint-card-trouble {
+  border-left: 4px solid var(--coral);
+}
+.maint-title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.maint-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.maint-list li {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--text);
+  padding-left: 12px;
+  position: relative;
+  margin-bottom: 2px;
+}
+.maint-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--emerald);
+}
+.trouble-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.trouble-table th {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  text-align: left;
+  padding: 5px 6px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.trouble-table td {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10.5px;
+  color: var(--text);
+  padding: 5px 6px;
+  line-height: 1.35;
+}
+.trouble-table tr:nth-child(odd) td { background: rgba(30,36,53,.3); }
+.trouble-table tr:nth-child(even) td { background: rgba(37,43,61,.3); }
+.trouble-table td:first-child {
+  color: var(--coral);
+  font-weight: 500;
+}
+
+/* ============================================================
+   ZONE 7 — FOOTER
+   ============================================================ */
+.zone-footer {
+  background: var(--navy);
+  margin: 0 -25px -25px;
+  padding: 16px 25px 18px;
+  margin-top: auto;
+}
+.footer-disclaimer {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 9px;
+  color: rgba(240,237,232,.45);
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.footer-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--amber), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+.footer-title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+}
+.footer-series {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  color: rgba(240,237,232,.6);
+}
+.footer-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 10px;
+  color: rgba(240,237,232,.45);
+  text-align: center;
+}
+
+/* ============================================================
+   LIGHT EDITION
+   ============================================================ */
+body[data-edition="light"] {
+  --bg: #F5F4F0;
+  --navy: #1A1F2E;
+  --text: #1A1F2E;
+  --amber: #C8860A;
+  --teal: #1A8C82;
+  --emerald: #1E7A47;
+  --coral: #B83E3E;
+  --slate: #D0D4DE;
+  --callout: #ECEEF4;
+  --altrow: #E8E8F0;
+  --glass-bg: rgba(236,238,244,.7);
+  --glass-grad: linear-gradient(145deg, rgba(255,255,255,.4), rgba(255,255,255,.1));
+  --glass-border: 1px solid rgba(0,0,0,.08);
+  --glass-shadow: inset 0 1px 0 rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.04), 0 4px 12px rgba(0,0,0,.06);
+}
+body[data-edition="light"] .poster {
+  background:
+    radial-gradient(1200px 800px at 15% 8%, rgba(26,140,130,.08), transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%, rgba(200,134,10,.07), transparent 55%),
+    radial-gradient(900px 900px at 50% 80%, rgba(184,62,62,.06), transparent 60%),
+    var(--bg);
+}
+body[data-edition="light"] .poster::before {
+  background-image:
+    linear-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,.04) 1px, transparent 1px);
+}
+body[data-edition="light"] .wf-diagram,
+body[data-edition="light"] .pr-svg-wrap {
+  background: var(--altrow);
+}
+body[data-edition="light"] .char-col {
+  background-color: rgba(232,232,240,.7);
+}
+body[data-edition="light"] .ripple-seg-green { background-color: rgba(30,122,71,.18); }
+body[data-edition="light"] .ripple-seg-yellow { background-color: rgba(200,134,10,.18); }
+body[data-edition="light"] .ripple-seg-red { background-color: rgba(184,62,62,.18); }
+body[data-edition="light"] .matrix-table th { background: var(--slate); color: #1A1F2E; }
+body[data-edition="light"] .matrix-table td { border-bottom-color: rgba(0,0,0,.06); }
+body[data-edition="light"] .trouble-table tr:nth-child(odd) td { background: rgba(236,238,244,.5); }
+body[data-edition="light"] .trouble-table tr:nth-child(even) td { background: rgba(232,232,240,.5); }
+body[data-edition="light"] .trouble-table th { border-bottom-color: rgba(0,0,0,.1); }
+body[data-edition="light"] .footer-disclaimer { color: rgba(26,31,46,.45); }
+body[data-edition="light"] .footer-series { color: rgba(26,31,46,.55); }
+body[data-edition="light"] .footer-meta { color: rgba(26,31,46,.45); }
+body[data-edition="light"] .footer-logo { color: #F5F4F0; }
+body[data-edition="light"] .ripple-card li::before,
+body[data-edition="light"] .maint-list li::before { background: var(--slate); }
+body[data-edition="light"] .zone-footer { background: var(--navy); color: #F0EDE8; }
+body[data-edition="light"] .zone-footer .footer-title,
+body[data-edition="light"] .zone-footer .footer-brand { color: #F0EDE8; }
+body[data-edition="light"] .zone-footer .footer-disclaimer { color: rgba(240,237,232,.45); }
+body[data-edition="light"] .zone-footer .footer-series { color: rgba(240,237,232,.6); }
+body[data-edition="light"] .zone-footer .footer-meta { color: rgba(240,237,232,.45); }
+
+/* SVG colors for light mode */
+body[data-edition="light"] .wf-svg-emerald { stroke: #1E7A47; }
+body[data-edition="light"] .wf-svg-amber { stroke: #C8860A; }
+body[data-edition="light"] .wf-svg-teal { stroke: #1A8C82; }
+body[data-edition="light"] .wf-svg-coral { stroke: #B83E3E; }
+body[data-edition="light"] .wf-svg-fill-teal { fill: rgba(26,140,130,.25); }
+body[data-edition="light"] .wf-svg-fill-coral { fill: rgba(184,62,62,.25); }
+body[data-edition="light"] .pr-fill-teal { fill: rgba(26,140,130,.2); stroke: #1A8C82; }
+body[data-edition="light"] .pr-fill-coral { fill: rgba(184,62,62,.2); stroke: #B83E3E; }
+
+/* ============================================================
+   PRINT CSS
+   ============================================================ */
+@media print {
+  @page { size: 12.5in 18.75in; margin: 0; }
+  html, body {
+    background: #1A1F2E !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .stage { position: static; padding: 0; display: block; overflow: visible; inset: auto; }
+  .poster-wrap { transform: none !important; width: auto !important; height: auto !important; }
+  .poster { box-shadow: none !important; width: 1200px !important; height: 1800px !important; overflow: hidden !important; }
+  .glass, .wf-card, .ripple-card, .benefit-card, .maint-card, .pr-diagram,
+  .matrix-table, .char-col, .zone-footer {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .tweaks { display: none !important; }
+}
+/* Light edition print overrides */
+body[data-edition="light"] {
+  background: #F5F4F0;
+}
+@media print {
+  body[data-edition="light"], body[data-edition="light"] html {
+    background: #F5F4F0 !important;
+  }
+}
+
+/* ============================================================
+   TWEAKS PANEL
+   ============================================================ */
+.tweaks {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+}
+.tweaks button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 8px;
+  background: rgba(26,31,46,.85);
+  color: #F0EDE8;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background .15s, border-color .15s;
+  white-space: nowrap;
+}
+.tweaks button:hover {
+  background: rgba(40,48,70,.9);
+  border-color: rgba(255,255,255,.25);
+}
+.tweaks button.active {
+  background: rgba(232,160,32,.2);
+  border-color: rgba(232,160,32,.4);
+}
+</style>
+</head>
+<body data-edition="dark">
+
+<!-- ============================================================
+     POSTER
+     ============================================================ -->
+<div class="stage">
+  <div class="poster-wrap">
+    <div class="poster" id="poster">
+      <div class="poster-content">
+
+        <!-- ======== ZONE 1 — HEADER ======== -->
+        <div class="zone-header">
+          <div class="headline">RECTIFIER FUNDAMENTALS</div>
+          <div class="subheading">DC, Pulse, and Periodic Reverse — The Power Behind Every Plated Part</div>
+          <div class="tagline">Your rectifier is not just a power supply — it shapes every atom that lands on the cathode.</div>
+        </div>
+
+        <!-- ======== ZONE 2 — WAVEFORM COMPARISON (HERO) ======== -->
+        <div class="zone-waveforms">
+          <div class="section-label">The Four Waveforms You Need to Know</div>
+
+          <div class="waveform-grid">
+
+            <!-- Card 1: Straight DC -->
+            <div class="wf-card glass">
+              <div class="wf-card-inner">
+                <div class="wf-title" style="color: var(--emerald);">Straight DC</div>
+                <div class="wf-diagram">
+                  <svg viewBox="0 0 240 100" preserveAspectRatio="xMidYMid meet">
+                    <!-- Baseline -->
+                    <line x1="20" y1="80" x2="220" y2="80" stroke="var(--silver)" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+                    <text x="12" y="84" font-family="JetBrains Mono" font-size="8" fill="var(--silver)" opacity="0.5" text-anchor="end">0</text>
+                    <!-- DC line -->
+                    <line x1="20" y1="30" x2="220" y2="30" class="wf-svg-emerald" stroke="var(--emerald)" stroke-width="3" stroke-linecap="round"/>
+                    <text x="225" y="34" font-family="JetBrains Mono" font-size="9" fill="var(--emerald)">V</text>
+                    <!-- Time arrow -->
+                    <line x1="20" y1="94" x2="220" y2="94" stroke="var(--silver)" stroke-width="0.5" opacity="0.3"/>
+                    <text x="120" y="98" font-family="JetBrains Mono" font-size="7" fill="var(--silver)" opacity="0.4" text-anchor="middle">time</text>
+                  </svg>
+                </div>
+                <div class="wf-desc">Steady, uninterrupted current flow. The standard for most plating baths. Simple, reliable, and well-understood.</div>
+                <div class="wf-stat" style="color: var(--emerald);">Used in: ~80% of all plating operations</div>
+              </div>
+            </div>
+
+            <!-- Card 2: Pulsed DC -->
+            <div class="wf-card glass">
+              <div class="wf-card-inner">
+                <div class="wf-title" style="color: var(--amber);">Pulsed DC</div>
+                <div class="wf-diagram">
+                  <svg viewBox="0 0 240 100" preserveAspectRatio="xMidYMid meet">
+                    <!-- Baseline -->
+                    <line x1="20" y1="80" x2="220" y2="80" stroke="var(--silver)" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+                    <text x="12" y="84" font-family="JetBrains Mono" font-size="8" fill="var(--silver)" opacity="0.5" text-anchor="end">0</text>
+                    <!-- Square wave -->
+                    <polyline points="20,80 20,30 55,30 55,80 70,80 70,30 105,30 105,80 120,80 120,30 155,30 155,80 170,80 170,30 205,30 205,80 220,80"
+                      fill="none" class="wf-svg-amber" stroke="var(--amber)" stroke-width="3" stroke-linejoin="miter"/>
+                    <!-- T-on / T-off labels -->
+                    <text x="37" y="22" font-family="JetBrains Mono" font-size="8" fill="var(--amber)" text-anchor="middle">T-on</text>
+                    <text x="62" y="92" font-family="JetBrains Mono" font-size="8" fill="var(--amber)" text-anchor="middle">T-off</text>
+                  </svg>
+                </div>
+                <div class="wf-desc">Current pulses on and off. During T-off, ions replenish at the cathode surface. Finer grain, better throwing power.</div>
+                <div class="wf-stat" style="color: var(--amber);">Duty cycle: T-on / (T-on + T-off) x 100%</div>
+              </div>
+            </div>
+
+            <!-- Card 3: Periodic Reverse -->
+            <div class="wf-card glass">
+              <div class="wf-card-inner">
+                <div class="wf-title" style="color: var(--teal);">Periodic Reverse</div>
+                <div class="wf-diagram">
+                  <svg viewBox="0 0 240 100" preserveAspectRatio="xMidYMid meet">
+                    <!-- Baseline (center) -->
+                    <line x1="20" y1="50" x2="220" y2="50" stroke="var(--silver)" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+                    <text x="12" y="54" font-family="JetBrains Mono" font-size="8" fill="var(--silver)" opacity="0.5" text-anchor="end">0</text>
+                    <!-- Cathodic rectangles (above) -->
+                    <rect x="20" y="12" width="55" height="38" rx="0" fill="rgba(46,196,182,.2)" class="wf-svg-fill-teal" stroke="var(--teal)" stroke-width="2.5"/>
+                    <rect x="95" y="12" width="55" height="38" rx="0" fill="rgba(46,196,182,.2)" class="wf-svg-fill-teal" stroke="var(--teal)" stroke-width="2.5"/>
+                    <rect x="170" y="12" width="50" height="38" rx="0" fill="rgba(46,196,182,.2)" class="wf-svg-fill-teal" stroke="var(--teal)" stroke-width="2.5"/>
+                    <!-- Anodic rectangles (below) -->
+                    <rect x="75" y="50" width="20" height="24" rx="0" fill="rgba(224,92,92,.2)" class="wf-svg-fill-coral" stroke="var(--coral)" stroke-width="2.5"/>
+                    <rect x="150" y="50" width="20" height="24" rx="0" fill="rgba(224,92,92,.2)" class="wf-svg-fill-coral" stroke="var(--coral)" stroke-width="2.5"/>
+                    <!-- Labels -->
+                    <text x="48" y="8" font-family="JetBrains Mono" font-size="7" fill="var(--teal)" text-anchor="middle">Cathodic</text>
+                    <text x="85" y="88" font-family="JetBrains Mono" font-size="7" fill="var(--coral)" text-anchor="middle">Anodic</text>
+                  </svg>
+                </div>
+                <div class="wf-desc">Current reverses polarity. Anodic pulse selectively dissolves HCD buildup, leveling the deposit. Exceptional for through-hole plating.</div>
+                <div class="wf-stat" style="color: var(--teal);">Cathodic:Anodic ratio typically 3:1 to 20:1</div>
+              </div>
+            </div>
+
+            <!-- Card 4: Unfiltered DC (Ripple) -->
+            <div class="wf-card glass">
+              <div class="wf-card-inner">
+                <div class="wf-title" style="color: var(--coral);">Unfiltered DC (Ripple)</div>
+                <div class="wf-diagram">
+                  <svg viewBox="0 0 240 100" preserveAspectRatio="xMidYMid meet">
+                    <!-- Baseline -->
+                    <line x1="20" y1="80" x2="220" y2="80" stroke="var(--silver)" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+                    <text x="12" y="84" font-family="JetBrains Mono" font-size="8" fill="var(--silver)" opacity="0.5" text-anchor="end">0</text>
+                    <!-- Average DC line (dashed) -->
+                    <line x1="20" y1="38" x2="220" y2="38" stroke="var(--silver)" stroke-width="1" stroke-dasharray="2,4" opacity="0.3"/>
+                    <text x="225" y="42" font-family="JetBrains Mono" font-size="7" fill="var(--silver)" opacity="0.4">Avg</text>
+                    <!-- Ripple waveform (zigzag approximation of rippled sine) -->
+                    <polyline points="20,38 30,20 40,50 50,18 60,52 70,20 80,48 90,22 100,50 110,18 120,52 130,20 140,50 150,18 160,52 170,22 180,48 190,20 200,52 210,22 220,38"
+                      fill="none" class="wf-svg-coral" stroke="var(--coral)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+                    <!-- Peak / Valley labels -->
+                    <text x="50" y="14" font-family="JetBrains Mono" font-size="8" fill="var(--coral)" text-anchor="middle">Peak</text>
+                    <text x="120" y="64" font-family="JetBrains Mono" font-size="8" fill="var(--coral)" text-anchor="middle">Valley</text>
+                  </svg>
+                </div>
+                <div class="wf-desc">What happens when filtering capacitors or SCRs degrade. The AC ripple component causes uneven deposition — roughness, burning, and poor coverage.</div>
+                <div class="wf-stat" style="color: var(--coral);">Ripple % = (Peak - Valley) / Avg x 100</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Characteristics Strip -->
+          <div class="char-strip">
+            <div class="char-col">
+              <div class="char-col-header" style="color: var(--emerald);">Straight DC</div>
+              <div class="char-row"><span class="char-label">Grain size</span><span class="char-value">Standard</span></div>
+              <div class="char-row"><span class="char-label">Throwing power</span><span class="char-value">Standard</span></div>
+              <div class="char-row"><span class="char-label">Equipment cost</span><span class="char-value">Lowest</span></div>
+            </div>
+            <div class="char-col">
+              <div class="char-col-header" style="color: var(--amber);">Pulsed DC</div>
+              <div class="char-row"><span class="char-label">Grain size</span><span class="char-value">Finer</span></div>
+              <div class="char-row"><span class="char-label">Throwing power</span><span class="char-value">Improved</span></div>
+              <div class="char-row"><span class="char-label">Equipment cost</span><span class="char-value">Moderate</span></div>
+            </div>
+            <div class="char-col">
+              <div class="char-col-header" style="color: var(--teal);">Periodic Reverse</div>
+              <div class="char-row"><span class="char-label">Grain size</span><span class="char-value">Finest</span></div>
+              <div class="char-row"><span class="char-label">Throwing power</span><span class="char-value">Best</span></div>
+              <div class="char-row"><span class="char-label">Equipment cost</span><span class="char-value">Highest</span></div>
+            </div>
+            <div class="char-col">
+              <div class="char-col-header" style="color: var(--coral);">Unfiltered DC</div>
+              <div class="char-row"><span class="char-label">Grain size</span><span class="char-value">Coarse/uneven</span></div>
+              <div class="char-row"><span class="char-label">Throwing power</span><span class="char-value">Degraded</span></div>
+              <div class="char-row"><span class="char-label">Equipment cost</span><span class="char-value">N/A (fault)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======== ZONE 3 — RIPPLE: THE HIDDEN ENEMY ======== -->
+        <div class="zone-ripple">
+          <div class="section-label">Ripple — The Hidden Enemy of Deposit Quality</div>
+
+          <!-- Ripple Gauge -->
+          <div class="ripple-gauge-wrap">
+            <div class="ripple-gauge">
+              <div class="ripple-seg ripple-seg-green">
+                <span class="ripple-seg-label" style="color: var(--emerald);">Acceptable</span>
+                <span class="ripple-seg-range">0 – 5%</span>
+              </div>
+              <div class="ripple-seg ripple-seg-yellow">
+                <span class="ripple-seg-label" style="color: var(--amber);">Caution</span>
+                <span class="ripple-seg-range">5 – 10%</span>
+              </div>
+              <div class="ripple-seg ripple-seg-red">
+                <span class="ripple-seg-label" style="color: var(--coral);">Danger</span>
+                <span class="ripple-seg-range">&gt; 10%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ripple-callout">Decorative chrome and bright nickel are the most ripple-sensitive processes — keep below 5%. Chrome and bright Ni: target &lt;3%.</div>
+
+          <!-- Ripple Effects Cards -->
+          <div class="ripple-cards">
+            <div class="ripple-card glass" style="border-left-color: var(--emerald);">
+              <div class="ripple-card-title" style="color: var(--emerald);">What Causes Ripple</div>
+              <ul>
+                <li>Aging SCR components</li>
+                <li>Failed filter capacitors</li>
+                <li>Loose bus bar connections</li>
+                <li>Undersized transformer for load</li>
+              </ul>
+            </div>
+            <div class="ripple-card glass" style="border-left-color: var(--amber);">
+              <div class="ripple-card-title" style="color: var(--amber);">What Ripple Does</div>
+              <ul>
+                <li>Roughness and nodular deposits</li>
+                <li>Burning at HCD areas</li>
+                <li>Reduced brightness in Ni</li>
+                <li>Poor adhesion on thin deposits</li>
+                <li>Inconsistent thickness</li>
+              </ul>
+            </div>
+            <div class="ripple-card glass" style="border-left-color: var(--coral);">
+              <div class="ripple-card-title" style="color: var(--coral);">How to Check</div>
+              <ul>
+                <li>Oscilloscope across output terminals</li>
+                <li>Compare peak-to-peak vs. DC average</li>
+                <li>Check under FULL LOAD — not idle</li>
+                <li>Measure at rectifier AND at tank</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======== ZONE 4 — APPLICATION SELECTION MATRIX ======== -->
+        <div class="zone-matrix">
+          <div class="section-label">Choosing the Right Waveform</div>
+
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th style="width:18%;">Process</th>
+                <th style="width:13%;">Straight DC</th>
+                <th style="width:13%;">Pulsed DC</th>
+                <th style="width:14%;">Periodic Rev.</th>
+                <th style="width:42%;">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Acid copper</td>
+                <td class="c-emerald">Standard</td>
+                <td class="c-amber">Good</td>
+                <td class="c-teal">Excellent</td>
+                <td class="notes-col">PR eliminates dog-boning on through-holes</td>
+              </tr>
+              <tr>
+                <td>Watts nickel (bright)</td>
+                <td class="c-emerald">Standard</td>
+                <td class="c-coral">Rarely</td>
+                <td class="c-coral">No</td>
+                <td class="notes-col">Additives tuned for DC; PR disrupts brightener system</td>
+              </tr>
+              <tr>
+                <td>Hard chrome</td>
+                <td class="c-emerald">Standard</td>
+                <td class="c-coral">Emerging</td>
+                <td class="c-coral">No</td>
+                <td class="notes-col">Must have &lt;5% ripple; pulse may improve microcrack density</td>
+              </tr>
+              <tr>
+                <td>Zinc (acid/alk)</td>
+                <td class="c-emerald">Standard</td>
+                <td class="c-amber">Good</td>
+                <td class="c-amber">Good</td>
+                <td class="notes-col">Pulse improves LCD coverage in barrel</td>
+              </tr>
+              <tr>
+                <td>Gold (hard)</td>
+                <td class="c-emerald">Standard</td>
+                <td class="c-teal">Excellent</td>
+                <td class="c-amber">Good</td>
+                <td class="notes-col">Pulse gives finer grain, better hardness</td>
+              </tr>
+              <tr>
+                <td>Tin-lead / Tin</td>
+                <td class="c-emerald">Standard</td>
+                <td class="c-amber">Good</td>
+                <td class="c-amber">Good</td>
+                <td class="notes-col">PR reduces whisker risk in some alloys</td>
+              </tr>
+              <tr>
+                <td>Copper sulfate (dec)</td>
+                <td class="c-emerald">Standard</td>
+                <td class="c-amber">Good</td>
+                <td class="c-coral">Rarely</td>
+                <td class="notes-col">Pulse improves leveling</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ======== ZONE 5 — PULSE AND PR DEEP DIVE ======== -->
+        <div class="zone-deepdive">
+          <div class="section-label">Pulse and Periodic Reverse — The Details</div>
+
+          <div class="deepdive-grid">
+            <!-- PR Timing Diagram -->
+            <div class="pr-diagram glass">
+              <div class="pr-diagram-title">PR Waveform — One Complete Cycle</div>
+              <div class="pr-svg-wrap">
+                <svg viewBox="0 0 520 200" preserveAspectRatio="xMidYMid meet">
+                  <!-- Baseline -->
+                  <line x1="30" y1="100" x2="500" y2="100" stroke="var(--silver)" stroke-width="1" stroke-dasharray="5,4" opacity="0.4"/>
+                  <text x="22" y="104" font-family="JetBrains Mono" font-size="11" fill="var(--silver)" opacity="0.5" text-anchor="end">0 A</text>
+
+                  <!-- Y-axis labels -->
+                  <text x="22" y="50" font-family="JetBrains Mono" font-size="10" fill="var(--teal)" opacity="0.6" text-anchor="end">+</text>
+                  <text x="22" y="148" font-family="JetBrains Mono" font-size="10" fill="var(--coral)" opacity="0.6" text-anchor="end">-</text>
+
+                  <!-- Cathodic pulse 1 -->
+                  <rect x="40" y="28" width="180" height="72" rx="3" fill="rgba(46,196,182,.18)" class="pr-fill-teal" stroke="var(--teal)" stroke-width="2.5"/>
+                  <text x="130" y="70" font-family="Barlow, sans-serif" font-weight="600" font-size="13" fill="var(--teal)" text-anchor="middle">CATHODIC (FORWARD)</text>
+                  <text x="130" y="88" font-family="JetBrains Mono" font-size="11" fill="var(--teal)" text-anchor="middle" opacity="0.8">I-cathodic</text>
+
+                  <!-- Anodic pulse -->
+                  <rect x="220" y="100" width="70" height="48" rx="3" fill="rgba(224,92,92,.18)" class="pr-fill-coral" stroke="var(--coral)" stroke-width="2.5"/>
+                  <text x="255" y="126" font-family="Barlow, sans-serif" font-weight="600" font-size="11" fill="var(--coral)" text-anchor="middle">ANODIC</text>
+                  <text x="255" y="140" font-family="JetBrains Mono" font-size="10" fill="var(--coral)" text-anchor="middle" opacity="0.8">I-anodic</text>
+
+                  <!-- Cathodic pulse 2 (partial, showing repetition) -->
+                  <rect x="290" y="28" width="180" height="72" rx="3" fill="rgba(46,196,182,.18)" class="pr-fill-teal" stroke="var(--teal)" stroke-width="2.5"/>
+                  <text x="380" y="70" font-family="Barlow, sans-serif" font-weight="600" font-size="13" fill="var(--teal)" text-anchor="middle">CATHODIC (FORWARD)</text>
+
+                  <!-- T-cathodic arrow -->
+                  <line x1="40" y1="180" x2="220" y2="180" stroke="var(--text)" stroke-width="1.5" marker-start="url(#arrowL)" marker-end="url(#arrowR)"/>
+                  <text x="130" y="196" font-family="JetBrains Mono" font-size="11" fill="var(--text)" text-anchor="middle">T-cathodic</text>
+
+                  <!-- T-anodic arrow -->
+                  <line x1="220" y1="168" x2="290" y2="168" stroke="var(--text)" stroke-width="1.5" marker-start="url(#arrowL)" marker-end="url(#arrowR)"/>
+                  <text x="255" y="164" font-family="JetBrains Mono" font-size="10" fill="var(--text)" text-anchor="middle">T-anodic</text>
+
+                  <!-- Arrow markers -->
+                  <defs>
+                    <marker id="arrowR" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                      <path d="M0,0 L8,3 L0,6" fill="none" stroke="var(--text)" stroke-width="1.2"/>
+                    </marker>
+                    <marker id="arrowL" markerWidth="8" markerHeight="6" refX="1" refY="3" orient="auto">
+                      <path d="M8,0 L0,3 L8,6" fill="none" stroke="var(--text)" stroke-width="1.2"/>
+                    </marker>
+                  </defs>
+                </svg>
+              </div>
+              <div class="pr-formulas">
+                <span>Duty cycle = T-cathodic / (T-cathodic + T-anodic)</span><br>
+                <span>Charge ratio = (I-cath x T-cath) / (I-anod x T-anod)</span><br>
+                <span style="color: var(--amber);">Net deposition requires charge ratio &gt; 1.0</span>
+              </div>
+            </div>
+
+            <!-- Benefits Callouts -->
+            <div class="benefits-stack">
+              <div class="benefit-card glass benefit-card-pulse">
+                <div class="benefit-title" style="color: var(--amber);">Pulse Plating Benefits</div>
+                <ul>
+                  <li>Finer grain structure — harder, denser deposits</li>
+                  <li>Better throwing power — improved LCD coverage</li>
+                  <li>Reduced hydrogen embrittlement risk</li>
+                  <li>Lower internal stress in many systems</li>
+                  <li>Can plate at higher peak CD than DC average would allow</li>
+                </ul>
+              </div>
+              <div class="benefit-card glass benefit-card-pr">
+                <div class="benefit-title" style="color: var(--teal);">Periodic Reverse Benefits</div>
+                <ul>
+                  <li>Levels HCD/LCD distribution — the reverse pulse "shaves the peaks"</li>
+                  <li>Eliminates dog-boning on PCB through-holes</li>
+                  <li>Reduces nodule formation in hard chrome</li>
+                  <li>Enables plating into deep recesses and blind holes</li>
+                  <li>Can replace or supplement thieves in some applications</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======== ZONE 6 — MAINTENANCE AND TROUBLESHOOTING ======== -->
+        <div class="zone-maint">
+          <div class="section-label">Rectifier Maintenance Quick Check</div>
+
+          <div class="maint-grid">
+            <!-- Maintenance Checklist -->
+            <div class="maint-card glass maint-card-check">
+              <div class="maint-title" style="color: var(--emerald);">Preventive Maintenance Checklist</div>
+              <ul class="maint-list">
+                <li>Check bus bar connections for heat/discoloration (monthly)</li>
+                <li>Measure output ripple under full load (quarterly)</li>
+                <li>Inspect cooling fans and air filters (monthly)</li>
+                <li>Verify ammeter/voltmeter calibration (annually)</li>
+                <li>Check anode and cathode connections for corrosion</li>
+                <li>Inspect SCR/diode modules — replace at first sign of degradation</li>
+                <li>Clean heat sinks — dust reduces cooling efficiency</li>
+                <li>Log ampere-hours for maintenance scheduling</li>
+              </ul>
+            </div>
+
+            <!-- Troubleshooting -->
+            <div class="maint-card glass maint-card-trouble">
+              <div class="maint-title" style="color: var(--coral);">Rectifier Troubleshooting</div>
+              <table class="trouble-table">
+                <thead>
+                  <tr>
+                    <th style="width: 32%;">Symptom</th>
+                    <th style="width: 32%;">Likely Cause</th>
+                    <th style="width: 36%;">Check</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Output drops under load</td>
+                    <td>Failing SCR/diode module</td>
+                    <td>Measure ripple; check individual diodes</td>
+                  </tr>
+                  <tr>
+                    <td>Hot bus bars</td>
+                    <td>Loose connection</td>
+                    <td>Torque all connections; infrared scan</td>
+                  </tr>
+                  <tr>
+                    <td>Ammeter high, plating thin</td>
+                    <td>Stray current / ground fault</td>
+                    <td>Check tank insulation; isolate buss</td>
+                  </tr>
+                  <tr>
+                    <td>Erratic current</td>
+                    <td>Loose control wire / failed SCR</td>
+                    <td>Scope the output waveform</td>
+                  </tr>
+                  <tr>
+                    <td>Burning at HCD only</td>
+                    <td>Excess ripple</td>
+                    <td>Measure ripple %; check filter caps</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======== ZONE 7 — FOOTER ======== -->
+        <div class="zone-footer">
+          <div class="footer-disclaimer">This poster is an educational reference tool. Waveform types, ripple thresholds, and application recommendations are typical industry values. Specific rectifier selection, pulse parameters, and PR settings vary by process, chemistry, and equipment manufacturer. Consult your rectifier supplier and process engineer for application-specific guidance.</div>
+          <div class="footer-brand">
+            <div class="footer-logo">PP</div>
+            <div>
+              <div class="footer-title">Rectifier Fundamentals — DC, Pulse, and Periodic Reverse</div>
+              <div class="footer-series">Plating Posters Inc — Metal Finishing Reference Series</div>
+            </div>
+          </div>
+          <div class="footer-meta">v1.0 — 2026 | Poster #24 — Rectifier Fundamentals | Plating Posters Inc</div>
+        </div>
+
+      </div><!-- /.poster-content -->
+    </div><!-- /.poster -->
+  </div><!-- /.poster-wrap -->
+</div><!-- /.stage -->
+
+<!-- ============================================================
+     TWEAKS PANEL
+     ============================================================ -->
+<div class="tweaks">
+  <button id="btn-edition" onclick="toggleEdition()">Edition: Dark</button>
+  <button id="btn-grid" onclick="toggleGrid()">Grid: Off</button>
+  <button onclick="window.print()">Print / PDF</button>
+</div>
+
+<script>
+/* === Scale poster to fit viewport === */
+(function() {
+  const stage = document.querySelector('.stage');
+  const wrap = document.querySelector('.poster-wrap');
+  const poster = document.querySelector('.poster');
+  function fit() {
+    wrap.style.transform = '';
+    const pw = 1200;
+    const ph = 1800;
+    const vw = stage.clientWidth;
+    const vh = window.innerHeight - 48;
+    const s = Math.min(vw / pw, vh / ph, 1);
+    wrap.style.transform = 'scale(' + s + ')';
+    wrap.style.width = pw + 'px';
+    wrap.style.height = ph + 'px';
+    wrap.style.transformOrigin = 'top center';
+  }
+  fit();
+  window.addEventListener('resize', fit);
+})();
+
+/* === Dark / Light toggle === */
+function toggleEdition() {
+  const body = document.body;
+  const btn = document.getElementById('btn-edition');
+  if (body.getAttribute('data-edition') === 'dark') {
+    body.setAttribute('data-edition', 'light');
+    btn.textContent = 'Edition: Light';
+    btn.classList.add('active');
+  } else {
+    body.setAttribute('data-edition', 'dark');
+    btn.textContent = 'Edition: Dark';
+    btn.classList.remove('active');
+  }
+}
+
+/* === Grid toggle === */
+function toggleGrid() {
+  const poster = document.getElementById('poster');
+  const btn = document.getElementById('btn-grid');
+  poster.classList.toggle('show-grid');
+  if (poster.classList.contains('show-grid')) {
+    btn.textContent = 'Grid: On';
+    btn.classList.add('active');
+  } else {
+    btn.textContent = 'Grid: Off';
+    btn.classList.remove('active');
+  }
+}
+</script>
+</body>
+</html>

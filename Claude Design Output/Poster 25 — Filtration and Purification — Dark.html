@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poster #25 — Filtration and Purification — Plating Posters Inc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,800;0,900;1,800;1,900&family=Barlow:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   POSTER #25 — FILTRATION AND PURIFICATION
+   Plating Posters Inc — Metal Finishing Reference Series
+   Dark Edition (flagship) + Light Edition (CSS toggle)
+   1200 x 1800 CSS px — iOS 18 Liquid Glass aesthetic
+   ============================================================ */
+/*EDITMODE-BEGIN*/{"edition":"dark","grid":false}/*EDITMODE-END*/
+
+:root {
+  --bg: #1A1F2E;
+  --navy: #0D1020;
+  --text: #F0EDE8;
+  --amber: #E8A020;
+  --teal: #2EC4B6;
+  --emerald: #27AE60;
+  --coral: #E05C5C;
+  --slate: #3A4055;
+  --callout: #1E2435;
+  --altrow: #252B3D;
+  --silver: #C8D0D8;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Light Edition Overrides --- */
+body[data-edition="light"] {
+  --bg: #F5F4F0;
+  --navy: #1A1F2E;
+  --text: #1A1F2E;
+  --callout: #ECEEF4;
+  --altrow: #E8E8F0;
+  --slate: #D0D4DE;
+  --amber: #C8860A;
+  --teal: #1A8C82;
+  --emerald: #1E7A47;
+  --coral: #B83E3E;
+  --silver: #5A6070;
+}
+body[data-edition="light"] .poster {
+  background:
+    radial-gradient(1200px 800px at 15% 8%, rgba(26,140,130,.10), transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%, rgba(200,134,10,.09), transparent 55%),
+    radial-gradient(900px 900px at 50% 80%, rgba(184,62,62,.07), transparent 60%),
+    var(--bg);
+}
+body[data-edition="light"] .glass,
+body[data-edition="light"] .filter-card,
+body[data-edition="light"] .micron-strip,
+body[data-edition="light"] .turnover-wrap,
+body[data-edition="light"] .formula-bar,
+body[data-edition="light"] .step-card,
+body[data-edition="light"] .dodont-card,
+body[data-edition="light"] .dummy-card,
+body[data-edition="light"] .advanced-card,
+body[data-edition="light"] .maint-wrap,
+body[data-edition="light"] .warning-card {
+  background-color: rgba(236,238,244,.65);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.30), rgba(255,255,255,.10));
+  border-color: rgba(0,0,0,.08);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.06), 0 4px 12px rgba(0,0,0,.08);
+}
+body[data-edition="light"] .zone-foot {
+  background-color: #ECEEF4;
+  background-image: linear-gradient(145deg, rgba(255,255,255,.30), rgba(255,255,255,.10));
+  border-color: rgba(0,0,0,.08);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.06), 0 4px 12px rgba(0,0,0,.08);
+}
+body[data-edition="light"] .turnover-table th {
+  background-color: rgba(200,134,10,.18);
+  color: var(--text);
+}
+body[data-edition="light"] .turnover-table tr:nth-child(even) td {
+  background-color: rgba(0,0,0,.03);
+}
+body[data-edition="light"] .maint-table th {
+  background-color: rgba(200,134,10,.18);
+  color: var(--text);
+}
+body[data-edition="light"] .maint-table tr:nth-child(even) td {
+  background-color: rgba(0,0,0,.03);
+}
+body[data-edition="light"] .footer-disclaimer,
+body[data-edition="light"] .footer-meta {
+  color: rgba(26,31,46,.5);
+}
+body[data-edition="light"] .poster::before {
+  background-image:
+    linear-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,.04) 1px, transparent 1px);
+}
+body[data-edition="light"] .eyebrow-bar { background: var(--amber); }
+body[data-edition="light"] .step-num {
+  background: radial-gradient(circle, rgba(26,31,46,.12), rgba(26,31,46,.04));
+  color: var(--text);
+}
+body[data-edition="light"] .filter-svg-wrap {
+  background: var(--altrow);
+}
+body[data-edition="light"] .formula-bar {
+  background-color: rgba(200,134,10,.12);
+  border-color: rgba(200,134,10,.25);
+}
+body[data-edition="light"] .warning-card {
+  background-color: rgba(184,62,62,.06);
+  border-color: rgba(184,62,62,.25);
+}
+body[data-edition="light"] .dummy-callout {
+  background-color: rgba(200,134,10,.10);
+  border-color: rgba(200,134,10,.22);
+}
+
+/* --- Stage & Scale --- */
+.stage {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+}
+.poster-wrap {
+  width: 1200px;
+  height: 1800px;
+  transform-origin: top center;
+}
+.poster {
+  width: 1200px;
+  height: 1800px;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0,0,0,.5);
+  background:
+    radial-gradient(1200px 800px at 15% 8%, rgba(46,196,182,.14), transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%, rgba(232,160,32,.12), transparent 55%),
+    radial-gradient(900px 900px at 50% 80%, rgba(224,92,92,.10), transparent 60%),
+    var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Faint grid overlay */
+.poster::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(200,208,216,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,208,216,.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+body[data-grid="off"] .poster::before { display: none; }
+
+.poster > * { position: relative; z-index: 1; }
+
+/* --- Glass Mixin --- */
+.glass {
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 14px;
+}
+
+/* ============================================================
+   ZONE 1 — HEADER
+   ============================================================ */
+.zone-header {
+  padding: 6px 0 10px 0;
+  flex-shrink: 0;
+}
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.eyebrow-bar {
+  display: inline-block;
+  width: 4px;
+  height: 16px;
+  background: var(--amber);
+  border-radius: 2px;
+}
+.headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 76px;
+  letter-spacing: 2px;
+  color: var(--text);
+  text-transform: uppercase;
+  line-height: 1.0;
+}
+.headline em {
+  font-style: italic;
+  color: var(--amber);
+}
+.subheading {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 23px;
+  color: var(--teal);
+  margin-top: 5px;
+  line-height: 1.2;
+}
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--text);
+  opacity: 0.65;
+  font-style: italic;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   ZONE 2 — FILTER TYPES HERO
+   ============================================================ */
+.zone-filters {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+  margin-bottom: 8px;
+}
+.filter-card {
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.filter-card-top {
+  height: 4px;
+  flex-shrink: 0;
+}
+.filter-card-top.teal-top { background: var(--teal); }
+.filter-card-top.amber-top { background: var(--amber); }
+.filter-card-top.emerald-top { background: var(--emerald); }
+.filter-card-top.coral-top { background: var(--coral); }
+
+.filter-card-inner {
+  padding: 10px 11px 9px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.filter-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.teal-text { color: var(--teal); }
+.amber-text { color: var(--amber); }
+.emerald-text { color: var(--emerald); }
+.coral-text { color: var(--coral); }
+
+.filter-svg-wrap {
+  background: var(--altrow);
+  border-radius: 8px;
+  height: 64px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.filter-svg-wrap svg {
+  width: 80%;
+  height: 80%;
+}
+.filter-specs {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 1.5;
+  color: var(--silver);
+  margin-bottom: 5px;
+}
+.filter-desc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10.5px;
+  line-height: 1.4;
+  color: var(--text);
+  margin-bottom: 5px;
+  flex: 1;
+}
+.filter-bestfor {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.35;
+  padding-top: 5px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+/* Micron strip */
+.micron-strip {
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 10px;
+  padding: 7px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.micron-item {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.micron-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   ZONE 3 — TURNOVER RATES TABLE
+   ============================================================ */
+.zone-turnovers {
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+.turnover-wrap {
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.turnover-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+}
+.turnover-table th {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 7px 10px;
+  text-align: left;
+  background-color: rgba(232,160,32,.18);
+  color: var(--amber);
+}
+.turnover-table td {
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.turnover-table tr:nth-child(even) td {
+  background-color: rgba(37,43,61,.4);
+}
+.turnover-table .td-process {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 11.5px;
+  color: var(--text);
+  white-space: nowrap;
+}
+.turnover-table .td-target {
+  color: var(--emerald);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 11px;
+}
+.turnover-table .td-min {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 11px;
+}
+.turnover-table .td-rating {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 10.5px;
+  color: var(--silver);
+}
+.turnover-table .td-notes {
+  font-size: 10.5px;
+  color: var(--silver);
+}
+.turnover-table .en-row td {
+  border-left: 3px solid var(--coral);
+}
+.turnover-table .en-row .td-process {
+  color: var(--coral);
+  font-weight: 700;
+}
+
+/* Formula bar */
+.formula-bar {
+  background-color: rgba(232,160,32,.12);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+  border: 1px solid rgba(232,160,32,.25);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 2px 8px rgba(0,0,0,.15);
+  border-radius: 10px;
+  padding: 7px 16px;
+  text-align: center;
+  margin-top: 8px;
+}
+.formula-bar code {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--amber);
+}
+
+/* ============================================================
+   ZONE 4 — CARBON TREATMENT FLOWCHART
+   ============================================================ */
+.zone-carbon {
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.step-card {
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 12px;
+  padding: 9px 11px;
+  position: relative;
+}
+.step-card.teal-border { border-color: rgba(46,196,182,.35); }
+.step-card.amber-border { border-color: rgba(232,160,32,.35); }
+.step-card.emerald-border { border-color: rgba(39,174,96,.35); }
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+.step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 13px;
+  color: var(--text);
+  background: radial-gradient(circle, rgba(255,255,255,.12), rgba(255,255,255,.04));
+  flex-shrink: 0;
+}
+.step-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.step-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10.5px;
+  line-height: 1.45;
+  color: var(--text);
+}
+.step-body strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Arrow connectors (inline between grid rows) */
+.step-row-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14px;
+  margin-bottom: 0;
+}
+.step-row-arrow svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Do's and Don'ts */
+.dodont-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: 0;
+}
+.dodont-card {
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 12px;
+  padding: 9px 12px;
+}
+.dodont-card.do-card { border-color: rgba(39,174,96,.35); }
+.dodont-card.dont-card { border-color: rgba(224,92,92,.35); }
+.dodont-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.dodont-list {
+  list-style: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10.5px;
+  line-height: 1.5;
+}
+.dodont-list li {
+  padding: 1.5px 0 1.5px 14px;
+  position: relative;
+}
+.dodont-list li::before {
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  font-size: 11px;
+}
+.do-card .dodont-list li::before {
+  content: '+';
+  color: var(--emerald);
+}
+.dont-card .dodont-list li::before {
+  content: '\2013';
+  color: var(--coral);
+}
+
+/* ============================================================
+   ZONE 5 — DUMMY PLATING + ADVANCED PURIFICATION
+   ============================================================ */
+.zone-purification {
+  flex-shrink: 0;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+.dummy-card, .advanced-card {
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 14px;
+  padding: 11px 13px;
+}
+.dummy-card { border-color: rgba(46,196,182,.30); }
+.advanced-card { border-color: rgba(232,160,32,.30); }
+
+.purif-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.dummy-specs {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 10px;
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+.dummy-specs dt {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--silver);
+  white-space: nowrap;
+}
+.dummy-specs dd {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 10.5px;
+  color: var(--teal);
+}
+.dummy-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10.5px;
+  line-height: 1.45;
+  margin-bottom: 7px;
+}
+.dummy-callout {
+  background-color: rgba(232,160,32,.10);
+  border: 1px solid rgba(232,160,32,.22);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--amber);
+  line-height: 1.45;
+}
+
+/* Advanced methods table */
+.adv-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2px;
+}
+.adv-table td {
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  vertical-align: top;
+  font-size: 10.5px;
+  line-height: 1.4;
+}
+.adv-table .td-method {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--amber);
+  white-space: nowrap;
+  padding-right: 10px;
+  width: 120px;
+}
+.adv-table .td-desc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: var(--silver);
+}
+
+/* ============================================================
+   ZONE 6 — MAINTENANCE SCHEDULE + WARNING SIGNS
+   ============================================================ */
+.zone-maintenance {
+  flex-shrink: 0;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 9px;
+}
+.maint-wrap {
+  background-color: rgba(30,36,53,.55);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.maint-section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text);
+  padding: 9px 12px 5px;
+}
+.maint-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+}
+.maint-table th {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 5px 10px;
+  text-align: left;
+  background-color: rgba(232,160,32,.15);
+  color: var(--amber);
+}
+.maint-table td {
+  padding: 4px 10px;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+  font-size: 10.5px;
+  line-height: 1.35;
+}
+.maint-table tr:nth-child(even) td {
+  background-color: rgba(37,43,61,.35);
+}
+.maint-table .td-task {
+  font-weight: 500;
+  color: var(--text);
+}
+.maint-table .td-freq {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--amber);
+  white-space: nowrap;
+}
+.maint-table .td-notes {
+  color: var(--silver);
+  font-size: 10px;
+}
+
+/* Warning signs card */
+.warning-card {
+  background-color: rgba(224,92,92,.08);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+  border: 1px solid rgba(224,92,92,.30);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), inset 0 -1px 0 rgba(0,0,0,.15), 0 4px 12px rgba(0,0,0,.20);
+  border-radius: 14px;
+  padding: 11px 13px;
+  display: flex;
+  flex-direction: column;
+}
+.warning-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--coral);
+  margin-bottom: 6px;
+}
+.warning-list {
+  list-style: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10.5px;
+  line-height: 1.5;
+  flex: 1;
+}
+.warning-list li {
+  padding: 2px 0 2px 14px;
+  position: relative;
+  color: var(--text);
+}
+.warning-list li::before {
+  content: '\25B6';
+  position: absolute;
+  left: 0;
+  color: var(--coral);
+  font-size: 7px;
+  top: 5px;
+}
+.warning-callout {
+  margin-top: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--coral);
+  line-height: 1.5;
+  border-top: 1px solid rgba(224,92,92,.20);
+  padding-top: 7px;
+}
+
+/* ============================================================
+   ZONE 7 — FOOTER
+   ============================================================ */
+.zone-foot {
+  margin-top: auto;
+  background-color: rgba(13,16,32,.70);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.03), rgba(255,255,255,.005));
+  border: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 -2px 12px rgba(0,0,0,.15);
+  border-radius: 0 0 6px 6px;
+  padding: 10px 18px;
+  margin-left: -24px;
+  margin-right: -24px;
+  margin-bottom: -24px;
+}
+.footer-disclaimer {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 9px;
+  color: var(--text);
+  opacity: 0.45;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 5px;
+}
+.footer-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--amber), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: #FFF;
+  flex-shrink: 0;
+}
+.footer-title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--text);
+}
+.footer-series {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--silver);
+}
+.footer-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--text);
+  opacity: 0.45;
+  text-align: center;
+}
+
+/* ============================================================
+   TWEAKS PANEL
+   ============================================================ */
+.tweaks {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(26,31,46,.92);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #F0EDE8;
+  z-index: 9999;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.tweaks label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.tweaks button {
+  background: rgba(232,160,32,.25);
+  border: 1px solid rgba(232,160,32,.4);
+  color: #F0EDE8;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.tweaks button:hover { background: rgba(232,160,32,.4); }
+
+/* ============================================================
+   PRINT CSS
+   ============================================================ */
+@media print {
+  @page { size: 12.5in 18.75in; margin: 0; }
+  html, body { background: #1A1F2E !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  .stage { position: static; padding: 0; display: block; overflow: visible; }
+  .poster-wrap { transform: none !important; width: auto !important; height: auto !important; }
+  .poster { box-shadow: none !important; width: 1200px !important; height: 1800px !important; overflow: hidden !important; }
+  .tweaks { display: none !important; }
+  .glass, .filter-card, .micron-strip, .turnover-wrap, .formula-bar,
+  .step-card, .dodont-card, .dummy-card, .advanced-card,
+  .maint-wrap, .warning-card, .zone-foot {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+</style>
+</head>
+<body data-edition="dark" data-grid="on">
+
+<div class="stage">
+<div class="poster-wrap">
+<div class="poster">
+
+<!-- ====== ZONE 1 — HEADER ====== -->
+<div class="zone-header">
+  <div class="eyebrow"><span class="eyebrow-bar"></span>POSTER #25</div>
+  <div class="headline">FILTRATION AND <em>PURIFICATION</em></div>
+  <div class="subheading">Keeping Your Bath Clean &mdash; The Most Underrated Quality Tool in the Shop</div>
+  <div class="tagline">If you can see particles in your solution, your filter stopped working two weeks ago.</div>
+</div>
+
+<!-- ====== ZONE 2 — FILTER TYPES HERO ====== -->
+<div class="zone-filters">
+  <div class="section-label">Filter Types &mdash; Know Your Options</div>
+
+  <div class="filter-grid">
+    <!-- Card 1: Cartridge Filter -->
+    <div class="filter-card">
+      <div class="filter-card-top teal-top"></div>
+      <div class="filter-card-inner">
+        <div class="filter-title teal-text">Cartridge Filter</div>
+        <div class="filter-svg-wrap">
+          <svg viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="35" y="8" width="50" height="44" rx="4" fill="none" stroke="rgba(46,196,182,.5)" stroke-width="1.5"/>
+            <line x1="42" y1="12" x2="42" y2="48" stroke="rgba(46,196,182,.25)" stroke-width="0.8"/>
+            <line x1="50" y1="12" x2="50" y2="48" stroke="rgba(46,196,182,.25)" stroke-width="0.8"/>
+            <line x1="58" y1="12" x2="58" y2="48" stroke="rgba(46,196,182,.25)" stroke-width="0.8"/>
+            <line x1="66" y1="12" x2="66" y2="48" stroke="rgba(46,196,182,.25)" stroke-width="0.8"/>
+            <line x1="74" y1="12" x2="74" y2="48" stroke="rgba(46,196,182,.25)" stroke-width="0.8"/>
+            <path d="M15 30 L32 30" stroke="rgba(46,196,182,.6)" stroke-width="1.2" marker-end="url(#arrowT)"/>
+            <path d="M88 30 L105 30" stroke="rgba(46,196,182,.6)" stroke-width="1.2" marker-end="url(#arrowT)"/>
+            <text x="60" y="56" text-anchor="middle" fill="rgba(46,196,182,.45)" font-family="JetBrains Mono" font-size="5">DEPTH MEDIA</text>
+            <defs><marker id="arrowT" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(46,196,182,.6)"/></marker></defs>
+          </svg>
+        </div>
+        <div class="filter-specs">1&ndash;50 &mu;m / Depth or pleated<br>Low&ndash;moderate flow</div>
+        <div class="filter-desc">The workhorse. Disposable or cleanable. Depth cartridges trap throughout media; pleated for higher flow. Most common for individual tank filtration.</div>
+        <div class="filter-bestfor teal-text">Best for: Individual tank circulation loops</div>
+      </div>
+    </div>
+
+    <!-- Card 2: Bag Filter -->
+    <div class="filter-card">
+      <div class="filter-card-top amber-top"></div>
+      <div class="filter-card-inner">
+        <div class="filter-title amber-text">Bag Filter</div>
+        <div class="filter-svg-wrap">
+          <svg viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="38" y="4" width="44" height="8" rx="2" fill="none" stroke="rgba(232,160,32,.5)" stroke-width="1.2"/>
+            <path d="M42 12 L42 48 Q60 55 78 48 L78 12" fill="none" stroke="rgba(232,160,32,.5)" stroke-width="1.5"/>
+            <line x1="42" y1="12" x2="78" y2="12" stroke="rgba(232,160,32,.35)" stroke-width="0.8"/>
+            <path d="M15 8 L35 8" stroke="rgba(232,160,32,.6)" stroke-width="1.2" marker-end="url(#arrowA)"/>
+            <circle cx="52" cy="28" r="1.5" fill="rgba(232,160,32,.3)"/>
+            <circle cx="65" cy="32" r="1.2" fill="rgba(232,160,32,.3)"/>
+            <circle cx="58" cy="38" r="1.8" fill="rgba(232,160,32,.3)"/>
+            <circle cx="68" cy="24" r="1" fill="rgba(232,160,32,.3)"/>
+            <circle cx="55" cy="44" r="1.3" fill="rgba(232,160,32,.3)"/>
+            <text x="60" y="58" text-anchor="middle" fill="rgba(232,160,32,.45)" font-family="JetBrains Mono" font-size="5">SURFACE CAPTURE</text>
+            <defs><marker id="arrowA" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(232,160,32,.6)"/></marker></defs>
+          </svg>
+        </div>
+        <div class="filter-specs">1&ndash;200 &mu;m / Surface capture<br>High volume</div>
+        <div class="filter-desc">Lower cost per change. Higher flow capacity. Less efficient at fine filtration but excellent for heavy-solids baths. Easy to change.</div>
+        <div class="filter-bestfor amber-text">Best for: High-flow, heavy-particle applications</div>
+      </div>
+    </div>
+
+    <!-- Card 3: Carbon Canister -->
+    <div class="filter-card">
+      <div class="filter-card-top emerald-top"></div>
+      <div class="filter-card-inner">
+        <div class="filter-title emerald-text">Carbon Canister</div>
+        <div class="filter-svg-wrap">
+          <svg viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="38" y="6" width="44" height="48" rx="6" fill="none" stroke="rgba(39,174,96,.5)" stroke-width="1.5"/>
+            <circle cx="50" cy="18" r="2.5" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="58" cy="15" r="2" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="66" cy="19" r="2.5" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="72" cy="14" r="1.8" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="46" cy="26" r="2" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="54" cy="28" r="2.5" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="63" cy="27" r="2" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="71" cy="28" r="2.2" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="48" cy="36" r="2.2" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="56" cy="38" r="2" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="65" cy="36" r="2.5" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="74" cy="38" r="1.8" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="50" cy="46" r="2" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="60" cy="47" r="2.2" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <circle cx="70" cy="46" r="2" fill="rgba(39,174,96,.18)" stroke="rgba(39,174,96,.3)" stroke-width="0.5"/>
+            <path d="M15 30 L35 30" stroke="rgba(39,174,96,.6)" stroke-width="1.2" marker-end="url(#arrowE)"/>
+            <path d="M85 30 L105 30" stroke="rgba(39,174,96,.6)" stroke-width="1.2" marker-end="url(#arrowE)"/>
+            <text x="60" y="58" text-anchor="middle" fill="rgba(39,174,96,.45)" font-family="JetBrains Mono" font-size="5">GRANULAR AC</text>
+            <defs><marker id="arrowE" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(39,174,96,.6)"/></marker></defs>
+          </svg>
+        </div>
+        <div class="filter-specs">Granular activated carbon<br>Organic removal / Continuous or batch</div>
+        <div class="filter-desc">Removes organic contamination &mdash; brightener breakdown products, oil, surfactant residue. Continuous GAC bed or batch powdered carbon added directly.</div>
+        <div class="filter-bestfor emerald-text">Best for: Organic contamination control (nickel, copper)</div>
+      </div>
+    </div>
+
+    <!-- Card 4: Pump & Filter Unit -->
+    <div class="filter-card">
+      <div class="filter-card-top coral-top"></div>
+      <div class="filter-card-inner">
+        <div class="filter-title coral-text">Pump &amp; Filter Unit</div>
+        <div class="filter-svg-wrap">
+          <svg viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="35" cy="30" r="14" fill="none" stroke="rgba(224,92,92,.5)" stroke-width="1.5"/>
+            <path d="M28 23 L42 30 L28 37 Z" fill="rgba(224,92,92,.18)" stroke="rgba(224,92,92,.4)" stroke-width="0.8"/>
+            <line x1="49" y1="30" x2="60" y2="30" stroke="rgba(224,92,92,.5)" stroke-width="1.2"/>
+            <rect x="60" y="16" width="30" height="28" rx="4" fill="none" stroke="rgba(224,92,92,.5)" stroke-width="1.5"/>
+            <line x1="67" y1="20" x2="67" y2="40" stroke="rgba(224,92,92,.25)" stroke-width="0.8"/>
+            <line x1="75" y1="20" x2="75" y2="40" stroke="rgba(224,92,92,.25)" stroke-width="0.8"/>
+            <line x1="83" y1="20" x2="83" y2="40" stroke="rgba(224,92,92,.25)" stroke-width="0.8"/>
+            <path d="M10 30 L21 30" stroke="rgba(224,92,92,.6)" stroke-width="1.2" marker-end="url(#arrowC)"/>
+            <path d="M93 30 L110 30" stroke="rgba(224,92,92,.6)" stroke-width="1.2" marker-end="url(#arrowC)"/>
+            <text x="35" y="50" text-anchor="middle" fill="rgba(224,92,92,.45)" font-family="JetBrains Mono" font-size="4.5">PUMP</text>
+            <text x="75" y="50" text-anchor="middle" fill="rgba(224,92,92,.45)" font-family="JetBrains Mono" font-size="4.5">HOUSING</text>
+            <defs><marker id="arrowC" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(224,92,92,.6)"/></marker></defs>
+          </svg>
+        </div>
+        <div class="filter-specs">Centrifugal (mag-drive) or air-operated<br>Cartridge or bag / Sized to tank volume</div>
+        <div class="filter-desc">Complete package &mdash; pump, housing, filter media integrated. Mag-drive standard for corrosive solutions. Air-operated for viscous or heated solutions.</div>
+        <div class="filter-bestfor coral-text">Best for: Dedicated tank filtration systems</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Micron Rating Quick Reference Strip -->
+  <div class="micron-strip">
+    <div class="micron-item"><div class="micron-dot" style="background:var(--teal)"></div><span style="color:var(--teal)">1 &mu;m = fine Ni/Cr filtration</span></div>
+    <div class="micron-item"><div class="micron-dot" style="background:var(--emerald)"></div><span style="color:var(--emerald)">5 &mu;m = standard plating filtration</span></div>
+    <div class="micron-item"><div class="micron-dot" style="background:var(--amber)"></div><span style="color:var(--amber)">10&ndash;25 &mu;m = acid copper / barrel</span></div>
+    <div class="micron-item"><div class="micron-dot" style="background:var(--coral)"></div><span style="color:var(--coral)">&gt;25 &mu;m = coarse pre-filtration only</span></div>
+  </div>
+</div>
+
+<!-- ====== ZONE 3 — TURNOVER RATES TABLE ====== -->
+<div class="zone-turnovers">
+  <div class="section-label">How Much Filtration Is Enough?</div>
+  <div class="turnover-wrap">
+    <table class="turnover-table">
+      <thead>
+        <tr>
+          <th>Process</th>
+          <th>Min Turnovers/hr</th>
+          <th>Target</th>
+          <th>Filter Rating</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-process">Watts nickel (bright)</td>
+          <td class="td-min">3</td>
+          <td class="td-target">5</td>
+          <td class="td-rating">1&ndash;5 &mu;m</td>
+          <td class="td-notes">Continuous; carbon canister recommended</td>
+        </tr>
+        <tr>
+          <td class="td-process">Hard chrome</td>
+          <td class="td-min">2</td>
+          <td class="td-target">3</td>
+          <td class="td-rating">5&ndash;10 &mu;m</td>
+          <td class="td-notes">Trivalent chrome higher &mdash; consult supplier</td>
+        </tr>
+        <tr>
+          <td class="td-process">Acid copper</td>
+          <td class="td-min">2</td>
+          <td class="td-target">3&ndash;4</td>
+          <td class="td-rating">5&ndash;10 &mu;m</td>
+          <td class="td-notes">Carbon treatment as needed for organics</td>
+        </tr>
+        <tr>
+          <td class="td-process">Zinc (acid chloride)</td>
+          <td class="td-min">2</td>
+          <td class="td-target">3</td>
+          <td class="td-rating">5&ndash;10 &mu;m</td>
+          <td class="td-notes">Filter before and after carbon treatment</td>
+        </tr>
+        <tr>
+          <td class="td-process">Zinc (alkaline)</td>
+          <td class="td-min">1</td>
+          <td class="td-target">2&ndash;3</td>
+          <td class="td-rating">10&ndash;25 &mu;m</td>
+          <td class="td-notes">Lower requirements; watch for carbonate buildup</td>
+        </tr>
+        <tr class="en-row">
+          <td class="td-process">Electroless nickel</td>
+          <td class="td-min">3</td>
+          <td class="td-target">10&ndash;20</td>
+          <td class="td-rating">1&ndash;5 &mu;m</td>
+          <td class="td-notes">CRITICAL &mdash; particles nucleate out-plating</td>
+        </tr>
+        <tr>
+          <td class="td-process">Gold / Precious metals</td>
+          <td class="td-min">3</td>
+          <td class="td-target">5</td>
+          <td class="td-rating">1 &mu;m</td>
+          <td class="td-notes">Filter media must be compatible with cyanide</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Sizing Formula Bar -->
+  <div class="formula-bar">
+    <code>Pump flow rate (GPM) = Tank volume (gal) &times; Turnovers/hr &divide; 60</code>
+  </div>
+</div>
+
+<!-- ====== ZONE 4 — CARBON TREATMENT FLOWCHART ====== -->
+<div class="zone-carbon">
+  <div class="section-label">Carbon Treatment &mdash; The Organic Detox</div>
+
+  <!-- Row 1: Steps 1-3 -->
+  <div class="steps-grid">
+    <div class="step-card teal-border">
+      <div class="step-header">
+        <div class="step-num" style="color:var(--teal)">1</div>
+        <div class="step-title teal-text">Analyze</div>
+      </div>
+      <div class="step-body">Test Hull cell for organic symptoms: hazy deposits, skip plate, reduced ductility.</div>
+    </div>
+    <div class="step-card amber-border">
+      <div class="step-header">
+        <div class="step-num" style="color:var(--amber)">2</div>
+        <div class="step-title amber-text">Adjust pH</div>
+      </div>
+      <div class="step-body"><strong>Lower pH to 3.0&ndash;3.5</strong> with dilute sulfuric acid (nickel) &mdash; promotes iron co-precipitation and maximizes carbon adsorption efficiency.</div>
+    </div>
+    <div class="step-card emerald-border">
+      <div class="step-header">
+        <div class="step-num" style="color:var(--emerald)">3</div>
+        <div class="step-title emerald-text">Add Carbon</div>
+      </div>
+      <div class="step-body"><strong>Add 2&ndash;5 g/L powdered activated carbon.</strong> Stir 2&ndash;4 hours minimum for complete adsorption.</div>
+    </div>
+  </div>
+
+  <!-- Row arrow -->
+  <div class="step-row-arrow">
+    <svg viewBox="0 0 14 14" fill="none"><path d="M7 2 L7 12 M3 8 L7 12 L11 8" stroke="rgba(200,208,216,.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+
+  <!-- Row 2: Steps 4-6 -->
+  <div class="steps-grid">
+    <div class="step-card emerald-border">
+      <div class="step-header">
+        <div class="step-num" style="color:var(--emerald)">4</div>
+        <div class="step-title emerald-text">Filter</div>
+      </div>
+      <div class="step-body">Filter through 1&ndash;5 &mu;m media to remove <strong>ALL</strong> carbon particles. No exceptions.</div>
+    </div>
+    <div class="step-card amber-border">
+      <div class="step-header">
+        <div class="step-num" style="color:var(--amber)">5</div>
+        <div class="step-title amber-text">Re-Adjust</div>
+      </div>
+      <div class="step-body"><strong>Raise pH to operating range</strong> with nickel carbonate. Replenish <strong>ALL</strong> organic additives &mdash; brighteners, carrier, and wetting agent.</div>
+    </div>
+    <div class="step-card teal-border">
+      <div class="step-header">
+        <div class="step-num" style="color:var(--teal)">6</div>
+        <div class="step-title teal-text">Verify</div>
+      </div>
+      <div class="step-body">Run Hull cell to confirm organic removal. Compare before/after panels side by side.</div>
+    </div>
+  </div>
+
+  <!-- Do's and Don'ts -->
+  <div class="dodont-row">
+    <div class="dodont-card do-card">
+      <div class="dodont-title emerald-text">DO</div>
+      <ul class="dodont-list">
+        <li>Test Hull cell BEFORE and AFTER treatment</li>
+        <li>Replenish all organic additives post-treatment</li>
+        <li>Use food-grade or reagent-grade carbon</li>
+        <li>Filter until solution is completely clear</li>
+      </ul>
+    </div>
+    <div class="dodont-card dont-card">
+      <div class="dodont-title coral-text">DON'T</div>
+      <ul class="dodont-list">
+        <li>Return bath to service without removing ALL carbon by filtration</li>
+        <li>Skip post-treatment pH adjustment</li>
+        <li>Use carbon treatment as a substitute for metallic contamination removal</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ====== ZONE 5 — DUMMY PLATING + ADVANCED PURIFICATION ====== -->
+<div class="zone-purification">
+  <!-- Left: Dummy Plating -->
+  <div class="dummy-card">
+    <div class="purif-title teal-text">Dummy Plating</div>
+    <dl class="dummy-specs">
+      <dt>Current density:</dt>
+      <dd>2&ndash;5 ASF</dd>
+      <dt>Cathode:</dt>
+      <dd>Corrugated mild steel</dd>
+      <dt>Duration:</dt>
+      <dd>4&ndash;24 hours</dd>
+      <dt>Removes:</dt>
+      <dd>Cu, Pb, Cd, contaminant metals</dd>
+    </dl>
+    <div class="dummy-body">Removes metallic contaminants by depositing them on a sacrificial cathode at low current density. The corrugated cathode maximizes surface area for efficient removal.</div>
+    <div class="dummy-callout">Run at LCD &mdash; you want the contaminants, not good metal.</div>
+  </div>
+
+  <!-- Right: Advanced Purification Methods -->
+  <div class="advanced-card">
+    <div class="purif-title amber-text">Advanced Purification Methods</div>
+    <table class="adv-table">
+      <tr>
+        <td class="td-method">Permanganate</td>
+        <td class="td-desc">Oxidizes organics that carbon cannot remove. Requires careful dosing &mdash; excess must be reduced before plating.</td>
+      </tr>
+      <tr>
+        <td class="td-method">Hydrogen peroxide</td>
+        <td class="td-desc">Fe<sup>2+</sup> to Fe<sup>3+</sup> for precipitation. Caution &mdash; excess decomposes nickel brighteners rapidly.</td>
+      </tr>
+      <tr>
+        <td class="td-method">Electrodialysis</td>
+        <td class="td-desc">Capital-intensive. Reserved for high-value baths (gold, palladium) where solution replacement cost justifies the equipment.</td>
+      </tr>
+      <tr>
+        <td class="td-method">Freezing</td>
+        <td class="td-desc">Alkaline zinc carbonate removal. Cool to crystallize sodium carbonate, then filter out precipitate.</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- ====== ZONE 6 — MAINTENANCE SCHEDULE + WARNING SIGNS ====== -->
+<div class="zone-maintenance">
+  <!-- Left: Maintenance Schedule -->
+  <div class="maint-wrap">
+    <div class="maint-section-label">Maintenance Schedule</div>
+    <table class="maint-table">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Frequency</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-task">Check filter pressure differential</td>
+          <td class="td-freq">Daily</td>
+          <td class="td-notes">Replace when &Delta;P exceeds manufacturer spec</td>
+        </tr>
+        <tr>
+          <td class="td-task">Inspect filter housing seals</td>
+          <td class="td-freq">Weekly</td>
+          <td class="td-notes">Bypass leaks defeat the filter entirely</td>
+        </tr>
+        <tr>
+          <td class="td-task">Change cartridge / bag filters</td>
+          <td class="td-freq">As needed</td>
+          <td class="td-notes">Run on pressure differential, NOT calendar</td>
+        </tr>
+        <tr>
+          <td class="td-task">Carbon canister media replacement</td>
+          <td class="td-freq">Monthly / Hull cell</td>
+          <td class="td-notes">Replace when Hull cell shows organic symptoms</td>
+        </tr>
+        <tr>
+          <td class="td-task">Clean pump strainer / inlet screen</td>
+          <td class="td-freq">Weekly</td>
+          <td class="td-notes">Clogged strainer starves the pump</td>
+        </tr>
+        <tr>
+          <td class="td-task">Full system inspection</td>
+          <td class="td-freq">Quarterly</td>
+          <td class="td-notes">Pump seals, hose connections, housing cracks</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Right: Warning Signs -->
+  <div class="warning-card">
+    <div class="warning-title">Your Filter Is Failing When&hellip;</div>
+    <ul class="warning-list">
+      <li>Rough deposits appear that weren't there last week</li>
+      <li>Filter pressure gauge reads zero (bypass or clogged)</li>
+      <li>Solution clarity decreases visibly</li>
+      <li>Hull cell panel shows pitting or roughness</li>
+      <li>Flow rate from return line drops noticeably</li>
+      <li>You can't remember the last filter change</li>
+    </ul>
+    <div class="warning-callout">The cheapest filter change you'll ever do is the one you do on time.</div>
+  </div>
+</div>
+
+<!-- ====== ZONE 7 — FOOTER ====== -->
+<div class="zone-foot">
+  <div class="footer-disclaimer">This poster is an educational reference tool. Filter types, turnover rates, and purification procedures are typical industry values. Consult your chemical supplier and filter manufacturer for application-specific guidance.</div>
+  <div class="footer-brand">
+    <div class="footer-logo">PP</div>
+    <div>
+      <div class="footer-title">Filtration and Purification &mdash; Keeping Your Bath Clean</div>
+      <div class="footer-series">Plating Posters Inc &mdash; Metal Finishing Reference Series</div>
+    </div>
+  </div>
+  <div class="footer-meta">v1.0 &mdash; 2026 &nbsp;|&nbsp; Poster #25 &mdash; Filtration and Purification &nbsp;|&nbsp; Plating Posters Inc</div>
+</div>
+
+</div><!-- .poster -->
+</div><!-- .poster-wrap -->
+</div><!-- .stage -->
+
+<!-- ====== TWEAKS PANEL ====== -->
+<div class="tweaks">
+  <label>
+    <input type="checkbox" id="twk-edition" onchange="toggleEdition()">
+    Light Edition
+  </label>
+  <label>
+    <input type="checkbox" id="twk-grid" checked onchange="toggleGrid()">
+    Grid Lines
+  </label>
+  <button onclick="window.print()">Print / PDF</button>
+</div>
+
+<script>
+function toggleEdition() {
+  var isLight = document.getElementById('twk-edition').checked;
+  document.body.setAttribute('data-edition', isLight ? 'light' : 'dark');
+}
+function toggleGrid() {
+  var on = document.getElementById('twk-grid').checked;
+  document.body.setAttribute('data-grid', on ? 'on' : 'off');
+}
+
+// Scale poster to fit viewport
+function scalePoster() {
+  var wrap = document.querySelector('.poster-wrap');
+  if (!wrap) return;
+  var vw = window.innerWidth;
+  var vh = window.innerHeight;
+  var sx = vw / 1248;
+  var sy = vh / 1848;
+  var s = Math.min(sx, sy, 1) * 0.95;
+  wrap.style.transform = 'scale(' + s + ')';
+  wrap.style.transformOrigin = 'top center';
+}
+window.addEventListener('resize', scalePoster);
+scalePoster();
+
+// PostMessage edit-mode protocol
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.__activate_edit_mode) {
+    // reserved for future edit-mode integration
+  }
+});
+window.parent.postMessage({ __edit_mode_available: true }, '*');
+</script>
+</body>
+</html>
