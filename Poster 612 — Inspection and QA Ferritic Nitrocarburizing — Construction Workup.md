@@ -1,21 +1,21 @@
 ---
 Project: Plating Posters Inc
 Poster Number: 612
-Title: "Inspection & QA -- Ferritic Nitrocarburizing (FNC / QPQ)"
+Title: "Inspection & QA -- Ferritic Nitrocarburizing (FNC / Q-P-Q)"
 Document Type: Construction Workup
 Status: v1.0 -- Ready for Generation
 Created: 2026-04-26T00:00:00
 Author: Alaina (poster-designer)
 Source Documents:
-  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / QPQ, Section 6.7)"
-Technical Source: FNC/QPQ inspection -- compound zone thickness (metallographic), surface hardness (Vickers micro/superficial Rockwell), salt spray testing (ASTM B117, 200-500 hr), appearance (matte black), surface roughness (Ra), dimensional change (<0.0002 inch). Common defects and remedies. Per AMS 2753, AMS 2755.
+  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / Q-P-Q, Section 6.7)"
+Technical Source: FNC/Q-P-Q inspection -- compound zone thickness (metallographic), surface hardness (Vickers micro/superficial Rockwell), salt spray testing (ASTM B117, 200-500 hr), appearance (matte black), surface roughness (Ra), dimensional change (<0.0002 inch). Common defects and remedies. Per AMS 2753, AMS 2755.
 Process Scope: Ferritic nitrocarburizing inspection and quality assurance (Stage 9 of 9)
 Editions: Dark (flagship) + Light (accessible print)
 tags:
   - PosterDesign
   - FerriticNitrocarburizing
   - FNC
-  - QPQ
+  - Q-P-Q
   - Inspection
   - QualityAssurance
   - ConstructionWorkup
@@ -23,12 +23,12 @@ tags:
 ---
 
 # Poster #612 -- Construction Workup
-## Inspection & QA -- Ferritic Nitrocarburizing (FNC / QPQ)
+## Inspection & QA -- Ferritic Nitrocarburizing (FNC / Q-P-Q)
 
 *Alaina -- Plating Posters Inc Poster Designer*
 *v1.0 -- 2026-04-26*
 
-The closing poster for the FNC/QPQ cluster. Inspection for QPQ is distinctive because it includes corrosion testing as a routine quality measure -- unlike most heat treatment processes where corrosion is not part of the inspection protocol. The five key inspection parameters are: compound zone thickness, surface hardness, salt spray resistance, appearance, and dimensional change. The defect table covers the five most common QPQ failures and links each to a root cause and remedy.
+The closing poster for the FNC/Q-P-Q cluster. Inspection for Q-P-Q is distinctive because it includes corrosion testing as a routine quality measure -- unlike most heat treatment processes where corrosion is not part of the inspection protocol. The five key inspection parameters are: compound zone thickness, surface hardness, salt spray resistance, appearance, and dimensional change. The defect table covers the five most common Q-P-Q failures and links each to a root cause and remedy.
 
 ---
 
@@ -37,7 +37,7 @@ The closing poster for the FNC/QPQ cluster. Inspection for QPQ is distinctive be
 ### Limitations to Flag
 1. **Five inspection parameters (Block B -- HERO):** Five parameter cards with target values and measurement methods.
 2. **Common defects table (Block D):** Five defects with causes and remedies.
-3. **Salt spray testing panel (Block E):** How ASTM B117 testing works and what QPQ results mean.
+3. **Salt spray testing panel (Block E):** How ASTM B117 testing works and what Q-P-Q results mean.
 4. **Acceptance criteria summary strip (Block F):** Quick-reference pass/fail targets.
 
 ---
@@ -72,21 +72,21 @@ ZONE 7 -- FOOTER BAND (32.5"--36.0")
 ### ZONE 1 -- Header Band
 
 **Headline:** `INSPECTION & QA` -- 80 pt `#F0EDE8`. X: 0.5", Y: 0.5".
-**Subheading:** `Ferritic Nitrocarburizing (FNC / QPQ) -- Stage 9 of 9` -- 32 pt `#27AE60` (Emerald). Y: 1.4".
-**Tagline:** `Five parameters define a good QPQ treatment: compound zone thickness, hardness, salt spray resistance, appearance, and dimensional stability. Corrosion testing is part of routine QA -- that is unique to QPQ among heat treatment processes.` -- 20 pt `#F0EDE8` at 65%. Y: 2.1".
+**Subheading:** `Ferritic Nitrocarburizing (FNC / Q-P-Q) -- Stage 9 of 9` -- 32 pt `#27AE60` (Emerald). Y: 1.4".
+**Tagline:** `Five parameters define a good Q-P-Q treatment: compound zone thickness, hardness, salt spray resistance, appearance, and dimensional stability. Corrosion testing is part of routine QA -- that is unique to Q-P-Q among heat treatment processes.` -- 20 pt `#F0EDE8` at 65%. Y: 2.1".
 
 ---
 
 ### ZONE 2 -- Orientation Strip
 
 Stage 9 highlighted: fill `#27AE60`, text `#1A1F2E`. Others dimmed.
-Below: `Before: QPQ-treated, rinsed parts  -->  After: Inspected, documented, released to customer`
+Below: `Before: Q-P-Q-treated, rinsed parts  -->  After: Inspected, documented, released to customer`
 
 ---
 
 ### ZONE 3 -- Five Inspection Parameters (HERO)
 
-**Section label:** `FIVE INSPECTION PARAMETERS -- THE COMPLETE QPQ QUALITY CHECK` -- Y: 4.4". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
+**Section label:** `FIVE INSPECTION PARAMETERS -- THE COMPLETE Q-P-Q QUALITY CHECK` -- Y: 4.4". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
 
 **BLOCK B -- Five Parameter Cards (Y: 5.0" to 14.5")**
 
@@ -131,7 +131,7 @@ Frequency: Per lot minimum
 *Card 3 -- Appearance (X: 15.83", W: 7.67", H: 4.5"):*
 - Title: `APPEARANCE` Barlow SemiBold 16 pt `#2EC4B6`
 - Accent: left `#2EC4B6`
-- Target: `Uniform matte black (QPQ)` JetBrains Mono 14 pt `#2EC4B6`
+- Target: `Uniform matte black (Q-P-Q)` JetBrains Mono 14 pt `#2EC4B6`
 - Method:
 ```
 Visual inspection:
@@ -142,7 +142,7 @@ Visual inspection:
 - Consistent color across all parts
 
 Gray = gas FNC without oxidizing quench
-(not QPQ -- lower corrosion performance)
+(not Q-P-Q -- lower corrosion performance)
 
 Frequency: 100% visual inspection
 Non-destructive
@@ -153,7 +153,7 @@ Row 2 (Y: 9.8", two cards centered):
 *Card 4 -- Salt Spray (X: 0.5", W: 11.0", H: 4.5"):*
 - Title: `SALT SPRAY RESISTANCE (ASTM B117)` Barlow SemiBold 16 pt `#27AE60`
 - Accent: left `#27AE60`
-- Target: `200--500 hours to first red rust (QPQ on 1018)` JetBrains Mono 14 pt `#27AE60`
+- Target: `200--500 hours to first red rust (Q-P-Q on 1018)` JetBrains Mono 14 pt `#27AE60`
 - Method:
 ```
 ASTM B117 Neutral Salt Spray:
@@ -163,7 +163,7 @@ ASTM B117 Neutral Salt Spray:
   200, 336, 500 hours)
 - Record time to first red rust
 
-QPQ on 1018 steel: 200--500+ hours
+Q-P-Q on 1018 steel: 200--500+ hours
 (compare: hard chrome = 24--96 hours)
 
 Frequency: Per qualification lot or
@@ -182,7 +182,7 @@ Before/after measurement:
 - Measure critical dimensions
   before FNC treatment
 - Measure same dimensions after
-  complete QPQ cycle
+  complete Q-P-Q cycle
 - Record growth per surface
 
 Expected: negligible (<0.0002")
@@ -199,7 +199,7 @@ tolerance parts
 
 ### ZONE 4 -- Common Defects Table
 
-**Section label:** `COMMON DEFECTS -- QPQ FAILURE MODES` -- Y: 15.7". Barlow Condensed ExtraBold 28 pt `#E05C5C`.
+**Section label:** `COMMON DEFECTS -- Q-P-Q FAILURE MODES` -- Y: 15.7". Barlow Condensed ExtraBold 28 pt `#E05C5C`.
 
 **BLOCK D -- Defect Table (Y: 16.3" to 21.8")**
 
@@ -249,7 +249,7 @@ it ranks treatments against each
 other, not against calendar time.
 
 INDUSTRY STANDARD:
-Most QPQ specifications require
+Most Q-P-Q specifications require
 minimum 200 hours to first red
 rust on a low-carbon steel panel.
 ```
@@ -258,13 +258,13 @@ rust on a low-carbon steel panel.
 
 Rounded rect fill `#1E2435`, left accent `#27AE60`.
 
-Title: `INTERPRETING QPQ RESULTS` Barlow SemiBold 18 pt `#27AE60`
+Title: `INTERPRETING Q-P-Q RESULTS` Barlow SemiBold 18 pt `#27AE60`
 
 Content:
 ```
 200--500 HOURS ON 1018 STEEL:
 This is the Watson-verified range for
-QPQ on low-carbon steel. Actual hours
+Q-P-Q on low-carbon steel. Actual hours
 depend on polish quality, bath
 condition, and oxidizing quench time.
 
@@ -282,10 +282,10 @@ FACTORS THAT REDUCE HOURS:
 
 COMPARISON CONTEXT:
 Hard chrome plate: 24--96 hours
-(QPQ is 2--10x better)
+(Q-P-Q is 2--10x better)
 
 Black oxide: 1--4 hours
-(QPQ is 50--500x better)
+(Q-P-Q is 50--500x better)
 ```
 
 ---
@@ -312,9 +312,9 @@ Details: Inter Regular 12 pt `#F0EDE8`.
 
 ### ZONE 7 -- Footer
 
-Standard. Title: `Inspection & QA -- Ferritic Nitrocarburizing (FNC / QPQ)`. Version `v1.0 -- 2026`.
+Standard. Title: `Inspection & QA -- Ferritic Nitrocarburizing (FNC / Q-P-Q)`. Version `v1.0 -- 2026`.
 
-Disclaimer: `Source: AMS 2753, AMS 2755, ASTM B117, ASTM E384. Acceptance criteria are specification-dependent. Salt spray results of 200-500 hours reflect the Watson-verified range for QPQ on low-carbon steel. Actual results vary by substrate, bath condition, and process execution.`
+Disclaimer: `Source: AMS 2753, AMS 2755, ASTM B117, ASTM E384. Acceptance criteria are specification-dependent. Salt spray results of 200-500 hours reflect the Watson-verified range for Q-P-Q on low-carbon steel. Actual results vary by substrate, bath condition, and process execution.`
 
 ---
 
@@ -326,7 +326,7 @@ Disclaimer: `Source: AMS 2753, AMS 2755, ASTM B117, ASTM E384. Acceptance criter
 
 ## Design Notes
 
-This poster closes the FNC/QPQ cluster with the quality engineer's reference. The five-parameter hero is organized by importance: compound zone and hardness (the metallurgical requirements), salt spray (the corrosion requirement), appearance (the visual requirement), and dimensional change (the precision requirement). The salt spray testing panel deserves extra space because ASTM B117 is unfamiliar to many heat treaters -- they know hardness testing cold but may never have run a salt spray cabinet. The acceptance criteria strip at the bottom is the one-line-per-parameter summary for the production floor.
+This poster closes the FNC/Q-P-Q cluster with the quality engineer's reference. The five-parameter hero is organized by importance: compound zone and hardness (the metallurgical requirements), salt spray (the corrosion requirement), appearance (the visual requirement), and dimensional change (the precision requirement). The salt spray testing panel deserves extra space because ASTM B117 is unfamiliar to many heat treaters -- they know hardness testing cold but may never have run a salt spray cabinet. The acceptance criteria strip at the bottom is the one-line-per-parameter summary for the production floor.
 
 ---
 

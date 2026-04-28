@@ -1,38 +1,38 @@
 ---
 Project: Plating Posters Inc
 Poster Number: 604
-Title: "Ferritic Nitrocarburizing (FNC / QPQ) -- Process Flow"
+Title: "Ferritic Nitrocarburizing (FNC / Q-P-Q) -- Process Flow"
 Document Type: Construction Workup
 Status: v1.0 -- Ready for Generation
 Created: 2026-04-26T00:00:00
 Author: Alaina (poster-designer)
 Source Documents:
-  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: Ferritic Nitrocarburizing / FNC / QPQ)"
-Technical Source: Industry-standard ferritic nitrocarburizing and QPQ (Quench-Polish-Quench) process. Salt bath FNC at 1050-1125 F, oxidizing quench at 700-800 F, mechanical polish, second oxidizing quench. QPQ corrosion resistance: 200-500 hours neutral salt spray on low-carbon steel. Per AMS 2753, AMS 2755, and ASTM B117.
-Process Scope: Ferritic nitrocarburizing (FNC/QPQ) -- complete process flow (9 stages)
+  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: Ferritic Nitrocarburizing / FNC / Q-P-Q)"
+Technical Source: Industry-standard ferritic nitrocarburizing and Q-P-Q (Quench-Polish-Quench) process. Salt bath FNC at 1050-1125 F, oxidizing quench at 700-800 F, mechanical polish, second oxidizing quench. Q-P-Q corrosion resistance: 200-500 hours neutral salt spray on low-carbon steel. Per AMS 2753, AMS 2755, and ASTM B117.
+Process Scope: Ferritic nitrocarburizing (FNC/Q-P-Q) -- complete process flow (9 stages)
 Editions: Dark (flagship) + Light (accessible print)
 Intended Use: Design specification document. Generation workflow -- Claude Chat (HTML artifact) -> Drew approval -> final production
 tags:
   - PosterDesign
   - FerriticNitrocarburizing
   - FNC
-  - QPQ
-  - Tenifer
-  - Melonite
+  - Q-P-Q
+  - SaltBathFNC
+  - GasFNC
   - ProcessFlow
   - ConstructionWorkup
   - DiffusionHT
 ---
 
 # Poster #604 -- Construction Workup
-## Ferritic Nitrocarburizing (FNC / QPQ) -- Process Flow
+## Ferritic Nitrocarburizing (FNC / Q-P-Q) -- Process Flow
 
 *Alaina -- Plating Posters Inc Poster Designer*
 *v1.0 -- 2026-04-26*
 
-This is the cluster overview poster for Ferritic Nitrocarburizing -- the process that gun owners know as Tenifer or Melonite, hydraulic engineers know as a hard chrome replacement, and automotive engineers know as the crankshaft treatment. FNC operates below Ac1 (ferritic range), produces a hard epsilon iron nitride compound zone, and when the full QPQ (Quench-Polish-Quench) cycle is applied, delivers corrosion resistance that exceeds hard chrome in salt spray testing at 200-500 hours. Minimal distortion, matte black appearance, no hexavalent chromium.
+This is the cluster overview poster for Ferritic Nitrocarburizing -- the process that gun owners, hydraulic engineers, and automotive engineers rely on for wear and corrosion resistance as a hard chrome replacement and crankshaft treatment. FNC operates below Ac1 (ferritic range), produces a hard epsilon iron nitride compound zone, and when the full Q-P-Q (Quench-Polish-Quench) cycle is applied, delivers corrosion resistance that exceeds hard chrome in salt spray testing at 200-500 hours. Minimal distortion, matte black appearance, no hexavalent chromium.
 
-Design philosophy: same U-flow hero layout for cluster consistency. The QPQ variant is the star, so the 9-step sequence follows the full QPQ path. Amber and Coral get prominent play -- this is a hot process with molten salt, and the hazard profile demands respect.
+Design philosophy: same U-flow hero layout for cluster consistency. The Q-P-Q variant is the star, so the 9-step sequence follows the full Q-P-Q path. Amber and Coral get prominent play -- this is a hot process with molten salt, and the hazard profile demands respect.
 
 ---
 
@@ -51,8 +51,8 @@ Design philosophy: same U-flow hero layout for cluster consistency. The QPQ vari
 
 1. **Process flow diagram (Block B -- HERO):** Nine rounded rectangles in a U-flow: top row L-to-R (stages 1-5), vertical connector, bottom row R-to-L (stages 6-9).
 2. **Parameter summary table (Block D):** Compact 9-row table (one per stage).
-3. **Trademarked process names callout (Block E):** Tufftride, Tenifer, Melonite, QPQ, Arcor -- what they all mean.
-4. **Troubleshooting quick-hit strip (Block F):** Four common FNC/QPQ failures.
+3. **Process variants callout (Block E):** Salt bath FNC, gas FNC, and Q-P-Q variants -- what distinguishes each.
+4. **Troubleshooting quick-hit strip (Block F):** Four common FNC/Q-P-Q failures.
 
 ---
 
@@ -108,8 +108,8 @@ ZONE 2 -- PROCESS FLOW DIAGRAM / HERO (2.9"--15.5" / ~12.6" tall)
 ZONE 3 -- PARAMETER SUMMARY TABLE (15.5"--22.0" / ~6.5" tall)
   Block D: 9-row parameter table (one row per stage)
 
-ZONE 4 -- TRADEMARKED PROCESS NAMES (22.0"--28.5" / ~6.5" tall)
-  Block E: Tufftride, Tenifer, Melonite, QPQ, Arcor
+ZONE 4 -- PROCESS VARIANTS (22.0"--28.5" / ~6.5" tall)
+  Block E: Salt bath FNC, gas FNC, and Q-P-Q variants
 
 ZONE 5 -- TROUBLESHOOTING QUICK HITS (28.5"--32.5" / ~4.0" tall)
   Block F: 4-problem strip with one-line fixes
@@ -148,7 +148,7 @@ ZONE 6 -- FOOTER BAND (32.5"--36.0" / ~3.5" tall)
 - Color: `#27AE60` (Emerald)
 - Text:
 
-> FNC / QPQ (Quench-Polish-Quench) -- Complete Process Flow
+> FNC / Q-P-Q (Quench-Polish-Quench) -- Complete Process Flow
 
 **BLOCK A -- Tagline**
 
@@ -170,7 +170,7 @@ ZONE 6 -- FOOTER BAND (32.5"--36.0" / ~3.5" tall)
 **Section label:**
 - Centered. Y: 3.1". Barlow Condensed ExtraBold, 28 pt, `#F0EDE8`
 
-> THE COMPLETE QPQ PROCESS -- STAGE BY STAGE
+> THE COMPLETE Q-P-Q PROCESS -- STAGE BY STAGE
 
 ---
 
@@ -187,7 +187,7 @@ Each flow box: Rounded rect W: 4.2", H: 4.3", fill `#1E2435`, radius 8, top acce
 | 1. Pre-Clean | Box 1 | 0.5" | `#2EC4B6` (Teal) | Prep |
 | 2. Preheat | Box 2 | 5.0" | `#E8A020` (Amber) | Heat |
 | 3. Nitrocarburize | Box 3 | 9.5" | `#27AE60` (Emerald) | Core Process |
-| 4. Oxidizing Quench (Q1) | Box 4 | 14.0" | `#E8A020` (Amber) | QPQ |
+| 4. Oxidizing Quench (Q1) | Box 4 | 14.0" | `#E8A020` (Amber) | Q-P-Q |
 | 5. Rinse | Box 5 | 18.5" | `#2EC4B6` (Teal) | Prep |
 
 **Arrows:** 3 pt `#3A4055`, filled arrowheads.
@@ -199,7 +199,7 @@ Each flow box: Rounded rect W: 4.2", H: 4.3", fill `#1E2435`, radius 8, top acce
 | Stage | Box | X | Top Accent | Type |
 |---|---|---|---|---|
 | 6. Polish (P) | Box 6 | 17.5" | `#2EC4B6` (Teal) | Mechanical |
-| 7. Second Oxidizing Quench (Q2) | Box 7 | 12.0" | `#E8A020` (Amber) | QPQ |
+| 7. Second Oxidizing Quench (Q2) | Box 7 | 12.0" | `#E8A020` (Amber) | Q-P-Q |
 | 8. Final Rinse | Box 8 | 6.5" | `#2EC4B6` (Teal) | Prep |
 | 9. Inspection & QA | Box 9 | 1.0" | `#27AE60` (Emerald) | Quality |
 
@@ -308,7 +308,7 @@ Dry thoroughly
 ```
 Compound zone: 10--25 um (0.0004--0.001")
 Surface hardness: 600--1000 HV
-Salt spray: 200--500 hr (QPQ on 1018)
+Salt spray: 200--500 hr (Q-P-Q on 1018)
 ```
 - Purpose: `Verify compound zone thickness, hardness, corrosion resistance, and appearance`
 - Check: `Dimensional change typically <0.0002" (5 um)`
@@ -354,19 +354,18 @@ Data: JetBrains Mono Regular, 11 pt, `#F0EDE8`. Stage names: Inter Medium, 12 pt
 
 ---
 
-### ZONE 4 -- Trademarked Process Names
+### ZONE 4 -- Process Variants
 
-**Section label:** `THE MANY NAMES OF FERRITIC NITROCARBURIZING` -- Y: 22.2". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
+**Section label:** `FNC PROCESS VARIANTS -- SAME METALLURGY, DIFFERENT METHODS` -- Y: 22.2". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
 
-**BLOCK E -- Five name cards in a row (Y: 22.9" to 28.3")**
+**BLOCK E -- Four variant cards in a row (Y: 22.9" to 28.3")**
 
 | Card | X | W | Name | Description | Accent |
 |---|---|---|---|---|---|
-| 1 | 0.5" | 4.4" | `TUFFTRIDE` | Durferrit/HEF. Original salt bath FNC process. The name that started the industry. | `#E8A020` |
-| 2 | 5.2" | 4.4" | `TENIFER` | Kolene Corporation. Salt bath FNC. The name Glock made famous -- barrel treatment for corrosion and wear. | `#E8A020` |
-| 3 | 9.9" | 4.4" | `MELONITE` | Bodycote. Gas FNC variant. NH3 + CO2 atmosphere. No molten salt handling. Cleaner process. | `#27AE60` |
-| 4 | 14.6" | 4.4" | `QPQ` | Kolene. Full Quench-Polish-Quench cycle with oxidizing salt bath. Maximum corrosion protection. The gold standard. | `#2EC4B6` |
-| 5 | 19.3" | 4.2" | `ARCOR` | Nitrex. Gas FNC variant. Controlled atmosphere. Used in automotive and tooling applications. | `#C8D0D8` |
+| 1 | 0.5" | 5.5" | `SALT BATH FNC` | The original method. Parts immersed in molten cyanate salt at 1050--1075 F. Uniform case depth. Excellent for complex geometries. Requires cyanide waste management. | `#E8A020` |
+| 2 | 6.33" | 5.5" | `GAS FNC` | NH3 + CO2 atmosphere in a sealed retort. No molten salt handling. Cleaner process. Lower corrosion resistance unless supplemented with oxidizing post-treatment. | `#27AE60` |
+| 3 | 12.16" | 5.5" | `Q-P-Q (QUENCH-POLISH-QUENCH)` | Full oxidizing quench, mechanical polish, second oxidizing quench cycle. Maximum corrosion protection -- 200--500 hr salt spray on low-carbon steel. The gold standard for wear + corrosion in one treatment. | `#2EC4B6` |
+| 4 | 18.0" | 5.5" | `PLASMA FNC` | Ion bombardment in vacuum. Precise case control. Can selectively treat surfaces. Most expensive method. Used in aerospace and precision tooling. | `#C8D0D8` |
 
 Each: Rounded rect H: 5.0", fill `#1E2435`, top accent 4 pt.
 Name: Barlow SemiBold 20 pt in accent color.
@@ -374,13 +373,13 @@ Details: Inter Regular 12 pt `#F0EDE8`.
 
 Bottom callout (Y: 27.8" to 28.3"):
 - Pill bar, fill `#2EC4B6` at 15%, border 1 pt `#2EC4B6`
-- `Different names, same metallurgy. Every one of these processes produces an epsilon iron nitride compound zone on a ferritic substrate. The QPQ variant adds the oxidizing quench and polish that makes corrosion resistance exceptional.` Inter Medium 14 pt `#2EC4B6`, center.
+- `Different methods, same metallurgy. Every FNC variant produces an epsilon iron nitride compound zone on a ferritic substrate. The Q-P-Q variant adds the oxidizing quench and polish that makes corrosion resistance exceptional.` Inter Medium 14 pt `#2EC4B6`, center.
 
 ---
 
 ### ZONE 5 -- Troubleshooting Quick Hits
 
-**Section label:** `QUICK TROUBLESHOOTING -- 4 COMMON FNC/QPQ FAILURES` -- Y: 28.7". Barlow Condensed ExtraBold 24 pt `#F0EDE8`.
+**Section label:** `QUICK TROUBLESHOOTING -- 4 COMMON FNC/Q-P-Q FAILURES` -- Y: 28.7". Barlow Condensed ExtraBold 24 pt `#F0EDE8`.
 
 **BLOCK F -- Four Problem Cards**
 
@@ -406,9 +405,9 @@ Fix: Inter Medium 12 pt `#27AE60`.
 
 **Disclaimer:** Inter Regular, 11 pt, `#F0EDE8` at 50%, Center.
 
-> This poster is an educational reference tool. Process parameters shown are typical industry values for ferritic nitrocarburizing with the QPQ (Quench-Polish-Quench) variant. Specific bath compositions, cycle times, and acceptance criteria vary by specification, equipment, and part design. Consult AMS 2753, AMS 2755, and your salt bath equipment supplier.
+> This poster is an educational reference tool. Process parameters shown are typical industry values for ferritic nitrocarburizing with the Q-P-Q (Quench-Polish-Quench) variant. Specific bath compositions, cycle times, and acceptance criteria vary by specification, equipment, and part design. Consult AMS 2753, AMS 2755, and your salt bath equipment supplier.
 
-**Poster title:** `Ferritic Nitrocarburizing (FNC / QPQ) -- Process Flow`
+**Poster title:** `Ferritic Nitrocarburizing (FNC / Q-P-Q) -- Process Flow`
 **Series name:** `Plating Posters Inc -- Metal Finishing Reference Series`
 **Version:** `v1.0 -- 2026`
 
@@ -449,18 +448,18 @@ Fix: Inter Medium 12 pt `#27AE60`.
 
 | File Name | Mode | Quality | Bleed |
 |---|---|---|---|
-| `Ferritic Nitrocarburizing FNC QPQ Process Flow -- Dark -- 24x36 -- Print.pdf` | RGB | 300 DPI | Yes |
-| `Ferritic Nitrocarburizing FNC QPQ Process Flow -- Dark -- 18x24 -- Print.pdf` | RGB | 300 DPI | Yes |
-| `Ferritic Nitrocarburizing FNC QPQ Process Flow -- Dark -- Digital.pdf` | RGB | Standard | No |
-| `Ferritic Nitrocarburizing FNC QPQ Process Flow -- Light -- 24x36 -- Print.pdf` | RGB | 300 DPI | Yes |
-| `Ferritic Nitrocarburizing FNC QPQ Process Flow -- Light -- 18x24 -- Print.pdf` | RGB | 300 DPI | Yes |
-| `Ferritic Nitrocarburizing FNC QPQ Process Flow -- Light -- Digital.pdf` | RGB | Standard | No |
+| `Ferritic Nitrocarburizing FNC Q-P-Q Process Flow -- Dark -- 24x36 -- Print.pdf` | RGB | 300 DPI | Yes |
+| `Ferritic Nitrocarburizing FNC Q-P-Q Process Flow -- Dark -- 18x24 -- Print.pdf` | RGB | 300 DPI | Yes |
+| `Ferritic Nitrocarburizing FNC Q-P-Q Process Flow -- Dark -- Digital.pdf` | RGB | Standard | No |
+| `Ferritic Nitrocarburizing FNC Q-P-Q Process Flow -- Light -- 24x36 -- Print.pdf` | RGB | 300 DPI | Yes |
+| `Ferritic Nitrocarburizing FNC Q-P-Q Process Flow -- Light -- 18x24 -- Print.pdf` | RGB | 300 DPI | Yes |
+| `Ferritic Nitrocarburizing FNC Q-P-Q Process Flow -- Light -- Digital.pdf` | RGB | Standard | No |
 
 ---
 
 ## Design Notes
 
-FNC/QPQ is one of the most commercially relevant processes in this entire series -- it's the hard chrome replacement that the industry has been looking for, the gun barrel treatment that every firearms enthusiast has heard of, and the crankshaft treatment that automotive engineers specify daily. The trademarked names section (Zone 4) is essential because operators encounter these processes under five different names and need to understand they're all variations of the same metallurgy. The QPQ corrosion resistance figure (200-500 hours salt spray) is the headline stat that makes this process commercially compelling -- it exceeds hard chrome (24-96 hours typical) by an order of magnitude.
+FNC/Q-P-Q is one of the most commercially relevant processes in this entire series -- it's the hard chrome replacement that the industry has been looking for, the gun barrel treatment that every firearms enthusiast has heard of, and the crankshaft treatment that automotive engineers specify daily. The process variants section (Zone 4) is essential because operators encounter FNC under multiple methods (salt bath, gas, plasma) and need to understand they're all variations of the same metallurgy. The Q-P-Q corrosion resistance figure (200-500 hours salt spray) is the headline stat that makes this process commercially compelling -- it exceeds hard chrome (24-96 hours typical) by an order of magnitude.
 
 ---
 

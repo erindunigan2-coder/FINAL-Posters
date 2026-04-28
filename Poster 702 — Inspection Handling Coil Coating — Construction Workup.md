@@ -177,7 +177,7 @@ Bullet list:
 - `Avoid condensation (coil sweating) -- coil temperature must exceed dew point before unwrapping`
 - `Do not store on concrete floor without pallets or cradles`
 - `Protect coil edges from damage during handling`
-- `Forming: fabricator must use polished rolls and Teflon-coated dies to avoid scratching`
+- `Forming: fabricator must use polished rolls and PTFE-coated dies to avoid scratching`
 - `Any handling scratch is a warranty claim -- the finish is the product`
 
 ---

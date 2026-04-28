@@ -1,13 +1,13 @@
 ---
 Project: Plating Posters Inc
 Poster Number: 610
-Title: "Nitrocarburizing Cycle -- FNC / QPQ"
+Title: "Nitrocarburizing Cycle -- FNC / Q-P-Q"
 Document Type: Construction Workup
 Status: v1.0 -- Ready for Generation
 Created: 2026-04-26T00:00:00
 Author: Alaina (poster-designer)
 Source Documents:
-  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / QPQ, Sections 6.1, 6.6)"
+  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / Q-P-Q, Sections 6.1, 6.6)"
 Technical Source: The active nitrocarburizing step -- cyanate decomposition mechanism, epsilon compound zone formation, diffusion zone development, ferritic transformation (no phase change). Per AMS 2753.
 Process Scope: The active nitrocarburizing cycle (Stage 3 of 9 -- the core process)
 Editions: Dark (flagship) + Light (accessible print)
@@ -15,14 +15,14 @@ tags:
   - PosterDesign
   - FerriticNitrocarburizing
   - FNC
-  - QPQ
+  - Q-P-Q
   - NitrocarburizingCycle
   - ConstructionWorkup
   - DiffusionHT
 ---
 
 # Poster #610 -- Construction Workup
-## Nitrocarburizing Cycle -- FNC / QPQ
+## Nitrocarburizing Cycle -- FNC / Q-P-Q
 
 *Alaina -- Plating Posters Inc Poster Designer*
 *v1.0 -- 2026-04-26*
@@ -68,7 +68,7 @@ ZONE 5 -- FOOTER BAND (32.5"--36.0")
 ### ZONE 1 -- Header Band
 
 **Headline:** `NITROCARBURIZING CYCLE` -- 80 pt `#F0EDE8`.
-**Subheading:** `FNC / QPQ -- The Core Process: Cyanate Salt at 1050-1075 F` -- 30 pt `#27AE60` (Emerald).
+**Subheading:** `FNC / Q-P-Q -- The Core Process: Cyanate Salt at 1050-1075 F` -- 30 pt `#27AE60` (Emerald).
 **Tagline:** `Below Ac1. No phase transformation. No quench distortion. Nitrogen and carbon diffuse into ferrite, forming an epsilon iron nitride compound zone of extraordinary hardness -- all without changing the core microstructure.` -- 20 pt `#F0EDE8` at 65%.
 
 **Rule card (right):**
@@ -100,7 +100,7 @@ Large vertical cross-section showing three distinct zones from surface to core:
   - `Primarily EPSILON (Fe2-3N) iron nitride` Inter Medium 13 pt `#27AE60`
   - `Extremely hard: 600--1000+ HV` Inter Medium 13 pt `#27AE60`
   - `Wear-resistant and corrosion-resistant` Inter Medium 13 pt `#2EC4B6`
-  - `Porous -- sealed by QPQ oxidizing quench` Inter Medium 13 pt `#E8A020`
+  - `Porous -- sealed by Q-P-Q oxidizing quench` Inter Medium 13 pt `#E8A020`
 
 **Layer 2 -- Diffusion Zone (middle):**
 - Rect, X: 2.0", Y: 6.0", W: 20.0", H: 5.0"
@@ -202,7 +202,7 @@ Content:
 
 8. The compound zone is POROUS --
    this is actually an advantage:
-   the QPQ oxidizing quench fills
+   the Q-P-Q oxidizing quench fills
    the pores with magnetite (Fe3O4),
    creating the corrosion barrier
 ```
@@ -276,7 +276,7 @@ Below both blocks -- bottom callout (Y: 30.5" to 32.3"):
 
 ### ZONE 5 -- Footer
 
-Standard. Title: `Nitrocarburizing Cycle -- FNC / QPQ`. Version `v1.0 -- 2026`.
+Standard. Title: `Nitrocarburizing Cycle -- FNC / Q-P-Q`. Version `v1.0 -- 2026`.
 
 Disclaimer: `Source: AMS 2753, AMS 2755, ASM Handbook Vol. 4. Hardness values are typical for standard salt bath FNC at 1075 F. Actual results depend on steel grade, bath composition, and immersion time.`
 
@@ -290,7 +290,7 @@ Disclaimer: `Source: AMS 2753, AMS 2755, ASM Handbook Vol. 4. Hardness values ar
 
 ## Design Notes
 
-The surface cross-section diagram mirrors the plasma nitriding cycle poster (#600) for series consistency -- operators familiar with one will immediately recognize the structure of the other. The key differentiator here is the "porous compound zone sealed by QPQ" annotation, which links this poster conceptually to the QPQ quench poster (#611). The steel response table is the reference that metallurgists will consult most often.
+The surface cross-section diagram mirrors the plasma nitriding cycle poster (#600) for series consistency -- operators familiar with one will immediately recognize the structure of the other. The key differentiator here is the "porous compound zone sealed by Q-P-Q" annotation, which links this poster conceptually to the Q-P-Q quench poster (#611). The steel response table is the reference that metallurgists will consult most often.
 
 ---
 

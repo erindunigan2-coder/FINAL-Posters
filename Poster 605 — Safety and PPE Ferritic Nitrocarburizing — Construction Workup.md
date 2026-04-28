@@ -1,13 +1,13 @@
 ---
 Project: Plating Posters Inc
 Poster Number: 605
-Title: "Safety & PPE -- Ferritic Nitrocarburizing (FNC / QPQ)"
+Title: "Safety & PPE -- Ferritic Nitrocarburizing (FNC / Q-P-Q)"
 Document Type: Construction Workup
 Status: v1.0 -- Ready for Generation
 Created: 2026-04-26T00:00:00
 Author: Alaina (poster-designer)
 Source Documents:
-  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / QPQ, Section 6.2)"
+  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / Q-P-Q, Section 6.2)"
 Technical Source: Molten salt bath hazards -- severe burn risk, moisture/steam explosion, cyanate salt handling, fume extraction. PPE for salt bath operations including elbow-length gauntlets and metatarsal guards. Fire suppression: dry chemical or dry sand ONLY, NEVER water. Per OSHA 29 CFR 1910 and NFPA 86.
 Process Scope: Ferritic nitrocarburizing safety and personal protective equipment
 Editions: Dark (flagship) + Light (accessible print)
@@ -15,7 +15,7 @@ tags:
   - PosterDesign
   - FerriticNitrocarburizing
   - FNC
-  - QPQ
+  - Q-P-Q
   - Safety
   - PPE
   - ConstructionWorkup
@@ -23,7 +23,7 @@ tags:
 ---
 
 # Poster #605 -- Construction Workup
-## Safety & PPE -- Ferritic Nitrocarburizing (FNC / QPQ)
+## Safety & PPE -- Ferritic Nitrocarburizing (FNC / Q-P-Q)
 
 *Alaina -- Plating Posters Inc Poster Designer*
 *v1.0 -- 2026-04-26*
@@ -74,14 +74,14 @@ ZONE 6 -- FOOTER BAND (32.5"--36.0")
 ### ZONE 1 -- Header Band
 
 **Headline:** `SAFETY & PPE` -- 80 pt `#F0EDE8`. X: 0.5", Y: 0.5".
-**Subheading:** `Ferritic Nitrocarburizing (FNC / QPQ) -- Molten Salt Operations` -- 32 pt `#E05C5C` (Coral). Y: 1.4".
+**Subheading:** `Ferritic Nitrocarburizing (FNC / Q-P-Q) -- Molten Salt Operations` -- 32 pt `#E05C5C` (Coral). Y: 1.4".
 **Tagline:** `Molten salt at 1050 F clings to skin and burns through clothing. Water causes steam explosions. Cyanate salts are regulated. Every safety rule in this poster exists because someone learned it the hard way.` -- 20 pt `#F0EDE8` at 65%. Y: 2.1".
 
 ---
 
 ### ZONE 2 -- Hazard Grid (HERO)
 
-**Section label:** `FOUR HAZARDS IN FNC / QPQ OPERATIONS` -- Y: 3.1". Barlow Condensed ExtraBold 28 pt `#E05C5C`.
+**Section label:** `FOUR HAZARDS IN FNC / Q-P-Q OPERATIONS` -- Y: 3.1". Barlow Condensed ExtraBold 28 pt `#E05C5C`.
 
 **BLOCK B -- Four Hazard Cards (2x2 layout)**
 
@@ -268,7 +268,7 @@ the contaminant is.
 
 ### ZONE 6 -- Footer
 
-Standard. Title: `Safety & PPE -- Ferritic Nitrocarburizing (FNC / QPQ)`. Version `v1.0 -- 2026`.
+Standard. Title: `Safety & PPE -- Ferritic Nitrocarburizing (FNC / Q-P-Q)`. Version `v1.0 -- 2026`.
 
 Disclaimer: `This poster is an educational reference tool. It does not replace your facility's safety program, SOPs, or regulatory requirements. Consult OSHA 29 CFR 1910, NFPA 86, your EHS department, and your salt bath equipment supplier's safety documentation.`
 

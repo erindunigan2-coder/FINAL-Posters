@@ -1,13 +1,13 @@
 ---
 Project: Plating Posters Inc
 Poster Number: 606
-Title: "Part Preparation -- Ferritic Nitrocarburizing (FNC / QPQ)"
+Title: "Part Preparation -- Ferritic Nitrocarburizing (FNC / Q-P-Q)"
 Document Type: Construction Workup
 Status: v1.0 -- Ready for Generation
 Created: 2026-04-26T00:00:00
 Author: Alaina (poster-designer)
 Source Documents:
-  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / QPQ, Section 6.3)"
+  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / Q-P-Q, Section 6.3)"
 Technical Source: FNC part preparation -- no pre-Q&T required (unlike gas nitriding), surface cleanliness and dryness critical (moisture/salt explosion), masking options (mechanical only -- copper plate NOT effective), preheat as safety-critical step. Per AMS 2753.
 Process Scope: Ferritic nitrocarburizing part preparation (Stages 1-2 of 9)
 Editions: Dark (flagship) + Light (accessible print)
@@ -15,14 +15,14 @@ tags:
   - PosterDesign
   - FerriticNitrocarburizing
   - FNC
-  - QPQ
+  - Q-P-Q
   - PartPreparation
   - ConstructionWorkup
   - DiffusionHT
 ---
 
 # Poster #606 -- Construction Workup
-## Part Preparation -- Ferritic Nitrocarburizing (FNC / QPQ)
+## Part Preparation -- Ferritic Nitrocarburizing (FNC / Q-P-Q)
 
 *Alaina -- Plating Posters Inc Poster Designer*
 *v1.0 -- 2026-04-26*
@@ -74,7 +74,7 @@ ZONE 7 -- FOOTER BAND (32.5"--36.0")
 ### ZONE 1 -- Header Band
 
 **Headline:** `PART PREPARATION` -- 80 pt `#F0EDE8`. X: 0.5", Y: 0.5".
-**Subheading:** `Ferritic Nitrocarburizing (FNC / QPQ) -- Stages 1 and 2 of 9` -- 32 pt `#2EC4B6` (Teal). Y: 1.4".
+**Subheading:** `Ferritic Nitrocarburizing (FNC / Q-P-Q) -- Stages 1 and 2 of 9` -- 32 pt `#2EC4B6` (Teal). Y: 1.4".
 **Tagline:** `No pre-quench-and-temper needed -- FNC works on as-machined parts. But every surface must be clean and absolutely dry before it goes near molten salt. The preheat step is not optional -- it is the line between a safe immersion and a steam explosion.` -- 20 pt `#F0EDE8` at 65%. Y: 2.1".
 
 ---
@@ -183,7 +183,7 @@ WHAT DOES NOT WORK:
   (dissolve in molten salt)
 
 PRACTICAL NOTE:
-Most FNC/QPQ parts are fully
+Most FNC/Q-P-Q parts are fully
 treated -- masking is less common
 than in carburizing or nitriding.
 When selective treatment IS needed,
@@ -215,7 +215,7 @@ before the nitriding operation.
 ```
 Inter Regular 13 pt `#F0EDE8`. Label: `#E8A020`.
 
-*Right -- FNC / QPQ:*
+*Right -- FNC / Q-P-Q:*
 ```
 Part can be as-machined, normalized,
 or annealed. No pre-Q&T required.
@@ -327,7 +327,7 @@ Details: Inter Regular 12 pt `#F0EDE8`.
 
 ### ZONE 7 -- Footer
 
-Standard. Title: `Part Preparation -- Ferritic Nitrocarburizing (FNC / QPQ)`. Version `v1.0 -- 2026`.
+Standard. Title: `Part Preparation -- Ferritic Nitrocarburizing (FNC / Q-P-Q)`. Version `v1.0 -- 2026`.
 
 Disclaimer: `Source: AMS 2753, AMS 2755, salt bath equipment OEM documentation. Preheat procedures are safety-critical -- consult your EHS department and equipment supplier for site-specific requirements.`
 

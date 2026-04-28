@@ -1,13 +1,13 @@
 ---
 Project: Plating Posters Inc
 Poster Number: 607
-Title: "Loading & Fixturing -- Ferritic Nitrocarburizing (FNC / QPQ)"
+Title: "Loading & Fixturing -- Ferritic Nitrocarburizing (FNC / Q-P-Q)"
 Document Type: Construction Workup
 Status: v1.0 -- Ready for Generation
 Created: 2026-04-26T00:00:00
 Author: Alaina (poster-designer)
 Source Documents:
-  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / QPQ, Section 6.4)"
+  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / Q-P-Q, Section 6.4)"
 Technical Source: FNC loading and fixturing -- low-carbon steel fixtures (fixtures also get treated), wire/rod/hook fixturing for salt bath immersion, orientation for salt drainage, part spacing less critical than gas nitriding (liquid salt provides uniform heat transfer). Per AMS 2753.
 Process Scope: Ferritic nitrocarburizing loading and fixturing (Stage 2 continued)
 Editions: Dark (flagship) + Light (accessible print)
@@ -15,7 +15,7 @@ tags:
   - PosterDesign
   - FerriticNitrocarburizing
   - FNC
-  - QPQ
+  - Q-P-Q
   - Loading
   - Fixturing
   - ConstructionWorkup
@@ -23,7 +23,7 @@ tags:
 ---
 
 # Poster #607 -- Construction Workup
-## Loading & Fixturing -- Ferritic Nitrocarburizing (FNC / QPQ)
+## Loading & Fixturing -- Ferritic Nitrocarburizing (FNC / Q-P-Q)
 
 *Alaina -- Plating Posters Inc Poster Designer*
 *v1.0 -- 2026-04-26*
@@ -75,7 +75,7 @@ ZONE 7 -- FOOTER BAND (32.5"--36.0")
 ### ZONE 1 -- Header Band
 
 **Headline:** `LOADING & FIXTURING` -- 80 pt `#F0EDE8`. X: 0.5", Y: 0.5".
-**Subheading:** `Ferritic Nitrocarburizing (FNC / QPQ) -- Salt Bath Operations` -- 32 pt `#2EC4B6` (Teal). Y: 1.4".
+**Subheading:** `Ferritic Nitrocarburizing (FNC / Q-P-Q) -- Salt Bath Operations` -- 32 pt `#2EC4B6` (Teal). Y: 1.4".
 **Tagline:** `Liquid salt provides uniform heat transfer -- spacing is less critical than gas-phase processes. But drainage is everything. A cupped part traps salt, and trapped salt means contaminated rinse, ruined polish, and failed corrosion performance.` -- 20 pt `#F0EDE8` at 65%. Y: 2.1".
 
 ---
@@ -226,7 +226,7 @@ Fix the orientation, then proceed.
 
 ### ZONE 5 -- Bath-to-Bath Transfer
 
-**Section label:** `TRANSFER BETWEEN BATHS -- QPQ LOGISTICS` -- Y: 22.2". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
+**Section label:** `TRANSFER BETWEEN BATHS -- Q-P-Q LOGISTICS` -- Y: 22.2". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
 
 **BLOCK E -- Transfer sequence (Y: 22.9" to 28.3")**
 
@@ -270,7 +270,7 @@ Each: Rounded rect H: 2.7", fill `#1E2435`, left accent `#2EC4B6`.
 
 ### ZONE 7 -- Footer
 
-Standard. Title: `Loading & Fixturing -- Ferritic Nitrocarburizing (FNC / QPQ)`. Version `v1.0 -- 2026`.
+Standard. Title: `Loading & Fixturing -- Ferritic Nitrocarburizing (FNC / Q-P-Q)`. Version `v1.0 -- 2026`.
 
 Disclaimer: `Source: AMS 2753, AMS 2755, salt bath equipment OEM documentation. Fixture designs vary by part geometry and salt bath configuration. Consult your equipment supplier for load capacity and fixture material recommendations.`
 
@@ -286,7 +286,7 @@ Disclaimer: `Source: AMS 2753, AMS 2755, salt bath equipment OEM documentation. 
 
 ## Design Notes
 
-Salt drainage is the star of this poster -- it's the fixturing equivalent of "moisture is the enemy" from the safety poster. The water-dip test suggestion in Zone 4 is a practical shop-floor trick that experienced operators use. The bath-to-bath transfer flow (Zone 5) is unique to QPQ and visually communicates the multi-step logistics that make this process more complex than a single-bath treatment.
+Salt drainage is the star of this poster -- it's the fixturing equivalent of "moisture is the enemy" from the safety poster. The water-dip test suggestion in Zone 4 is a practical shop-floor trick that experienced operators use. The bath-to-bath transfer flow (Zone 5) is unique to Q-P-Q and visually communicates the multi-step logistics that make this process more complex than a single-bath treatment.
 
 ---
 

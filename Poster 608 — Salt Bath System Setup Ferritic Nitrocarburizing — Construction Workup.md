@@ -1,13 +1,13 @@
 ---
 Project: Plating Posters Inc
 Poster Number: 608
-Title: "Salt Bath / System Setup -- Ferritic Nitrocarburizing (FNC / QPQ)"
+Title: "Salt Bath / System Setup -- Ferritic Nitrocarburizing (FNC / Q-P-Q)"
 Document Type: Construction Workup
 Status: v1.0 -- Ready for Generation
 Created: 2026-04-26T00:00:00
 Author: Alaina (poster-designer)
 Source Documents:
-  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / QPQ, Section 6.5)"
+  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / Q-P-Q, Section 6.5)"
 Technical Source: Salt bath types and compositions -- nitrocarburizing bath (NaCNO/KCNO + carbonate, 1050-1125 F), oxidizing quench bath (NaNO3/NaNO2, 700-800 F), gas FNC alternative (NH3 + CO2), salt bath maintenance (cyanate analysis, cyanide monitoring, sludge removal). Per AMS 2753 and AMS 2755.
 Process Scope: Ferritic nitrocarburizing salt bath and system setup (Stage 3 setup)
 Editions: Dark (flagship) + Light (accessible print)
@@ -15,7 +15,7 @@ tags:
   - PosterDesign
   - FerriticNitrocarburizing
   - FNC
-  - QPQ
+  - Q-P-Q
   - SaltBath
   - SystemSetup
   - ConstructionWorkup
@@ -23,12 +23,12 @@ tags:
 ---
 
 # Poster #608 -- Construction Workup
-## Salt Bath / System Setup -- Ferritic Nitrocarburizing (FNC / QPQ)
+## Salt Bath / System Setup -- Ferritic Nitrocarburizing (FNC / Q-P-Q)
 
 *Alaina -- Plating Posters Inc Poster Designer*
 *v1.0 -- 2026-04-26*
 
-The equipment poster for the FNC cluster. A full QPQ installation requires at minimum two salt baths (nitrocarburizing + oxidizing quench), a preheat oven, rinse tanks, and a polishing station. This poster covers the salt bath compositions, the gas FNC alternative, and the critical bath maintenance procedures that keep the process running correctly. The cyanate analysis and cyanide monitoring sections are especially important for regulatory compliance.
+The equipment poster for the FNC cluster. A full Q-P-Q installation requires at minimum two salt baths (nitrocarburizing + oxidizing quench), a preheat oven, rinse tanks, and a polishing station. This poster covers the salt bath compositions, the gas FNC alternative, and the critical bath maintenance procedures that keep the process running correctly. The cyanate analysis and cyanide monitoring sections are especially important for regulatory compliance.
 
 ---
 
@@ -38,7 +38,7 @@ The equipment poster for the FNC cluster. A full QPQ installation requires at mi
 1. **Two salt bath cards (Block B -- HERO):** Nitrocarburizing bath and oxidizing quench bath -- compositions, temperatures, and functions.
 2. **Gas FNC alternative panel (Block D):** NH3 + CO2 atmosphere approach vs. salt bath.
 3. **Bath maintenance procedures (Block E):** Cyanate analysis, cyanide monitoring, sludge removal.
-4. **Equipment layout strip (Block F):** Typical QPQ line arrangement.
+4. **Equipment layout strip (Block F):** Typical Q-P-Q line arrangement.
 
 ---
 
@@ -64,7 +64,7 @@ ZONE 4 -- GAS FNC ALTERNATIVE (14.5"--22.0" / ~7.5")
 ZONE 5 -- BATH MAINTENANCE (22.0"--28.5" / ~6.5")
   Block E: Maintenance procedures
 ZONE 6 -- EQUIPMENT LAYOUT (28.5"--32.5" / ~4.0")
-  Block F: Typical QPQ line strip
+  Block F: Typical Q-P-Q line strip
 ZONE 7 -- FOOTER BAND (32.5"--36.0")
 ```
 
@@ -75,21 +75,21 @@ ZONE 7 -- FOOTER BAND (32.5"--36.0")
 ### ZONE 1 -- Header Band
 
 **Headline:** `SALT BATH / SYSTEM SETUP` -- 80 pt `#F0EDE8`. X: 0.5", Y: 0.5".
-**Subheading:** `Ferritic Nitrocarburizing (FNC / QPQ) -- Equipment and Bath Chemistry` -- 32 pt `#E8A020` (Amber). Y: 1.4".
-**Tagline:** `Two molten salt baths, a preheat oven, rinse tanks, and a polishing station. The QPQ line is a multi-station operation where bath chemistry is everything -- cyanate content controls the case, and the oxidizing bath creates the corrosion barrier.` -- 20 pt `#F0EDE8` at 65%. Y: 2.1".
+**Subheading:** `Ferritic Nitrocarburizing (FNC / Q-P-Q) -- Equipment and Bath Chemistry` -- 32 pt `#E8A020` (Amber). Y: 1.4".
+**Tagline:** `Two molten salt baths, a preheat oven, rinse tanks, and a polishing station. The Q-P-Q line is a multi-station operation where bath chemistry is everything -- cyanate content controls the case, and the oxidizing bath creates the corrosion barrier.` -- 20 pt `#F0EDE8` at 65%. Y: 2.1".
 
 ---
 
 ### ZONE 2 -- Orientation Strip
 
 System setup highlighted: fill `#E8A020`, text `#1A1F2E`.
-Below: `Equipment setup for the complete QPQ cycle -- from preheat through final rinse`
+Below: `Equipment setup for the complete Q-P-Q cycle -- from preheat through final rinse`
 
 ---
 
 ### ZONE 3 -- Salt Bath Specifications (HERO)
 
-**Section label:** `TWO BATHS, TWO FUNCTIONS -- THE CHEMISTRY OF QPQ` -- Y: 4.4". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
+**Section label:** `TWO BATHS, TWO FUNCTIONS -- THE CHEMISTRY OF Q-P-Q` -- Y: 4.4". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
 
 **BLOCK B -- Two Salt Bath Cards (Y: 5.0" to 14.0")**
 
@@ -150,11 +150,11 @@ Oxidizing salt creates a magnetite
 the porous compound zone.
 
 This oxide layer is the key to
-QPQ corrosion resistance. Without it,
+Q-P-Q corrosion resistance. Without it,
 the compound zone alone provides only
 moderate corrosion protection.
 
-WITH oxidizing quench (QPQ):
+WITH oxidizing quench (Q-P-Q):
 200--500 hours neutral salt spray
 
 WITHOUT oxidizing quench (FNC only):
@@ -185,7 +185,7 @@ oxidizing bath.
 
 Rounded rect fill `#1E2435`, left accent `#2EC4B6`.
 
-Title: `GAS FNC (MELONITE / ARCOR)` Barlow SemiBold 18 pt `#2EC4B6`
+Title: `GAS FNC (ATMOSPHERE METHOD)` Barlow SemiBold 18 pt `#2EC4B6`
 
 Content:
 ```
@@ -206,26 +206,26 @@ ADVANTAGES:
 + Easier to automate
 
 LIMITATIONS:
-- Cannot produce the QPQ oxidizing
+- Cannot produce the Q-P-Q oxidizing
   quench in a gas process
 - Corrosion resistance without the
   oxidizing quench step is LOWER
-  than full QPQ
+  than full Q-P-Q
 - Separate oxidizing step can be
   added (steam treatment or liquid)
-  but does not match salt QPQ
+  but does not match salt Q-P-Q
 ```
 
 *Right -- Salt Bath FNC (X: 12.0", W: 11.5"):*
 
 Rounded rect fill `#1E2435`, left accent `#E8A020`.
 
-Title: `SALT BATH FNC (TUFFTRIDE / TENIFER)` Barlow SemiBold 18 pt `#E8A020`
+Title: `SALT BATH FNC (MOLTEN CYANATE METHOD)` Barlow SemiBold 18 pt `#E8A020`
 
 Content:
 ```
 ADVANTAGES:
-+ Full QPQ cycle available
++ Full Q-P-Q cycle available
   (highest corrosion performance)
 + Uniform heat transfer (liquid)
 + Well-established for firearms,
@@ -241,7 +241,7 @@ LIMITATIONS:
 - Splash and fume hazards
 
 BOTTOM LINE:
-If you need maximum QPQ corrosion
+If you need maximum Q-P-Q corrosion
 resistance (200--500 hr salt spray),
 salt bath is the proven path.
 If you need FNC without the salt
@@ -339,7 +339,7 @@ for critical applications.
 
 ### ZONE 6 -- Equipment Layout
 
-**Section label:** `TYPICAL QPQ LINE LAYOUT` -- Y: 28.7". Barlow Condensed ExtraBold 24 pt `#F0EDE8`.
+**Section label:** `TYPICAL Q-P-Q LINE LAYOUT` -- Y: 28.7". Barlow Condensed ExtraBold 24 pt `#F0EDE8`.
 
 **BLOCK F -- Five-station strip (Y: 29.4" to 32.3")**
 
@@ -362,9 +362,9 @@ Below: `Parts flow left to right. Polish station feeds back to oxidizing quench 
 
 ### ZONE 7 -- Footer
 
-Standard. Title: `Salt Bath / System Setup -- Ferritic Nitrocarburizing (FNC / QPQ)`. Version `v1.0 -- 2026`.
+Standard. Title: `Salt Bath / System Setup -- Ferritic Nitrocarburizing (FNC / Q-P-Q)`. Version `v1.0 -- 2026`.
 
-Disclaimer: `Source: AMS 2753, AMS 2755. Salt compositions and maintenance schedules vary by bath supplier (Durferrit, Kolene, etc.). Consult your salt supplier for specific composition targets, replenishment rates, and cyanide disposal requirements.`
+Disclaimer: `Source: AMS 2753, AMS 2755. Salt compositions and maintenance schedules vary by bath supplier. Consult your salt supplier for specific composition targets, replenishment rates, and cyanide disposal requirements.`
 
 ---
 
@@ -378,7 +378,7 @@ Disclaimer: `Source: AMS 2753, AMS 2755. Salt compositions and maintenance sched
 
 ## Design Notes
 
-The two salt bath cards are the technical core -- operators need to understand that the nitrocarburizing bath and the oxidizing quench bath are fundamentally different chemistries with different functions. The gas FNC comparison (Zone 4) is commercially important -- many shops are evaluating whether they can get QPQ-equivalent results without molten salt, and the honest answer is "not quite, but close for some applications." The cyanide monitoring card is the regulatory reality check.
+The two salt bath cards are the technical core -- operators need to understand that the nitrocarburizing bath and the oxidizing quench bath are fundamentally different chemistries with different functions. The gas FNC comparison (Zone 4) is commercially important -- many shops are evaluating whether they can get Q-P-Q-equivalent results without molten salt, and the honest answer is "not quite, but close for some applications." The cyanide monitoring card is the regulatory reality check.
 
 ---
 

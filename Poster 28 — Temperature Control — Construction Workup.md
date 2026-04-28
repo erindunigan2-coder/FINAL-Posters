@@ -300,7 +300,7 @@ Each card: Width: 5.5". Height: 3.0". Fill: `#1E2435`. Corner radius: 6 pt. Bord
 | Card | X | Accent | Equipment | Content |
 |---|---|---|---|---|
 | 1 | 0.5" | `#E05C5C` | `IMMERSION HEATERS` | Electric elements submerged in tank. Direct, efficient. Titanium or quartz sheath for corrosive baths. Risk: local overheating at element surface — keep element clean and solution circulating. Size: 5-50 watts/gallon typical. |
-| 2 | 6.25" | `#E8A020` | `STEAM / HOT WATER COILS` | Indirect heating via coils in tank. Gentler, more uniform. Common in larger tanks. Titanium, Teflon-lined, or Hastelloy for corrosive baths. Slower response than electric. |
+| 2 | 6.25" | `#E8A020` | `STEAM / HOT WATER COILS` | Indirect heating via coils in tank. Gentler, more uniform. Common in larger tanks. Titanium, PTFE-lined, or Hastelloy for corrosive baths. Slower response than electric. |
 | 3 | 12.0" | `#2EC4B6` | `CHILLERS` | Active refrigeration for heat removal. Essential for anodize, bright acid tin, and high-amperage baths that generate excess heat. Undersized chillers are the #1 cause of temperature drift in summer. |
 | 4 | 17.75" | `#27AE60` | `HEAT EXCHANGERS` | External plate-and-frame or shell-and-tube units. Solution circulates through exchanger, returns to tank. Allows cooling OR heating. Best for temperature-critical processes (EN, chrome). |
 

@@ -258,7 +258,7 @@ Disclaimer: `This poster is an educational reference tool. Parameters shown are 
 This is the densest poster in the CC-05 cluster. The reaction mechanism diagram must be clear at wall distance -- use large arrows and bold labels. The pH window gauge is THE single most important visual -- it makes the narrow operating range visceral. The Tri vs. Hex film characteristics table is the reference payoff -- a shop engineer should be able to answer "what exactly is different about tri?" by reading this table.
 
 Watson flag: Confirm current MIL-DTL-5541F revision still requires 168 hr SST minimum for Type II Class 1A.
-Tyler flag: Validate that pH 3.5--4.2 is the consensus range across major TCP suppliers (Surtec 650, Alodine 5700, TCP-HF).
+Tyler flag: Validate that pH 3.5--4.2 is the consensus range across major trivalent chromium passivate (TCP) suppliers.
 
 ---
 

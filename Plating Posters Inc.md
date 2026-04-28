@@ -92,7 +92,7 @@ These rules are locked as of 2026-04-26 and apply to all future sessions:
 2. **Push to GitHub at end of each session** — repository: `https://github.com/DrewsBest90/PlatingPosters.git` (Option C workflow). Push CWs and GPs as they are completed.
 3. **GP pacing** — produce GPs in controlled batches to avoid hitting rate limits. Do not attempt all remaining GPs in a single session.
 4. **Tyler validation** — cluster validation is ongoing; 25/81 clusters complete. Continue with Drew present; all corrections applied before GP production.
-5. **Watson re-verification** — 7 flagged technical items were cleared 2026-04-26 (EN-B deposition rates, Electroless Cu formaldehyde, BSAA H2SO4, QPQ salt spray, gold efficiency). New flags should be queued for Watson review before the corresponding GP is written.
+5. **Watson re-verification** — 7 flagged technical items were cleared 2026-04-26 (EN-B deposition rates, Electroless Cu formaldehyde, BSAA H2SO4, FNC/Q-P-Q salt spray, gold efficiency). New flags should be queued for Watson review before the corresponding GP is written.
 6. **No product names or company names** in any poster content — 100% generic and publishable.
 
 ---
@@ -240,7 +240,7 @@ Watson flagged 7 technical items that were re-verified during Session 3 (2026-04
 - EN-B deposition rates — cleared
 - Electroless copper formaldehyde chemistry — cleared
 - BSAA H2SO4 concentration — cleared
-- QPQ salt spray performance data — cleared
+- FNC/Q-P-Q salt spray performance data — cleared
 - Gold plating efficiency values — cleared
 - Two additional items — cleared
 

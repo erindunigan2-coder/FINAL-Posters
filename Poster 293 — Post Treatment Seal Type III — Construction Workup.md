@@ -117,7 +117,7 @@ Y: 5.0" to 14.5". Four tall cards in a single row.
 **Card 3 -- PTFE Impregnation (X: 12.16", W: 5.5", H: 9.0"):**
 - Fill `#1E2435`, top accent 4 pt `#E8A020`
 - Title: `PTFE IMPREGNATION` Barlow SemiBold 18 pt `#E8A020`
-- Chemistry: `PTFE (Teflon) dispersion, vendor-specific` JetBrains Mono 12 pt `#F0EDE8`
+- Chemistry: `PTFE dispersion, vendor-specific` JetBrains Mono 12 pt `#F0EDE8`
 - Temperature: `Per vendor TDS` JetBrains Mono 13 pt `#F0EDE8`
 - Time: `Per vendor TDS` JetBrains Mono 12 pt `#F0EDE8`
 - Mechanism: `PTFE particles fill pores; cured at elevated temperature` Inter Regular 12 pt `#F0EDE8` at 70%
@@ -147,7 +147,7 @@ Section label: `PTFE IMPREGNATION -- THE HARDCOAT SPECIALTY SEAL` Barlow Condens
 Callout box, fill `#1E2435`, left accent `#E8A020`:
 
 Content (Inter Regular 13 pt `#F0EDE8`, line height 155%):
-- `PTFE (polytetrafluoroethylene) is the same polymer as Teflon.`
+- `PTFE (polytetrafluoroethylene) -- the industry-standard low-friction polymer.`
 - `Applied as an aqueous dispersion that is drawn into the open pores of the hard coat by immersion or vacuum.`
 - `After impregnation, parts are typically heat-cured at 400--500 F to fuse PTFE particles.`
 - ``

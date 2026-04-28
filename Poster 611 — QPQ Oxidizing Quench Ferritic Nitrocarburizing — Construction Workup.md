@@ -1,41 +1,41 @@
 ---
 Project: Plating Posters Inc
 Poster Number: 611
-Title: "QPQ Oxidizing Quench -- Ferritic Nitrocarburizing"
+Title: "Q-P-Q Oxidizing Quench -- Ferritic Nitrocarburizing"
 Document Type: Construction Workup
 Status: v1.0 -- Ready for Generation
 Created: 2026-04-26T00:00:00
 Author: Alaina (poster-designer)
 Source Documents:
-  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / QPQ, Section 6.7)"
-Technical Source: QPQ oxidizing quench -- NOT a hardening quench but an oxidizing immersion in NaNO3/NaNO2 salt at 700-800 F. Creates magnetite (Fe3O4) that seals compound zone pores. Polish step between Q1 and Q2. Corrosion resistance: 200-500 hours neutral salt spray on low-carbon steel (ASTM B117). Per AMS 2755.
-Process Scope: QPQ oxidizing quench, polish, and second quench (Stages 4, 6, and 7 of 9)
+  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / Q-P-Q, Section 6.7)"
+Technical Source: Q-P-Q oxidizing quench -- NOT a hardening quench but an oxidizing immersion in NaNO3/NaNO2 salt at 700-800 F. Creates magnetite (Fe3O4) that seals compound zone pores. Polish step between Q1 and Q2. Corrosion resistance: 200-500 hours neutral salt spray on low-carbon steel (ASTM B117). Per AMS 2755.
+Process Scope: Q-P-Q oxidizing quench, polish, and second quench (Stages 4, 6, and 7 of 9)
 Editions: Dark (flagship) + Light (accessible print)
 tags:
   - PosterDesign
   - FerriticNitrocarburizing
   - FNC
-  - QPQ
+  - Q-P-Q
   - OxidizingQuench
   - ConstructionWorkup
   - DiffusionHT
 ---
 
 # Poster #611 -- Construction Workup
-## QPQ Oxidizing Quench -- Ferritic Nitrocarburizing
+## Q-P-Q Oxidizing Quench -- Ferritic Nitrocarburizing
 
 *Alaina -- Plating Posters Inc Poster Designer*
 *v1.0 -- 2026-04-26*
 
-This poster covers the "QPQ" in QPQ -- the Quench-Polish-Quench sequence that transforms FNC from a hardness treatment into a corrosion powerhouse. The "quench" is NOT a hardening quench -- no martensite forms. It's an immersion in oxidizing salt that creates a magnetite (Fe3O4) layer, sealing the porous compound zone. The polish step smooths the surface and exposes fresh compound zone for the second oxidizing treatment. The result: 200-500 hours of salt spray resistance on low-carbon steel -- an order of magnitude better than hard chrome plate.
+This poster covers the "Q-P-Q" in Q-P-Q -- the Quench-Polish-Quench sequence that transforms FNC from a hardness treatment into a corrosion powerhouse. The "quench" is NOT a hardening quench -- no martensite forms. It's an immersion in oxidizing salt that creates a magnetite (Fe3O4) layer, sealing the porous compound zone. The polish step smooths the surface and exposes fresh compound zone for the second oxidizing treatment. The result: 200-500 hours of salt spray resistance on low-carbon steel -- an order of magnitude better than hard chrome plate.
 
 ---
 
 ## Part 1 -- Workflow Orientation
 
 ### Limitations to Flag
-1. **Q-P-Q three-step hero (Block B):** Visual showing the three QPQ steps and what each accomplishes.
-2. **Corrosion resistance comparison (Block D):** QPQ vs. hard chrome vs. FNC-only vs. untreated.
+1. **Q-P-Q three-step hero (Block B):** Visual showing the three Q-P-Q steps and what each accomplishes.
+2. **Corrosion resistance comparison (Block D):** Q-P-Q vs. hard chrome vs. FNC-only vs. untreated.
 3. **Polish specification panel (Block E):** Ra targets, methods, and why polish quality matters.
 4. **The magnetite mechanism callout (Block F):** How Fe3O4 seals the compound zone pores.
 
@@ -53,7 +53,7 @@ Standard: 24x36", `#1A1F2E`, locked palette and fonts.
 ZONE 1 -- HEADER BAND (0"--2.9")
 ZONE 2 -- SEQUENCE ORIENTATION STRIP (2.9"--4.2")
   Stages 4, 6, and 7 highlighted
-ZONE 3 -- QPQ THREE-STEP HERO (4.2"--15.5" / ~11.3")
+ZONE 3 -- Q-P-Q THREE-STEP HERO (4.2"--15.5" / ~11.3")
   Block B: Q1 -> Polish -> Q2 with annotations
 ZONE 4 -- CORROSION RESISTANCE COMPARISON (15.5"--22.0" / ~6.5")
   Block D: Salt spray comparison table
@@ -69,13 +69,13 @@ ZONE 6 -- FOOTER BAND (32.5"--36.0")
 
 ### ZONE 1 -- Header Band
 
-**Headline:** `QPQ OXIDIZING QUENCH` -- 80 pt `#F0EDE8`.
+**Headline:** `Q-P-Q OXIDIZING QUENCH` -- 80 pt `#F0EDE8`.
 **Subheading:** `Quench -- Polish -- Quench: The Corrosion Resistance Sequence` -- 30 pt `#E8A020` (Amber).
-**Tagline:** `This is NOT a hardening quench. No martensite. No phase change. The QPQ "quench" is an oxidizing immersion that creates a magnetite seal over the compound zone -- and it is the reason FNC/QPQ outperforms hard chrome in salt spray testing.` -- 20 pt `#F0EDE8` at 65%.
+**Tagline:** `This is NOT a hardening quench. No martensite. No phase change. The Q-P-Q "quench" is an oxidizing immersion that creates a magnetite seal over the compound zone -- and it is the reason FNC/Q-P-Q outperforms hard chrome in salt spray testing.` -- 20 pt `#F0EDE8` at 65%.
 
 **Rule card (right):**
 - Big number: `200-500` -- 60 pt `#27AE60`
-- Label: `hours ASTM B117 salt spray on QPQ-treated 1018 steel` -- 14 pt `#F0EDE8`
+- Label: `hours ASTM B117 salt spray on Q-P-Q-treated 1018 steel` -- 14 pt `#F0EDE8`
 
 ---
 
@@ -86,9 +86,9 @@ Below: `Before: Compound zone formed (porous)  -->  After: Compound zone sealed 
 
 ---
 
-### ZONE 3 -- QPQ Three-Step Hero
+### ZONE 3 -- Q-P-Q Three-Step Hero
 
-**Section label:** `THE QPQ SEQUENCE -- THREE STEPS TO EXCEPTIONAL CORROSION RESISTANCE` -- Y: 4.4". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
+**Section label:** `THE Q-P-Q SEQUENCE -- THREE STEPS TO EXCEPTIONAL CORROSION RESISTANCE` -- Y: 4.4". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
 
 **BLOCK B -- Three large step cards (Y: 5.0" to 14.5")**
 
@@ -213,24 +213,24 @@ Professional, consistent appearance
 
 ### ZONE 4 -- Corrosion Resistance Comparison
 
-**Section label:** `CORROSION RESISTANCE -- QPQ vs. THE COMPETITION` -- Y: 15.7". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
+**Section label:** `CORROSION RESISTANCE -- Q-P-Q vs. THE COMPETITION` -- Y: 15.7". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
 
 **BLOCK D -- Comparison Table (Y: 16.3" to 21.8")**
 
 | Treatment | Substrate | Salt Spray (ASTM B117) | Appearance | Hex Cr? |
 |---|---|---|---|---|
-| QPQ (full Q-P-Q) | 1018 steel | 200--500 hours | Matte black | No |
-| FNC only (no QPQ) | 1018 steel | 50--100 hours (est.) | Gray | No |
+| Q-P-Q (full Q-P-Q) | 1018 steel | 200--500 hours | Matte black | No |
+| FNC only (no Q-P-Q) | 1018 steel | 50--100 hours (est.) | Gray | No |
 | Hard chrome plate | Steel | 24--96 hours (typical) | Bright metallic | YES (Cr6+) |
 | Black oxide | Steel | 1--4 hours | Black | No |
 | Zinc plate (clear) | Steel | 8--24 hours | Silver | No |
 | Untreated 1018 | -- | 2--8 hours | Bare steel | N/A |
 
-Table: Header `#3A4055`, alternating rows. QPQ row highlighted with left border `#27AE60`.
+Table: Header `#3A4055`, alternating rows. Q-P-Q row highlighted with left border `#27AE60`.
 
 Below table:
-- `QPQ outperforms hard chrome by 2--10x in salt spray testing AND eliminates hexavalent chromium exposure.` Inter Medium 16 pt `#27AE60`
-- `This is why QPQ is positioned as a hard chrome REPLACEMENT for hydraulic cylinders, gun barrels, and shafts.` Inter Regular 13 pt `#F0EDE8` at 70%
+- `Q-P-Q outperforms hard chrome by 2--10x in salt spray testing AND eliminates hexavalent chromium exposure.` Inter Medium 16 pt `#27AE60`
+- `This is why Q-P-Q is positioned as a hard chrome REPLACEMENT for hydraulic cylinders, gun barrels, and shafts.` Inter Regular 13 pt `#F0EDE8` at 70%
 
 ---
 
@@ -304,7 +304,7 @@ forming MAGNETITE (Fe3O4).
 Magnetite is:
 - Hard (580--630 HV)
 - Adherent (bonds chemically)
-- Black (gives QPQ its appearance)
+- Black (gives Q-P-Q its appearance)
 - Corrosion-resistant (stable oxide)
 - Space-filling (plugs the pores)
 
@@ -321,11 +321,11 @@ Polish exposes fresh surface.
 Q2 seals the polished surface.
 Two layers > one layer.
 
-WHY QPQ BEATS HARD CHROME:
+WHY Q-P-Q BEATS HARD CHROME:
 Chrome plate is subject to
 micro-cracking under stress.
 Cracks allow corrosion attack.
-QPQ has no cracks -- the oxide-
+Q-P-Q has no cracks -- the oxide-
 sealed compound zone is continuous.
 ```
 
@@ -333,9 +333,9 @@ sealed compound zone is continuous.
 
 ### ZONE 6 -- Footer
 
-Standard. Title: `QPQ Oxidizing Quench -- Ferritic Nitrocarburizing`. Version `v1.0 -- 2026`.
+Standard. Title: `Q-P-Q Oxidizing Quench -- Ferritic Nitrocarburizing`. Version `v1.0 -- 2026`.
 
-Disclaimer: `Source: AMS 2755, ASTM B117. Salt spray values are typical for QPQ-treated low-carbon steel. Actual corrosion resistance varies by substrate, bath condition, polish quality, and test conditions. QPQ corrosion resistance of 200-500 hours reflects the Watson-verified range for this treatment.`
+Disclaimer: `Source: AMS 2755, ASTM B117. Salt spray values are typical for Q-P-Q-treated low-carbon steel. Actual corrosion resistance varies by substrate, bath condition, polish quality, and test conditions. Q-P-Q corrosion resistance of 200-500 hours reflects the Watson-verified range for this treatment.`
 
 ---
 
@@ -347,7 +347,7 @@ Disclaimer: `Source: AMS 2755, ASTM B117. Salt spray values are typical for QPQ-
 
 ## Design Notes
 
-The three-step hero (Q1 -> P -> Q2) is the visual structure that makes QPQ intuitive. Each card tells the story of what happens at that stage AND why it matters. The corrosion comparison table is the commercial argument -- showing QPQ at 200-500 hours alongside hard chrome at 24-96 hours is the data point that sells this process. The magnetite mechanism panel connects the metallurgy to the performance in plain language -- "the oxide plugs the pores" is a mental model that any operator can carry.
+The three-step hero (Q1 -> P -> Q2) is the visual structure that makes Q-P-Q intuitive. Each card tells the story of what happens at that stage AND why it matters. The corrosion comparison table is the commercial argument -- showing Q-P-Q at 200-500 hours alongside hard chrome at 24-96 hours is the data point that sells this process. The magnetite mechanism panel connects the metallurgy to the performance in plain language -- "the oxide plugs the pores" is a mental model that any operator can carry.
 
 ---
 

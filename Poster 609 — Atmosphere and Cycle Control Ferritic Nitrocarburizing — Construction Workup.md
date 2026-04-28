@@ -1,40 +1,40 @@
 ---
 Project: Plating Posters Inc
 Poster Number: 609
-Title: "Atmosphere & Cycle Control -- Ferritic Nitrocarburizing (FNC / QPQ)"
+Title: "Atmosphere & Cycle Control -- Ferritic Nitrocarburizing (FNC / Q-P-Q)"
 Document Type: Construction Workup
 Status: v1.0 -- Ready for Generation
 Created: 2026-04-26T00:00:00
 Author: Alaina (poster-designer)
 Source Documents:
-  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / QPQ, Section 6.6)"
-Technical Source: FNC cycle parameters -- nitrocarburizing temperature (1050-1125 F), immersion times (60-240 min), oxidizing quench parameters (700-800 F, 15-30 min), total QPQ cycle time (2.5-5 hours). Per AMS 2753 and AMS 2755.
+  - "Diffusion & Heat Treatment Clusters -- Watson Research Brief (Process 6: FNC / Q-P-Q, Section 6.6)"
+Technical Source: FNC cycle parameters -- nitrocarburizing temperature (1050-1125 F), immersion times (60-240 min), oxidizing quench parameters (700-800 F, 15-30 min), total Q-P-Q cycle time (2.5-5 hours). Per AMS 2753 and AMS 2755.
 Process Scope: Ferritic nitrocarburizing atmosphere and cycle control (Stages 3-4 of 9)
 Editions: Dark (flagship) + Light (accessible print)
 tags:
   - PosterDesign
   - FerriticNitrocarburizing
   - FNC
-  - QPQ
+  - Q-P-Q
   - CycleControl
   - ConstructionWorkup
   - DiffusionHT
 ---
 
 # Poster #609 -- Construction Workup
-## Atmosphere & Cycle Control -- Ferritic Nitrocarburizing (FNC / QPQ)
+## Atmosphere & Cycle Control -- Ferritic Nitrocarburizing (FNC / Q-P-Q)
 
 *Alaina -- Plating Posters Inc Poster Designer*
 *v1.0 -- 2026-04-26*
 
-The cycle control poster for FNC. Unlike gas carburizing (where carbon potential is measured in real time) or vacuum carburizing (where recipes are simulation-driven), salt bath FNC is controlled by three straightforward variables: bath temperature, immersion time, and bath composition. The simplicity is part of the appeal -- but the bath chemistry must be monitored and maintained. This poster covers all the cycle timing parameters and connects each QPQ stage to its purpose.
+The cycle control poster for FNC. Unlike gas carburizing (where carbon potential is measured in real time) or vacuum carburizing (where recipes are simulation-driven), salt bath FNC is controlled by three straightforward variables: bath temperature, immersion time, and bath composition. The simplicity is part of the appeal -- but the bath chemistry must be monitored and maintained. This poster covers all the cycle timing parameters and connects each Q-P-Q stage to its purpose.
 
 ---
 
 ## Part 1 -- Workflow Orientation
 
 ### Limitations to Flag
-1. **QPQ cycle timeline (Block B -- HERO):** Full timeline showing each QPQ stage with duration, temperature, and purpose.
+1. **Q-P-Q cycle timeline (Block B -- HERO):** Full timeline showing each Q-P-Q stage with duration, temperature, and purpose.
 2. **Parameter table (Block D):** All cycle control parameters in one reference table.
 3. **Compound zone growth vs. time (Block E):** How immersion time affects the compound zone.
 4. **Total cycle time callout (Block F):** 2.5-5 hours from preheat to final rinse.
@@ -53,8 +53,8 @@ Standard: 24x36", `#1A1F2E`, locked palette and fonts.
 ZONE 1 -- HEADER BAND (0"--2.9")
 ZONE 2 -- SEQUENCE ORIENTATION STRIP (2.9"--4.2")
   Stages 3 and 4 highlighted
-ZONE 3 -- QPQ CYCLE TIMELINE HERO (4.2"--15.5" / ~11.3")
-  Block B: Horizontal timeline with all QPQ stages
+ZONE 3 -- Q-P-Q CYCLE TIMELINE HERO (4.2"--15.5" / ~11.3")
+  Block B: Horizontal timeline with all Q-P-Q stages
 ZONE 4 -- PARAMETER TABLE (15.5"--22.0" / ~6.5")
   Block D: All cycle parameters
 ZONE 5 -- COMPOUND ZONE GROWTH (22.0"--28.5" / ~6.5")
@@ -71,7 +71,7 @@ ZONE 7 -- FOOTER BAND (32.5"--36.0")
 ### ZONE 1 -- Header Band
 
 **Headline:** `ATMOSPHERE & CYCLE CONTROL` -- 72 pt `#F0EDE8`. X: 0.5", Y: 0.5".
-**Subheading:** `Ferritic Nitrocarburizing (FNC / QPQ) -- Stages 3 and 4 of 9` -- 32 pt `#27AE60` (Emerald). Y: 1.4".
+**Subheading:** `Ferritic Nitrocarburizing (FNC / Q-P-Q) -- Stages 3 and 4 of 9` -- 32 pt `#27AE60` (Emerald). Y: 1.4".
 **Tagline:** `Three variables: bath temperature, immersion time, bath composition. Salt bath FNC is simpler to control than gas-phase processes -- but the chemistry must be maintained. Cyanate content is your process control knob.` -- 20 pt `#F0EDE8` at 65%. Y: 2.1".
 
 ---
@@ -83,15 +83,15 @@ Below: `Before: Parts preheated and fixtured  -->  After: Compound zone formed, 
 
 ---
 
-### ZONE 3 -- QPQ Cycle Timeline (HERO)
+### ZONE 3 -- Q-P-Q Cycle Timeline (HERO)
 
-**Section label:** `THE COMPLETE QPQ CYCLE -- TIME AND TEMPERATURE` -- Y: 4.4". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
+**Section label:** `THE COMPLETE Q-P-Q CYCLE -- TIME AND TEMPERATURE` -- Y: 4.4". Barlow Condensed ExtraBold 28 pt `#F0EDE8`.
 
 **BLOCK B -- Horizontal Timeline (Y: 5.0" to 14.5")**
 
 Full-width rounded rect fill `#1E2435`, border 1 pt `#3A4055`.
 
-Horizontal timeline with time scale along the bottom (minutes). Seven blocks representing the QPQ stages:
+Horizontal timeline with time scale along the bottom (minutes). Seven blocks representing the Q-P-Q stages:
 
 | Stage | Start (min) | Duration (min) | Temperature | Fill | Label |
 |---|---|---|---|---|---|
@@ -117,8 +117,8 @@ Each block: Rounded rect at proportional width on timeline, height 3.5", with st
 Inter Regular 12 pt `#F0EDE8`.
 
 *Below timeline -- total time bar:*
-- `TOTAL QPQ CYCLE: 2.5--5 HOURS (preheat to final rinse)` Barlow SemiBold 20 pt `#E8A020`
-- `Compare to gas nitriding: 24--90 hours. QPQ is dramatically faster for equivalent wear and corrosion performance.` Inter Medium 14 pt `#27AE60`
+- `TOTAL Q-P-Q CYCLE: 2.5--5 HOURS (preheat to final rinse)` Barlow SemiBold 20 pt `#E8A020`
+- `Compare to gas nitriding: 24--90 hours. Q-P-Q is dramatically faster for equivalent wear and corrosion performance.` Inter Medium 14 pt `#27AE60`
 
 ---
 
@@ -211,10 +211,10 @@ stainless) slow initial absorption.
 
 | Card | X | W | Process | Typical Cycle Time |
 |---|---|---|---|---|
-| 1 | 0.5" | 5.5" | `FNC/QPQ (SALT BATH)` | 2.5--5 hours total. Preheat to final rinse. Wear + corrosion in one cycle. |
+| 1 | 0.5" | 5.5" | `FNC/Q-P-Q (SALT BATH)` | 2.5--5 hours total. Preheat to final rinse. Wear + corrosion in one cycle. |
 | 2 | 6.33" | 5.5" | `GAS NITRIDING` | 24--90 hours. Deeper case possible but dramatically longer. No built-in corrosion treatment. |
-| 3 | 12.16" | 5.5" | `HARD CHROME PLATE` | 2--8 hours (plating time). But hexavalent chromium. QPQ is the replacement candidate. |
-| 4 | 18.0" | 5.5" | `GAS FNC (MELONITE)` | 2--4 hours (FNC step only). No oxidizing quench = lower corrosion unless supplemented. |
+| 3 | 12.16" | 5.5" | `HARD CHROME PLATE` | 2--8 hours (plating time). But hexavalent chromium. Q-P-Q is the replacement candidate. |
+| 4 | 18.0" | 5.5" | `GAS FNC (ATMOSPHERE)` | 2--4 hours (FNC step only). No oxidizing quench = lower corrosion unless supplemented. |
 
 Each: Rounded rect H: 2.7", fill `#1E2435`, left accent `#2EC4B6`.
 Title: Barlow SemiBold 14 pt `#2EC4B6`.
@@ -224,7 +224,7 @@ Details: Inter Regular 12 pt `#F0EDE8`.
 
 ### ZONE 7 -- Footer
 
-Standard. Title: `Atmosphere & Cycle Control -- Ferritic Nitrocarburizing (FNC / QPQ)`. Version `v1.0 -- 2026`.
+Standard. Title: `Atmosphere & Cycle Control -- Ferritic Nitrocarburizing (FNC / Q-P-Q)`. Version `v1.0 -- 2026`.
 
 Disclaimer: `Source: AMS 2753, AMS 2755. Cycle times and compound zone growth rates are typical values for standard salt bath FNC. Actual results depend on bath composition, steel grade, and equipment. Consult your salt bath supplier for application-specific cycle recommendations.`
 
@@ -240,7 +240,7 @@ Disclaimer: `Source: AMS 2753, AMS 2755. Cycle times and compound zone growth ra
 
 ## Design Notes
 
-The QPQ cycle timeline is the hero -- it shows production managers that the entire QPQ process fits into half a shift, which is dramatically faster than gas nitriding (days). The compound zone growth table is the metallurgist's reference. The cycle time comparison strip at the bottom positions QPQ against its competitors -- gas nitriding for case depth, hard chrome for corrosion -- and makes a compelling case for FNC/QPQ as the process that delivers both in one short cycle.
+The Q-P-Q cycle timeline is the hero -- it shows production managers that the entire Q-P-Q process fits into half a shift, which is dramatically faster than gas nitriding (days). The compound zone growth table is the metallurgist's reference. The cycle time comparison strip at the bottom positions Q-P-Q against its competitors -- gas nitriding for case depth, hard chrome for corrosion -- and makes a compelling case for FNC/Q-P-Q as the process that delivers both in one short cycle.
 
 ---
 
