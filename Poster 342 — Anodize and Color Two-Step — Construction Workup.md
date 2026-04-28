@@ -166,7 +166,7 @@ Title: `STEP 2: ELECTROLYTIC COLORING` Barlow SemiBold 18 pt `#2EC4B6`
 | Organic additives | ~1 lb per 3 lb SnSO4 | Vendor-specified; mandatory |
 | Temperature | 65--75 F (18--24 C) | Room temperature range |
 | Power | AC (60 Hz single phase) | NOT DC |
-| Voltage | 10--18V AC (typical 18--20V) | ~1V lower than anodize voltage |
+| Voltage | 10--18V AC (typical 14--16V) | Matched to pore structure from Step 1 |
 | Current | 5 ASF average / 10 ASF peak | Self-regulating |
 | Counter-electrode | 316 SS, tin, or graphite | Tin replenishes the bath |
 

@@ -9,7 +9,7 @@ Visual Direction: Polished and boardroom-quality with a functional reference lay
 Editions: Dark + Light (both produced for every poster)
 Process Scope Rule: One plating process per poster — no mixing
 Illustration Approach: Pure vector, built from scratch in Affinity Designer
-Last Updated: 2026-04-26T00:00:00
+Last Updated: 2026-04-28T00:00:00
 tags:
   - PosterDesign
   - PlatingPosters
@@ -66,6 +66,8 @@ Every poster is a **sellable product** in the Plating Posters Inc product line �
 | **2026-04-26** | **MILESTONE: All 721/721 Construction Workups confirmed on disk — ZERO GAPS** |
 | 2026-04-26 | GitHub repo established: `https://github.com/DrewsBest90/PlatingPosters.git` — all 721 CWs pushed (3 commits) |
 | 2026-04-26 | GPs extended to 38/721 (Posters 1–38); Tyler validation: 25/81 clusters complete |
+| 2026-04-27 | Tyler batch 4a+4b validation: 36/81 clusters; 3 corrections applied |
+| 2026-04-28 | Tyler batches 5–9 validation: **81/81 clusters COMPLETE**; 1 correction (Poster 342 coloring voltage); proprietary names removed (QPQ→Q-P-Q, Teflon→PTFE, trade names genericized) |
 
 ---
 
@@ -76,7 +78,7 @@ Every poster is a **sellable product** in the Plating Posters Inc product line �
 | Construction Workups (CW) | **721** | 721 | **0** |
 | Generation Prompts (GP) | 38 | 721 | 683 |
 | Research Briefs | 12 | 12 | 0 |
-| Tyler Cluster Validations | 25 | 81 | 56 |
+| Tyler Cluster Validations | **81** | 81 | **0** |
 
 **CW milestone reached 2026-04-26 — the full 721-poster series has complete construction workups on disk.**
 
@@ -91,7 +93,7 @@ These rules are locked as of 2026-04-26 and apply to all future sessions:
 1. **NO HTML rendering from Claude Code** — Claude Design (Claude Chat) handles all visual generation. Claude Code is for documentation, organization, and file management only.
 2. **Push to GitHub at end of each session** — repository: `https://github.com/DrewsBest90/PlatingPosters.git` (Option C workflow). Push CWs and GPs as they are completed.
 3. **GP pacing** — produce GPs in controlled batches to avoid hitting rate limits. Do not attempt all remaining GPs in a single session.
-4. **Tyler validation** — cluster validation is ongoing; 25/81 clusters complete. Continue with Drew present; all corrections applied before GP production.
+4. **Tyler validation** — **COMPLETE: 81/81 clusters validated.** All chemistry, parameters, sequences, and safety verified. 6 total corrections applied across all batches. All CWs are GP-ready.
 5. **Watson re-verification** — 7 flagged technical items were cleared 2026-04-26 (EN-B deposition rates, Electroless Cu formaldehyde, BSAA H2SO4, FNC/Q-P-Q salt spray, gold efficiency). New flags should be queued for Watson review before the corresponding GP is written.
 6. **No product names or company names** in any poster content — 100% generic and publishable.
 
@@ -270,10 +272,15 @@ All flags resolved. No open research issues as of 2026-04-26.
 - [x] Elara engineers Generation Prompts for Posters #24–#38 — completed 2026-04-26
 - [x] **ALL 721/721 Construction Workups confirmed on disk — 2026-04-26** MILESTONE
 - [x] GitHub repo established and all files pushed — 2026-04-26
-- [x] Tyler cluster validation: 25/81 clusters complete — 2026-04-26
+- [x] **Tyler cluster validation: 81/81 COMPLETE — 2026-04-28** MILESTONE
 - [x] Watson re-verified 7 flagged technical items — all cleared 2026-04-26
+- [x] Proprietary names removed from all CW files — 2026-04-28 (QPQ→Q-P-Q, Teflon→PTFE, trade names genericized)
 - [ ] Resolve Poster 703 vs. 704 duplicate title — confirm correct title for both #gravel
-- [ ] Continue Tyler cluster validation: 56/81 clusters remaining (with Drew present) #sand
+- [ ] Resolve Poster 667 vs. 668 duplicate (E-Coat) — keep one, retire or reassign the other #gravel
+- [ ] Resolve Poster 685 vs. 686 duplicate (Flow Coating) — keep one, retire or reassign the other #gravel
+- [ ] Fix 52100 Ms temp inconsistency — 410 F (Poster 642) vs. 420 F (Poster 645); standardize #sand
+- [ ] Alaina: reconcile PVD/CVD stage numbering (off-by-2 in Posters 406-408, 416) #sand
+- [ ] Add RoHS/REACH regulatory callout blocks to hex chrome, cadmium, and tin-lead CWs #sand
 - [ ] Elara engineers GPs for Posters #39 onward — pace across the week to avoid rate limits #sand
 - [ ] Drew generates Poster #4 in Claude Chat (first generation) #gravel
 - [ ] Drew generates Poster #10 in Claude Chat #gravel
@@ -284,7 +291,7 @@ All flags resolved. No open research issues as of 2026-04-26.
 ## Notes
 
 - Watson should be consulted before any poster touching specific chemistry (bath compositions, contamination limits, passivation sequences, etc.)
-- Tyler is the validation checkpoint for any process steps that will be presented as "do it this way" instructions — cluster validation is ongoing (25/81 complete)
+- Tyler is the validation checkpoint for any process steps that will be presented as "do it this way" instructions — **cluster validation COMPLETE (81/81)**
 - Drew's [[Knowledge Notes/Quick Reference Metal Finishing Notes]] is the internal field-knowledge baseline — consult before drafting technical content
 - Watson's troubleshooting guides (`Knowledge Notes/Troubleshooting/`) feed poster content alongside the dedicated Research Briefs — both sources inform Alaina's workups
 - **No product names or company names in any poster** — 100% generic content only; this is a non-negotiable publishability requirement
