@@ -8,7 +8,7 @@ Created: 2026-04-26T00:00:00
 Author: Alaina (alaina-poster-designer)
 Source Documents:
   - "Electroless Clusters -- Watson Research Brief (Process 4: Electroless Copper, Poster 6)"
-Technical Source: Formaldehyde-based electroless copper bath chemistry. Autocatalytic Cu deposition via HCHO reducing agent in alkaline EDTA-complexed solution. Covers bath composition, operating parameters, deposit properties, deposition reaction, and formaldehyde safety. Watson-verified formaldehyde concentration: 10-15 mL/L of 37% formaldehyde solution (NOT 4-8 g/L). IPC-TM-650 reference.
+Technical Source: Formaldehyde-based electroless copper bath chemistry. Autocatalytic Cu deposition via HCHO reducing agent in alkaline EDTA-complexed solution. Covers bath composition, operating parameters, deposit properties, deposition reaction, and formaldehyde safety. Watson-verified formaldehyde concentration: 3-15 mL/L of 37% formaldehyde solution (NOT 4-8 g/L). IPC-TM-650 reference.
 Process Scope: Electroless copper -- Stage 6 of 8 (main plating tank)
 Editions: Dark (flagship) + Light (accessible print)
 tags:
@@ -106,7 +106,7 @@ Column widths: Component (5.5") | Concentration (4.5") | Role (13.0")
 | Component | Concentration | Role |
 |---|---|---|
 | Copper sulfate (CuSO4 . 5H2O) | 7-12 g/L (1.5-3.0 g/L Cu2+) | Metal ion source -- provides Cu2+ for reduction |
-| Formaldehyde (37% solution) | 10-15 mL/L | Reducing agent -- oxidized to formate (HCOO-); consumed + volatile loss |
+| Formaldehyde (37% solution) | 3-15 mL/L | Reducing agent -- oxidized to formate (HCOO-); consumed + volatile loss |
 | NaOH | 5-10 g/L | pH control -- provides OH- consumed in the deposition reaction |
 | EDTA (tetrasodium salt) | 25-40 g/L | Primary complexant -- prevents Cu(OH)2 precipitation at high pH |
 | 2,2'-Bipyridyl or proprietary | 10-30 mg/L | Stabilizer -- prevents spontaneous decomposition (replaces cyanide) |
@@ -118,7 +118,7 @@ Alternating rows: `#1E2435` / `#252B3D`.
 
 **Formaldehyde concentration callout (below table, Y: 12.0"):**
 - Rounded rect, X: 0.5", W: 23.0", H: 0.8", fill `#E8A020` at 20%, border-left 0.06" `#E8A020`
-- `FORMALDEHYDE: 10-15 mL/L of 37% solution. This is the Watson-verified correct range. Formaldehyde is volatile and consumed rapidly -- replenish frequently. Monitor by titration or colorimetric test.` Inter Medium 13 pt `#E8A020`
+- `FORMALDEHYDE: 3-15 mL/L of 37% solution (3-8 mL/L light/PCB seed; 10-15 mL/L standard/heavy-build). Volatile and consumed rapidly -- replenish frequently. Monitor by titration or colorimetric test.` Inter Medium 13 pt `#E8A020`
 
 **Legacy stabilizer note (Y: 13.0"):**
 - `NOTE: Some older formulations use trace sodium cyanide (10-20 mg/L) as a stabilizer. Modern E-Cu baths are overwhelmingly cyanide-free, using bipyridyl or proprietary organic stabilizers instead.` Inter Regular 11 pt `#F0EDE8` at 60%
@@ -161,7 +161,7 @@ Header: `OPERATING PARAMETERS` fill `#3A4055`.
 | pH | 11.5-13.0 | +/- 0.3 |
 | Temperature | 28-45 C (82-113 F) | +/- 2 C |
 | Cu2+ concentration | 1.5-3.0 g/L | +/- 0.3 g/L |
-| Formaldehyde | 10-15 mL/L of 37% HCHO | Replenish frequently |
+| Formaldehyde | 3-15 mL/L of 37% HCHO | Replenish frequently |
 | Deposition rate | 1-5 um/hr (thin-film) | Up to 5-8 um/hr (heavy-build) |
 | Bath life | 1-4 MTO | Shorter than EN |
 | Air agitation | Required | Replenishes HCHO; removes H2 |
@@ -262,7 +262,7 @@ Problem: Barlow SemiBold 12 pt `#E05C5C`. Cause/Fix: Inter Regular 11 pt `#F0EDE
 
 Standard footer. Title: `Main Tank -- Electroless Copper Bath`. Version `v1.0 -- 2026`.
 
-Disclaimer: `This poster is an educational reference tool. Bath composition and operating parameters shown are typical for formaldehyde-based electroless copper plating for PCB and plastics metallization. Formaldehyde concentration: 10-15 mL/L of 37% solution (Watson-verified). Proprietary bath formulations vary by supplier. Consult your supplier TDS and SDS. Source: IPC-TM-650; general industry practice.`
+Disclaimer: `This poster is an educational reference tool. Bath composition and operating parameters shown are typical for formaldehyde-based electroless copper plating for PCB and plastics metallization. Formaldehyde concentration: 3-15 mL/L of 37% solution (Watson-verified). Proprietary bath formulations vary by supplier. Consult your supplier TDS and SDS. Source: IPC-TM-650; general industry practice.`
 
 ---
 
@@ -276,7 +276,7 @@ Disclaimer: `This poster is an educational reference tool. Bath composition and 
 
 ## Design Notes
 
-This is the crown jewel of the EL-04 Electroless Copper cluster. The bath composition table is the primary reference element -- every E-Cu operator needs this on the wall. The Watson-verified formaldehyde concentration of 10-15 mL/L of 37% solution is called out explicitly with a dedicated callout bar to prevent the common literature error of reporting 4-8 g/L (which conflates HCHO gas content with the 37% solution volume).
+This is the crown jewel of the EL-04 Electroless Copper cluster. The bath composition table is the primary reference element -- every E-Cu operator needs this on the wall. The Watson-verified formaldehyde concentration of 3-15 mL/L of 37% solution is called out explicitly with a dedicated callout bar to prevent the common literature error of reporting 4-8 g/L (which conflates HCHO gas content with the 37% solution volume).
 
 The deposition reaction equation is given hero treatment at 22 pt because this is the core chemistry. The four annotation labels below the equation make it readable for operators who do not have chemistry backgrounds.
 

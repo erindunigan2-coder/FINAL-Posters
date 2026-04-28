@@ -36,7 +36,7 @@ Hero visual: a PAA anodize tank cross-section with labeled components, plus a po
 ## Part 1 -- Workflow Orientation
 
 ### Limitations to Flag
-1. **PAA tank cross-section hero (Block B):** Tank with cathode (workpiece), counter-electrode, voltage-controlled power supply, and labeled parameters. Built with rectangles, lines, arrows.
+1. **PAA tank cross-section hero (Block B):** Tank with anode (workpiece), counter-electrode (cathode), voltage-controlled power supply, and labeled parameters. Built with rectangles, lines, arrows.
 2. **Pore morphology diagram (Block C):** Cross-section of PAA oxide showing open columnar pores with whisker tips -- the key visual for this poster.
 3. **Operating window panel (Block D):** All critical parameters.
 4. **How PAA creates bond surfaces (Block E):** The mechanism explained.
@@ -98,12 +98,12 @@ X: 0.5", Y: 5.0", W: 12.0", H: 8.5".
 - Fill: `#252B3D` (H3PO4 solution)
 - Border: 2 pt `#C8D0D8`
 
-**Cathode / Workpiece (center of tank):**
+**Anode / Workpiece (center of tank):**
 - Vertical rect, X: 5.5", Y: 6.0", W: 1.5", H: 5.0"
 - Fill: `#27AE60` at 30%, border 2 pt `#27AE60`
-- Label above: `CATHODE (WORKPIECE)` Barlow SemiBold 12 pt `#27AE60`
+- Label above: `ANODE (+) — WORKPIECE` Barlow SemiBold 12 pt `#27AE60`
 
-**Counter-electrode (both sides):**
+**Cathode / Counter-electrode (both sides):**
 - Two vertical rects, X: 2.0" and 9.5", Y: 6.0", W: 0.8", H: 5.0"
 - Fill: `#C8D0D8` at 40%, border 1 pt `#C8D0D8`
 - Label: `STAINLESS STEEL or CARBON` JetBrains Mono 10 pt `#C8D0D8`

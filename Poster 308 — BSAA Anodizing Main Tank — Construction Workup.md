@@ -128,7 +128,7 @@ Y: 5.0" to 13.0".
 **Bath parameter labels (below tank, Y: 12.5"):**
 
 Centered parameter strip:
-- `H2SO4: 30--50 g/L (3--5% w/v)` JetBrains Mono 13 pt `#F0EDE8`
+- `H2SO4: 40--100 g/L (4--10% w/v)` JetBrains Mono 13 pt `#F0EDE8`
 - `H3BO3: 5--10 g/L (0.5--1% w/v)` JetBrains Mono 13 pt `#E8A020`
 - `Temp: 70--90 F (21--32 C) | Voltage: ramp from ~5V to 15V`
 - `CD: max ~10 ASF average (voltage-controlled)`

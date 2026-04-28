@@ -9,6 +9,7 @@ Visual Direction: Polished and boardroom-quality with a functional reference lay
 Editions: Dark + Light (both produced for every poster)
 Process Scope Rule: One plating process per poster — no mixing
 Illustration Approach: Pure vector, built from scratch in Affinity Designer
+Last Updated: 2026-04-26T00:00:00
 tags:
   - PosterDesign
   - PlatingPosters
@@ -16,6 +17,24 @@ tags:
 ---
 
 # Plating Posters Inc — Project Home
+
+## Table of Contents
+
+1. [[#What This Is]]
+2. [[#Milestone Log]]
+3. [[#Library Status — At a Glance]]
+4. [[#Pipeline Rules]]
+5. [[#Known Issues]]
+6. [[#Creative Lead]]
+7. [[#Team Collaboration]]
+8. [[#Design Philosophy]]
+9. [[#Design Standards (Series-Wide)]]
+10. [[#Poster Library — Generation Status]]
+11. [[#Research Briefs]]
+12. [[#Next Steps]]
+13. [[#Notes]]
+
+---
 
 ## What This Is
 
@@ -29,16 +48,74 @@ Every poster is a **sellable product** in the Plating Posters Inc product line �
 
 ---
 
+## Milestone Log
+
+| Date | Milestone |
+|------|-----------|
+| 2026-03-14 | Project launched |
+| 2026-03-16 | Color palette and typography locked (series-wide) |
+| 2026-03-18 | Poster #4 flags cleared by Watson; Affinity Designer workflow confirmed |
+| 2026-03-21 | Watson Research Brief v2 delivered for Poster #10 |
+| 2026-04-03 | Watson research briefs complete for Posters #1–#12; Production Checklist template created |
+| 2026-04-04 | Construction Workups + Generation Prompts complete for all original 15 posters |
+| 2026-04-06 | Watson + Tyler CEF research briefs delivered for Posters #16–#20 |
+| 2026-04-07 | Construction Workups complete for Posters #16–#20 |
+| 2026-04-11 | Construction Workups complete for Posters #21–#23; Watson Watts Nickel Research Brief delivered |
+| 2026-04-20 | Canva workflow fully retired — Claude native design tools only; Elara completes GPs for Posters #16–#23 |
+| 2026-04-24 | Construction Workups complete for Posters #24–#30 (Alaina session); 12/12 Research Briefs complete; Watson Phase 3 poster briefs complete (+13 new) |
+| **2026-04-26** | **MILESTONE: All 721/721 Construction Workups confirmed on disk — ZERO GAPS** |
+| 2026-04-26 | GitHub repo established: `https://github.com/DrewsBest90/PlatingPosters.git` — all 721 CWs pushed (3 commits) |
+| 2026-04-26 | GPs extended to 38/721 (Posters 1–38); Tyler validation: 25/81 clusters complete |
+
+---
+
+## Library Status — At a Glance
+
+| Asset Type | Complete | Total | Gap |
+|------------|----------|-------|-----|
+| Construction Workups (CW) | **721** | 721 | **0** |
+| Generation Prompts (GP) | 38 | 721 | 683 |
+| Research Briefs | 12 | 12 | 0 |
+| Tyler Cluster Validations | 25 | 81 | 56 |
+
+**CW milestone reached 2026-04-26 — the full 721-poster series has complete construction workups on disk.**
+
+GP pipeline pacing: GPs will be produced in batches across the week to stay within rate limits. Current GP frontier: Poster 38 complete, Poster 39 next.
+
+---
+
+## Pipeline Rules
+
+These rules are locked as of 2026-04-26 and apply to all future sessions:
+
+1. **NO HTML rendering from Claude Code** — Claude Design (Claude Chat) handles all visual generation. Claude Code is for documentation, organization, and file management only.
+2. **Push to GitHub at end of each session** — repository: `https://github.com/DrewsBest90/PlatingPosters.git` (Option C workflow). Push CWs and GPs as they are completed.
+3. **GP pacing** — produce GPs in controlled batches to avoid hitting rate limits. Do not attempt all remaining GPs in a single session.
+4. **Tyler validation** — cluster validation is ongoing; 25/81 clusters complete. Continue with Drew present; all corrections applied before GP production.
+5. **Watson re-verification** — 7 flagged technical items were cleared 2026-04-26 (EN-B deposition rates, Electroless Cu formaldehyde, BSAA H2SO4, QPQ salt spray, gold efficiency). New flags should be queued for Watson review before the corresponding GP is written.
+6. **No product names or company names** in any poster content — 100% generic and publishable.
+
+---
+
+## Known Issues
+
+| # | Issue | Status | Notes |
+|---|-------|--------|-------|
+| 1 | Poster 703 vs. Poster 704 — duplicate title (Industrial Priming Process Flow) | Open | Needs Drew to confirm correct title for one of the two before GP is written for either |
+
+---
+
 ## Creative Lead
 
 **Alaina** is the design and content creation agent for this project. Alaina handles:
 - Poster content (headlines, body copy, callouts, diagram labels, glossary snippets)
-- Design briefs written for **Affinity Designer** (primary tool)
-- Concept development and creative direction
-- Collaboration flags to Watson (technical research) and Tyler (process validation, evenings/weekends only)
+- Construction Workups — the structured content and layout specification for each poster
+- Collaboration flags to Watson (technical research) and Tyler (process validation)
 - Asset Summary Reports to June after each significant output
 
 Alaina does not handle marketing strategy, email campaigns, sales collateral, or promotional copy.
+
+Generation Prompts are engineered by **Elara** from Alaina's Construction Workups.
 
 ---
 
@@ -46,8 +123,9 @@ Alaina does not handle marketing strategy, email campaigns, sales collateral, or
 
 | Agent | Role | When Available |
 |-------|------|----------------|
-| Watson (`watson-chemistry-researcher`) | Technical depth, historical context, process chemistry | Anytime |
-| Tyler (`tyler-plating-chemist`) | Lab-validated process details, real-world validation | No scheduling restriction (Claude Max — API limit no longer a concern as of 2026-04-03) |
+| Watson (`watson-chemistry-researcher`) | Technical depth, historical context, process chemistry, research briefs | Anytime |
+| Tyler (`tyler-plating-chemist`) | Lab-validated process details, cluster validation, real-world accuracy checks | No scheduling restriction |
+| Elara | Generation Prompt engineering from Construction Workups | Anytime |
 | June (`june-executive-secretary`) | Vault organization, task tracking, briefings | Business hours |
 
 ---
@@ -67,109 +145,106 @@ Drew has delegated all design and typography decisions to Alaina. His guidance:
 
 Full standards reference: [[Plating Posters Inc — Series Design Standards]]
 
-Summary of locked decisions as of 2026-03-16:
+Summary of locked decisions:
 
-- **Primary design tool**: Claude Chat (visual artifact generation) — confirmed 2026-04-20; replaces prior tools
+- **Primary design tool**: Claude Chat (visual artifact generation) — confirmed 2026-04-20; replaces all prior tools. Canva is fully retired.
+- **Output format**: HTML (not SVG); iOS 18 Liquid Glass aesthetic; 6-zone layout; print CSS rules
 - **Print resolution**: 300 DPI minimum
-- **Standard poster sizes**: 18×24" and 24×36"
+- **Standard poster sizes**: 18x24" and 24x36"
 - **Readability target**: All text legible from 3–8 feet at finished print size
 - **Format**: Dual — physical print and digital download. Every poster must be designed for both.
 - **Visual direction (LOCKED)**: Polished and boardroom-quality, with a genuine functional reference layer. Not decorative-only; not purely utilitarian.
 - **Product framing (LOCKED)**: Every poster is a sellable product, not an internal document.
 - **Editions (LOCKED)**: Every poster in both a **Dark edition** (flagship) and a **Light edition** (accessible print). Six export files per poster.
 - **Process scope (LOCKED)**: **One plating process per poster.** No exceptions.
-- **Illustration approach**: Alaina produces construction workups → Elara engineers generation prompts → Drew generates poster in Claude Chat (SVG/HTML artifact). (Original Affinity Designer spec superseded 2026-03-18; Canva workflow superseded 2026-04-20.)
-- **Hull cell panel illustration**: Built as layered geometric shapes — confirmed 2026-03-20.
-- **Color palette (LOCKED 2026-03-16)**: Gunmetal Dark `#1A1F2E` background / Warm White `#F0EDE8` text / Amber `#E8A020` HCD accent / Teal `#2EC4B6` LCD accent / Emerald `#27AE60` positive / Coral `#E05C5C` problem — see [[Plating Posters Inc — Series Design Standards]] for full hex table and Light edition remap.
-- **Typography (LOCKED 2026-03-16)**: Barlow Condensed ExtraBold (headlines) / Barlow SemiBold (subheadings) / Inter Regular/Medium (body) / JetBrains Mono Regular (data tables) — see [[Plating Posters Inc — Series Design Standards]] for full type scale.
+- **Workflow**: Alaina produces Construction Workups → Elara engineers Generation Prompts → Drew generates poster in Claude Chat (HTML artifact)
+- **Hull cell panel illustration**: Built as layered geometric shapes — confirmed 2026-03-20
+- **Color palette (LOCKED 2026-03-16)**: Gunmetal Dark `#1A1F2E` background / Warm White `#F0EDE8` text / Amber `#E8A020` HCD accent / Teal `#2EC4B6` LCD accent / Emerald `#27AE60` positive / Coral `#E05C5C` problem — see [[Plating Posters Inc — Series Design Standards]] for full hex table and Light edition remap
+- **Typography (LOCKED 2026-03-16)**: Barlow Condensed ExtraBold (headlines) / Barlow SemiBold (subheadings) / Inter Regular/Medium (body) / JetBrains Mono Regular (data tables) — see [[Plating Posters Inc — Series Design Standards]] for full type scale
+- **Canonical design system**: `Claude Design Output/Plating Posters - Series Design Prompt.md` — all Generation Prompts must reference this
 - **Logo placement**: TBD — pending brand identity confirmation
 
 ---
 
-## Poster Library
+## Poster Library — Generation Status
 
-### Ready for Generation (Generation Prompt Complete)
+### Ready for Drew to Generate (GP Complete — Posters 1–38)
 
-| # | Title | Status | File |
-|---|-------|--------|------|
-| 1 | Surface Preparation: The Foundation of Every Flawless Finish | Generation Prompt v1.0 — Ready for Drew | [[Poster 1 — Surface Preparation — Generation Prompt]] |
-| 2 | The Electroplating Process — Step by Step | Generation Prompt v1.0 — Ready for Drew | [[Poster 2 — The Electroplating Process — Generation Prompt]] |
-| 3 | Zinc Plating at a Glance: Acid Chloride vs. Alkaline Non-Cyanide | Generation Prompt v1.0 — Ready for Drew | [[Poster 3 — Zinc Plating at a Glance — Generation Prompt]] |
-| 4 | Reading Your Hull Cell Panel | Generation Prompt v1.0 — CONFIRMED FIRST BUILD | [[Poster 4 — Hull Cell Panel — Generation Prompt]] |
-| 5 | Anode-to-Cathode Ratio | Generation Prompt v1.0 — Ready for Drew | [[Poster 5 — Anode-to-Cathode Ratio — Generation Prompt]] |
-| 6 | The Passivation Sequence | Generation Prompt v1.0 — Ready for Drew | [[Poster 6 — Passivation Sequence — Generation Prompt]] |
-| 7 | Metallic Contamination — Know Your Thresholds | Generation Prompt v1.0 — Ready for Drew | [[Poster 7 — Metallic Contamination — Generation Prompt]] |
-| 8 | Faraday's Law in the Shop | Generation Prompt v1.0 — Ready for Drew | [[Poster 8 — Faradays Law — Generation Prompt]] |
-| 9 | Anodizing Fundamentals: Type I, II, and III | Generation Prompt v1.0 — Ready for Drew | [[Poster 9 — Anodizing Fundamentals — Generation Prompt]] |
-| 10 | Electroless Nickel — Process Overview and Bath Control | Generation Prompt v1.0 — Ready for Drew | [[Poster 10 — Electroless Nickel — Generation Prompt]] |
-| 11 | Current Density Quick Reference Chart | Generation Prompt v1.0 — Ready for Drew | [[Poster 11 — Current Density — Generation Prompt]] |
-| 12 | The pH Control Poster | Generation Prompt v1.0 — Ready for Drew | [[Poster 12 — pH Control — Generation Prompt]] |
-| 13 | Barrel vs. Rack Plating | Generation Prompt v1.0 — Ready for Drew | [[Poster 13 — Barrel vs Rack — Generation Prompt]] |
-| 14 | Safety in the Plating Shop | Generation Prompt v1.0 — Ready for Drew | [[Poster 14 — Safety in the Plating Shop — Generation Prompt]] |
-| 15 | The Plating Shop Quality Loop | Generation Prompt v1.0 — Ready for Drew | [[Poster 15 — The Plating Shop Quality Loop — Generation Prompt]] |
-| 16 | Rinsing Efficiency — The Hidden Cost of Poor Rinsing | Generation Prompt v1.0 — Ready for Drew | [[Poster 16 — Rinsing Efficiency — Generation Prompt]] |
-| 17 | The Galvanic Series — Why Metals Corrode in Contact | Generation Prompt v1.0 — Ready for Drew | [[Poster 17 — The Galvanic Series — Generation Prompt]] |
-| 18 | Deposit Thickness Testing — Methods, Ranges, and When to Use Each | Generation Prompt v1.0 — Ready for Drew | [[Poster 18 — Deposit Thickness Testing — Generation Prompt]] |
-| 19 | Hydrogen Embrittlement — The Invisible Threat | Generation Prompt v1.0 — Ready for Drew | [[Poster 19 — Hydrogen Embrittlement — Generation Prompt]] |
-| 20 | Precious Metals Plating — Gold and Silver Quick Reference | Generation Prompt v1.0 — Ready for Drew | [[Poster 20 — Precious Metals Quick Reference — Generation Prompt]] |
-| 21 | Alloy Plating Fundamentals — Brass, Bronze, and Zinc Alloys | Generation Prompt v1.0 — Ready for Drew | [[Poster 21 — Alloy Plating Fundamentals — Generation Prompt]] |
-| 22 | Corrosion Testing at a Glance — Salt Spray, CASS, Humidity, and Beyond | Generation Prompt v1.0 — Ready for Drew | [[Poster 22 — Corrosion Testing — Generation Prompt]] |
-| 23 | Watts Nickel Plating — The Workhorse Bath | Generation Prompt v1.0 — Ready for Drew | [[Poster 23 — Watts Nickel Plating — Generation Prompt]] |
+| # | Title | GP Status |
+|---|-------|-----------|
+| 1 | Surface Preparation: The Foundation of Every Flawless Finish | GP v1.0 Ready |
+| 2 | The Electroplating Process — Step by Step | GP v1.0 Ready |
+| 3 | Zinc Plating at a Glance: Acid Chloride vs. Alkaline Non-Cyanide | GP v1.0 Ready |
+| 4 | Reading Your Hull Cell Panel | GP v1.0 Ready — CONFIRMED FIRST BUILD |
+| 5 | Anode-to-Cathode Ratio | GP v1.0 Ready |
+| 6 | The Passivation Sequence | GP v1.0 Ready |
+| 7 | Metallic Contamination — Know Your Thresholds | GP v1.0 Ready |
+| 8 | Faraday's Law in the Shop | GP v1.0 Ready |
+| 9 | Anodizing Fundamentals: Type I, II, and III | GP v1.0 Ready |
+| 10 | Electroless Nickel — Process Overview and Bath Control | GP v1.0 Ready |
+| 11 | Current Density Quick Reference Chart | GP v1.0 Ready |
+| 12 | The pH Control Poster | GP v1.0 Ready |
+| 13 | Barrel vs. Rack Plating | GP v1.0 Ready |
+| 14 | Safety in the Plating Shop | GP v1.0 Ready |
+| 15 | The Plating Shop Quality Loop | GP v1.0 Ready |
+| 16 | Rinsing Efficiency — The Hidden Cost of Poor Rinsing | GP v1.0 Ready |
+| 17 | The Galvanic Series — Why Metals Corrode in Contact | GP v1.0 Ready |
+| 18 | Deposit Thickness Testing — Methods, Ranges, and When to Use Each | GP v1.0 Ready |
+| 19 | Hydrogen Embrittlement — The Invisible Threat | GP v1.0 Ready |
+| 20 | Precious Metals Plating — Gold and Silver Quick Reference | GP v1.0 Ready |
+| 21 | Alloy Plating Fundamentals — Brass, Bronze, and Zinc Alloys | GP v1.0 Ready |
+| 22 | Corrosion Testing at a Glance — Salt Spray, CASS, Humidity, and Beyond | GP v1.0 Ready |
+| 23 | Watts Nickel Plating — The Workhorse Bath | GP v1.0 Ready |
+| 24 | Rectifier Fundamentals — DC, Pulse, and Periodic Reverse | GP v1.0 Ready |
+| 25 | Filtration and Purification — Keeping Your Bath Clean | GP v1.0 Ready |
+| 26 | Chromate and Conversion Coatings — Hex, Tri, and Beyond | GP v1.0 Ready |
+| 27 | Wastewater Treatment Fundamentals — From Rinse Tank to Discharge | GP v1.0 Ready |
+| 28 | Temperature Control — The Overlooked Variable | GP v1.0 Ready |
+| 29 | Anode Chemistry and Maintenance — Soluble, Insoluble, and Everything Between | GP v1.0 Ready |
+| 30 | Bath Analysis Methods — What to Test, How Often, and Why It Matters | GP v1.0 Ready |
+| 31 | Zinc Alkaline Process Flow | GP v1.0 Ready |
+| 32 | Cleaning Zinc Alkaline | GP v1.0 Ready |
+| 33 | Rinse Zinc Alkaline Pre-Activation | GP v1.0 Ready |
+| 34 | Activation Zinc Alkaline | GP v1.0 Ready |
+| 35 | Rinse Zinc Alkaline Pre-Plate | GP v1.0 Ready |
+| 36 | Zinc Plating Alkaline Main Tank | GP v1.0 Ready |
+| 37 | Rinse Zinc Alkaline Post-Plate | GP v1.0 Ready |
+| 38 | Post Treatment Zinc Alkaline | GP v1.0 Ready |
 
-### Ready for Elara (Construction Workup Complete — Awaiting Generation Prompt)
+### CW Complete — Awaiting GP (Posters 39–721)
 
-| # | Title | Status | Workup File |
-|---|-------|--------|-------------|
-| 24 | Rectifier Fundamentals — DC, Pulse, and Periodic Reverse | Construction Workup v1.0 — Ready for Elara | [[Poster 24 — Rectifier Fundamentals — Construction Workup]] |
-| 25 | Filtration and Purification — Keeping Your Bath Clean | Construction Workup v1.0 — Ready for Elara | [[Poster 25 — Filtration and Purification — Construction Workup]] |
-| 26 | Chromate and Conversion Coatings — Hex, Tri, and Beyond | Construction Workup v1.0 — Ready for Elara | [[Poster 26 — Chromate and Conversion Coatings — Construction Workup]] |
-| 27 | Wastewater Treatment Fundamentals — From Rinse Tank to Discharge | Construction Workup v1.0 — Ready for Elara | [[Poster 27 — Wastewater Treatment Fundamentals — Construction Workup]] |
-| 28 | Temperature Control — The Overlooked Variable | Construction Workup v1.0 — Ready for Elara | [[Poster 28 — Temperature Control — Construction Workup]] |
-| 29 | Anode Chemistry and Maintenance — Soluble, Insoluble, and Everything Between | Construction Workup v1.0 — Ready for Elara | [[Poster 29 — Anode Chemistry and Maintenance — Construction Workup]] |
-| 30 | Bath Analysis Methods — What to Test, How Often, and Why It Matters | Construction Workup v1.0 — Ready for Elara | [[Poster 30 — Bath Analysis Methods — Construction Workup]] |
+683 posters have completed Construction Workups on disk and are queued for Elara to engineer Generation Prompts. GPs will be produced in batches to manage rate limits.
 
-### Completed
+Next GP frontier: **Poster 39**
 
-_None yet. Poster #4 is the first awaiting Drew's Claude Chat generation._
+See the `Additional Poster Ideas/` folder for the source category lists that define the full 721-poster scope.
+
+### Known Issue — Duplicate Titles
+
+| Poster # | Flagged Title | Action Required |
+|----------|---------------|-----------------|
+| 703 | Industrial Priming Process Flow | Confirm correct title for 703 vs. 704 before GP is written for either |
+| 704 | Industrial Priming Process Flow | Same as above |
 
 ---
 
-## Full Poster Index
+## Research Briefs
 
-See the original brainstorm in [[Plating Posters Inc — Starter Poster List]]. Additional concepts (#16-#23) originated from Watson and Tyler CEF study material research (2026-04-06) and Watson's Watts Nickel research brief (2026-04-11). Concepts #24-#30 developed by Alaina (2026-04-24) to extend the series with equipment, environmental, and analytical control topics.
+Watson produces standalone **Alaina Research Briefs** for each poster requiring technical depth. These are design-input documents — not embedded in the `Knowledge Notes/Troubleshooting/` library.
 
-**All 30 concepts:**
+**Status: 12/12 Research Briefs complete (as of 2026-04-24).**
 
-1. Surface Preparation: The Foundation of Every Flawless Finish
-2. The Electroplating Process — Step by Step
-3. Zinc Plating at a Glance: Acid Chloride vs. Alkaline Non-Cyanide
-4. Reading Your Hull Cell Panel
-5. Anode-to-Cathode Ratio: Why It Matters More Than You Think
-6. The Passivation Sequence: From Plated Part to Protected Part
-7. Metallic Contamination — Know Your Thresholds
-8. Faraday's Law in the Shop: Calculating Plating Thickness
-9. Anodizing Fundamentals: Type I, II, and III at a Glance
-10. Electroless Nickel — Process Overview and Bath Control
-11. Current Density Quick Reference Chart
-12. The pH Control Poster
-13. Barrel vs. Rack Plating — Choosing the Right Method
-14. Safety in the Plating Shop: Chemical Hazard Quick Reference
-15. The Plating Shop Quality Loop: From Incoming Part to Final Inspection
-16. Rinsing Efficiency — The Hidden Cost of Poor Rinsing
-17. The Galvanic Series — Why Metals Corrode in Contact
-18. Deposit Thickness Testing — Methods, Ranges, and When to Use Each
-19. Hydrogen Embrittlement — The Invisible Threat
-20. Precious Metals Plating — Gold and Silver Quick Reference
-21. Alloy Plating Fundamentals — Brass, Bronze, and Zinc Alloys
-22. Corrosion Testing at a Glance — Salt Spray, CASS, Humidity, and Beyond
-23. Watts Nickel Plating — The Workhorse Bath
-24. Rectifier Fundamentals — DC, Pulse, and Periodic Reverse
-25. Filtration and Purification — Keeping Your Bath Clean
-26. Chromate and Conversion Coatings — Hex, Tri, and Beyond
-27. Wastewater Treatment Fundamentals — From Rinse Tank to Discharge
-28. Temperature Control — The Overlooked Variable
-29. Anode Chemistry and Maintenance — Soluble, Insoluble, and Everything Between
-30. Bath Analysis Methods — What to Test, How Often, and Why It Matters
+They live in: `[[Research Briefs/Research Briefs|Research Briefs/]]`
+
+Watson flagged 7 technical items that were re-verified during Session 3 (2026-04-26):
+- EN-B deposition rates — cleared
+- Electroless copper formaldehyde chemistry — cleared
+- BSAA H2SO4 concentration — cleared
+- QPQ salt spray performance data — cleared
+- Gold plating efficiency values — cleared
+- Two additional items — cleared
+
+All flags resolved. No open research issues as of 2026-04-26.
 
 ---
 
@@ -183,40 +258,34 @@ See the original brainstorm in [[Plating Posters Inc — Starter Poster List]]. 
 - [x] Series Design Standards updated for production workflow — 2026-04-03
 - [x] Poster Production Checklist Template created — 2026-04-03
 - [x] Watson research briefs received for Posters #1, #2, #5, #6, #7, #8, #9, #11, #12 — 2026-04-03
-- [x] Poster #1 (Surface Preparation) Content Draft + Construction Workup complete — 2026-04-03
-- [x] Poster #11 (Current Density) Content Draft + Construction Workup complete — 2026-04-03
-- [x] Poster #13 (Barrel vs. Rack) Content Draft complete — 2026-04-03
-- [x] Poster #14 (Safety) Content Draft complete — 2026-04-03
-- [x] Elara engineers Generation Prompts for Posters #1 and #11 — 2026-04-04
-- [x] Construction Workups complete for Posters #13 and #14 — 2026-04-04
-- [x] Content Drafts complete for Posters #2, #5, #6, #7, #8, #9, #12 — 2026-04-04
 - [x] Construction Workups + Generation Prompts complete for ALL original 15 posters — 2026-04-04
-- [x] Watson + Tyler CEF research briefs delivered for Posters #16-#20 — 2026-04-06
-- [x] Construction Workups complete for Posters #16-#20 — 2026-04-07
+- [x] Watson + Tyler CEF research briefs delivered for Posters #16–#20 — 2026-04-06
+- [x] Construction Workups complete for Posters #16–#20 — 2026-04-07
 - [x] Watson research brief delivered for Watts Nickel (Poster #23) — 2026-04-11
 - [x] Construction Workups complete for Posters #21, #22, #23 (Alaina overnight session) — 2026-04-11
+- [x] Elara engineers Generation Prompts for Posters #16–#23 — completed 2026-04-20
+- [x] Canva workflow retired — Claude native tools only — 2026-04-20
+- [x] Construction Workups complete for Posters #24–#30 (Alaina session) — 2026-04-24
+- [x] 12/12 Research Briefs complete — 2026-04-24
+- [x] Elara engineers Generation Prompts for Posters #24–#38 — completed 2026-04-26
+- [x] **ALL 721/721 Construction Workups confirmed on disk — 2026-04-26** MILESTONE
+- [x] GitHub repo established and all files pushed — 2026-04-26
+- [x] Tyler cluster validation: 25/81 clusters complete — 2026-04-26
+- [x] Watson re-verified 7 flagged technical items — all cleared 2026-04-26
+- [ ] Resolve Poster 703 vs. 704 duplicate title — confirm correct title for both #gravel
+- [ ] Continue Tyler cluster validation: 56/81 clusters remaining (with Drew present) #sand
+- [ ] Elara engineers GPs for Posters #39 onward — pace across the week to avoid rate limits #sand
 - [ ] Drew generates Poster #4 in Claude Chat (first generation) #gravel
 - [ ] Drew generates Poster #10 in Claude Chat #gravel
 - [ ] Erin to quote print + shipping cost per poster — pending
-- [x] Elara engineers Generation Prompts for Posters #16-#23 — completed 2026-04-20
-- [x] Construction Workups complete for Posters #24-#30 (Alaina session) — 2026-04-24
-- [ ] Elara engineers Generation Prompts for Posters #24-#30 #sand
-
----
-
-## Research Briefs
-
-Watson produces standalone **Alaina Research Briefs** for each poster requiring technical depth. These are design-input documents — not embedded in the `Knowledge Notes/Troubleshooting/` library. They live in:
-
-`[[Research Briefs/Research Briefs|Research Briefs/]]`
-
-June cross-links each new brief in the Research Briefs index and in this master note upon receipt. Alaina draws on these when developing workups; Tyler validates process steps in his evening/weekend sessions.
 
 ---
 
 ## Notes
 
 - Watson should be consulted before any poster touching specific chemistry (bath compositions, contamination limits, passivation sequences, etc.)
-- Tyler is the validation checkpoint for any process steps that will be presented as "do it this way" instructions — flag for evening/weekend session
+- Tyler is the validation checkpoint for any process steps that will be presented as "do it this way" instructions — cluster validation is ongoing (25/81 complete)
 - Drew's [[Knowledge Notes/Quick Reference Metal Finishing Notes]] is the internal field-knowledge baseline — consult before drafting technical content
 - Watson's troubleshooting guides (`Knowledge Notes/Troubleshooting/`) feed poster content alongside the dedicated Research Briefs — both sources inform Alaina's workups
+- **No product names or company names in any poster** — 100% generic content only; this is a non-negotiable publishability requirement
+- GitHub: `https://github.com/DrewsBest90/PlatingPosters.git` — push at end of every session
