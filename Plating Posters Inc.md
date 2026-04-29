@@ -76,13 +76,13 @@ Every poster is a **sellable product** in the Plating Posters Inc product line â
 | Asset Type | Complete | Total | Gap |
 |------------|----------|-------|-----|
 | Construction Workups (CW) | **721** | 721 | **0** |
-| Generation Prompts (GP) | **142** | 721 | 579 |
+| Generation Prompts (GP) | **458** | 721 | 263 |
 | Research Briefs | 12 | 12 | 0 |
 | Tyler Cluster Validations | **81** | 81 | **0** |
 
 **CW milestone reached 2026-04-26 â€” the full 721-poster series has complete construction workups on disk.**
 
-GP pipeline pacing: GPs will be produced in batches across the week to stay within rate limits. Current GP frontier: Poster 142 complete, Poster 143 next.
+GP pipeline pacing: GPs will be produced in batches across the week to stay within rate limits. Current GP frontier: Poster 458 complete, Poster 459 next.
 
 ---
 
