@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electroless Nickel Low Phos — Cleaning Stage 1 | Plating Posters Inc</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Barlow:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #1A1F2E; --navy: #0D1020; --text: #F0EDE8; --muted: rgba(240,237,232,.62);
+  --amber: #E8A020; --teal: #2EC4B6; --emerald: #27AE60; --coral: #E05C5C;
+  --slate: #3A4055; --callout: #1E2435; --altrow: #252B3D;
+  --glass-bg: rgba(30,36,53,.55);
+  --glass-border: rgba(255,255,255,.12);
+  --glass-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+}
+.poster[data-edition="light"] {
+  --bg:#F5F4F0; --navy:#DDD8CE; --text:#1B2030; --muted:rgba(27,32,48,.66);
+  --amber:#B8770D; --teal:#1A8C82; --emerald:#1E8449; --coral:#B7322F;
+  --slate:#C5C0B5; --callout:#ECEAE1; --altrow:#E4E1D6;
+  --glass-bg: rgba(255,253,247,.66); --glass-border: rgba(27,32,48,.10);
+}
+html, body { margin: 0; padding: 0; background: #0a0c14; }
+.stage { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.poster-wrap { transform-origin: top center; }
+.poster {
+  width: 1200px; height: 1800px; position: relative; overflow: hidden;
+  background:
+    radial-gradient(1200px 800px at 15% 8%, rgba(46,196,182,.14), transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%, rgba(232,160,32,.12), transparent 55%),
+    radial-gradient(900px 900px at 50% 80%, rgba(224,92,92,.10), transparent 60%),
+    var(--bg);
+  font-family: 'Inter', sans-serif; color: var(--text);
+}
+.glass {
+  background-color: var(--glass-bg);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: var(--glass-shadow);
+  border-radius: 12px;
+}
+.corner-tab { position:absolute; width:24px; height:24px; z-index:20; pointer-events:none; }
+.corner-tl { top:8px; left:8px; border-top:2px solid rgba(255,255,255,.3); border-left:2px solid rgba(255,255,255,.3); }
+.corner-tr { top:8px; right:8px; border-top:2px solid rgba(255,255,255,.3); border-right:2px solid rgba(255,255,255,.3); }
+.corner-bl { bottom:8px; left:8px; border-bottom:2px solid rgba(255,255,255,.3); border-left:2px solid rgba(255,255,255,.3); }
+.corner-br { bottom:8px; right:8px; border-bottom:2px solid rgba(255,255,255,.3); border-right:2px solid rgba(255,255,255,.3); }
+.orient-strip { margin:0 28px 10px; padding:10px 14px; display:flex; align-items:center; gap:4px; height:52px; box-sizing:border-box; }
+.orient-stage { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1px; padding:5px 10px; border-radius:6px; font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:500; letter-spacing:.05em; background:var(--slate); color:var(--muted); opacity:0.35; min-width:100px; text-align:center; }
+.orient-stage.active { opacity:1; color:var(--text); }
+.orient-stage.active.teal { background:rgba(46,196,182,.25); border:1px solid var(--teal); color:var(--teal); }
+.orient-stage.active.amber { background:rgba(232,160,32,.25); border:1px solid var(--amber); color:var(--amber); }
+.orient-stage.active.emerald { background:rgba(39,174,96,.25); border:1px solid var(--emerald); color:var(--emerald); }
+.orient-arrow { color:var(--muted); font-size:14px; opacity:0.5; }
+.stage-num { font-size:8px; opacity:.7; }
+.section-title { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:16px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+.param-table { width:100%; border-collapse:collapse; font-size:11px; }
+.param-table th { font-family:'Barlow',sans-serif; font-weight:700; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); padding:7px 10px; text-align:left; border-bottom:1px solid var(--glass-border); }
+.param-table td { padding:6px 10px; color:var(--text); line-height:1.4; border-bottom:1px solid rgba(255,255,255,.05); font-family:'Inter',sans-serif; font-size:11px; }
+.param-table tr:nth-child(even) td { background:rgba(255,255,255,.025); }
+.mono { font-family:'JetBrains Mono',monospace !important; font-size:10px !important; }
+.footer { position:absolute; bottom:0; left:0; right:0; background:rgba(13,16,32,.9); border-top:1px solid rgba(255,255,255,.08); padding:14px 28px; text-align:center; }
+.footer-disclaimer { font-size:10px; color:var(--muted); line-height:1.5; margin-bottom:6px; }
+.footer-title { font-family:'Barlow',sans-serif; font-weight:600; font-size:15px; color:var(--text); margin-bottom:4px; }
+.footer-brand { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); }
+@media print {
+  @page { size: 12.5in 18.75in; margin: 0; }
+  html, body { background: #1A1F2E !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  .stage { position: static; padding: 0; display: block; overflow: visible; }
+  .poster-wrap { transform: none !important; }
+  .poster { box-shadow: none !important; width: 1200px !important; height: 1800px !important; overflow: hidden !important; }
+  .glass { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .tweaks { display: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="poster-wrap" id="posterWrap">
+    <div class="poster" id="poster">
+      <div class="corner-tab corner-tl"></div>
+      <div class="corner-tab corner-tr"></div>
+      <div class="corner-tab corner-bl"></div>
+      <div class="corner-tab corner-br"></div>
+
+      <!-- Logo -->
+      <div style="position:absolute;top:28px;right:28px;display:flex;align-items:center;gap:10px;z-index:10;">
+        <div style="width:38px;height:38px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:13px;border-radius:6px;background:linear-gradient(135deg,#E8A020,#2EC4B6);color:#1A1F2E;">PP</div>
+        <div style="line-height:1.1;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:17px;color:var(--text);text-transform:uppercase;letter-spacing:.05em;">Plating </span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:17px;color:var(--amber);text-transform:uppercase;letter-spacing:.05em;">Posters</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--slate);margin-left:4px;vertical-align:middle;">Inc</span>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div style="padding:28px 28px 10px;height:155px;box-sizing:border-box;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px;">Electroless Nickel — Stage 1 of 7</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:90px;color:var(--text);line-height:1;letter-spacing:-.01em;">CLEANING</div>
+        <div style="font-family:'Barlow',sans-serif;font-weight:700;font-size:26px;color:var(--teal);margin:2px 0 4px;">EN (Low Phos) — Alkaline Soak Clean — Stage 1 of 7</div>
+        <div style="font-family:'Barlow',sans-serif;font-weight:600;font-size:13px;color:var(--muted);line-height:1.4;max-width:760px;">EN is autocatalytic — it plates itself. But only on a truly clean surface. Contamination does not reduce quality. It stops deposition entirely.</div>
+      </div>
+
+      <!-- Orientation Strip -->
+      <div class="orient-strip glass">
+        <div class="orient-stage active teal"><span class="stage-num">1</span>CLEAN</div>
+        <div class="orient-arrow">›</div>
+        <div class="orient-stage"><span class="stage-num">2</span>RINSE</div>
+        <div class="orient-arrow">›</div>
+        <div class="orient-stage"><span class="stage-num">3</span>ACTIVATE</div>
+        <div class="orient-arrow">›</div>
+        <div class="orient-stage"><span class="stage-num">4</span>RINSE</div>
+        <div class="orient-arrow">›</div>
+        <div class="orient-stage"><span class="stage-num">5</span>EN BATH</div>
+        <div class="orient-arrow">›</div>
+        <div class="orient-stage"><span class="stage-num">6</span>RINSE</div>
+        <div class="orient-arrow">›</div>
+        <div class="orient-stage"><span class="stage-num">7</span>POST-TX</div>
+      </div>
+
+      <!-- Before/After strip -->
+      <div style="margin:0 28px 10px;display:flex;gap:12px;align-items:center;">
+        <div class="glass" style="padding:8px 16px;flex:1;display:flex;align-items:center;gap:8px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap;">BEFORE:</div>
+          <div style="font-size:11px;color:var(--muted);">Incoming parts (as-received) — oil, grease, shop soil, oxides</div>
+        </div>
+        <div style="font-size:20px;color:var(--muted);opacity:.5;">→</div>
+        <div class="glass" style="padding:8px 16px;flex:1;display:flex;align-items:center;gap:8px;border:1px solid rgba(46,196,182,.3);">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap;">AFTER:</div>
+          <div style="font-size:11px;color:var(--text);">Oil-free, water-break-free surface ready for activation</div>
+        </div>
+      </div>
+
+      <!-- Hero Tank Diagram -->
+      <div style="margin:0 28px;height:460px;position:relative;">
+        <div class="glass" style="height:100%;position:relative;overflow:hidden;border:1px solid rgba(46,196,182,.2);">
+          <!-- Tank label -->
+          <div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;letter-spacing:.1em;color:var(--teal);text-transform:uppercase;">ALKALINE SOAK CLEAN TANK</div>
+
+          <!-- Temperature indicator -->
+          <div style="position:absolute;left:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;writing-mode:vertical-lr;transform:rotate(180deg);">TEMPERATURE</div>
+            <div style="width:28px;height:180px;background:rgba(255,255,255,.06);border:1px solid var(--glass-border);border-radius:14px;position:relative;overflow:hidden;">
+              <div style="position:absolute;bottom:0;left:0;right:0;height:75%;background:linear-gradient(to top,rgba(232,160,32,.8),rgba(232,160,32,.3));border-radius:14px;"></div>
+            </div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);text-align:center;font-weight:500;">60–80°C<br><span style="font-size:9px;color:var(--muted);">140–176°F</span></div>
+          </div>
+
+          <!-- Tank body -->
+          <div style="position:absolute;left:80px;right:80px;top:55px;bottom:55px;">
+            <!-- Solution level indicator -->
+            <div style="position:absolute;top:0;left:0;right:0;bottom:80px;background:rgba(46,196,182,.04);border:2px solid rgba(46,196,182,.2);border-radius:8px;overflow:hidden;">
+              <!-- Solution fill -->
+              <div style="position:absolute;bottom:0;left:0;right:0;top:15%;background:linear-gradient(to top,rgba(46,196,182,.1),rgba(46,196,182,.04));"></div>
+
+              <!-- Agitation arrows -->
+              <div style="position:absolute;bottom:30px;left:20px;display:flex;flex-direction:column;gap:4px;opacity:.6;">
+                <div style="color:var(--teal);font-size:11px;">↑↑↑</div><div style="color:var(--teal);font-size:11px;">↑↑↑</div><div style="color:var(--teal);font-size:11px;">↑↑↑</div>
+              </div>
+              <div style="position:absolute;bottom:30px;right:20px;display:flex;flex-direction:column;gap:4px;opacity:.6;">
+                <div style="color:var(--teal);font-size:11px;text-align:right;">↑↑↑</div><div style="color:var(--teal);font-size:11px;text-align:right;">↑↑↑</div><div style="color:var(--teal);font-size:11px;text-align:right;">↑↑↑</div>
+              </div>
+
+              <!-- Rack bar -->
+              <div style="position:absolute;top:0;left:10%;right:10%;height:14px;background:rgba(255,255,255,.15);border-radius:2px;"></div>
+
+              <!-- Hanging parts -->
+              <div style="position:absolute;top:14px;left:15%;display:flex;gap:40px;">
+                <!-- Part 1 - rectangle -->
+                <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+                  <div style="width:2px;height:40px;background:rgba(255,255,255,.3);"></div>
+                  <div style="width:50px;height:80px;border:2px solid rgba(255,255,255,.4);border-radius:3px;background:rgba(255,255,255,.06);position:relative;">
+                    <div style="position:absolute;top:4px;left:4px;width:5px;height:5px;border-radius:50%;background:var(--amber);opacity:.8;"></div>
+                    <div style="position:absolute;top:12px;right:4px;width:5px;height:5px;border-radius:50%;background:var(--amber);opacity:.6;"></div>
+                    <div style="position:absolute;bottom:8px;left:8px;width:5px;height:5px;border-radius:50%;background:var(--amber);opacity:.5;"></div>
+                  </div>
+                </div>
+                <!-- Part 2 - cylinder -->
+                <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+                  <div style="width:2px;height:40px;background:rgba(255,255,255,.3);"></div>
+                  <div style="width:40px;height:90px;border:2px solid rgba(255,255,255,.4);border-radius:20px;background:rgba(255,255,255,.06);position:relative;">
+                    <div style="position:absolute;top:6px;left:6px;width:4px;height:4px;border-radius:50%;background:var(--amber);opacity:.7;"></div>
+                    <div style="position:absolute;bottom:10px;right:6px;width:4px;height:4px;border-radius:50%;background:var(--amber);opacity:.5;"></div>
+                  </div>
+                </div>
+                <!-- Part 3 - L-bracket -->
+                <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+                  <div style="width:2px;height:40px;background:rgba(255,255,255,.3);"></div>
+                  <div style="position:relative;width:60px;height:85px;">
+                    <div style="position:absolute;top:0;left:0;width:60px;height:20px;border:2px solid rgba(255,255,255,.4);border-radius:3px;background:rgba(255,255,255,.06);"></div>
+                    <div style="position:absolute;top:18px;left:0;width:20px;height:67px;border:2px solid rgba(255,255,255,.4);border-top:none;border-radius:0 0 3px 3px;background:rgba(255,255,255,.06);"></div>
+                    <div style="position:absolute;top:5px;left:30px;width:4px;height:4px;border-radius:50%;background:var(--amber);opacity:.8;"></div>
+                    <div style="position:absolute;top:30px;left:5px;width:4px;height:4px;border-radius:50%;background:var(--amber);opacity:.6;"></div>
+                  </div>
+                </div>
+                <!-- Part 4 - flat plate -->
+                <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+                  <div style="width:2px;height:40px;background:rgba(255,255,255,.3);"></div>
+                  <div style="width:65px;height:70px;border:2px solid rgba(255,255,255,.4);border-radius:3px;background:rgba(255,255,255,.06);position:relative;">
+                    <div style="position:absolute;top:6px;right:6px;width:4px;height:4px;border-radius:50%;background:var(--amber);opacity:.9;"></div>
+                    <div style="position:absolute;bottom:8px;left:6px;width:4px;height:4px;border-radius:50%;background:var(--amber);opacity:.5;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Soil particles floating away -->
+              <div style="position:absolute;top:20%;left:25%;font-size:7px;color:var(--amber);opacity:.5;">●</div>
+              <div style="position:absolute;top:35%;right:30%;font-size:5px;color:var(--amber);opacity:.4;">●</div>
+              <div style="position:absolute;top:55%;left:40%;font-size:6px;color:var(--amber);opacity:.45;">●</div>
+              <div style="position:absolute;top:45%;right:20%;font-size:5px;color:var(--amber);opacity:.35;">●</div>
+              <div style="position:absolute;bottom:40%;left:60%;font-size:7px;color:var(--amber);opacity:.4;">●</div>
+              <div style="position:absolute;bottom:25%;right:40%;font-size:5px;color:var(--amber);opacity:.5;">●</div>
+            </div>
+
+            <!-- Bottom label -->
+            <div style="position:absolute;bottom:0;left:0;right:0;text-align:center;">
+              <div style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);">Agitation: Mechanical or air agitation — keeps fresh cleaner in contact with soil</div>
+            </div>
+          </div>
+
+          <!-- Right side chemistry labels -->
+          <div style="position:absolute;right:14px;top:55px;width:70px;display:flex;flex-direction:column;gap:8px;">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--teal);line-height:1.6;text-align:right;">
+              Alkaline Soak<br>NaOH<br>30–60 g/L<br>Na₂CO₃<br>15–30 g/L<br>Surfactants<br>1–5 mL/L<br>3–10 min
+            </div>
+          </div>
+
+          <!-- Left callout -->
+          <div style="position:absolute;bottom:70px;left:14px;width:190px;padding:10px;background:rgba(46,196,182,.12);border:1px solid rgba(46,196,182,.3);border-radius:8px;">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--teal);font-weight:500;margin-bottom:4px;">SUBMERSION</div>
+            <div style="font-size:10px;color:var(--text);line-height:1.5;">Parts must be fully submerged. Air pockets trap soil and cause skip plating.</div>
+          </div>
+
+          <!-- Right callout -->
+          <div style="position:absolute;bottom:70px;right:14px;width:190px;padding:10px;background:rgba(232,160,32,.12);border:1px solid rgba(232,160,32,.3);border-radius:8px;">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--amber);font-weight:500;margin-bottom:4px;">ELECTROCLEAN OPTION</div>
+            <div style="font-size:10px;color:var(--text);line-height:1.5;">Cathodic then anodic 3–6 V, 30–60 sec each for stubborn soils</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parameter Tables -->
+      <div style="margin:10px 28px;display:flex;gap:12px;">
+        <!-- Left: Soak Clean -->
+        <div style="flex:1;">
+          <div class="section-title">Soak Clean Parameters</div>
+          <div class="glass" style="padding:0;overflow:hidden;">
+            <table class="param-table">
+              <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+              <tbody>
+                <tr><td>Cleaner type</td><td class="mono">Alkaline soak</td></tr>
+                <tr><td>NaOH</td><td class="mono">30–60 g/L</td></tr>
+                <tr><td>Na₂CO₃</td><td class="mono">15–30 g/L</td></tr>
+                <tr><td>Surfactants</td><td class="mono">1–5 mL/L</td></tr>
+                <tr><td>Temperature</td><td class="mono">60–80°C (140–176°F)</td></tr>
+                <tr><td>Time</td><td class="mono">3–10 min</td></tr>
+                <tr><td>pH</td><td class="mono">11–13</td></tr>
+                <tr><td>Agitation</td><td class="mono">Air or mechanical</td></tr>
+                <tr><td>Water-break test</td><td>Continuous film = clean</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Right: Electroclean + Substrate Notes -->
+        <div style="flex:1;">
+          <div class="section-title">Electroclean + Substrate Notes</div>
+          <div class="glass" style="padding:0;overflow:hidden;">
+            <table class="param-table">
+              <thead><tr><th>Parameter</th><th>Value / Note</th></tr></thead>
+              <tbody>
+                <tr><td>Cathodic EC</td><td class="mono">3–6 V / 30–60 sec</td></tr>
+                <tr><td>Anodic EC</td><td class="mono">3–6 V / 15–30 sec</td></tr>
+                <tr><td>HTS steel (>1000 MPa)</td><td style="color:var(--coral);font-size:10px;">⚠ Cathodic H absorption risk</td></tr>
+                <tr><td>Aluminum</td><td class="mono">Non-etch cleaner, pH &lt;10.5</td></tr>
+                <tr><td>Silicate cleaners</td><td style="color:var(--amber);font-size:10px;">Must rinse thoroughly — residue poisons EN</td></tr>
+                <tr><td>Steel / iron</td><td class="mono">Standard alkaline soak, OK at pH 13</td></tr>
+                <tr><td>Copper / brass</td><td class="mono">Mild alkaline, 50–65°C</td></tr>
+                <tr><td>Stainless</td><td class="mono">Alkaline soak + cathodic EC</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problems Table -->
+      <div style="margin:8px 28px;">
+        <div class="section-title">Cleaning Problems — Root Causes &amp; Fixes</div>
+        <div class="glass" style="padding:0;overflow:hidden;">
+          <table class="param-table">
+            <thead><tr><th>Problem</th><th>Downstream Symptom</th><th>Root Cause</th><th>Fix</th></tr></thead>
+            <tbody>
+              <tr><td style="color:var(--coral);">Water break</td><td>Parts bead up after rinse</td><td>Residual oil/grease on surface</td><td>Extend clean time; increase temp or concentration</td></tr>
+              <tr><td style="color:var(--coral);">Skip plating</td><td>Bare spots in EN deposit</td><td>Contamination reached EN bath</td><td>Full re-clean; check water-break before proceeding</td></tr>
+              <tr><td style="color:var(--coral);">Pitting in EN</td><td>Holes or pits in deposit</td><td>Particulate or H₂ from EC</td><td>Filter cleaner; use cathodic then anodic EC sequence</td></tr>
+              <tr><td style="color:var(--coral);">Poor adhesion</td><td>Blistering or peel after HT</td><td>Oxide or smut not removed</td><td>Add acid desmut or pre-clean step</td></tr>
+              <tr><td style="color:var(--coral);">Rough deposit</td><td>Nodular EN surface</td><td>Particulate in cleaner</td><td>Filter cleaner bath; replace if contaminated</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Safety Section -->
+      <div style="margin:8px 28px;">
+        <div class="section-title">Safety</div>
+        <div style="display:flex;gap:12px;">
+          <!-- Chemical Hazards -->
+          <div class="glass" style="flex:1;padding:14px;border:1px solid rgba(224,92,92,.3);">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;color:var(--coral);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Chemical Hazards</div>
+            <div style="font-size:11px;color:var(--text);line-height:1.7;">
+              <div>● NaOH — severe skin/eye burns on contact</div>
+              <div>● Hot solution (60–80°C) — thermal burn risk</div>
+              <div>● Mist and vapor — irritates respiratory tract</div>
+              <div>● <span style="color:var(--coral);font-weight:600;">NEVER add water to NaOH concentrate</span> — add caustic to water</div>
+              <div>● H₂ gas evolved during electrocleaning — ventilate</div>
+            </div>
+          </div>
+          <!-- PPE -->
+          <div class="glass" style="flex:1;padding:14px;border:1px solid rgba(232,160,32,.3);">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;color:var(--amber);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">PPE Required</div>
+            <div style="font-size:11px;color:var(--text);line-height:1.7;">
+              <div>● Chemical splash goggles (not safety glasses)</div>
+              <div>● Chemical-resistant gloves — nitrile or neoprene</div>
+              <div>● Chemical-resistant apron or lab coat</div>
+              <div>● Eyewash station within 10 seconds of tank</div>
+              <div>● SDS posted at point of use and in safety binder</div>
+              <div>● Overhead ventilation at tank line</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="footer-disclaimer">Technical reference only. Values shown are typical operating ranges — consult your chemistry supplier for bath-specific parameters. ASTM B733 governs EN plating specifications.</div>
+        <div class="footer-title">Electroless Nickel Low Phos — Cleaning Stage 1 of 7</div>
+        <div class="footer-brand">Plating Posters Inc — Metal Finishing Reference Series | v1.0 2026</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tweaks" style="position:fixed;bottom:16px;right:16px;z-index:100;background:rgba(13,16,32,.92);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 16px;display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:#F0EDE8;">
+  <div style="display:flex;gap:8px;align-items:center;">
+    <span style="color:rgba(240,237,232,.5);">Edition</span>
+    <button onclick="document.getElementById('poster').dataset.edition=''" style="padding:3px 10px;border-radius:4px;border:1px solid #E8A020;background:#E8A020;color:#1A1F2E;cursor:pointer;font-size:11px;">Dark</button>
+    <button onclick="document.getElementById('poster').dataset.edition='light'" style="padding:3px 10px;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#F0EDE8;cursor:pointer;font-size:11px;">Light</button>
+  </div>
+  <button onclick="window.print()" style="padding:4px 12px;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#F0EDE8;cursor:pointer;font-size:11px;">Print / PDF</button>
+</div>
+
+<script>
+  const posterWrap = document.getElementById('posterWrap');
+  function scalePoster() {
+    const s = Math.min(window.innerWidth / 1200, window.innerHeight / 1800);
+    posterWrap.style.transform = 'scale(' + s + ')';
+  }
+  scalePoster();
+  window.addEventListener('resize', scalePoster);
+</script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electroless Nickel Low Phos — Process Flow | Plating Posters Inc</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Barlow:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #1A1F2E; --navy: #0D1020; --text: #F0EDE8; --muted: rgba(240,237,232,.62);
+  --amber: #E8A020; --teal: #2EC4B6; --emerald: #27AE60; --coral: #E05C5C;
+  --slate: #3A4055; --callout: #1E2435; --altrow: #252B3D;
+  --glass-bg: rgba(30,36,53,.55);
+  --glass-border: rgba(255,255,255,.12);
+  --glass-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+}
+.poster[data-edition="light"] {
+  --bg:#F5F4F0; --navy:#DDD8CE; --text:#1B2030; --muted:rgba(27,32,48,.66);
+  --amber:#B8770D; --teal:#1A8C82; --emerald:#1E8449; --coral:#B7322F;
+  --slate:#C5C0B5; --callout:#ECEAE1; --altrow:#E4E1D6;
+  --glass-bg: rgba(255,253,247,.66); --glass-border: rgba(27,32,48,.10);
+}
+html, body { margin: 0; padding: 0; background: #0a0c14; }
+.stage {
+  width: 100vw; height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.poster-wrap { transform-origin: top center; }
+.poster {
+  width: 1200px; height: 1800px; position: relative; overflow: hidden;
+  background:
+    radial-gradient(1200px 800px at 15% 8%, rgba(46,196,182,.14), transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%, rgba(232,160,32,.12), transparent 55%),
+    radial-gradient(900px 900px at 50% 80%, rgba(224,92,92,.10), transparent 60%),
+    var(--bg);
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+}
+.glass {
+  background-color: var(--glass-bg);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: var(--glass-shadow);
+  border-radius: 12px;
+}
+.corner-tab { position:absolute; width:24px; height:24px; z-index:20; pointer-events:none; }
+.corner-tl { top:8px; left:8px; border-top:2px solid rgba(255,255,255,.3); border-left:2px solid rgba(255,255,255,.3); }
+.corner-tr { top:8px; right:8px; border-top:2px solid rgba(255,255,255,.3); border-right:2px solid rgba(255,255,255,.3); }
+.corner-bl { bottom:8px; left:8px; border-bottom:2px solid rgba(255,255,255,.3); border-left:2px solid rgba(255,255,255,.3); }
+.corner-br { bottom:8px; right:8px; border-bottom:2px solid rgba(255,255,255,.3); border-right:2px solid rgba(255,255,255,.3); }
+
+/* Header */
+.header-band {
+  padding: 28px 28px 16px 28px;
+  height: 160px;
+  box-sizing: border-box;
+  position: relative;
+}
+.eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--amber); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
+.headline { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 78px; color: var(--text); line-height: 1; margin: 0; letter-spacing: -.01em; }
+.subhead { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 28px; color: var(--emerald); margin: 4px 0 6px; }
+.tagline { font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 14px; color: var(--muted); line-height: 1.4; max-width: 780px; }
+
+/* Orientation strip */
+.orient-strip {
+  margin: 0 28px 12px;
+  padding: 10px 14px;
+  display: flex; align-items: center; gap: 4px;
+  height: 52px; box-sizing: border-box;
+}
+.orient-stage {
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 1px;
+  padding: 5px 10px; border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace; font-size: 9px;
+  font-weight: 500; letter-spacing: .05em;
+  background: var(--slate); color: var(--muted);
+  opacity: 0.35; min-width: 100px; text-align: center;
+}
+.orient-stage.active { opacity: 1; color: var(--text); }
+.orient-stage.active.teal { background: rgba(46,196,182,.25); border: 1px solid var(--teal); color: var(--teal); }
+.orient-stage.active.amber { background: rgba(232,160,32,.25); border: 1px solid var(--amber); color: var(--amber); }
+.orient-stage.active.emerald { background: rgba(39,174,96,.25); border: 1px solid var(--emerald); color: var(--emerald); }
+.orient-arrow { color: var(--muted); font-size: 14px; opacity: 0.5; }
+.stage-num { font-size: 8px; opacity: .7; }
+
+/* Stage cards in hero */
+.flow-row { display: flex; gap: 10px; margin: 0 28px; align-items: stretch; }
+.stage-card {
+  flex: 1; padding: 12px; border-radius: 10px; min-height: 180px;
+  background-color: var(--glass-bg);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+}
+.stage-card .top-border {
+  position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 10px 10px 0 0;
+}
+.stage-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 10px; border-radius: 20px;
+  font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 500;
+  letter-spacing: .07em; text-transform: uppercase; margin-top: 10px; margin-bottom: 8px;
+}
+.stage-card .params {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  color: var(--text); line-height: 1.6; margin-bottom: 8px;
+}
+.stage-card .purpose { font-size: 11px; color: var(--muted); line-height: 1.4; margin-bottom: 6px; }
+.stage-card .critical { font-size: 10px; line-height: 1.4; font-weight: 600; }
+
+/* Arrow between rows */
+.flow-arrow {
+  display: flex; align-items: center; padding: 0 4px;
+  font-size: 18px; color: var(--muted); opacity: 0.5; align-self: center;
+}
+
+/* U-turn indicator */
+.u-turn {
+  display: flex; justify-content: flex-end; margin: 6px 28px;
+  align-items: center; gap: 8px;
+}
+.u-turn-line {
+  flex: 1; height: 2px; background: linear-gradient(to right, transparent, rgba(255,255,255,.2), rgba(255,255,255,.2));
+}
+.u-turn-arrow { font-size: 22px; color: var(--muted); opacity: 0.5; }
+
+/* Parameter table */
+.param-section { margin: 10px 28px 8px; }
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 16px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 8px;
+}
+.param-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.param-table th {
+  font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 10px;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  padding: 7px 10px; text-align: left;
+  border-bottom: 1px solid var(--glass-border);
+}
+.param-table td {
+  padding: 6px 10px; color: var(--text); line-height: 1.4;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+  font-family: 'Inter', sans-serif; font-size: 10px;
+}
+.param-table tr:nth-child(even) td { background: rgba(255,255,255,.025); }
+.param-table .mono { font-family: 'JetBrains Mono', monospace; font-size: 10px; }
+.param-table .highlight td { background: rgba(39,174,96,.08) !important; }
+
+/* Comparison cards */
+.compare-row { display: flex; gap: 12px; margin: 0 28px; }
+.compare-card { flex: 1; padding: 14px; border-radius: 10px; position: relative; overflow: hidden; }
+.compare-card .top-border { position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 10px 10px 0 0; }
+.compare-card h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 18px; margin: 10px 0 4px; }
+.compare-card .badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 8px; padding: 2px 8px; border-radius: 10px; margin-bottom: 6px; }
+.compare-card ul { margin: 0; padding-left: 14px; font-size: 10px; color: var(--muted); line-height: 1.7; }
+
+/* Trouble strip */
+.trouble-row { display: flex; gap: 10px; margin: 8px 28px 0; }
+.trouble-card { flex: 1; padding: 12px; border-radius: 8px; border-left: 3px solid var(--coral); }
+.trouble-card h5 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; color: var(--coral); margin: 0 0 4px; text-transform: uppercase; letter-spacing: .06em; }
+.trouble-card p { font-size: 10px; color: var(--muted); margin: 0; line-height: 1.5; }
+
+/* Legend strip */
+.legend-strip { display: flex; gap: 16px; margin: 8px 28px; align-items: center; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--muted); }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+/* Footer */
+.footer {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(13,16,32,.9);
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 14px 28px;
+  text-align: center;
+}
+.footer-disclaimer { font-size: 10px; color: var(--muted); line-height: 1.5; margin-bottom: 6px; }
+.footer-title { font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 15px; color: var(--text); margin-bottom: 4px; }
+.footer-brand { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); }
+
+@media print {
+  @page { size: 12.5in 18.75in; margin: 0; }
+  html, body { background: #1A1F2E !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  .stage { position: static; padding: 0; display: block; overflow: visible; }
+  .poster-wrap { transform: none !important; }
+  .poster { box-shadow: none !important; width: 1200px !important; height: 1800px !important; overflow: hidden !important; }
+  .glass, .stage-card, .compare-card, .trouble-card { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .tweaks { display: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="poster-wrap" id="posterWrap">
+    <div class="poster" id="poster">
+      <!-- Corner tabs -->
+      <div class="corner-tab corner-tl"></div>
+      <div class="corner-tab corner-tr"></div>
+      <div class="corner-tab corner-bl"></div>
+      <div class="corner-tab corner-br"></div>
+
+      <!-- Logo -->
+      <div style="position:absolute;top:28px;right:28px;display:flex;align-items:center;gap:10px;z-index:10;">
+        <div style="width:38px;height:38px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:13px;border-radius:6px;background:linear-gradient(135deg,#E8A020,#2EC4B6);color:#1A1F2E;">PP</div>
+        <div style="line-height:1.1;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:17px;color:var(--text);text-transform:uppercase;letter-spacing:.05em;">Plating </span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:17px;color:var(--amber);text-transform:uppercase;letter-spacing:.05em;">Posters</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--slate);margin-left:4px;vertical-align:middle;">Inc</span>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div class="header-band">
+        <div class="eyebrow">Metal Finishing Reference Series — Electroless Nickel</div>
+        <div class="headline">ELECTROLESS NICKEL</div>
+        <div class="subhead">Low Phosphorus (2–4% P) — Complete Process Flow — 7 Stages</div>
+        <div class="tagline">No rectifier. No anode. The deposit grows itself. Autocatalytic Ni-P at 650–750 HV as-plated — the hardest EN class straight out of the bath.</div>
+      </div>
+
+      <!-- Orientation Strip -->
+      <div class="orient-strip glass" style="margin:0 28px 10px;">
+        <div class="orient-stage active teal"><span class="stage-num">1</span>CLEAN</div>
+        <div class="orient-arrow">›</div>
+        <div class="orient-stage active teal"><span class="stage-num">2</span>RINSE</div>
+        <div class="orient-arrow">›</div>
+        <div class="orient-stage active amber"><span class="stage-num">3</span>ACTIVATE</div>
+        <div class="orient-arrow">›</div>
+        <div class="orient-stage active teal"><span class="stage-num">4</span>RINSE</div>
+        <div class="orient-arrow">›</div>
+        <div class="orient-stage active emerald"><span class="stage-num">5</span>EN BATH</div>
+        <div class="orient-arrow">›</div>
+        <div class="orient-stage active teal"><span class="stage-num">6</span>RINSE</div>
+        <div class="orient-arrow">›</div>
+        <div class="orient-stage active amber"><span class="stage-num">7</span>POST-TX</div>
+      </div>
+
+      <!-- Hero: U-Flow Diagram — Top row stages 1-4 -->
+      <div style="margin: 0 28px 6px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">7-STAGE PROCESS FLOW — U-FLOW LAYOUT</div>
+      </div>
+      <div class="flow-row" style="margin-bottom:6px;">
+        <!-- Stage 1 -->
+        <div class="stage-card">
+          <div class="top-border" style="background:var(--teal);"></div>
+          <div class="stage-badge" style="background:rgba(46,196,182,.2);color:var(--teal);border:1px solid rgba(46,196,182,.3);">1 · ALKALINE CLEAN</div>
+          <div class="params">60–80°C<br>NaOH 30–60 g/L<br>Na₂CO₃ 15–30 g/L<br>Time: 3–10 min</div>
+          <div class="purpose">Removes oil, grease, and surface contaminants. EN is autocatalytic — contamination stops deposition entirely.</div>
+          <div class="critical" style="color:var(--teal);">✓ Water-break-free surface</div>
+        </div>
+        <div class="flow-arrow">›</div>
+        <!-- Stage 2 -->
+        <div class="stage-card">
+          <div class="top-border" style="background:var(--teal);"></div>
+          <div class="stage-badge" style="background:rgba(46,196,182,.2);color:var(--teal);border:1px solid rgba(46,196,182,.3);">2 · RINSE PRE-ACT</div>
+          <div class="params">Ambient<br>Counterflow 2-stage<br>&lt;50 µS/cm<br>30–60 sec</div>
+          <div class="purpose">Removes alkaline drag-out. Bridges cleaning to acid activation — alkaline carry-over neutralizes activator.</div>
+          <div class="critical" style="color:var(--teal);">✓ &lt;50 µS/cm conductivity</div>
+        </div>
+        <div class="flow-arrow">›</div>
+        <!-- Stage 3 -->
+        <div class="stage-card">
+          <div class="top-border" style="background:var(--amber);"></div>
+          <div class="stage-badge" style="background:rgba(232,160,32,.2);color:var(--amber);border:1px solid rgba(232,160,32,.3);">3 · ACTIVATION</div>
+          <div class="params">HCl 10–20% v/v (steel)<br>or Zincate (Al)<br>Ambient<br>30–120 sec</div>
+          <div class="purpose">Exposes catalytic surface. Steel is self-catalytic with HCl. Aluminum requires double zincate sequence.</div>
+          <div class="critical" style="color:var(--amber);">✓ Steel is self-catalytic</div>
+        </div>
+        <div class="flow-arrow">›</div>
+        <!-- Stage 4 -->
+        <div class="stage-card">
+          <div class="top-border" style="background:var(--teal);"></div>
+          <div class="stage-badge" style="background:rgba(46,196,182,.2);color:var(--teal);border:1px solid rgba(46,196,182,.3);">4 · RINSE PRE-PLATE</div>
+          <div class="params">DI preferred<br>Ambient 30–60 sec<br>&lt;20 µS/cm<br>Double counterflow</div>
+          <div class="purpose">Most critical rinse. Removes acid and chloride ions that cause pitting in the EN bath.</div>
+          <div class="critical" style="color:var(--coral);">⚠ Chloride drag-in causes pitting</div>
+        </div>
+      </div>
+
+      <!-- U-turn -->
+      <div class="u-turn" style="margin:4px 28px;">
+        <div style="flex:1;height:2px;background:linear-gradient(to right,transparent,rgba(255,255,255,.15),rgba(255,255,255,.15));border-radius:1px;"></div>
+        <div style="font-size:20px;color:var(--muted);opacity:.5;padding:0 8px;">↓</div>
+        <div style="width:40px;height:2px;background:rgba(255,255,255,.15);border-radius:1px;"></div>
+      </div>
+
+      <!-- Bottom row stages 5-7 (right to left) -->
+      <div class="flow-row" style="flex-direction:row-reverse;margin-bottom:6px;">
+        <!-- Empty spacer where U-turn is -->
+        <div style="flex:1;min-height:180px;display:flex;align-items:center;justify-content:center;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);opacity:.4;text-align:center;padding:10px;">U-FLOW<br>TURN</div>
+        </div>
+        <div class="flow-arrow" style="transform:scaleX(-1);">›</div>
+        <!-- Stage 7 -->
+        <div class="stage-card">
+          <div class="top-border" style="background:var(--amber);"></div>
+          <div class="stage-badge" style="background:rgba(232,160,32,.2);color:var(--amber);border:1px solid rgba(232,160,32,.3);">7 · POST TREATMENT</div>
+          <div class="params">HE Bake: 190–210°C<br>Time: 2–23 hr<br>HT: 350–400°C, 1 hr<br>ASTM B733 Class 2/3</div>
+          <div class="purpose">Heat treatment converts microcrystalline to Ni₃P precipitation hardened structure. Mandatory for HTS.</div>
+          <div class="critical" style="color:var(--amber);">⚠ Mandatory for &gt;1000 MPa steel</div>
+        </div>
+        <div class="flow-arrow" style="transform:scaleX(-1);">›</div>
+        <!-- Stage 6 -->
+        <div class="stage-card">
+          <div class="top-border" style="background:var(--teal);"></div>
+          <div class="stage-badge" style="background:rgba(46,196,182,.2);color:var(--teal);border:1px solid rgba(46,196,182,.3);">6 · RINSE POST-PLATE</div>
+          <div class="params">Cold water preferred<br>Double counterflow<br>Ambient<br>30–60 sec</div>
+          <div class="purpose">Stops autocatalytic reaction. Removes drag-out. Cold water quench is the fastest reaction stop.</div>
+          <div class="critical" style="color:var(--coral);">⚠ Do not air-dry</div>
+        </div>
+        <div class="flow-arrow" style="transform:scaleX(-1);">›</div>
+        <!-- Stage 5 -->
+        <div class="stage-card" style="border:1px solid rgba(39,174,96,.3);">
+          <div class="top-border" style="background:var(--emerald);"></div>
+          <div class="stage-badge" style="background:rgba(39,174,96,.2);color:var(--emerald);border:1px solid rgba(39,174,96,.3);">5 · EN LOW-P BATH</div>
+          <div class="params">Ni²⁺ 4.5–6.0 g/L<br>NaH₂PO₂ 20–35 g/L<br>pH 8.5–9.5<br><strong>Temp: 80–92°C</strong></div>
+          <div class="purpose">Autocatalytic deposition. Uniform coating on all surfaces. No rectifier, no anodes required.</div>
+          <div class="critical" style="color:var(--emerald);">✓ Rate: 10–15 µm/hr · Bath life: 6–8 MTO</div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="legend-strip glass" style="margin:4px 28px;padding:8px 14px;">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--teal);"></div>Cleaning &amp; Rinse</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--amber);"></div>Activation &amp; Post-Treatment</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--emerald);"></div>Plating</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--coral);"></div>Caution</div>
+        <div style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);">→ Parts travel left-to-right top, right-to-left bottom</div>
+      </div>
+
+      <!-- Parameter Table -->
+      <div class="param-section">
+        <div class="section-title">Process Parameters — All 7 Stages</div>
+        <div class="glass" style="padding:0;overflow:hidden;">
+          <table class="param-table">
+            <thead>
+              <tr>
+                <th>Stage</th><th>Chemistry</th><th>Temp</th><th>Time</th><th>Key Control</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style="color:var(--teal);">1 · Alkaline Clean</td><td class="mono">NaOH 30–60 g/L, Na₂CO₃ 15–30 g/L, Surfactants</td><td class="mono">60–80°C</td><td class="mono">3–10 min</td><td>Water-break-free surface</td></tr>
+              <tr><td style="color:var(--teal);">2 · Rinse Pre-Act</td><td class="mono">DI/city water, 2-stage counterflow</td><td class="mono">Ambient</td><td class="mono">30–60 sec</td><td>&lt;50 µS/cm final stage</td></tr>
+              <tr><td style="color:var(--amber);">3 · Activation</td><td class="mono">HCl 10–20% v/v (steel) / Zincate (Al)</td><td class="mono">Ambient</td><td class="mono">30–120 sec</td><td>Steel self-catalytic; Al = double zincate</td></tr>
+              <tr><td style="color:var(--teal);">4 · Rinse Pre-Plate</td><td class="mono">DI water, double counterflow</td><td class="mono">Ambient</td><td class="mono">30–60 sec</td><td>⚠ &lt;20 µS/cm; Cl⁻ &lt;5 ppm</td></tr>
+              <tr class="highlight"><td style="color:var(--emerald);">5 · EN Bath</td><td class="mono">Ni²⁺ 4.5–6.0 g/L, NaH₂PO₂ 20–35 g/L, pH 8.5–9.5</td><td class="mono"><strong>80–92°C</strong></td><td class="mono">Per spec</td><td>Rate 10–15 µm/hr · 6–8 MTO bath life</td></tr>
+              <tr><td style="color:var(--teal);">6 · Rinse Post-Plate</td><td class="mono">Cold DI, double counterflow</td><td class="mono">Ambient (cold)</td><td class="mono">30–60 sec</td><td>⚠ No air-dry; no finger contact</td></tr>
+              <tr><td style="color:var(--amber);">7 · Post Treatment</td><td class="mono">HE Bake 190–210°C / HT 350–400°C</td><td class="mono">190–400°C</td><td class="mono">1–23 hr</td><td>ASTM B733 Class 2 or 3 per substrate</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Comparison Cards -->
+      <div style="margin:10px 28px 6px;">
+        <div class="section-title">EN Phosphorus Class Comparison</div>
+        <div class="compare-row">
+          <!-- Low-P -->
+          <div class="compare-card glass" style="border:1px solid rgba(39,174,96,.4);">
+            <div class="top-border" style="background:var(--emerald);"></div>
+            <div style="margin-top:10px;">
+              <div class="badge" style="background:rgba(39,174,96,.2);color:var(--emerald);border:1px solid rgba(39,174,96,.3);">THIS POSTER ← LOW-P</div>
+              <h4 style="color:var(--emerald);">LOW-P (2–4% P)</h4>
+              <ul style="color:var(--muted);font-size:10px;line-height:1.7;padding-left:14px;margin:0;">
+                <li>pH 8.5–9.5 alkaline bath</li>
+                <li>Microcrystalline structure</li>
+                <li>Ferromagnetic deposit</li>
+                <li>650–750 HV as-plated</li>
+                <li>1000–1100 HV after heat treat</li>
+                <li>Rate: 10–15 µm/hr</li>
+                <li>Excellent solderability</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Mid-P -->
+          <div class="compare-card glass" style="border:1px solid rgba(232,160,32,.3);">
+            <div class="top-border" style="background:var(--amber);"></div>
+            <div style="margin-top:10px;">
+              <h4 style="color:var(--amber);">MID-P (5–9% P)</h4>
+              <ul style="color:var(--muted);font-size:10px;line-height:1.7;padding-left:14px;margin:0;">
+                <li>pH 4.6–5.2 acid bath</li>
+                <li>Mixed amorphous/crystalline</li>
+                <li>500–600 HV as-plated</li>
+                <li>Rate: 18–25 µm/hr (fastest)</li>
+                <li>ENIG standard for PCB</li>
+                <li>General purpose coating</li>
+                <li>Most widely used class</li>
+              </ul>
+            </div>
+          </div>
+          <!-- High-P -->
+          <div class="compare-card glass" style="border:1px solid rgba(46,196,182,.3);">
+            <div class="top-border" style="background:var(--teal);"></div>
+            <div style="margin-top:10px;">
+              <h4 style="color:var(--teal);">HIGH-P (10–13% P)</h4>
+              <ul style="color:var(--muted);font-size:10px;line-height:1.7;padding-left:14px;margin:0;">
+                <li>pH 4.2–4.8 acid bath</li>
+                <li>Fully amorphous structure</li>
+                <li>Non-magnetic deposit</li>
+                <li>~550–600 HV as-plated</li>
+                <li>1000+ hr salt spray (SST)</li>
+                <li>Maximum corrosion resistance</li>
+                <li>Electronics / HDD applications</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Troubleshooting Strip -->
+      <div style="margin:8px 28px 0;">
+        <div class="section-title">Common Problems</div>
+        <div class="trouble-row">
+          <div class="trouble-card glass">
+            <h5>Skip Plating</h5>
+            <p>Contamination or poor activation → Improve cleaning protocol; verify activation; check water-break test</p>
+          </div>
+          <div class="trouble-card glass">
+            <h5>Pitting</h5>
+            <p>Chloride drag-in from HCl activation or particulate → DI rinse pre-plate; filter bath 5–10 µm continuously</p>
+          </div>
+          <div class="trouble-card glass">
+            <h5>Bath Decomposition</h5>
+            <p>Low stabilizer or idle at operating temp → Check stabilizer ppm; never leave bath hot without parts or dummy</p>
+          </div>
+          <div class="trouble-card glass">
+            <h5>Low Deposition Rate</h5>
+            <p>pH drift, low temp, or reducer depleted → Check pH every 2–4 hr; verify temp; replenish hypophosphite</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="footer-disclaimer">Technical reference only. Values shown are typical operating ranges — consult your chemistry supplier for bath-specific parameters. See ASTM B733 for plating specification requirements.</div>
+        <div class="footer-title">Electroless Nickel Low Phosphorus (2–4% P) — Complete Process Flow</div>
+        <div class="footer-brand">Plating Posters Inc — Metal Finishing Reference Series | v1.0 2026</div>
+      </div>
+
+    </div><!-- end .poster -->
+  </div><!-- end .poster-wrap -->
+</div><!-- end .stage -->
+
+<!-- Tweaks panel -->
+<div class="tweaks" style="position:fixed;bottom:16px;right:16px;z-index:100;background:rgba(13,16,32,.92);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 16px;display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:#F0EDE8;">
+  <div style="display:flex;gap:8px;align-items:center;">
+    <span style="color:rgba(240,237,232,.5);">Edition</span>
+    <button onclick="document.getElementById('poster').dataset.edition=''" style="padding:3px 10px;border-radius:4px;border:1px solid #E8A020;background:#E8A020;color:#1A1F2E;cursor:pointer;font-size:11px;">Dark</button>
+    <button onclick="document.getElementById('poster').dataset.edition='light'" style="padding:3px 10px;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#F0EDE8;cursor:pointer;font-size:11px;">Light</button>
+  </div>
+  <button onclick="window.print()" style="padding:4px 12px;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#F0EDE8;cursor:pointer;font-size:11px;">Print / PDF</button>
+</div>
+
+<script>
+  const posterWrap = document.getElementById('posterWrap');
+  function scalePoster() {
+    const s = Math.min(window.innerWidth / 1200, window.innerHeight / 1800);
+    posterWrap.style.transform = 'scale(' + s + ')';
+  }
+  scalePoster();
+  window.addEventListener('resize', scalePoster);
+</script>
+</body>
+</html>

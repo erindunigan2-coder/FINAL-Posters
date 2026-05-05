@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electroless Nickel Low Phos - Post Treatment Stage 7 | Plating Posters Inc</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Barlow:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #1A1F2E; --navy: #0D1020; --text: #F0EDE8; --muted: rgba(240,237,232,.62);
+  --amber: #E8A020; --teal: #2EC4B6; --emerald: #27AE60; --coral: #E05C5C;
+  --slate: #3A4055; --callout: #1E2435; --altrow: #252B3D;
+  --glass-bg: rgba(30,36,53,.55); --glass-border: rgba(255,255,255,.12);
+  --glass-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.2), 0 4px 12px rgba(0,0,0,.25);
+}
+.poster[data-edition="light"] {
+  --bg:#F5F4F0; --navy:#DDD8CE; --text:#1B2030; --muted:rgba(27,32,48,.66);
+  --amber:#B8770D; --teal:#1A8C82; --emerald:#1E8449; --coral:#B7322F;
+  --slate:#C5C0B5; --callout:#ECEAE1; --altrow:#E4E1D6;
+  --glass-bg: rgba(255,253,247,.66); --glass-border: rgba(27,32,48,.10);
+}
+html, body { margin: 0; padding: 0; background: #0a0c14; }
+.stage { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.poster-wrap { transform-origin: top center; }
+.poster {
+  width: 1200px; height: 1800px; position: relative; overflow: hidden;
+  background:
+    radial-gradient(1200px 800px at 15% 8%, rgba(232,160,32,.14), transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%, rgba(39,174,96,.10), transparent 55%),
+    radial-gradient(900px 900px at 50% 80%, rgba(224,92,92,.10), transparent 60%),
+    var(--bg);
+  font-family: 'Inter', sans-serif; color: var(--text);
+}
+.glass {
+  background-color: var(--glass-bg);
+  background-image: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: var(--glass-shadow);
+  border-radius: 12px;
+}
+.corner-tab { position:absolute; width:24px; height:24px; z-index:20; pointer-events:none; }
+.corner-tl { top:8px; left:8px; border-top:2px solid rgba(255,255,255,.3); border-left:2px solid rgba(255,255,255,.3); }
+.corner-tr { top:8px; right:8px; border-top:2px solid rgba(255,255,255,.3); border-right:2px solid rgba(255,255,255,.3); }
+.corner-bl { bottom:8px; left:8px; border-bottom:2px solid rgba(255,255,255,.3); border-left:2px solid rgba(255,255,255,.3); }
+.corner-br { bottom:8px; right:8px; border-bottom:2px solid rgba(255,255,255,.3); border-right:2px solid rgba(255,255,255,.3); }
+.orient-strip { margin:0 28px 10px; padding:10px 14px; display:flex; align-items:center; gap:4px; height:52px; box-sizing:border-box; }
+.orient-stage { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1px; padding:5px 10px; border-radius:6px; font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:500; letter-spacing:.05em; background:var(--slate); color:var(--muted); opacity:0.35; min-width:100px; text-align:center; }
+.orient-stage.active.amber { opacity:1; background:rgba(232,160,32,.25); border:1px solid var(--amber); color:var(--amber); }
+.orient-arrow { color:var(--muted); font-size:14px; opacity:0.5; }
+.stage-num { font-size:8px; opacity:.7; }
+.section-title { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:16px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+.param-table { width:100%; border-collapse:collapse; font-size:11px; }
+.param-table th { font-family:'Barlow',sans-serif; font-weight:700; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); padding:7px 10px; text-align:left; border-bottom:1px solid var(--glass-border); }
+.param-table td { padding:6px 10px; color:var(--text); line-height:1.4; border-bottom:1px solid rgba(255,255,255,.05); font-size:11px; }
+.param-table tr:nth-child(even) td { background:rgba(255,255,255,.025); }
+.mono { font-family:'JetBrains Mono',monospace !important; font-size:10px !important; }
+.footer { position:absolute; bottom:0; left:0; right:0; background:rgba(13,16,32,.9); border-top:1px solid rgba(255,255,255,.08); padding:14px 28px; text-align:center; }
+.footer-disclaimer { font-size:10px; color:var(--muted); line-height:1.5; margin-bottom:6px; }
+.footer-title { font-family:'Barlow',sans-serif; font-weight:600; font-size:15px; color:var(--text); margin-bottom:4px; }
+.footer-brand { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); }
+@media print {
+  @page { size: 12.5in 18.75in; margin: 0; }
+  html, body { background: #1A1F2E !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  .stage { position: static; padding: 0; display: block; overflow: visible; }
+  .poster-wrap { transform: none !important; }
+  .poster { box-shadow: none !important; width: 1200px !important; height: 1800px !important; overflow: hidden !important; }
+  .glass { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .tweaks { display: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="poster-wrap" id="posterWrap">
+    <div class="poster" id="poster">
+      <div class="corner-tab corner-tl"></div>
+      <div class="corner-tab corner-tr"></div>
+      <div class="corner-tab corner-bl"></div>
+      <div class="corner-tab corner-br"></div>
+      <!-- Logo -->
+      <div style="position:absolute;top:28px;right:28px;display:flex;align-items:center;gap:10px;z-index:10;">
+        <div style="width:38px;height:38px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:13px;border-radius:6px;background:linear-gradient(135deg,#E8A020,#2EC4B6);color:#1A1F2E;">PP</div>
+        <div style="line-height:1.1;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:17px;color:var(--text);text-transform:uppercase;letter-spacing:.05em;">Plating </span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:17px;color:var(--amber);text-transform:uppercase;letter-spacing:.05em;">Posters</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--slate);margin-left:4px;vertical-align:middle;">Inc</span>
+        </div>
+      </div>
+      <!-- Header -->
+      <div style="padding:28px 28px 8px;height:148px;box-sizing:border-box;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;">Electroless Nickel &#8212; Stage 7 of 7</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:66px;color:var(--text);line-height:1;letter-spacing:-.01em;">POST TREATMENT</div>
+        <div style="font-family:'Barlow',sans-serif;font-weight:700;font-size:23px;color:var(--amber);margin:2px 0 4px;">EN (Low Phos) &#8212; Heat Treatment &amp; Passivation &#8212; Stage 7 of 7</div>
+        <div style="font-family:'Barlow',sans-serif;font-weight:600;font-size:13px;color:var(--muted);line-height:1.4;max-width:780px;">650 HV out of the bath. 1100 HV out of the oven. Heat treatment transforms EN Low-P into one of the hardest coatings in metal finishing.</div>
+      </div>
+      <!-- Orientation Strip -->
+      <div class="orient-strip glass">
+        <div class="orient-stage"><span class="stage-num">1</span>CLEAN</div>
+        <div class="orient-arrow">&#8250;</div>
+        <div class="orient-stage"><span class="stage-num">2</span>RINSE</div>
+        <div class="orient-arrow">&#8250;</div>
+        <div class="orient-stage"><span class="stage-num">3</span>ACTIVATE</div>
+        <div class="orient-arrow">&#8250;</div>
+        <div class="orient-stage"><span class="stage-num">4</span>RINSE</div>
+        <div class="orient-arrow">&#8250;</div>
+        <div class="orient-stage"><span class="stage-num">5</span>EN BATH</div>
+        <div class="orient-arrow">&#8250;</div>
+        <div class="orient-stage"><span class="stage-num">6</span>RINSE</div>
+        <div class="orient-arrow">&#8250;</div>
+        <div class="orient-stage active amber"><span class="stage-num">7</span>POST-TX</div>
+      </div>
+      <!-- Hero: Hardness Bar Chart -->
+      <div style="margin:0 28px 8px;">
+        <div class="section-title">Hardness vs Heat Treatment Condition &#8212; EN Low Phosphorus (2&#8211;4% P)</div>
+        <div class="glass" style="height:380px;padding:20px;position:relative;overflow:hidden;border:1px solid rgba(232,160,32,.2);">
+          <!-- Y-axis label -->
+          <div style="position:absolute;left:10px;top:50%;transform:translateY(-50%) rotate(-90deg);font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);white-space:nowrap;letter-spacing:.06em;">HARDNESS (HV)</div>
+          <!-- Y-axis scale -->
+          <div style="position:absolute;left:30px;top:20px;bottom:50px;width:30px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);">1200</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);">1000</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);">800</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);">600</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);">400</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);">200</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);">0</div>
+          </div>
+          <!-- Chart area -->
+          <div style="position:absolute;left:65px;right:20px;top:20px;bottom:50px;">
+            <!-- Grid lines -->
+            <div style="position:absolute;top:0;left:0;right:0;height:1px;background:rgba(255,255,255,.06);"></div>
+            <div style="position:absolute;top:16.7%;left:0;right:0;height:1px;background:rgba(255,255,255,.06);"></div>
+            <div style="position:absolute;top:33.3%;left:0;right:0;height:1px;background:rgba(255,255,255,.06);"></div>
+            <div style="position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(255,255,255,.06);"></div>
+            <div style="position:absolute;top:66.7%;left:0;right:0;height:1px;background:rgba(255,255,255,.06);"></div>
+            <div style="position:absolute;top:83.3%;left:0;right:0;height:1px;background:rgba(255,255,255,.06);"></div>
+            <!-- Hard Chrome reference line at 900HV = 75% from bottom -->
+            <div style="position:absolute;bottom:75%;left:0;right:0;height:2px;background:repeating-linear-gradient(to right, var(--slate) 0, var(--slate) 8px, transparent 8px, transparent 16px);opacity:.6;"></div>
+            <div style="position:absolute;bottom:calc(75% + 4px);right:4px;font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--slate);">Hard Chrome ~900 HV (ref)</div>
+            <!-- Bars (bottom-aligned, chart height = 310px, 1200HV = 100%) -->
+            <!-- Bar 1: As-Plated 650-750 HV = 58% height, teal -->
+            <div style="position:absolute;left:2%;bottom:0;width:12%;height:58%;background:linear-gradient(to top,rgba(46,196,182,.7),rgba(46,196,182,.4));border:1px solid rgba(46,196,182,.5);border-radius:4px 4px 0 0;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding-top:6px;">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--teal);font-weight:500;">650&#8211;750</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:7px;color:var(--teal);opacity:.7;">HV</div>
+            </div>
+            <!-- Bar 2: HE Relief 190-210C = 57% height, amber -->
+            <div style="position:absolute;left:17%;bottom:0;width:12%;height:57%;background:linear-gradient(to top,rgba(232,160,32,.65),rgba(232,160,32,.35));border:1px solid rgba(232,160,32,.5);border-radius:4px 4px 0 0;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding-top:6px;">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--amber);font-weight:500;">650&#8211;700</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:7px;color:var(--amber);opacity:.7;">HV</div>
+            </div>
+            <!-- Bar 3: Adhesion Al 120-150C = 55% height, amber -->
+            <div style="position:absolute;left:32%;bottom:0;width:12%;height:55%;background:linear-gradient(to top,rgba(232,160,32,.6),rgba(232,160,32,.3));border:1px solid rgba(232,160,32,.45);border-radius:4px 4px 0 0;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding-top:6px;">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--amber);font-weight:500;">620&#8211;680</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:7px;color:var(--amber);opacity:.7;">HV</div>
+            </div>
+            <!-- Bar 4: Medium HT 260-300C = 71% height, amber -->
+            <div style="position:absolute;left:47%;bottom:0;width:12%;height:71%;background:linear-gradient(to top,rgba(232,160,32,.75),rgba(232,160,32,.4));border:1px solid rgba(232,160,32,.55);border-radius:4px 4px 0 0;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding-top:6px;">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--amber);font-weight:500;">800&#8211;900</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:7px;color:var(--amber);opacity:.7;">HV</div>
+            </div>
+            <!-- Bar 5: Max Hardness 350-400C = 88% height, emerald - TALLEST -->
+            <div style="position:absolute;left:62%;bottom:0;width:12%;height:88%;background:linear-gradient(to top,rgba(39,174,96,.85),rgba(39,174,96,.5));border:2px solid rgba(39,174,96,.7);border-radius:4px 4px 0 0;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding-top:6px;box-shadow:0 0 12px rgba(39,174,96,.3);">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--emerald);font-weight:700;">1000&#8211;1100</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:7px;color:var(--emerald);opacity:.8;">HV MAX</div>
+            </div>
+            <!-- Peak callout -->
+            <div style="position:absolute;left:59%;top:4%;padding:6px 10px;background:rgba(39,174,96,.2);border:1px solid rgba(39,174,96,.4);border-radius:8px;">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:13px;color:var(--emerald);">1000&#8211;1100 HV</div>
+              <div style="font-size:9px;color:var(--muted);">Ni&#8323;P precipitation hardening</div>
+              <div style="font-size:9px;color:var(--emerald);">Exceeds hard chrome</div>
+            </div>
+          </div>
+          <!-- X-axis labels -->
+          <div style="position:absolute;left:65px;right:20px;bottom:2px;display:flex;justify-content:space-between;">
+            <div style="width:12%;text-align:center;font-family:'JetBrains Mono',monospace;font-size:7px;color:var(--teal);">As-Plated</div>
+            <div style="width:12%;text-align:center;font-family:'JetBrains Mono',monospace;font-size:7px;color:var(--amber);">HE Relief<br>190&#8211;210&#176;C</div>
+            <div style="width:12%;text-align:center;font-family:'JetBrains Mono',monospace;font-size:7px;color:var(--amber);">Adhesion Al<br>120&#8211;150&#176;C</div>
+            <div style="width:12%;text-align:center;font-family:'JetBrains Mono',monospace;font-size:7px;color:var(--amber);">Med HT<br>260&#8211;300&#176;C</div>
+            <div style="width:12%;text-align:center;font-family:'JetBrains Mono',monospace;font-size:7px;color:var(--emerald);">Max Hard<br>350&#8211;400&#176;C</div>
+            <div style="width:14%;text-align:right;font-family:'JetBrains Mono',monospace;font-size:7px;color:var(--slate);">Hard Chrome<br>(reference)</div>
+          </div>
+        </div>
+      </div>
+      <!-- ASTM B733 Classes Table -->
+      <div style="margin:8px 28px;">
+        <div class="section-title">ASTM B733 Post-Treatment Classes</div>
+        <div class="glass" style="padding:0;overflow:hidden;">
+          <table class="param-table">
+            <thead><tr><th>Class</th><th>Treatment</th><th>Temp</th><th>Time</th><th>Purpose</th><th>Substrate</th></tr></thead>
+            <tbody>
+              <tr><td style="color:var(--teal);">Class 1</td><td>As-plated</td><td class="mono">&#8212;</td><td class="mono">&#8212;</td><td>No heat treatment required</td><td>General</td></tr>
+              <tr style="background:rgba(39,174,96,.05);"><td style="color:var(--emerald);font-weight:600;">Class 2</td><td>Max hardness HT</td><td class="mono" style="color:var(--emerald);">350&#8211;400&#176;C</td><td class="mono">1 hr min</td><td>Maximum hardness &#8212; Ni&#8323;P precipitation</td><td>Steel (non-HTS)</td></tr>
+              <tr><td style="color:var(--coral);">Class 3</td><td>HE embrittlement relief</td><td class="mono" style="color:var(--coral);">190&#8211;210&#176;C</td><td class="mono">2&#8211;23 hr</td><td>H&#8322; relief before hardness HT</td><td>HTS &gt;1000 MPa</td></tr>
+              <tr><td style="color:var(--amber);">Class 4</td><td>Adhesion Al (non-age)</td><td class="mono">120&#8211;150&#176;C</td><td class="mono">1&#8211;2 hr</td><td>Adhesion improvement &#8212; aluminum</td><td>Aluminum (non-age-hardened)</td></tr>
+              <tr><td style="color:var(--amber);">Class 5</td><td>Adhesion Al (age-hard)</td><td class="mono">120&#8211;150&#176;C</td><td class="mono">1&#8211;2 hr</td><td>Adhesion &#8212; age-hardenable alloys</td><td>Aluminum (age-hardenable)</td></tr>
+              <tr><td style="color:var(--teal);">Class 6</td><td>Adhesion Ti</td><td class="mono">300&#8211;320&#176;C</td><td class="mono">1&#8211;4 hr</td><td>Adhesion improvement &#8212; titanium</td><td>Titanium alloys</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:6px;padding:8px 12px;background:rgba(224,92,92,.1);border:1px solid rgba(224,92,92,.3);border-radius:6px;font-size:11px;color:var(--coral);">
+          &#9888; Always perform HE relief (Class 3) FIRST, before hardness treatment (Class 2), on HTS steel.
+        </div>
+      </div>
+      <!-- HE Relief Timing + Substrate Notes -->
+      <div style="margin:8px 28px;display:flex;gap:12px;">
+        <div class="glass" style="flex:1;padding:16px;border:2px solid rgba(224,92,92,.5);">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;color:var(--coral);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">HYDROGEN EMBRITTLEMENT RELIEF &#8212; THE 4-HOUR WINDOW</div>
+          <!-- Timeline bar -->
+          <div style="margin-bottom:10px;">
+            <div style="display:flex;height:22px;border-radius:6px;overflow:hidden;">
+              <div style="width:80px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:7px;color:var(--muted);">PLATE DONE</div>
+              <div style="flex:2;background:rgba(39,174,96,.4);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--emerald);">0&#8211;4 hr: BAKE WINDOW</div>
+              <div style="flex:3;background:rgba(224,92,92,.3);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--coral);">&gt;4 hr: RISK ZONE</div>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--text);line-height:1.7;">
+            <div style="margin-bottom:4px;color:var(--text);font-weight:600;">High-strength steel (&gt;1000 MPa UTS or &gt;40 HRC):</div>
+            <div>&#9679; Bake at 190&#8211;210&#176;C within 4 hours of plating completion</div>
+            <div>&#9679; Minimum hold: 4 hours (ASTM B849)</div>
+            <div>&#9679; Up to 23 hours for critical aerospace applications (ASTM B850)</div>
+            <div style="color:var(--coral);font-weight:600;margin-top:4px;">&#9679; FAILURE TO BAKE = RISK OF CATASTROPHIC DELAYED BRITTLE FRACTURE</div>
+          </div>
+          <div style="margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);">Refs: ASTM B849 / B850 / AMS 2759/9</div>
+        </div>
+        <div class="glass" style="flex:1;padding:16px;border:1px solid rgba(232,160,32,.3);">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;color:var(--amber);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Substrate-Specific Notes</div>
+          <div style="font-size:11px;color:var(--text);line-height:1.8;">
+            <div style="display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.06);"><span style="color:var(--teal);">Steel (non-HTS)</span><span class="mono">350&#8211;400&#176;C max hardness OK</span></div>
+            <div style="display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.06);"><span style="color:var(--coral);">HTS &gt;1000 MPa</span><span class="mono" style="color:var(--coral);">Class 3 first, then Class 2</span></div>
+            <div style="display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.06);"><span style="color:var(--amber);">Aluminum (non-age)</span><span class="mono">120&#8211;150&#176;C max, 1&#8211;2 hr</span></div>
+            <div style="display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.06);"><span style="color:var(--amber);">Aluminum (age-hard)</span><span class="mono">Max 290&#176;C &#8212; do not overshoot</span></div>
+            <div style="display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.06);"><span style="color:var(--teal);">Titanium</span><span class="mono">300&#8211;320&#176;C, 1&#8211;4 hr</span></div>
+            <div style="display:flex;justify-content:space-between;padding:3px 0;"><span>Passivation Low-P</span><span class="mono">Optional &#8212; already low P</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Problems + Furnace Safety -->
+      <div style="margin:8px 28px;display:flex;gap:12px;">
+        <div style="flex:1;">
+          <div class="section-title">Post-Treatment Problems</div>
+          <div class="glass" style="padding:0;overflow:hidden;">
+            <table class="param-table">
+              <thead><tr><th>Problem</th><th>Root Cause</th><th>Fix</th></tr></thead>
+              <tbody>
+                <tr><td style="color:var(--amber);">Hardness not reached</td><td>Too low temp or short time; wrong furnace calibration</td><td>Verify furnace calibration; check actual part temp</td></tr>
+                <tr><td style="color:var(--coral);">Deposit cracking</td><td>Rapid heat-up from room temp; stress relief</td><td>Ramp temperature slowly; 5&#8211;10&#176;C/min</td></tr>
+                <tr><td style="color:var(--coral);">Adhesion loss (Al)</td><td>Exceeded max temp for aluminum substrate</td><td>Never exceed 290&#176;C for Al; follow Class 4/5</td></tr>
+                <tr><td style="color:var(--coral);">Delayed fracture (HTS)</td><td>HE relief skipped or &gt;4 hr delay</td><td>Mandatory bake within 4 hr; ASTM B849</td></tr>
+                <tr><td style="color:var(--amber);">Discoloration</td><td>Air atmosphere at high temp; oxidation</td><td>Use inert atmosphere or reduce temp below oxide threshold</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="flex:1;">
+          <div class="section-title">Furnace Safety</div>
+          <div class="glass" style="padding:14px;border:1px solid rgba(232,160,32,.3);">
+            <div style="font-size:11px;color:var(--text);line-height:1.7;">
+              <div>&#9679; Furnace at 190&#8211;400&#176;C &#8212; severe burn hazard on contact</div>
+              <div>&#9679; Heat-resistant gloves required for loading/unloading</div>
+              <div>&#9679; Ventilation required &#8212; H&#8322; released from EN deposit during bake</div>
+              <div>&#9679; <span style="color:var(--coral);font-weight:600;">Inert atmosphere furnace (N&#8322;, Ar) &#8212; asphyxiation risk</span> &#8212; confined space, verify O&#8322; before entry</div>
+              <div>&#9679; Allow parts to cool before handling</div>
+              <div>&#9679; Furnace calibration: verify &#177;5&#176;C across load; thermocouples calibrated annually</div>
+              <div>&#9679; Log every bake cycle: part ID, temp, time, furnace ID</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="footer">
+        <div class="footer-disclaimer">Technical reference only. Values shown are typical operating ranges &#8212; consult your chemistry supplier for bath-specific parameters. See ASTM B733 / B849 / B850 / AMS 2759/9 for heat treatment requirements.</div>
+        <div class="footer-title">Electroless Nickel Low Phos &#8212; Post Treatment Stage 7 of 7</div>
+        <div class="footer-brand">Plating Posters Inc &#8212; Metal Finishing Reference Series | v1.0 2026</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tweaks" style="position:fixed;bottom:16px;right:16px;z-index:100;background:rgba(13,16,32,.92);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 16px;display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:#F0EDE8;">
+  <div style="display:flex;gap:8px;align-items:center;">
+    <span style="color:rgba(240,237,232,.5);">Edition</span>
+    <button onclick="document.getElementById('poster').dataset.edition=''" style="padding:3px 10px;border-radius:4px;border:1px solid #E8A020;background:#E8A020;color:#1A1F2E;cursor:pointer;font-size:11px;">Dark</button>
+    <button onclick="document.getElementById('poster').dataset.edition='light'" style="padding:3px 10px;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#F0EDE8;cursor:pointer;font-size:11px;">Light</button>
+  </div>
+  <button onclick="window.print()" style="padding:4px 12px;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#F0EDE8;cursor:pointer;font-size:11px;">Print / PDF</button>
+</div>
+<script>
+  const posterWrap = document.getElementById('posterWrap');
+  function scalePoster() {
+    const s = Math.min(window.innerWidth / 1200, window.innerHeight / 1800);
+    posterWrap.style.transform = 'scale(' + s + ')';
+  }
+  scalePoster();
+  window.addEventListener('resize', scalePoster);
+</script>
+</body>
+</html>
