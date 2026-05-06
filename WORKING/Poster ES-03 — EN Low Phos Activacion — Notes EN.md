@@ -38,7 +38,7 @@ Immersion time for steel (HCl 10–20%). For high-strength steel (> 1000 MPa): m
 2. For steel: immerse in 10–20% HCl at room temperature for 30 to 120 seconds.
 3. For aluminum: follow the complete sequence — desmut with HNO₃, first zincate, strip, second zincate. Do not skip the double zincate.
 4. Transfer aluminum parts to rinse and EN bath in under 30 seconds — the zinc layer oxidizes quickly.
-5. For high-strength steel (> 1000 MPa / > 40 HRC): limit acid exposure to 15–30 seconds maximum, and notify the supervisor for hydrogen embrittlement baking.
+5. For high-strength steel (> 1000 MPa / > 40 HRC): limit acid exposure to a maximum of 30 seconds, and notify the supervisor for hydrogen embrittlement baking.
 
 *Translator note: "Desmut" (desmutado) is the acid treatment that removes the smut layer from aluminum before zincating. "Zinconato" = zincate.*
 

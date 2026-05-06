@@ -62,6 +62,6 @@ Target conductivity in the final tank. Use deionized (DI) water — tap water is
 
 ### FOOTER
 
-Consult the supervisor if conductivity will not drop below 50 µS/cm or if you suspect EN bath contamination.
+Consult the supervisor if conductivity will not drop below 20 µS/cm or if you suspect EN bath contamination.
 
 Plating Posters Inc — Metal Finishing Reference Series
