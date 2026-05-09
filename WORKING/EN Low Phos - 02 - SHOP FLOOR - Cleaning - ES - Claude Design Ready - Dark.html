@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EN Bajo Fósforo — Limpieza | Plating Posters Inc</title>
+<title>EN Bajo Fósforo — Limpieza Etapa 1 | Plating Posters</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Barlow:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -11,15 +11,21 @@
   --amber:#E8A020; --teal:#2EC4B6; --emerald:#27AE60; --coral:#E05C5C;
   --slate:#3A4055; --glass-bg:rgba(30,36,53,.55); --glass-border:rgba(255,255,255,.12);
   --glass-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(0,0,0,.2),0 4px 12px rgba(0,0,0,.25);
+  --tack:30px;
 }
 .poster[data-edition="light"] {
-  --bg:#F5F4F0; --navy:#DDD8CE; --text:#1B2030; --muted:rgba(27,32,48,.66);
-  --amber:#B8770D; --teal:#1A8C82; --emerald:#1E8449; --coral:#B7322F;
-  --slate:#C5C0B5; --glass-bg:rgba(255,253,247,.66); --glass-border:rgba(27,32,48,.10);
+  --bg:#F5F4F0; --navy:#DDD8CE; --text:#1B2030; --muted:rgba(27,32,48,.78);
+  --amber:#8C5A00; --teal:#0F6B62; --emerald:#15693B; --coral:#9B2825;
+  --slate:#C5C0B5;
+  --glass-bg:rgba(255,253,247,.82); --glass-border:rgba(27,32,48,.18);
+  --glass-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 4px 12px rgba(27,32,48,.08);
 }
+.poster[data-edition="light"] .logo-url { color:rgba(27,32,48,.62); }
+.poster[data-edition="light"] .logo-word .a { color:#1B2030; }
+
 html,body{margin:0;padding:0;background:#0a0c14;}
 .stage{width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.poster-wrap{transform-origin:top center;}
+.poster-wrap{transform-origin:center center;}
 .poster{
   width:900px;height:1200px;position:relative;overflow:hidden;
   background:
@@ -28,7 +34,9 @@ html,body{margin:0;padding:0;background:#0a0c14;}
     radial-gradient(550px 500px at 50% 88%,rgba(224,92,92,.10),transparent 60%),
     var(--bg);
   font-family:'Inter',sans-serif;color:var(--text);
-  display:flex;flex-direction:column;box-sizing:border-box;
+  display:flex;flex-direction:column;
+  padding: var(--tack);
+  box-sizing:border-box;
 }
 .poster::before{
   content:'';position:absolute;inset:0;
@@ -48,136 +56,181 @@ html,body{margin:0;padding:0;background:#0a0c14;}
   box-shadow:var(--glass-shadow);
   border-radius:12px;
 }
-.corner-tab{position:absolute;width:20px;height:20px;z-index:20;pointer-events:none;}
-.corner-tl{top:7px;left:7px;border-top:2px solid rgba(255,255,255,.3);border-left:2px solid rgba(255,255,255,.3);}
-.corner-tr{top:7px;right:7px;border-top:2px solid rgba(255,255,255,.3);border-right:2px solid rgba(255,255,255,.3);}
-.corner-bl{bottom:7px;left:7px;border-bottom:2px solid rgba(255,255,255,.3);border-left:2px solid rgba(255,255,255,.3);}
-.corner-br{bottom:7px;right:7px;border-bottom:2px solid rgba(255,255,255,.3);border-right:2px solid rgba(255,255,255,.3);}
-@media print{
-  @page{size:9.375in 12.5in;margin:0;}
-  html,body{background:#1A1F2E !important;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
-  *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
-  .stage{position:static;display:block;overflow:visible;}
-  .poster-wrap{transform:none !important;}
-  .poster{box-shadow:none !important;width:900px !important;height:1200px !important;overflow:hidden !important;}
-  .glass{backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}
-  .tweaks{display:none !important;}
+.tack { position:absolute; width:18px; height:18px; border-radius:50%;
+  border:1.5px solid rgba(232,160,32,.28); z-index:2; pointer-events:none; }
+.tack::before,.tack::after { content:""; position:absolute; background:rgba(232,160,32,.28); }
+.tack::before { left:50%; top:-2px; bottom:-2px; width:1px; transform:translateX(-50%); }
+.tack::after  { top:50%; left:-2px; right:-2px; height:1px; transform:translateY(-50%); }
+.tack.tl { top:6px; left:6px; }
+.tack.tr { top:6px; right:6px; }
+.tack.bl { bottom:6px; left:6px; }
+.tack.br { bottom:6px; right:6px; }
+
+/* Header */
+.header-row { display:flex; align-items:flex-start; justify-content:space-between; gap:14px; margin-bottom:12px; }
+.header-left { flex:1; min-width:0; }
+.eyebrow { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--amber); letter-spacing:.12em; text-transform:uppercase; margin-bottom:6px; }
+.headline { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:84px; color:var(--text); line-height:.95; letter-spacing:-.01em; margin-bottom:6px; }
+.subhead { font-family:'Barlow',sans-serif; font-weight:700; font-size:18px; color:var(--teal); margin-bottom:6px; line-height:1.25; }
+.tagline { font-family:'Inter',sans-serif; font-weight:500; font-size:15.5px; color:var(--muted); line-height:1.45; max-width:540px; }
+
+.logo-card { flex-shrink:0; display:flex; flex-direction:column; align-items:center; gap:7px; padding:12px 14px; min-width:210px;
+  background-color:var(--glass-bg); background-image:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
+  border:1px solid var(--glass-border); border-radius:12px;
+  backdrop-filter:blur(18px) saturate(140%); -webkit-backdrop-filter:blur(18px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 4px 12px rgba(0,0,0,.25);
+}
+.logo-mark { width:78px; height:78px; border-radius:13px; background:linear-gradient(135deg,#E8A020,#2EC4B6); display:flex; align-items:center; justify-content:center; box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 4px rgba(0,0,0,.15),0 4px 14px rgba(0,0,0,.35); }
+.logo-mark span { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:26px; color:#1A1F2E; letter-spacing:.02em; line-height:1; }
+.logo-word { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:19px; letter-spacing:.04em; text-transform:uppercase; line-height:1; text-align:center; white-space:nowrap; }
+.logo-word .a { color:#F0EDE8; }
+.logo-word .b { color:#E8A020; }
+.logo-url { font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:.06em; color:rgba(240,237,232,.45); margin-top:-1px; }
+
+/* Sections */
+.section { margin-bottom:8px; }
+.section-card { padding:13px 16px; }
+.section-title { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:19px; letter-spacing:.07em; text-transform:uppercase; color:var(--amber); margin-bottom:11px; }
+.section-title.coral { color:var(--coral); }
+
+/* Key number */
+.key-card { padding:16px 18px; background:rgba(232,160,32,.07); border-radius:12px; }
+.key-eyebrow { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--amber); letter-spacing:.12em; text-transform:uppercase; margin-bottom:6px; }
+.key-title { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:70px; color:var(--amber); line-height:1; margin-bottom:7px; }
+.key-note { font-family:'Inter',sans-serif; font-weight:500; font-size:14.5px; color:var(--muted); line-height:1.45; }
+
+/* Numbered list */
+.numbered-list { display:flex; flex-direction:column; gap:7px; }
+.numbered-item { display:flex; align-items:flex-start; gap:12px; }
+.num-bullet { width:26px; height:26px; border-radius:50%; background:var(--teal); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:14px; color:#1A1F2E; margin-top:1px; }
+.num-text { font-family:'Inter',sans-serif; font-weight:500; font-size:15px; color:var(--text); line-height:1.45; }
+
+/* Table */
+.problems-table { width:100%; border-collapse:collapse; }
+.problems-table th { font-family:'Barlow',sans-serif; font-weight:700; font-size:11.5px; color:var(--amber); letter-spacing:.07em; text-transform:uppercase; padding:8px 10px; text-align:left; border-bottom:1px solid var(--glass-border); }
+.problems-table td { font-family:'Inter',sans-serif; font-weight:500; font-size:13.5px; color:var(--text); padding:9px 10px; border-bottom:1px solid rgba(255,255,255,.05); line-height:1.45; }
+.problems-table td.muted { color:var(--muted); }
+.problems-table tr.alt { background:rgba(58,64,85,.35); }
+.problems-table tr.alarm td { background:rgba(224,92,92,.08); }
+.problems-table tr.alarm td.bold { color:var(--coral); font-weight:600; }
+
+/* Safety */
+.safety-card { padding:13px 16px; background:rgba(224,92,92,.06); border-radius:12px; }
+.safety-list { display:flex; flex-direction:column; gap:6px; }
+.safety-item { display:flex; align-items:flex-start; gap:9px; font-family:'Inter',sans-serif; font-weight:500; font-size:13.5px; color:var(--text); line-height:1.45; }
+.safety-bullet { color:var(--coral); flex-shrink:0; }
+
+/* Footer */
+.footer-panel { margin-top:auto; padding:10px 22px; text-align:center; border-radius:10px; }
+.footer-disclaimer { font-family:'Inter',sans-serif; font-weight:400; font-size:11px; color:var(--muted); line-height:1.5; margin-bottom:5px; }
+.footer-title { font-family:'Barlow',sans-serif; font-weight:600; font-size:13px; color:var(--text); margin-bottom:3px; }
+.footer-brand { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); }
+
+@media print {
+  @page { size:9.375in 12.5in; margin:0; }
+  html, body { background:#1A1F2E !important; -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+  * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+  .stage { position:static; display:block; overflow:visible; }
+  .poster-wrap { transform:none !important; }
+  .poster { box-shadow:none !important; width:900px !important; height:1200px !important; overflow:hidden !important; }
+  .glass { backdrop-filter:none !important; -webkit-backdrop-filter:none !important; }
+  .tweaks { display:none !important; }
 }
 </style>
 </head>
 <body>
 <div class="stage">
 <div class="poster-wrap" id="posterWrap">
-<div class="poster" id="poster">
-  <div class="corner-tab corner-tl"></div>
-  <div class="corner-tab corner-tr"></div>
-  <div class="corner-tab corner-bl"></div>
-  <div class="corner-tab corner-br"></div>
+<div class="poster" id="poster" data-screen-label="EN Bajo Fosforo Limpieza Etapa 1 (ES)">
+  <span class="tack tl"></span>
+  <span class="tack tr"></span>
+  <span class="tack bl"></span>
+  <span class="tack br"></span>
 
-  <!-- ZONE 1 — HEADER -->
-  <div style="padding:22px 22px 0 22px;display:flex;align-items:flex-start;justify-content:space-between;gap:14px;min-height:155px;box-sizing:border-box;">
-    <div style="flex:1;min-width:0;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--amber);letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;">Níquel Químico (Electroless) — Etapa 1 de 7</div>
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:80px;color:var(--text);line-height:.95;letter-spacing:-.01em;margin-bottom:4px;">LIMPIEZA</div>
-      <div style="font-family:'Barlow',sans-serif;font-weight:700;font-size:20px;color:var(--teal);margin-bottom:5px;">Limpieza alcalina en tanque — elimina aceite, grasa y contaminantes</div>
-      <div style="font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--muted);line-height:1.4;max-width:540px;">El enchapado sin corriente solo deposita sobre una superficie completamente limpia. La contaminación no reduce la calidad — la detiene por completo.</div>
+  <div class="header-row">
+    <div class="header-left">
+      <div class="eyebrow">Níquel Químico (Electroless) — Etapa 1 de 7</div>
+      <div class="headline">LIMPIEZA</div>
+      <div class="subhead">Limpieza alcalina en tanque — elimina aceite, grasa y contaminantes</div>
+      <div class="tagline">El enchapado sin corriente solo deposita sobre una superficie completamente limpia. La contaminación no reduce la calidad — la detiene por completo.</div>
     </div>
-    <!-- PP Logo -->
-    <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 10px;background-color:var(--glass-bg);background-image:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));border:1px solid var(--glass-border);border-radius:12px;backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);">
-      <div style="width:78px;height:78px;border-radius:13px;background:linear-gradient(135deg,#E8A020,#2EC4B6);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 4px rgba(0,0,0,.15),0 4px 14px rgba(0,0,0,.35);"><span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;color:#1A1F2E;letter-spacing:.02em;line-height:1;">PP</span></div>
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;letter-spacing:.04em;text-transform:uppercase;line-height:1;text-align:center;white-space:nowrap;"><span style="color:var(--text);">Plating</span> <span style="color:var(--amber);">Posters</span></div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(240,237,232,.30);margin-top:-2px;">Inc</div>
+    <div class="logo-card">
+      <div class="logo-mark"><span>PP</span></div>
+      <div class="logo-word"><span class="a">Plating</span> <span class="b">Posters</span></div>
+      <div class="logo-url">www.platingposters.com</div>
     </div>
   </div>
 
-  <!-- ZONE 2 — EL NÚMERO CLAVE -->
-  <div style="margin:12px 22px 0;" class="glass">
-    <div style="padding:16px 18px;background:rgba(232,160,32,.07);border-radius:12px;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--amber);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;">EL NÚMERO CLAVE</div>
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:64px;color:var(--amber);line-height:1;margin-bottom:6px;">60–80 °C</div>
-      <div style="font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--muted);line-height:1.4;">Temperatura del baño de limpieza. Por debajo de 60 °C, el limpiador no trabaja bien.</div>
+  <div class="section">
+    <div class="glass key-card">
+      <div class="key-eyebrow">EL NÚMERO CLAVE</div>
+      <div class="key-title">60–80 °C</div>
+      <div class="key-note">Temperatura del baño de limpieza. Por debajo de 60 °C, el limpiador no trabaja bien.</div>
     </div>
   </div>
 
-  <!-- ZONE 3 — LO QUE DEBE HACER -->
-  <div style="margin:10px 22px 0;" class="glass">
-    <div style="padding:14px 16px;">
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;color:var(--amber);letter-spacing:.07em;text-transform:uppercase;margin-bottom:10px;">LO QUE DEBE HACER</div>
-      <div style="display:flex;flex-direction:column;gap:7px;">
-        <div style="display:flex;align-items:flex-start;gap:10px;">
-          <div style="width:26px;height:26px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;color:#1A1F2E;margin-top:1px;">1</div>
-          <div style="font-family:'Inter',sans-serif;font-weight:500;font-size:15px;color:var(--text);line-height:1.4;">Verifique que el baño esté entre 60 y 80 °C antes de sumergir las piezas.</div>
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:10px;">
-          <div style="width:26px;height:26px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;color:#1A1F2E;margin-top:1px;">2</div>
-          <div style="font-family:'Inter',sans-serif;font-weight:500;font-size:15px;color:var(--text);line-height:1.4;">Sumerja las piezas completamente — las bolsas de aire atrapan grasa y causan zonas sin enchapado.</div>
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:10px;">
-          <div style="width:26px;height:26px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;color:#1A1F2E;margin-top:1px;">3</div>
-          <div style="font-family:'Inter',sans-serif;font-weight:500;font-size:15px;color:var(--text);line-height:1.4;">Mantenga las piezas en el tanque entre 3 y 10 minutos con agitación.</div>
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:10px;">
-          <div style="width:26px;height:26px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;color:#1A1F2E;margin-top:1px;">4</div>
-          <div style="font-family:'Inter',sans-serif;font-weight:500;font-size:15px;color:var(--text);line-height:1.4;">Haga la prueba de ruptura de agua: el agua debe correr en película continua, sin separarse en gotas. Si se forman gotas, vuelva a limpiar.</div>
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:10px;">
-          <div style="width:26px;height:26px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;color:#1A1F2E;margin-top:1px;">5</div>
-          <div style="font-family:'Inter',sans-serif;font-weight:500;font-size:15px;color:var(--text);line-height:1.4;">Transfiera las piezas al enjuague de inmediato — no las deje secar al aire.</div>
-        </div>
+  <div class="section">
+    <div class="glass section-card">
+      <div class="section-title">LO QUE DEBE HACER</div>
+      <div class="numbered-list">
+        <div class="numbered-item"><div class="num-bullet">1</div><div class="num-text">Verifique que el baño esté entre 60 y 80 °C antes de sumergir las piezas.</div></div>
+        <div class="numbered-item"><div class="num-bullet">2</div><div class="num-text">Sumerja las piezas completamente — las bolsas de aire atrapan grasa y causan zonas sin enchapado.</div></div>
+        <div class="numbered-item"><div class="num-bullet">3</div><div class="num-text">Mantenga las piezas en el tanque entre 3 y 10 minutos con agitación.</div></div>
+        <div class="numbered-item"><div class="num-bullet">4</div><div class="num-text">Haga la prueba de ruptura de agua: el agua debe correr en película continua, sin separarse en gotas. Si se forman gotas, vuelva a limpiar.</div></div>
+        <div class="numbered-item"><div class="num-bullet">5</div><div class="num-text">Transfiera las piezas al enjuague de inmediato — no las deje secar al aire.</div></div>
       </div>
     </div>
   </div>
 
-  <!-- ZONE 4 — PROBLEMAS COMUNES -->
-  <div style="margin:10px 22px 0;" class="glass">
-    <div style="padding:14px 16px;">
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;color:var(--amber);letter-spacing:.07em;text-transform:uppercase;margin-bottom:10px;">PROBLEMAS COMUNES</div>
-      <table style="width:100%;border-collapse:collapse;">
+  <div class="section">
+    <div class="glass section-card">
+      <div class="section-title">PROBLEMAS COMUNES</div>
+      <table class="problems-table">
         <thead>
           <tr>
-            <th style="font-family:'Barlow',sans-serif;font-weight:700;font-size:11px;color:var(--amber);letter-spacing:.07em;text-transform:uppercase;padding:6px 8px;text-align:left;border-bottom:1px solid var(--glass-border);width:26%;">Problema</th>
-            <th style="font-family:'Barlow',sans-serif;font-weight:700;font-size:11px;color:var(--amber);letter-spacing:.07em;text-transform:uppercase;padding:6px 8px;text-align:left;border-bottom:1px solid var(--glass-border);width:32%;">Qué ver</th>
-            <th style="font-family:'Barlow',sans-serif;font-weight:700;font-size:11px;color:var(--amber);letter-spacing:.07em;text-transform:uppercase;padding:6px 8px;text-align:left;border-bottom:1px solid var(--glass-border);">Qué hacer</th>
+            <th style="width:26%;">Problema</th>
+            <th style="width:32%;">Qué ver</th>
+            <th>Qué hacer</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="background:rgba(58,64,85,.35);">
-            <td style="font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--text);padding:7px 8px;border-bottom:1px solid rgba(255,255,255,.05);">Ruptura de agua</td>
-            <td style="font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--muted);padding:7px 8px;border-bottom:1px solid rgba(255,255,255,.05);">El agua forma gotas al enjuagar</td>
-            <td style="font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--muted);padding:7px 8px;border-bottom:1px solid rgba(255,255,255,.05);">Aumentar el tiempo o la temperatura; reponer el limpiador</td>
+          <tr class="alt">
+            <td>Ruptura de agua</td>
+            <td class="muted">El agua forma gotas al enjuagar</td>
+            <td class="muted">Aumentar el tiempo o la temperatura; reponer el limpiador</td>
           </tr>
           <tr>
-            <td style="font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--text);padding:7px 8px;border-bottom:1px solid rgba(255,255,255,.05);">Zonas sin enchapado</td>
-            <td style="font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--muted);padding:7px 8px;border-bottom:1px solid rgba(255,255,255,.05);">Áreas desnudas en el depósito final</td>
-            <td style="font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--muted);padding:7px 8px;border-bottom:1px solid rgba(255,255,255,.05);">Relimpiar; verificar la prueba de agua antes de continuar</td>
+            <td>Zonas sin enchapado</td>
+            <td class="muted">Áreas desnudas en el depósito final</td>
+            <td class="muted">Relimpiar; verificar la prueba de agua antes de continuar</td>
           </tr>
-          <tr style="background:rgba(58,64,85,.35);">
-            <td style="font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--text);padding:7px 8px;">Depósito rugoso</td>
-            <td style="font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--muted);padding:7px 8px;">Superficie del níquel irregular</td>
-            <td style="font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--muted);padding:7px 8px;">Filtrar el baño; reemplazarlo si está muy contaminado</td>
+          <tr class="alt">
+            <td>Depósito rugoso</td>
+            <td class="muted">Superficie del níquel irregular</td>
+            <td class="muted">Filtrar el baño; reemplazarlo si está muy contaminado</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- ZONE 5 — SEGURIDAD -->
-  <div style="margin:10px 22px 0;" class="glass">
-    <div style="padding:14px 16px;background:rgba(224,92,92,.06);border-radius:12px;">
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;color:var(--coral);letter-spacing:.07em;text-transform:uppercase;margin-bottom:10px;">⚠ SEGURIDAD</div>
-      <div style="display:flex;flex-direction:column;gap:6px;">
-        <div style="display:flex;align-items:flex-start;gap:8px;font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--text);line-height:1.4;"><span style="color:var(--coral);flex-shrink:0;">●</span>Use goggles de salpicadura, guantes de nitrilo o neopreno y mandil resistente a químicos.</div>
-        <div style="display:flex;align-items:flex-start;gap:8px;font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--text);line-height:1.4;"><span style="color:var(--coral);flex-shrink:0;">●</span>El NaOH (sosa cáustica) causa quemaduras graves. A 60–80 °C el riesgo es mayor.</div>
-        <div style="display:flex;align-items:flex-start;gap:8px;font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--text);line-height:1.4;"><span style="color:var(--coral);flex-shrink:0;">●</span>Nunca vierta agua sobre el NaOH concentrado — siempre agregue el cáustico al agua.</div>
-        <div style="display:flex;align-items:flex-start;gap:8px;font-family:'Inter',sans-serif;font-weight:500;font-size:13px;color:var(--text);line-height:1.4;"><span style="color:var(--coral);flex-shrink:0;">●</span>La fuente lavajos debe estar a menos de 10 segundos del tanque.</div>
+  <div class="section">
+    <div class="glass safety-card">
+      <div class="section-title coral">⚠ SEGURIDAD</div>
+      <div class="safety-list">
+        <div class="safety-item"><span class="safety-bullet">●</span>Use goggles de salpicadura, guantes de nitrilo o neopreno y mandil resistente a químicos.</div>
+        <div class="safety-item"><span class="safety-bullet">●</span>El NaOH (sosa cáustica) causa quemaduras graves. A 60–80 °C el riesgo es mayor.</div>
+        <div class="safety-item"><span class="safety-bullet">●</span>Vapores y niebla del baño irritan las vías respiratorias — asegure ventilación sobre el tanque.</div>
+        <div class="safety-item"><span class="safety-bullet">●</span>Nunca vierta agua sobre el NaOH concentrado — siempre agregue el cáustico al agua.</div>
+        <div class="safety-item"><span class="safety-bullet">●</span>La fuente lavajos debe estar a menos de 10 segundos del tanque.</div>
       </div>
     </div>
   </div>
 
-  <!-- ZONE 6 — FOOTER -->
-  <div style="margin-top:auto;background:rgba(13,16,32,.92);border-top:1px solid rgba(255,255,255,.08);padding:11px 22px;text-align:center;">
-    <div style="font-family:'Inter',sans-serif;font-weight:400;font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:4px;">Consulte al supervisor antes de ajustar la concentración del limpiador o la temperatura del tanque.</div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);">Plating Posters Inc — Metal Finishing Reference Series</div>
+  <div class="glass footer-panel">
+    <div class="footer-disclaimer">Consulte al supervisor antes de ajustar la concentración del limpiador o la temperatura del tanque.</div>
+    <div class="footer-title">EN Bajo Fósforo — Limpieza, Etapa 1 de 7</div>
+    <div class="footer-brand">Plating Posters — Metal Finishing Reference Series · v1.0 2026 · www.platingposters.com</div>
   </div>
 
 </div>
