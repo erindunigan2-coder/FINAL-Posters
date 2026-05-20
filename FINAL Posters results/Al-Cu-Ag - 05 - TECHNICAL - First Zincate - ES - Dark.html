@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barra Colectora Al-Cu-Ag &mdash; Paso 05 Primer Zincado &mdash; T&eacute;cnico | Plating Posters Inc</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Barlow:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#1A1F2E;--navy:#0D1020;--text:#F0EDE8;--muted:rgba(240,237,232,.62);
+  --faint:rgba(240,237,232,.38);
+  --amber:#E8A020;--teal:#2EC4B6;--emerald:#27AE60;--coral:#E05C5C;
+  --slate:#3A4055;--callout:#1E2435;--altrow:#252B3D;
+  --glass-bg:rgba(30,36,53,.55);--glass-border:rgba(255,255,255,.12);
+  --glass-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(0,0,0,.2),0 4px 12px rgba(0,0,0,.25);
+}
+.poster[data-edition="light"]{
+  --bg:#F5F4F0;--navy:#DDD8CE;--text:#1B2030;--muted:rgba(27,32,48,.66);
+  --faint:rgba(27,32,48,.42);
+  --amber:#B8770D;--teal:#1A8C82;--emerald:#1E8449;--coral:#B7322F;
+  --slate:#C5C0B5;--callout:#ECEAE1;--altrow:#E4E1D6;
+  --glass-bg:rgba(255,253,247,.66);--glass-border:rgba(27,32,48,.10);
+  --glass-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 4px 12px rgba(27,32,48,.08);
+}
+html,body{margin:0;padding:0;background:#0a0c14;}
+.stage{width:100vw;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;overflow:visible;padding:12px 0;box-sizing:border-box;}
+.poster-wrap{transform-origin:center center;}
+.poster{
+  width:1200px;height:1800px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(1200px 800px at 15% 8%,rgba(46,196,182,.14),transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%,rgba(232,160,32,.12),transparent 55%),
+    radial-gradient(900px 900px at 50% 80%,rgba(224,92,92,.10),transparent 60%),
+    var(--bg);
+  font-family:'Inter',sans-serif;color:var(--text);
+  display:flex;flex-direction:column;padding:32px;box-sizing:border-box;
+}
+.glass{background-color:var(--glass-bg);background-image:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));border:1px solid var(--glass-border);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:var(--glass-shadow);border-radius:12px;}
+.tack{position:absolute;width:24px;height:24px;border-radius:50%;border:1.5px solid rgba(232,160,32,.28);z-index:2;pointer-events:none;}
+.tack::before,.tack::after{content:"";position:absolute;background:rgba(232,160,32,.28);}
+.tack::before{left:50%;top:-3px;bottom:-3px;width:1px;transform:translateX(-50%);}
+.tack::after{top:50%;left:-3px;right:-3px;height:1px;transform:translateY(-50%);}
+.tack.tl{top:12px;left:12px;}.tack.tr{top:12px;right:12px;}.tack.bl{bottom:12px;left:12px;}.tack.br{bottom:12px;right:12px;}
+
+.poster-header{flex-shrink:0;}
+.poster-body{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:6px;justify-content:space-between;}
+.poster-footer{flex-shrink:0;margin-top:4px;}
+
+.header-band{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:8px;}
+.header-left{flex:1;min-width:0;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--amber);letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px;display:flex;align-items:center;gap:12px;}
+.eyebrow::before{content:"";display:inline-block;width:30px;height:3px;background:var(--amber);}
+.headline{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:72px;color:var(--text);line-height:.92;margin:4px 0;letter-spacing:-.01em;text-transform:uppercase;}
+.headline em{font-style:normal;color:var(--amber);}
+.subhead{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--teal);margin:0 0 3px;letter-spacing:.02em;text-transform:uppercase;}
+.tagline{font-family:'Inter',sans-serif;font-style:italic;font-size:11px;color:var(--muted);line-height:1.35;max-width:700px;margin:0;}
+.logo-card{flex-shrink:0;padding:12px 10px;display:flex;flex-direction:column;align-items:center;gap:8px;align-self:flex-start;}
+.logo-tile{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,#E8A020,#2EC4B6);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 4px rgba(0,0,0,.15),0 4px 14px rgba(0,0,0,.35);}
+.logo-tile span{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;color:#1A1F2E;letter-spacing:.02em;line-height:1;}
+.logo-word{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em;text-transform:uppercase;line-height:1;text-align:center;white-space:nowrap;}
+.logo-word .a{color:var(--text);}.logo-word .b{color:var(--amber);}
+.logo-inc{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.05em;text-transform:lowercase;color:var(--muted);margin-top:-2px;}
+
+.orient-strip{display:flex;align-items:center;gap:4px;padding:6px 10px;margin-bottom:0;flex-wrap:wrap;}
+.orient-stage{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:5px 8px;border-radius:5px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;letter-spacing:.05em;text-transform:uppercase;background:rgba(58,64,85,.4);border:1px solid rgba(255,255,255,.06);color:var(--muted);}
+.orient-stage .sn{font-family:'JetBrains Mono',monospace;font-size:7px;opacity:.7;letter-spacing:.08em;}
+.orient-stage.active{background:rgba(46,196,182,.22);border-color:rgba(46,196,182,.5);color:var(--teal);box-shadow:0 0 12px rgba(46,196,182,.15);}
+.orient-arrow{color:var(--faint);font-size:11px;flex:none;}
+
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin:0 0 4px;display:flex;align-items:center;gap:8px;}
+.section-title::before{content:"";width:5px;height:5px;background:var(--amber);border-radius:50%;}
+.section-title .sub{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:var(--muted);margin-left:auto;font-weight:500;}
+
+.rule-card{display:flex;align-items:center;gap:18px;padding:10px 20px;background:rgba(232,160,32,.07);}
+.rule-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:var(--amber);line-height:1;letter-spacing:-.02em;}
+.rule-body{flex:1;}
+.rule-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;color:var(--amber);letter-spacing:.08em;text-transform:uppercase;}
+.rule-text{font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);line-height:1.4;margin-top:3px;}
+
+.insight-card{padding:10px 18px;border-left:3px solid var(--teal);background:rgba(46,196,182,.06);border-radius:0 12px 12px 0;}
+.insight-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.insight-text{font-family:'Inter',sans-serif;font-size:12px;color:var(--text);line-height:1.5;}
+
+.data-table{width:100%;border-collapse:collapse;}
+.data-table th{font-family:'Barlow',sans-serif;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);padding:6px 12px;text-align:left;background:rgba(13,16,32,.35);border-bottom:1px solid var(--glass-border);}
+.poster[data-edition="light"] .data-table th{background:rgba(27,32,48,.06);}
+.data-table td{padding:5px 12px;color:var(--text);line-height:1.35;border-bottom:1px solid rgba(255,255,255,.05);font-family:'Inter',sans-serif;font-size:11.5px;}
+.data-table tr:last-child td{border-bottom:none;}
+.data-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+.poster[data-edition="light"] .data-table tr:nth-child(even) td{background:rgba(27,32,48,.025);}
+.data-table .mono{font-family:'JetBrains Mono',monospace;font-size:11px;}
+
+.warn-card{padding:10px 18px;border-left:3px solid var(--coral);background:rgba(224,92,92,.06);border-radius:0 12px 12px 0;}
+.warn-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;color:var(--coral);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.warn-text{font-family:'Inter',sans-serif;font-size:12px;color:var(--text);line-height:1.5;}
+.warn-text strong{color:var(--coral);font-weight:700;}
+
+.trouble-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.trouble-card{padding:8px 14px;border-radius:10px;border-left:3px solid var(--coral);display:flex;flex-direction:column;gap:3px;}
+.trouble-card h5{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;color:var(--coral);margin:0;text-transform:uppercase;letter-spacing:.06em;line-height:1.1;}
+.trouble-card p{font-size:10.5px;color:var(--muted);margin:0;line-height:1.35;}
+
+.context-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.context-card{padding:10px 16px;}
+.context-card h4{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;margin:0 0 4px;letter-spacing:.04em;text-transform:uppercase;}
+.context-card h4.teal{color:var(--teal);}
+.context-card h4.amber{color:var(--amber);}
+.context-card h4.coral{color:var(--coral);}
+.context-card p{font-size:11px;line-height:1.4;color:var(--text);margin:0;}
+.context-card .detail{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-top:4px;}
+
+
+
+.footer{padding:10px 20px;background-color:rgba(13,16,32,.85);background-image:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,0));border:1px solid rgba(255,255,255,.10);border-radius:8px;text-align:center;display:flex;flex-direction:column;gap:2px;}
+.poster[data-edition="light"] .footer{background-color:rgba(221,216,206,.95);border-color:rgba(27,32,48,.10);}
+.footer-disclaimer{font-family:'Inter',sans-serif;font-size:8.5px;line-height:1.35;color:var(--faint);margin:0 auto;max-width:900px;}
+.footer-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;color:var(--text);letter-spacing:.04em;text-transform:uppercase;margin:0;}
+.footer-brand{font-family:'JetBrains Mono',monospace;font-size:8.5px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;}
+
+.tweaks{position:fixed;bottom:16px;right:16px;z-index:100;background:rgba(13,16,32,.92);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:10px 14px;display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:#F0EDE8;}
+@media print{
+  @page{size:12.5in 18.75in;margin:0;}
+  html,body{background:#1A1F2E !important;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+  *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+  .stage{position:static;padding:0;display:block;overflow:visible;}
+  .poster-wrap{transform:none !important;width:auto !important;height:auto !important;}
+  .poster{box-shadow:none !important;width:1200px !important;height:1800px !important;overflow:hidden !important;}
+  .glass,.trouble-card,.insight-card,.warn-card,.context-card{backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}
+  .tweaks{display:none !important;}
+}
+</style>
+</head>
+<body>
+<div class="stage">
+<div class="poster-wrap" id="posterWrap">
+<div class="poster" id="poster">
+  <span class="tack tl" aria-hidden="true"></span><span class="tack tr" aria-hidden="true"></span>
+  <span class="tack bl" aria-hidden="true"></span><span class="tack br" aria-hidden="true"></span>
+
+  <!-- HEADER -->
+  <div class="poster-header">
+    <header class="header-band">
+      <div class="header-left">
+        <div class="eyebrow"><span>Plating Posters Inc &nbsp;&middot;&nbsp; Serie Barra Colectora Al-Cu-Ag &nbsp;&middot;&nbsp; Paso 05 de 19</span></div>
+        <h1 class="headline">PRIMER<br><em>ZINCADO</em></h1>
+        <h2 class="subhead">Inmersi&oacute;n de Desplazamiento de Zinc &mdash; La Base de la Adhesi&oacute;n</h2>
+        <p class="tagline">Este es el paso m&aacute;s cr&iacute;tico de todo el proceso de 19 pasos. La capa de zinc se adhiere al aluminio; cada capa superior se adhiere al zinc. Si el zincado falla, todo falla.</p>
+      </div>
+      <aside class="glass logo-card">
+        <div class="logo-tile"><span>PP</span></div>
+        <div class="logo-word"><span class="a">Plating</span> <span class="b">Posters</span></div>
+        <div class="logo-inc">www.platingposters.com</div>
+      </aside>
+    </header>
+
+    <div class="orient-strip glass">
+      <div class="orient-stage"><span class="sn">01</span>Limp</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">02</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">03</span>Ataq</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">04</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage active"><span class="sn">05</span>Zinc&nbsp;1</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">06</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">07</span>Decap</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">08</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">09</span>Zinc&nbsp;2</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">10</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">11</span>Cu&nbsp;Str</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">12</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">13</span>Cu&nbsp;Plt</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">14</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">15</span>Ag&nbsp;Str</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">16</span>Ag&nbsp;Plt</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">17</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">18</span>A-Tar</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">19</span>Sec</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="poster-body">
+
+    <div class="glass rule-card">
+      <div class="rule-num">0.25&ndash;0.50&nbsp;&micro;m</div>
+      <div class="rule-body">
+        <div class="rule-label">Espesor Objetivo de Zinc &mdash; M&aacute;s Delgado Es Mejor</div>
+        <div class="rule-text">La capa de zinc debe ser delgada, uniforme y completamente adherente. Un zincado grueso o pulverulento atrapa soluci&oacute;n en los l&iacute;mites de grano y causa ampollamiento en cada capa superior. Si no puede ver la estructura de grano del aluminio subyacente a trav&eacute;s del zinc, el dep&oacute;sito es demasiado grueso. Reduzca el tiempo de inmersi&oacute;n.</div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="section-title">Qu&iacute;mica del Ba&ntilde;o <span class="sub">Inmersi&oacute;n de zincado alcalino</span></h3>
+      <div class="glass" style="padding:0;overflow:hidden;border-radius:10px;">
+        <table class="data-table">
+          <thead><tr><th>Componente</th><th>Concentraci&oacute;n</th><th>Funci&oacute;n</th></tr></thead>
+          <tbody>
+            <tr><td>Hidr&oacute;xido de Sodio (NaOH)</td><td class="mono">120&ndash;150 g/L (16&ndash;20 oz/gal)</td><td>Disuelve el Al&#8322;O&#8323; nativo para exponer aluminio desnudo al desplazamiento de zinc</td></tr>
+            <tr><td>&Oacute;xido de Zinc (ZnO)</td><td class="mono">20&ndash;30 g/L (2.7&ndash;4.0 oz/gal)</td><td>Fuente de zinc &mdash; se deposita por reacci&oacute;n de inmersi&oacute;n (desplazamiento)</td></tr>
+            <tr><td>Sal de Rochelle (KNaC&#8324;H&#8324;O&#8326;)</td><td class="mono">45&ndash;55 g/L (6.0&ndash;7.3 oz/gal)</td><td>Agente complejante &mdash; controla la velocidad de deposici&oacute;n y estructura de grano del zinc</td></tr>
+            <tr><td>Nitrato de Sodio (NaNO&#8323;)</td><td class="mono">1&ndash;2 g/L (opcional)</td><td>Refinador de grano &mdash; promueve un dep&oacute;sito de zinc m&aacute;s fino y uniforme</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="section-title">Par&aacute;metros de Operaci&oacute;n <span class="sub">Proceso de inmersi&oacute;n &mdash; sin corriente</span></h3>
+      <div class="glass" style="padding:0;overflow:hidden;border-radius:10px;">
+        <table class="data-table">
+          <thead><tr><th>Par&aacute;metro</th><th>Valor</th><th>Notas</th></tr></thead>
+          <tbody>
+            <tr><td>Temperatura</td><td class="mono">18&ndash;27&deg;C (65&ndash;80&deg;F)</td><td>Temperatura ambiente &mdash; no requiere calentamiento</td></tr>
+            <tr><td>Tiempo de Inmersi&oacute;n</td><td class="mono">30&ndash;60 segundos</td><td>M&aacute;s corto para aleaciones de grano fino; m&aacute;s largo solo si la cobertura es incompleta</td></tr>
+            <tr><td>Agitaci&oacute;n</td><td class="mono">Mec&aacute;nica suave o movimiento de piezas</td><td>Suave &mdash; la agitaci&oacute;n excesiva interrumpe la deposici&oacute;n uniforme de zinc</td></tr>
+            <tr><td>Apariencia (Buena)</td><td class="mono">Gris medio uniforme</td><td>Color parejo, sin manchas oscuras, sin &aacute;reas desnudas, sin dep&oacute;sito pulverulento</td></tr>
+            <tr><td>Espesor del Dep&oacute;sito</td><td class="mono">0.25&ndash;0.50 &micro;m</td><td>M&aacute;s delgado es mejor &mdash; zincado grueso = falla de adhesi&oacute;n</td></tr>
+            <tr><td>pH</td><td class="mono">&gt;13</td><td>Fuertemente alcalino &mdash; NaOH mantenido en rango operativo</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="insight-card glass">
+      <div class="insight-label">Mecanismo de la Reacci&oacute;n de Desplazamiento</div>
+      <div class="insight-text">El zincado es un proceso de inmersi&oacute;n (desplazamiento electroless), no un proceso de electrodeposici&oacute;n. El aluminio es m&aacute;s activo que el zinc en la serie EMF. Cuando el aluminio desnudo contacta la soluci&oacute;n alcalina de zincado, el Al se disuelve como aluminato y los iones de zinc en soluci&oacute;n se depositan como zinc met&aacute;lico en la superficie: 2Al + 3Zn(OH)&#8324;&sup2;&#8315; &rarr; 2Al(OH)&#8324;&#8315; + 3Zn. La reacci&oacute;n es autolimitante &mdash; una vez que la superficie de aluminio est&aacute; completamente cubierta con zinc, la fuerza impulsora se detiene. Por eso m&aacute;s grueso NO es mejor: la inmersi&oacute;n extendida produce una capa externa suelta y pulverulenta que no tiene valor de adhesi&oacute;n.</div>
+    </div>
+
+    <!-- SECUENCIA DE REACCIÓN DE DESPLAZAMIENTO DE ZINCADO -->
+    <div class="glass" style="padding:14px 18px;border-radius:12px;">
+      <h3 class="section-title">Secuencia de Reacci&oacute;n de Desplazamiento <span class="sub">Mecanismo de inmersi&oacute;n &mdash; sin corriente externa</span></h3>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 175" width="100%" style="display:block;">
+        <!-- PANEL 1: ALUMINIO DESNUDO EN ZINCADO -->
+        <rect x="20" y="8" width="310" height="158" rx="6" stroke="var(--slate)" stroke-width="1.5" fill="none"/>
+        <text x="175" y="26" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="13" fill="var(--slate)" text-anchor="middle" letter-spacing=".08em">Al DESNUDO EN ZINCADO</text>
+
+        <!-- Fondo de solución -->
+        <rect x="40" y="34" width="270" height="58" rx="0" fill="rgba(232,160,32,0.04)"/>
+        <text x="175" y="48" font-family="Inter,sans-serif" font-size="8" fill="var(--muted)" text-anchor="middle">Soluci&oacute;n alcalina de zincado (NaOH + ZnO)</text>
+
+        <!-- Iones Zn²⁺ flotando -->
+        <text x="65" y="62" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--teal)" text-anchor="middle">Zn²⁺</text>
+        <text x="125" y="72" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--teal)" text-anchor="middle">Zn²⁺</text>
+        <text x="195" y="58" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--teal)" text-anchor="middle">Zn²⁺</text>
+        <text x="250" y="68" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--teal)" text-anchor="middle">Zn²⁺</text>
+        <text x="285" y="55" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--teal)" text-anchor="middle">Zn²⁺</text>
+        <!-- Iones OH⁻ -->
+        <text x="90" y="82" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--muted)" text-anchor="middle">OH⁻</text>
+        <text x="155" y="56" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--muted)" text-anchor="middle">OH⁻</text>
+        <text x="225" y="80" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--muted)" text-anchor="middle">OH⁻</text>
+
+        <!-- Sustrato de Al (limpio, desnudo) -->
+        <rect x="40" y="100" width="270" height="40" rx="0" stroke="var(--slate)" stroke-width="1.5" fill="rgba(58,64,85,0.12)"/>
+        <text x="175" y="124" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="11" fill="var(--slate)" text-anchor="middle" letter-spacing=".06em">ALUMINIO DESNUDO</text>
+        <text x="175" y="95" font-family="Inter,sans-serif" font-size="8" fill="var(--muted)" text-anchor="middle">Superficie limpia del ataque &aacute;cido (Paso 3)</text>
+
+        <!-- Estado -->
+        <text x="175" y="155" font-family="Inter,sans-serif" font-size="9" fill="var(--slate)" text-anchor="middle">t = 0 seg &middot; Comienza la inmersi&oacute;n</text>
+
+        <!-- FLECHA 1 -->
+        <line x1="348" y1="85" x2="398" y2="85" stroke="var(--amber)" stroke-width="1.5"/>
+        <polygon points="398,81 410,85 398,89" fill="var(--amber)"/>
+        <text x="379" y="75" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="9" fill="var(--amber)" text-anchor="middle" letter-spacing=".06em">Al SE DISUELVE</text>
+        <text x="379" y="100" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="9" fill="var(--teal)" text-anchor="middle" letter-spacing=".06em">Zn SE DEPOSITA</text>
+
+        <!-- PANEL 2: DESPLAZAMIENTO ACTIVO -->
+        <rect x="420" y="8" width="310" height="158" rx="6" stroke="var(--amber)" stroke-width="1.5" fill="none"/>
+        <text x="575" y="26" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="13" fill="var(--amber)" text-anchor="middle" letter-spacing=".08em">DESPLAZAMIENTO ACTIVO</text>
+
+        <!-- Flechas de Al disolviéndose (subiendo desde superficie) -->
+        <line x1="470" y1="98" x2="470" y2="68" stroke="var(--amber)" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <polygon points="467,68 470,60 473,68" fill="var(--amber)"/>
+        <line x1="530" y1="98" x2="530" y2="72" stroke="var(--amber)" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <polygon points="527,72 530,64 533,72" fill="var(--amber)"/>
+        <line x1="620" y1="98" x2="620" y2="68" stroke="var(--amber)" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <polygon points="617,68 620,60 623,68" fill="var(--amber)"/>
+        <line x1="680" y1="98" x2="680" y2="72" stroke="var(--amber)" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <polygon points="677,72 680,64 683,72" fill="var(--amber)"/>
+
+        <!-- Iones Al³⁺ disueltos subiendo -->
+        <text x="470" y="55" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--amber)" text-anchor="middle">Al³⁺</text>
+        <text x="530" y="58" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--amber)" text-anchor="middle">Al³⁺</text>
+        <text x="620" y="55" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--amber)" text-anchor="middle">Al³⁺</text>
+        <text x="680" y="58" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--amber)" text-anchor="middle">Al³⁺</text>
+
+        <!-- Flechas de Zn depositándose (bajando a superficie) -->
+        <line x1="500" y1="62" x2="500" y2="92" stroke="var(--teal)" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <polygon points="497,92 500,100 503,92" fill="var(--teal)"/>
+        <line x1="560" y1="58" x2="560" y2="92" stroke="var(--teal)" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <polygon points="557,92 560,100 563,92" fill="var(--teal)"/>
+        <line x1="650" y1="62" x2="650" y2="92" stroke="var(--teal)" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <polygon points="647,92 650,100 653,92" fill="var(--teal)"/>
+        <line x1="710" y1="58" x2="710" y2="92" stroke="var(--teal)" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <polygon points="707,92 710,100 713,92" fill="var(--teal)"/>
+
+        <!-- Depósitos de Zn formándose (cobertura parcial) -->
+        <rect x="488" y="97" width="25" height="5" rx="1" fill="rgba(46,196,182,0.35)" stroke="var(--teal)" stroke-width="0.8"/>
+        <rect x="548" y="97" width="25" height="5" rx="1" fill="rgba(46,196,182,0.35)" stroke="var(--teal)" stroke-width="0.8"/>
+        <rect x="638" y="97" width="25" height="5" rx="1" fill="rgba(46,196,182,0.35)" stroke="var(--teal)" stroke-width="0.8"/>
+        <rect x="698" y="97" width="25" height="5" rx="1" fill="rgba(46,196,182,0.35)" stroke="var(--teal)" stroke-width="0.8"/>
+
+        <!-- Sustrato de Al (consumiéndose) -->
+        <rect x="440" y="102" width="270" height="38" rx="0" stroke="var(--slate)" stroke-width="1.5" fill="rgba(58,64,85,0.08)" stroke-dasharray="4,2"/>
+        <text x="575" y="125" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="11" fill="var(--slate)" text-anchor="middle" letter-spacing=".06em" opacity=".7">Al DISOLVI&Eacute;NDOSE</text>
+
+        <!-- Ecuación -->
+        <text x="575" y="40" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--muted)" text-anchor="middle">2Al + 3Zn(OH)₄²⁻ → 2Al(OH)₄⁻ + 3Zn</text>
+
+        <!-- Estado -->
+        <text x="575" y="155" font-family="Inter,sans-serif" font-size="9" fill="var(--amber)" text-anchor="middle">t = 15 seg &middot; Intercambio en progreso</text>
+
+        <!-- FLECHA 2 -->
+        <line x1="748" y1="85" x2="798" y2="85" stroke="var(--teal)" stroke-width="1.5"/>
+        <polygon points="798,81 810,85 798,89" fill="var(--teal)"/>
+        <text x="779" y="75" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="9" fill="var(--teal)" text-anchor="middle" letter-spacing=".06em">AUTO-</text>
+        <text x="779" y="100" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="9" fill="var(--teal)" text-anchor="middle" letter-spacing=".06em">LIMITANTE</text>
+
+        <!-- PANEL 3: COBERTURA COMPLETA DE ZINC -->
+        <rect x="820" y="8" width="260" height="158" rx="6" stroke="var(--teal)" stroke-width="1.5" fill="none"/>
+        <text x="950" y="26" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="13" fill="var(--teal)" text-anchor="middle" letter-spacing=".08em">COMPLETO &mdash; Zn UNIFORME</text>
+
+        <!-- Capa uniforme de zinc -->
+        <rect x="840" y="92" width="220" height="8" rx="1" fill="rgba(46,196,182,0.30)" stroke="var(--teal)" stroke-width="1.2"/>
+        <text x="950" y="88" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="10" fill="var(--teal)" text-anchor="middle" letter-spacing=".06em">CAPA DE ZINC UNIFORME</text>
+        <text x="950" y="78" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--teal)" text-anchor="middle">0.25 &ndash; 0.50 &micro;m</text>
+
+        <!-- Bracket de dimensión -->
+        <line x1="1068" y1="92" x2="1068" y2="100" stroke="var(--teal)" stroke-width="0.8"/>
+        <line x1="1065" y1="92" x2="1071" y2="92" stroke="var(--teal)" stroke-width="0.8"/>
+        <line x1="1065" y1="100" x2="1071" y2="100" stroke="var(--teal)" stroke-width="0.8"/>
+
+        <!-- Sustrato de Al debajo -->
+        <rect x="840" y="100" width="220" height="40" rx="0" stroke="var(--slate)" stroke-width="1.5" fill="rgba(58,64,85,0.12)"/>
+        <text x="950" y="124" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="11" fill="var(--slate)" text-anchor="middle" letter-spacing=".06em">ALUMINIO</text>
+
+        <!-- Etiquetas -->
+        <text x="950" y="56" font-family="Inter,sans-serif" font-size="9" fill="var(--teal)" text-anchor="middle">Delgado, adherente, gris medio</text>
+        <text x="950" y="68" font-family="Inter,sans-serif" font-size="8" fill="var(--muted)" text-anchor="middle">Reacci&oacute;n se detiene &mdash; Zn cubre todo el Al</text>
+
+        <!-- Marca de verificación -->
+        <path d="M922,148 L932,160 L952,142" stroke="var(--emerald)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="962" y="155" font-family="Inter,sans-serif" font-size="9" fill="var(--emerald)">Listo para enjuague</text>
+      </svg>
+    </div>
+
+    <div class="context-grid">
+      <div class="context-card glass">
+        <h4 class="teal">Buena Apariencia de Zincado</h4>
+        <p>Recubrimiento gris medio uniforme en todas las superficies. La estructura de grano del aluminio subyacente puede ser d&eacute;bilmente visible a trav&eacute;s del zinc. Sin manchas oscuras (sobredeposici&oacute;n). Sin parches desnudos (&oacute;xido no removido completamente). Sin residuo pulverulento (sobreinmersi&oacute;n).</p>
+        <div class="detail">Libre de ruptura de agua &mdash; el agua de enjuague debe escurrir uniformemente en l&aacute;mina sobre la superficie zincada.</div>
+      </div>
+      <div class="context-card glass">
+        <h4 class="coral">Mal Zincado &mdash; Detenga e Investigue</h4>
+        <p>Las manchas oscuras o negras indican ba&ntilde;o contaminado (arrastre de Fe, Cu) u &oacute;xido localizado remanente de un ataque inadecuado. Las &aacute;reas desnudas significan que el &oacute;xido no se removi&oacute; en el Paso 3. Un dep&oacute;sito pulverulento o grueso significa sobreinmersi&oacute;n o ba&ntilde;o fuera de balance. Cualquiera de estas condiciones causar&aacute; falla de adhesi&oacute;n en las capas de cobre y plata superiores.</p>
+        <div class="detail">Si el zincado no es uniforme: decape en 50% HNO&#8323;, repita el ataque, repita el zincado. No contin&uacute;e.</div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="section-title">Soluci&oacute;n de Problemas <span class="sub">Problemas en la estaci&oacute;n de zincado</span></h3>
+      <div class="trouble-grid">
+        <div class="trouble-card glass">
+          <h5>Manchas Oscuras o Negras</h5>
+          <p>Contaminaci&oacute;n met&aacute;lica en el ba&ntilde;o de zincado (arrastre de hierro o cobre de tanques anteriores). Trate el ba&ntilde;o con carb&oacute;n activado. Verifique la integridad del enjuague entre ataque y zincado. Confirme que no hay contaminaci&oacute;n cruzada de la zona &aacute;cida.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>&Aacute;reas Desnudas / Cobertura Incompleta</h5>
+          <p>&Oacute;xido no removido completamente en el Paso 3 (ataque). Repita el ataque de la pieza. Verifique concentraci&oacute;n y tiempo de inmersi&oacute;n del ataque. Confirme que las piezas no se secaron entre ataque, enjuague y zincado.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>Dep&oacute;sito Pulverulento / Grueso</h5>
+          <p>Sobreinmersi&oacute;n (demasiado tiempo en el zincado). Reduzca el tiempo hacia 30 segundos. Tambi&eacute;n verifique las concentraciones de NaOH y ZnO &mdash; un ZnO alto relativo al NaOH acelera la deposici&oacute;n.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>El Cobre o la Plata Se Despegan Despu&eacute;s</h5>
+          <p>Falla de adhesi&oacute;n del zincado propag&aacute;ndose hacia arriba. Verifique que se realiz&oacute; el doble zincado (Pasos 5&ndash;7&ndash;9). Confirme que el primer zincado fue delgado y uniforme. Confirme la entrada en caliente en el golpe de cobre (Paso 11).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="warn-card glass">
+      <div class="warn-label">&#9888; Seguridad</div>
+      <div class="warn-text"><strong>La soluci&oacute;n de zincado es fuertemente alcalina (NaOH 120&ndash;150 g/L, pH &gt;13).</strong> Causa quemaduras qu&iacute;micas severas por contacto. Use careta, guantes resistentes a qu&iacute;micos, delantal y botas de goma. Si la soluci&oacute;n entra en contacto con la piel, lave inmediatamente con agua durante 15 minutos. <strong>El contacto con los ojos es una emergencia m&eacute;dica</strong> &mdash; lave con agua y busque atenci&oacute;n m&eacute;dica inmediata. Mantenga ventilaci&oacute;n de ranura en el tanque de zincado.</div>
+    </div>
+
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer poster-footer">
+    <p class="footer-disclaimer">Referencia t&eacute;cnica &uacute;nicamente. Verifique todos los par&aacute;metros con la hoja t&eacute;cnica de su proveedor de productos qu&iacute;micos, las especificaciones del cliente y los requisitos reglamentarios aplicables antes de su uso en producci&oacute;n.</p>
+    <p class="footer-title">Paso 05 &mdash; Primer Zincado &mdash; Serie de Recubrimiento de Barra Colectora Al &rarr; Cu &rarr; Ag</p>
+    <span class="footer-brand">Plating Posters Inc &middot; Serie de Referencia de Acabado de Metales &middot; PP-05-T / v1.0 / 2026</span>
+  </footer>
+
+</div>
+</div>
+</div>
+
+<div class="tweaks">
+  <div style="display:flex;gap:8px;align-items:center;">
+    <span style="color:rgba(240,237,232,.5);font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Edition</span>
+    <button id="btnDark" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:#E8A020;color:#1A1F2E;border:1px solid #E8A020;" onclick="setEdition('')">Dark</button>
+    <button id="btnLight" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:transparent;color:#F0EDE8;border:1px solid rgba(255,255,255,.2);" onclick="setEdition('light')">Light</button>
+  </div>
+  <button onclick="window.print()" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:transparent;color:#F0EDE8;border:1px solid rgba(255,255,255,.2);">Print / PDF</button>
+</div>
+
+<script>
+const posterWrap=document.getElementById('posterWrap');
+const poster=document.getElementById('poster');
+function scalePoster(){const sW=(window.innerWidth-24)/1200;const sH=(window.innerHeight-24)/1800;const s=Math.min(sW,sH);posterWrap.style.transform='scale('+s+')';posterWrap.style.transformOrigin='top center';posterWrap.style.width='1200px';posterWrap.style.height=(1800*s)+'px';}
+function setEdition(e){if(e)poster.dataset.edition=e;else delete poster.dataset.edition;document.getElementById('btnDark').style.background=e?'transparent':'#E8A020';document.getElementById('btnDark').style.color=e?'#F0EDE8':'#1A1F2E';document.getElementById('btnDark').style.borderColor=e?'rgba(255,255,255,.2)':'#E8A020';document.getElementById('btnLight').style.background=e?'#E8A020':'transparent';document.getElementById('btnLight').style.color=e?'#1A1F2E':'#F0EDE8';document.getElementById('btnLight').style.borderColor=e?'#E8A020':'rgba(255,255,255,.2)';}
+scalePoster();window.addEventListener('resize',scalePoster);
+</script>
+</body>
+</html>
