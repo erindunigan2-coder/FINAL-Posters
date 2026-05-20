@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al-Cu-Ag Busbar &mdash; Step 17 DI Rinse Multi-Stage Post-Ag &mdash; Technical | Plating Posters Inc</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Barlow:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#1A1F2E;--navy:#0D1020;--text:#F0EDE8;--muted:rgba(240,237,232,.62);
+  --faint:rgba(240,237,232,.38);
+  --amber:#E8A020;--teal:#2EC4B6;--emerald:#27AE60;--coral:#E05C5C;
+  --slate:#3A4055;--callout:#1E2435;--altrow:#252B3D;
+  --glass-bg:rgba(30,36,53,.55);--glass-border:rgba(255,255,255,.12);
+  --glass-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(0,0,0,.2),0 4px 12px rgba(0,0,0,.25);
+}
+.poster[data-edition="light"]{
+  --bg:#F5F4F0;--navy:#DDD8CE;--text:#1B2030;--muted:rgba(27,32,48,.66);
+  --faint:rgba(27,32,48,.42);
+  --amber:#B8770D;--teal:#1A8C82;--emerald:#1E8449;--coral:#B7322F;
+  --slate:#C5C0B5;--callout:#ECEAE1;--altrow:#E4E1D6;
+  --glass-bg:rgba(255,253,247,.66);--glass-border:rgba(27,32,48,.10);
+  --glass-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 4px 12px rgba(27,32,48,.08);
+}
+html,body{margin:0;padding:0;background:#0a0c14;}
+.stage{width:100vw;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;overflow:visible;padding:12px 0;box-sizing:border-box;}
+.poster-wrap{transform-origin:center center;}
+.poster{
+  width:1200px;height:1800px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(1200px 800px at 15% 8%,rgba(46,196,182,.14),transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%,rgba(232,160,32,.12),transparent 55%),
+    radial-gradient(900px 900px at 50% 80%,rgba(224,92,92,.10),transparent 60%),
+    var(--bg);
+  font-family:'Inter',sans-serif;color:var(--text);
+  display:flex;flex-direction:column;padding:32px;box-sizing:border-box;
+}
+.glass{background-color:var(--glass-bg);background-image:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));border:1px solid var(--glass-border);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:var(--glass-shadow);border-radius:12px;}
+.tack{position:absolute;width:24px;height:24px;border-radius:50%;border:1.5px solid rgba(232,160,32,.28);z-index:2;pointer-events:none;}
+.tack::before,.tack::after{content:"";position:absolute;background:rgba(232,160,32,.28);}
+.tack::before{left:50%;top:-3px;bottom:-3px;width:1px;transform:translateX(-50%);}
+.tack::after{top:50%;left:-3px;right:-3px;height:1px;transform:translateY(-50%);}
+.tack.tl{top:12px;left:12px;}.tack.tr{top:12px;right:12px;}.tack.bl{bottom:12px;left:12px;}.tack.br{bottom:12px;right:12px;}
+
+.poster-header{flex-shrink:0;}
+.poster-body{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:10px;justify-content:space-between;}
+.poster-footer{flex-shrink:0;margin-top:8px;}
+
+.header-band{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:8px;}
+.header-left{flex:1;min-width:0;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--teal);letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px;display:flex;align-items:center;gap:12px;}
+.eyebrow::before{content:"";display:inline-block;width:30px;height:3px;background:var(--teal);}
+.headline{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:72px;color:var(--text);line-height:.92;margin:4px 0;letter-spacing:-.01em;text-transform:uppercase;}
+.headline em{font-style:normal;color:var(--teal);}
+.subhead{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--teal);margin:0 0 3px;letter-spacing:.02em;text-transform:uppercase;}
+.tagline{font-family:'Inter',sans-serif;font-style:italic;font-size:11px;color:var(--muted);line-height:1.35;max-width:700px;margin:0;}
+.logo-card{flex-shrink:0;padding:12px 10px;display:flex;flex-direction:column;align-items:center;gap:8px;align-self:flex-start;}
+.logo-tile{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,#E8A020,#2EC4B6);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 4px rgba(0,0,0,.15),0 4px 14px rgba(0,0,0,.35);}
+.logo-tile span{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;color:#1A1F2E;letter-spacing:.02em;line-height:1;}
+.logo-word{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em;text-transform:uppercase;line-height:1;text-align:center;white-space:nowrap;}
+.logo-word .a{color:var(--text);}.logo-word .b{color:var(--amber);}
+.logo-inc{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.05em;text-transform:lowercase;color:var(--muted);margin-top:-2px;}
+
+.orient-strip{display:flex;align-items:center;gap:4px;padding:6px 10px;margin-bottom:0;flex-wrap:wrap;}
+.orient-stage{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:5px 8px;border-radius:5px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;letter-spacing:.05em;text-transform:uppercase;background:rgba(58,64,85,.4);border:1px solid rgba(255,255,255,.06);color:var(--muted);}
+.orient-stage .sn{font-family:'JetBrains Mono',monospace;font-size:7px;opacity:.7;letter-spacing:.08em;}
+.orient-stage.active{background:rgba(46,196,182,.22);border-color:rgba(46,196,182,.5);color:var(--teal);box-shadow:0 0 12px rgba(46,196,182,.15);}
+.orient-arrow{color:var(--faint);font-size:11px;flex:none;}
+
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin:0 0 6px;display:flex;align-items:center;gap:8px;}
+.section-title::before{content:"";width:5px;height:5px;background:var(--teal);border-radius:50%;}
+.section-title .sub{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:var(--muted);margin-left:auto;font-weight:500;}
+
+.rule-card{display:flex;align-items:center;gap:18px;padding:14px 20px;background:rgba(46,196,182,.07);}
+.rule-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:38px;color:var(--teal);line-height:1;letter-spacing:-.02em;}
+.rule-body{flex:1;}
+.rule-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;}
+.rule-text{font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);line-height:1.4;margin-top:3px;}
+
+.insight-card{padding:14px 18px;border-left:3px solid var(--teal);background:rgba(46,196,182,.06);border-radius:0 12px 12px 0;}
+.insight-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.insight-text{font-family:'Inter',sans-serif;font-size:12px;color:var(--text);line-height:1.5;}
+
+.data-table{width:100%;border-collapse:collapse;}
+.data-table th{font-family:'Barlow',sans-serif;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);padding:8px 12px;text-align:left;background:rgba(13,16,32,.35);border-bottom:1px solid var(--glass-border);}
+.poster[data-edition="light"] .data-table th{background:rgba(27,32,48,.06);}
+.data-table td{padding:8px 12px;color:var(--text);line-height:1.4;border-bottom:1px solid rgba(255,255,255,.05);font-family:'Inter',sans-serif;font-size:12px;}
+.data-table tr:last-child td{border-bottom:none;}
+.data-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+.poster[data-edition="light"] .data-table tr:nth-child(even) td{background:rgba(27,32,48,.025);}
+.data-table .mono{font-family:'JetBrains Mono',monospace;font-size:11px;}
+
+.warn-card{padding:14px 18px;border-left:3px solid var(--coral);background:rgba(224,92,92,.06);border-radius:0 12px 12px 0;}
+.warn-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;color:var(--coral);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.warn-text{font-family:'Inter',sans-serif;font-size:12px;color:var(--text);line-height:1.5;}
+.warn-text strong{color:var(--coral);font-weight:700;}
+
+.trouble-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.trouble-card{padding:12px 14px;border-radius:10px;border-left:3px solid var(--coral);display:flex;flex-direction:column;gap:4px;}
+.trouble-card h5{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;color:var(--coral);margin:0;text-transform:uppercase;letter-spacing:.06em;line-height:1.1;}
+.trouble-card p{font-size:11px;color:var(--muted);margin:0;line-height:1.4;}
+
+.context-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.context-card{padding:14px 16px;}
+.context-card h4{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;margin:0 0 6px;letter-spacing:.04em;text-transform:uppercase;}
+.context-card h4.teal{color:var(--teal);}
+.context-card h4.amber{color:var(--amber);}
+.context-card h4.coral{color:var(--coral);}
+.context-card p{font-size:12px;line-height:1.5;color:var(--text);margin:0;}
+.context-card .detail{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);margin-top:6px;}
+
+
+
+.footer{padding:10px 20px;background-color:rgba(13,16,32,.85);background-image:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,0));border:1px solid rgba(255,255,255,.10);border-radius:8px;text-align:center;display:flex;flex-direction:column;gap:2px;}
+.poster[data-edition="light"] .footer{background-color:rgba(221,216,206,.95);border-color:rgba(27,32,48,.10);}
+.footer-disclaimer{font-family:'Inter',sans-serif;font-size:8.5px;line-height:1.35;color:var(--faint);margin:0 auto;max-width:900px;}
+.footer-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;color:var(--text);letter-spacing:.04em;text-transform:uppercase;margin:0;}
+.footer-brand{font-family:'JetBrains Mono',monospace;font-size:8.5px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;}
+
+.tweaks{position:fixed;bottom:16px;right:16px;z-index:100;background:rgba(13,16,32,.92);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:10px 14px;display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:#F0EDE8;}
+@media print{
+  @page{size:12.5in 18.75in;margin:0;}
+  html,body{background:#1A1F2E !important;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+  *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+  .stage{position:static;padding:0;display:block;overflow:visible;}
+  .poster-wrap{transform:none !important;width:auto !important;height:auto !important;}
+  .poster{box-shadow:none !important;width:1200px !important;height:1800px !important;overflow:hidden !important;}
+  .glass,.trouble-card,.insight-card,.warn-card,.context-card{backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}
+  .tweaks{display:none !important;}
+}
+</style>
+</head>
+<body>
+<div class="stage">
+<div class="poster-wrap" id="posterWrap">
+<div class="poster" id="poster">
+  <span class="tack tl" aria-hidden="true"></span><span class="tack tr" aria-hidden="true"></span>
+  <span class="tack bl" aria-hidden="true"></span><span class="tack br" aria-hidden="true"></span>
+
+  <!-- HEADER -->
+  <div class="poster-header">
+    <header class="header-band">
+      <div class="header-left">
+        <div class="eyebrow"><span>Plating Posters Inc &nbsp;&middot;&nbsp; Al-Cu-Ag Busbar Series &nbsp;&middot;&nbsp; Step 17 of 19</span></div>
+        <h1 class="headline">DI RINSE<br><em>MULTI-STAGE</em></h1>
+        <h2 class="subhead">Post-Silver Plate &mdash; Silver Recovery + Counterflow Rinse</h2>
+        <p class="tagline">Multi-stage DI rinse removes silver plate dragout while recovering dissolved silver in the first stage. Silver has significant reclaim value &mdash; the first rinse tank is a recovery tank that should never be dumped. Final rinse conductivity must be tighter than other rinses in the process.</p>
+      </div>
+      <aside class="glass logo-card">
+        <div class="logo-tile"><span>PP</span></div>
+        <div class="logo-word"><span class="a">Plating</span> <span class="b">Posters</span></div>
+        <div class="logo-inc">www.platingposters.com</div>
+      </aside>
+    </header>
+
+    <div class="orient-strip glass">
+      <div class="orient-stage"><span class="sn">01</span>Clean</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">02</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">03</span>Etch</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">04</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">05</span>Zinc&nbsp;1</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">06</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">07</span>Strip</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">08</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">09</span>Zinc&nbsp;2</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">10</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">11</span>Cu&nbsp;Str</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">12</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">13</span>Cu&nbsp;Plt</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">14</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">15</span>Ag&nbsp;Str</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">16</span>Ag&nbsp;Plt</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage active"><span class="sn">17</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">18</span>A-Tar</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">19</span>Dry</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="poster-body">
+
+    <!-- RULE CARD -->
+    <div class="glass rule-card">
+      <div class="rule-num">&lt;20 &micro;S/cm</div>
+      <div class="rule-body">
+        <div class="rule-label">Tighter Rinse Target Than Other Stages &mdash; DI Water Only</div>
+        <div class="rule-text">Final rinse conductivity must be below 20 &micro;S/cm &mdash; tighter than the 50 &micro;S/cm target used in earlier rinse stages. This stricter standard is required because residual cyanide on the silver surface causes tarnishing and staining in storage. Use DI water only &mdash; do NOT use tap water. Chlorides in tap water precipitate insoluble AgCl on the silver surface, causing white spots and staining.</div>
+      </div>
+    </div>
+
+    <!-- RINSE STAGES TABLE -->
+    <div>
+      <h3 class="section-title">Rinse Stage Configuration <span class="sub">2+ stage counterflow</span></h3>
+      <div class="glass" style="padding:0;overflow:hidden;border-radius:10px;">
+        <table class="data-table">
+          <thead><tr><th>Stage</th><th>Type</th><th>Time</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Stage 1 (Recovery)</td><td class="mono">Stagnant DI recovery rinse</td><td class="mono">30&ndash;60 seconds</td><td>Silver recovery &mdash; do NOT dump. Route to electrolytic recovery or AgCl precipitation. Silver has significant reclaim value.</td></tr>
+            <tr><td>Stage 2+</td><td class="mono">Counterflow DI rinse, ambient</td><td class="mono">30&ndash;60 seconds each</td><td>Fresh DI water inlet on final stage. Target &lt;20 &micro;S/cm at exit. All effluent to cyanide destruct.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- COUNTERFLOW RINSE SCHEMATIC -->
+    <div class="glass" style="padding:16px 20px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);text-align:center;margin-bottom:8px;">Counterflow Rinse Schematic</div>
+      <svg viewBox="0 0 1100 160" width="100%" height="160" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+        <!-- Part flow arrow (left to right) -->
+        <text x="60" y="16" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="12" fill="var(--amber)" letter-spacing=".08em" text-anchor="middle">PARTS</text>
+        <line x1="100" y1="12" x2="980" y2="12" stroke="var(--amber)" stroke-width="1.6" stroke-dasharray="6 4"/>
+        <polygon points="980,7 990,12 980,17" fill="var(--amber)"/>
+
+        <!-- Tank 1: Recovery -->
+        <rect x="80" y="30" width="260" height="70" rx="8" stroke="var(--coral)" stroke-width="2" fill="none"/>
+        <text x="210" y="52" font-family="Barlow Condensed,sans-serif" font-weight="900" font-size="18" fill="var(--coral)" text-anchor="middle">RECOVERY</text>
+        <text x="210" y="68" font-family="JetBrains Mono,monospace" font-size="11" fill="var(--muted)" text-anchor="middle">Stagnant &bull; No Drain</text>
+        <text x="210" y="84" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="16" fill="var(--amber)" text-anchor="middle">$</text>
+        <!-- Down arrow to Ag Recovery -->
+        <line x1="210" y1="100" x2="210" y2="130" stroke="var(--emerald)" stroke-width="1.6"/>
+        <polygon points="205,130 210,140 215,130" fill="var(--emerald)"/>
+        <text x="210" y="155" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="12" fill="var(--emerald)" text-anchor="middle" letter-spacing=".06em">Ag RECOVERY</text>
+
+        <!-- Tank 2 -->
+        <rect x="400" y="30" width="260" height="70" rx="8" stroke="var(--teal)" stroke-width="2" fill="none"/>
+        <text x="530" y="52" font-family="Barlow Condensed,sans-serif" font-weight="900" font-size="18" fill="var(--teal)" text-anchor="middle">STAGE 2</text>
+        <text x="530" y="68" font-family="JetBrains Mono,monospace" font-size="11" fill="var(--muted)" text-anchor="middle">Counterflow DI</text>
+        <!-- Down arrow to CN Destruct -->
+        <line x1="530" y1="100" x2="530" y2="130" stroke="var(--coral)" stroke-width="1.6"/>
+        <polygon points="525,130 530,140 535,130" fill="var(--coral)"/>
+        <text x="530" y="155" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="12" fill="var(--coral)" text-anchor="middle" letter-spacing=".06em">CN DESTRUCT</text>
+
+        <!-- Tank 3: Final -->
+        <rect x="720" y="30" width="260" height="70" rx="8" stroke="var(--teal)" stroke-width="2" fill="none"/>
+        <text x="850" y="52" font-family="Barlow Condensed,sans-serif" font-weight="900" font-size="18" fill="var(--teal)" text-anchor="middle">STAGE 3 (FINAL)</text>
+        <text x="850" y="68" font-family="JetBrains Mono,monospace" font-size="11" fill="var(--muted)" text-anchor="middle">Counterflow DI</text>
+        <!-- Down arrow to CN Destruct -->
+        <line x1="850" y1="100" x2="850" y2="130" stroke="var(--coral)" stroke-width="1.6"/>
+        <polygon points="845,130 850,140 855,130" fill="var(--coral)"/>
+        <text x="850" y="155" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="12" fill="var(--coral)" text-anchor="middle" letter-spacing=".06em">CN DESTRUCT</text>
+
+        <!-- Water flow arrows (right to left, between tanks) -->
+        <line x1="720" y1="65" x2="660" y2="65" stroke="var(--teal)" stroke-width="1.6"/>
+        <polygon points="668,60 658,65 668,70" fill="var(--teal)"/>
+        <line x1="400" y1="65" x2="340" y2="65" stroke="var(--teal)" stroke-width="1.6" opacity=".4"/>
+        <polygon points="348,60 338,65 348,70" fill="var(--teal)" opacity=".4"/>
+
+        <!-- Water flow label -->
+        <text x="690" y="58" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--teal)" text-anchor="middle">H&#x2082;O</text>
+        <text x="370" y="58" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--teal)" opacity=".5" text-anchor="middle">overflow</text>
+
+        <!-- DI Water inlet arrow -->
+        <line x1="1040" y1="65" x2="980" y2="65" stroke="var(--teal)" stroke-width="2"/>
+        <polygon points="988,60 978,65 988,70" fill="var(--teal)"/>
+        <text x="1070" y="58" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="13" fill="var(--teal)" text-anchor="middle" letter-spacing=".04em">DI</text>
+        <text x="1070" y="74" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="13" fill="var(--teal)" text-anchor="middle" letter-spacing=".04em">IN</text>
+
+        <!-- Conductivity probe at exit -->
+        <circle cx="1000" cy="35" r="12" stroke="var(--amber)" stroke-width="1.4" fill="none"/>
+        <line x1="1000" y1="26" x2="1000" y2="44" stroke="var(--amber)" stroke-width="1.2"/>
+        <line x1="992" y1="35" x2="1008" y2="35" stroke="var(--amber)" stroke-width="1.2"/>
+        <text x="1000" y="19" font-family="JetBrains Mono,monospace" font-weight="700" font-size="11" fill="var(--amber)" text-anchor="middle">&lt;20 &micro;S</text>
+      </svg>
+    </div>
+
+    <!-- PROCESS INSIGHT -->
+    <div class="insight-card glass">
+      <div class="insight-label">Silver Recovery Economics</div>
+      <div class="insight-text">Silver is a precious metal with significant commodity value. The first rinse tank captures the highest concentration of silver cyanide dragout from the plate bath. This concentrated solution is sent to electrolytic recovery (silver cell) or precipitation with NaCl to produce AgCl for refining. Even small shops recover hundreds of dollars per month from this single tank. Do NOT dilute the recovery rinse with flowing water &mdash; keep it stagnant to maintain concentration. Never dump this tank to drain &mdash; you are literally pouring money away.</div>
+    </div>
+
+    <!-- CONTEXT CARDS -->
+    <div class="context-grid">
+      <div class="context-card glass">
+        <h4 class="coral">Chloride Sensitivity</h4>
+        <p>Do NOT use tap water for any post-silver rinse stage. Municipal water contains chloride ions (Cl&minus;) that react with dissolved silver to form insoluble silver chloride (AgCl). AgCl precipitates as a white, chalky deposit on the freshly plated silver surface, creating permanent staining that cannot be removed without re-plating. DI or high-purity RO water only.</p>
+        <div class="detail">Cl&minus; + Ag&plus; &rarr; AgCl (insoluble white precipitate). DI water only.</div>
+      </div>
+      <div class="context-card glass">
+        <h4 class="teal">Effluent Routing</h4>
+        <p>All rinse water beyond the recovery stage contains cyanide from silver plate dragout and must be routed to the cyanide destruct treatment system. Cyanide-bearing waste must never be mixed with acid waste streams. Verify your facility&rsquo;s drain routing before operating. Residual silver in effluent should also be recovered or precipitated before discharge.</p>
+        <div class="detail">Effluent &rarr; cyanide destruct + silver recovery. NEVER to acid waste.</div>
+      </div>
+    </div>
+
+    <!-- TROUBLESHOOTING -->
+    <div>
+      <h3 class="section-title">Troubleshooting <span class="sub">Post-silver rinse issues</span></h3>
+      <div class="trouble-grid">
+        <div class="trouble-card glass">
+          <h5>White Spots / Staining on Silver</h5>
+          <p>Chloride contamination from tap water. AgCl precipitate. Switch to DI water immediately. Re-plate affected parts &mdash; AgCl staining cannot be rinsed off.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>Rapid Silver Tarnishing</h5>
+          <p>Residual cyanide from poor rinse quality. Final rinse conductivity too high. Improve rinse time and water quality. Target &lt;20 &micro;S/cm. Check DI system output.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>Recovery Tank Overflowing</h5>
+          <p>Excessive dragout volume. Ensure parts drain adequately over silver plate tank before transfer. Verify counterflow water is not leaking into recovery stage.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>Anti-Tarnish (Step 18) Not Working</h5>
+          <p>Insufficient rinsing here carries cyanide into the anti-tarnish bath, contaminating it. Increase rinse time and check conductivity before allowing parts to proceed.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAFETY -->
+    <div class="warn-card glass">
+      <div class="warn-label">&#9888; Safety</div>
+      <div class="warn-text"><strong>All rinse stages contain cyanide from silver plate dragout.</strong> Treat every tank in this rinse system as a cyanide-containing solution. Wear chemical-resistant gloves and face shield. <strong>Never route cyanide rinse water to acid waste drains &mdash; mixing cyanide with acid generates lethal HCN gas.</strong> All effluent must go to the cyanide destruct treatment system. Silver recovery solutions are also cyanide-bearing. Maintain ventilation. If you detect a bitter almond odor or HCN monitor alarms, evacuate immediately.</div>
+    </div>
+
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer poster-footer">
+    <p class="footer-disclaimer">Technical reference only. Verify all parameters against your chemistry supplier&rsquo;s TDS, customer specifications, and applicable regulatory requirements before production use.</p>
+    <p class="footer-title">Step 17 &mdash; DI Rinse Multi-Stage (Post-Ag) &mdash; Al &rarr; Cu &rarr; Ag Busbar Plating Series</p>
+    <span class="footer-brand">Plating Posters Inc &middot; Metal Finishing Reference Series &middot; PP-17-T / v1.0 / 2026</span>
+  </footer>
+
+</div>
+</div>
+</div>
+
+<div class="tweaks">
+  <div style="display:flex;gap:8px;align-items:center;">
+    <span style="color:rgba(240,237,232,.5);font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Edition</span>
+    <button id="btnDark" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:#E8A020;color:#1A1F2E;border:1px solid #E8A020;" onclick="setEdition('')">Dark</button>
+    <button id="btnLight" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:transparent;color:#F0EDE8;border:1px solid rgba(255,255,255,.2);" onclick="setEdition('light')">Light</button>
+  </div>
+  <button onclick="window.print()" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:transparent;color:#F0EDE8;border:1px solid rgba(255,255,255,.2);">Print / PDF</button>
+</div>
+
+<script>
+const posterWrap=document.getElementById('posterWrap');
+const poster=document.getElementById('poster');
+function scalePoster(){const sW=(window.innerWidth-24)/1200;const sH=(window.innerHeight-24)/1800;const s=Math.min(sW,sH);posterWrap.style.transform='scale('+s+')';posterWrap.style.transformOrigin='top center';posterWrap.style.width='1200px';posterWrap.style.height=(1800*s)+'px';}
+function setEdition(e){if(e)poster.dataset.edition=e;else delete poster.dataset.edition;document.getElementById('btnDark').style.background=e?'transparent':'#E8A020';document.getElementById('btnDark').style.color=e?'#F0EDE8':'#1A1F2E';document.getElementById('btnDark').style.borderColor=e?'rgba(255,255,255,.2)':'#E8A020';document.getElementById('btnLight').style.background=e?'#E8A020':'transparent';document.getElementById('btnLight').style.color=e?'#1A1F2E':'#F0EDE8';document.getElementById('btnLight').style.borderColor=e?'#E8A020':'rgba(255,255,255,.2)';}
+scalePoster();window.addEventListener('resize',scalePoster);
+</script>
+</body>
+</html>
