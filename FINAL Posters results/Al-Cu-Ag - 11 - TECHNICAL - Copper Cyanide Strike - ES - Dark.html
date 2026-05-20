@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barra Colectora Al-Cu-Ag &mdash; Paso 11 Golpe de Cianuro de Cobre &mdash; T&eacute;cnico | Plating Posters Inc</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Barlow:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#1A1F2E;--navy:#0D1020;--text:#F0EDE8;--muted:rgba(240,237,232,.62);
+  --faint:rgba(240,237,232,.38);
+  --amber:#E8A020;--teal:#2EC4B6;--emerald:#27AE60;--coral:#E05C5C;
+  --slate:#3A4055;--callout:#1E2435;--altrow:#252B3D;
+  --glass-bg:rgba(30,36,53,.55);--glass-border:rgba(255,255,255,.12);
+  --glass-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(0,0,0,.2),0 4px 12px rgba(0,0,0,.25);
+}
+.poster[data-edition="light"]{
+  --bg:#F5F4F0;--navy:#DDD8CE;--text:#1B2030;--muted:rgba(27,32,48,.66);
+  --faint:rgba(27,32,48,.42);
+  --amber:#B8770D;--teal:#1A8C82;--emerald:#1E8449;--coral:#B7322F;
+  --slate:#C5C0B5;--callout:#ECEAE1;--altrow:#E4E1D6;
+  --glass-bg:rgba(255,253,247,.66);--glass-border:rgba(27,32,48,.10);
+  --glass-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 4px 12px rgba(27,32,48,.08);
+}
+html,body{margin:0;padding:0;background:#0a0c14;}
+.stage{width:100vw;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;overflow:visible;padding:12px 0;box-sizing:border-box;}
+.poster-wrap{transform-origin:center center;}
+.poster{
+  width:1200px;height:1800px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(1200px 800px at 15% 8%,rgba(46,196,182,.14),transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%,rgba(232,160,32,.12),transparent 55%),
+    radial-gradient(900px 900px at 50% 80%,rgba(224,92,92,.10),transparent 60%),
+    var(--bg);
+  font-family:'Inter',sans-serif;color:var(--text);
+  display:flex;flex-direction:column;padding:32px;box-sizing:border-box;
+}
+.glass{background-color:var(--glass-bg);background-image:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));border:1px solid var(--glass-border);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:var(--glass-shadow);border-radius:12px;}
+.tack{position:absolute;width:24px;height:24px;border-radius:50%;border:1.5px solid rgba(232,160,32,.28);z-index:2;pointer-events:none;}
+.tack::before,.tack::after{content:"";position:absolute;background:rgba(232,160,32,.28);}
+.tack::before{left:50%;top:-3px;bottom:-3px;width:1px;transform:translateX(-50%);}
+.tack::after{top:50%;left:-3px;right:-3px;height:1px;transform:translateY(-50%);}
+.tack.tl{top:12px;left:12px;}.tack.tr{top:12px;right:12px;}.tack.bl{bottom:12px;left:12px;}.tack.br{bottom:12px;right:12px;}
+
+.poster-header{flex-shrink:0;}
+.poster-body{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:6px;justify-content:space-between;}
+.poster-footer{flex-shrink:0;margin-top:4px;}
+
+.header-band{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:8px;}
+.header-left{flex:1;min-width:0;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--amber);letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px;display:flex;align-items:center;gap:12px;}
+.eyebrow::before{content:"";display:inline-block;width:30px;height:3px;background:var(--amber);}
+.headline{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:72px;color:var(--text);line-height:.92;margin:4px 0;letter-spacing:-.01em;text-transform:uppercase;}
+.headline em{font-style:normal;color:var(--amber);}
+.subhead{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--teal);margin:0 0 3px;letter-spacing:.02em;text-transform:uppercase;}
+.tagline{font-family:'Inter',sans-serif;font-style:italic;font-size:11px;color:var(--muted);line-height:1.35;max-width:700px;margin:0;}
+.logo-card{flex-shrink:0;padding:12px 10px;display:flex;flex-direction:column;align-items:center;gap:8px;align-self:flex-start;}
+.logo-tile{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,#E8A020,#2EC4B6);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 4px rgba(0,0,0,.15),0 4px 14px rgba(0,0,0,.35);}
+.logo-tile span{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;color:#1A1F2E;letter-spacing:.02em;line-height:1;}
+.logo-word{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em;text-transform:uppercase;line-height:1;text-align:center;white-space:nowrap;}
+.logo-word .a{color:var(--text);}.logo-word .b{color:var(--amber);}
+.logo-inc{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.05em;text-transform:lowercase;color:var(--muted);margin-top:-2px;}
+
+.orient-strip{display:flex;align-items:center;gap:4px;padding:6px 10px;margin-bottom:0;flex-wrap:wrap;}
+.orient-stage{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:5px 8px;border-radius:5px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;letter-spacing:.05em;text-transform:uppercase;background:rgba(58,64,85,.4);border:1px solid rgba(255,255,255,.06);color:var(--muted);}
+.orient-stage .sn{font-family:'JetBrains Mono',monospace;font-size:7px;opacity:.7;letter-spacing:.08em;}
+.orient-stage.active{background:rgba(232,160,32,.22);border-color:rgba(232,160,32,.5);color:var(--amber);box-shadow:0 0 12px rgba(232,160,32,.15);}
+.orient-arrow{color:var(--faint);font-size:11px;flex:none;}
+
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin:0 0 4px;display:flex;align-items:center;gap:8px;}
+.section-title::before{content:"";width:5px;height:5px;background:var(--amber);border-radius:50%;}
+.section-title .sub{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:var(--muted);margin-left:auto;font-weight:500;}
+
+.rule-card{display:flex;align-items:center;gap:18px;padding:10px 20px;background:rgba(232,160,32,.07);}
+.rule-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:var(--amber);line-height:1;letter-spacing:-.02em;}
+.rule-body{flex:1;}
+.rule-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;color:var(--amber);letter-spacing:.08em;text-transform:uppercase;}
+.rule-text{font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);line-height:1.4;margin-top:3px;}
+
+.insight-card{padding:10px 18px;border-left:3px solid var(--teal);background:rgba(46,196,182,.06);border-radius:0 12px 12px 0;}
+.insight-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.insight-text{font-family:'Inter',sans-serif;font-size:12px;color:var(--text);line-height:1.5;}
+
+.data-table{width:100%;border-collapse:collapse;}
+.data-table th{font-family:'Barlow',sans-serif;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);padding:6px 12px;text-align:left;background:rgba(13,16,32,.35);border-bottom:1px solid var(--glass-border);}
+.poster[data-edition="light"] .data-table th{background:rgba(27,32,48,.06);}
+.data-table td{padding:5px 12px;color:var(--text);line-height:1.35;border-bottom:1px solid rgba(255,255,255,.05);font-family:'Inter',sans-serif;font-size:11.5px;}
+.data-table tr:last-child td{border-bottom:none;}
+.data-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+.poster[data-edition="light"] .data-table tr:nth-child(even) td{background:rgba(27,32,48,.025);}
+.data-table .mono{font-family:'JetBrains Mono',monospace;font-size:11px;}
+
+.warn-card{padding:10px 18px;border-left:3px solid var(--coral);background:rgba(224,92,92,.06);border-radius:0 12px 12px 0;}
+.warn-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;color:var(--coral);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.warn-text{font-family:'Inter',sans-serif;font-size:12px;color:var(--text);line-height:1.5;}
+.warn-text strong{color:var(--coral);font-weight:700;}
+
+.trouble-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.trouble-card{padding:8px 14px;border-radius:10px;border-left:3px solid var(--coral);display:flex;flex-direction:column;gap:3px;}
+.trouble-card h5{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;color:var(--coral);margin:0;text-transform:uppercase;letter-spacing:.06em;line-height:1.1;}
+.trouble-card p{font-size:10.5px;color:var(--muted);margin:0;line-height:1.35;}
+
+.context-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.context-card{padding:14px 16px;}
+.context-card h4{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;margin:0 0 6px;letter-spacing:.04em;text-transform:uppercase;}
+.context-card h4.teal{color:var(--teal);}
+.context-card h4.amber{color:var(--amber);}
+.context-card h4.coral{color:var(--coral);}
+.context-card p{font-size:12px;line-height:1.5;color:var(--text);margin:0;}
+.context-card .detail{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);margin-top:6px;}
+
+
+
+.footer{padding:10px 20px;background-color:rgba(13,16,32,.85);background-image:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,0));border:1px solid rgba(255,255,255,.10);border-radius:8px;text-align:center;display:flex;flex-direction:column;gap:2px;}
+.poster[data-edition="light"] .footer{background-color:rgba(221,216,206,.95);border-color:rgba(27,32,48,.10);}
+.footer-disclaimer{font-family:'Inter',sans-serif;font-size:8.5px;line-height:1.35;color:var(--faint);margin:0 auto;max-width:900px;}
+.footer-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;color:var(--text);letter-spacing:.04em;text-transform:uppercase;margin:0;}
+.footer-brand{font-family:'JetBrains Mono',monospace;font-size:8.5px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;}
+
+.tweaks{position:fixed;bottom:16px;right:16px;z-index:100;background:rgba(13,16,32,.92);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:10px 14px;display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:#F0EDE8;}
+@media print{
+  @page{size:12.5in 18.75in;margin:0;}
+  html,body{background:#1A1F2E !important;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+  *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+  .stage{position:static;padding:0;display:block;overflow:visible;}
+  .poster-wrap{transform:none !important;width:auto !important;height:auto !important;}
+  .poster{box-shadow:none !important;width:1200px !important;height:1800px !important;overflow:hidden !important;}
+  .glass,.trouble-card,.insight-card,.warn-card,.context-card{backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}
+  .tweaks{display:none !important;}
+}
+</style>
+</head>
+<body>
+<div class="stage">
+<div class="poster-wrap" id="posterWrap">
+<div class="poster" id="poster">
+  <span class="tack tl" aria-hidden="true"></span><span class="tack tr" aria-hidden="true"></span>
+  <span class="tack bl" aria-hidden="true"></span><span class="tack br" aria-hidden="true"></span>
+
+  <!-- HEADER -->
+  <div class="poster-header">
+    <header class="header-band">
+      <div class="header-left">
+        <div class="eyebrow"><span>Plating Posters Inc &nbsp;&middot;&nbsp; Serie Barra Colectora Al-Cu-Ag &nbsp;&middot;&nbsp; Paso 11 de 19</span></div>
+        <h1 class="headline">GOLPE DE CIANURO<br><em>DE COBRE</em></h1>
+        <h2 class="subhead">Capa Semilla de Cobre Delgada y Adherente &mdash; Entrada en Caliente Requerida</h2>
+        <p class="tagline">Deposite una capa semilla de cobre delgada (1&ndash;3 &micro;m) altamente adherente sobre el recubrimiento de zincato. El complejo de cianuro previene el desplazamiento por inmersi&oacute;n que destruir&iacute;a la adhesi&oacute;n. La corriente debe estar ENCENDIDA antes de que las piezas entren al ba&ntilde;o.</p>
+      </div>
+      <aside class="glass logo-card">
+        <div class="logo-tile"><span>PP</span></div>
+        <div class="logo-word"><span class="a">Plating</span> <span class="b">Posters</span></div>
+        <div class="logo-inc">www.platingposters.com</div>
+      </aside>
+    </header>
+
+    <div class="orient-strip glass">
+      <div class="orient-stage"><span class="sn">01</span>Limp</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">02</span>Enjuag</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">03</span>Grab</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">04</span>Enjuag</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">05</span>Zinc&nbsp;1</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">06</span>Enjuag</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">07</span>Decap</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">08</span>Enjuag</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">09</span>Zinc&nbsp;2</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">10</span>Enjuag</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage active"><span class="sn">11</span>Cu&nbsp;Glp</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">12</span>Enjuag</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">13</span>Cu&nbsp;Rec</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">14</span>Enjuag</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">15</span>Ag&nbsp;Glp</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">16</span>Ag&nbsp;Rec</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">17</span>Enjuag</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">18</span>A-Tar</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">19</span>Sec</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="poster-body">
+
+    <!-- RULE CARD -->
+    <div class="glass rule-card">
+      <div class="rule-num">ENTRADA EN CALIENTE</div>
+      <div class="rule-body">
+        <div class="rule-label">Corriente ENCENDIDA Antes de que las Piezas Entren al Ba&ntilde;o</div>
+        <div class="rule-text">Aplique corriente al bastidor antes de sumergir las piezas. Si las piezas permanecen en el golpe de cianuro sin corriente, la capa de zincato se disuelve y la adhesi&oacute;n se destruye permanentemente. El cianuro libre debe mantenerse alto en relaci&oacute;n al metal de cobre para suprimir la deposici&oacute;n por inmersi&oacute;n. Este es un requisito de proceso no negociable.</div>
+      </div>
+    </div>
+
+    <!-- CHEMISTRY TABLE -->
+    <div>
+      <h3 class="section-title">Qu&iacute;mica del Ba&ntilde;o <span class="sub">Golpe de cianuro de cobre</span></h3>
+      <div class="glass" style="padding:0;overflow:hidden;border-radius:10px;">
+        <table class="data-table">
+          <thead><tr><th>Componente</th><th>Rango</th><th>Funci&oacute;n</th></tr></thead>
+          <tbody>
+            <tr><td>Cianuro de Cobre (CuCN)</td><td class="mono">22&ndash;30 g/L</td><td>Fuente de metal de cobre (Cu met&aacute;lico: 15&ndash;20 g/L)</td></tr>
+            <tr><td>Cianuro de Sodio (NaCN) &mdash; Total</td><td class="mono">34&ndash;45 g/L</td><td>Compleja el cobre, proporciona conductividad</td></tr>
+            <tr><td>NaCN Libre</td><td class="mono">11&ndash;15 g/L</td><td>Mantiene la estabilidad del complejo de cianuro &mdash; cr&iacute;tico para supresi&oacute;n de inmersi&oacute;n</td></tr>
+            <tr><td>Hidr&oacute;xido de Sodio (NaOH)</td><td class="mono">3&ndash;8 g/L</td><td>Mantiene alcalinidad, mejora conductividad</td></tr>
+            <tr><td>Carbonato de Sodio (Na&#8322;CO&#8323;)</td><td class="mono">&lt;15 g/L</td><td>Contaminante &mdash; monitorear y controlar. Se acumula por absorci&oacute;n de CO&#8322; y oxidaci&oacute;n de cianuro</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- OPERATING PARAMETERS -->
+    <div>
+      <h3 class="section-title">Par&aacute;metros de Operaci&oacute;n <span class="sub">Electrol&iacute;tico &mdash; entrada en caliente</span></h3>
+      <div class="glass" style="padding:0;overflow:hidden;border-radius:10px;">
+        <table class="data-table">
+          <thead><tr><th>Par&aacute;metro</th><th>Valor</th><th>Notas</th></tr></thead>
+          <tbody>
+            <tr><td>Temperatura</td><td class="mono">32&ndash;43&deg;C (90&ndash;110&deg;F)</td><td>Temperatura moderada &mdash; no sobrecalentar</td></tr>
+            <tr><td>Densidad de Corriente</td><td class="mono">1&ndash;3 A/dm&sup2; (10&ndash;30 ASF)</td><td>Baja densidad de corriente para capa semilla delgada y adherente</td></tr>
+            <tr><td>Tiempo</td><td class="mono">1&ndash;3 minutos</td><td>Deposita 1&ndash;3 &micro;m de capa semilla de cobre</td></tr>
+            <tr><td>Voltaje</td><td class="mono">3&ndash;6 V</td><td>Ajuste para mantener la densidad de corriente objetivo</td></tr>
+            <tr><td>&Aacute;nodo</td><td class="mono">Acero (inerte)</td><td>NO cobre &mdash; los &aacute;nodos de acero previenen la adici&oacute;n descontrolada de cobre</td></tr>
+            <tr><td>M&eacute;todo de Entrada</td><td class="mono">ENTRADA EN CALIENTE &mdash; corriente ENCENDIDA primero</td><td>Obligatorio &mdash; previene desplazamiento por inmersi&oacute;n del zincato</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PROCESS INSIGHT -->
+    <div class="insight-card glass">
+      <div class="insight-label">Por Qu&eacute; la Entrada en Caliente Es Obligatoria</div>
+      <div class="insight-text">El cianuro libre debe ser alto en relaci&oacute;n al metal de cobre para suprimir la deposici&oacute;n por inmersi&oacute;n. Sin corriente aplicada, los iones de cobre en soluci&oacute;n desplazar&aacute;n espont&aacute;neamente la capa de zinc a trav&eacute;s de una reacci&oacute;n de inmersi&oacute;n no controlada. Esto destruye la capa de adhesi&oacute;n de zincato cuidadosamente construida. Al aplicar corriente antes de la inmersi&oacute;n, la electrodeposici&oacute;n domina y el cobre se deposita uniformemente sobre el zincato intacto, creando una capa semilla fuertemente adherente para el recubrimiento completo de cobre que sigue.</div>
+    </div>
+
+    <!-- CONTEXT CARDS -->
+    <div class="context-grid">
+      <div class="context-card glass">
+        <h4 class="teal">Selecci&oacute;n de &Aacute;nodos</h4>
+        <p>Se utilizan &aacute;nodos de acero (inertes) en el ba&ntilde;o de golpe. Los &aacute;nodos de cobre se disolverían y agregarían cobre continuamente al ba&ntilde;o, haciendo imposible el control de concentraci&oacute;n. Con &aacute;nodos inertes, el cobre se repone &uacute;nicamente mediante adiciones de CuCN, permitiendo un control preciso de la relaci&oacute;n Cu:CN.</p>
+        <div class="detail">Monitoree la concentraci&oacute;n de metal de cobre regularmente. Reponga CuCN conforme el cobre se agota por el enchapado.</div>
+      </div>
+      <div class="context-card glass">
+        <h4 class="amber">Control de Carbonatos</h4>
+        <p>El carbonato de sodio se acumula por absorci&oacute;n de CO&#8322; y oxidaci&oacute;n de cianuro en el &aacute;nodo. Mantenga por debajo de 15 g/L. El carbonato alto reduce la conductividad, estrecha la ventana operativa y puede causar dep&oacute;sitos rugosos. Elimine por cristalizaci&oacute;n en fr&iacute;o si los niveles exceden los l&iacute;mites.</p>
+        <div class="detail">Na&#8322;CO&#8323; &lt;15 g/L &mdash; analice semanalmente en ambientes de producci&oacute;n.</div>
+      </div>
+    </div>
+
+    <!-- HOT ENTRY vs COLD ENTRY CROSS-SECTION -->
+    <div class="glass" style="padding:16px 20px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);text-align:center;margin-bottom:8px;">Entrada Caliente vs. Entrada Fr&iacute;a &mdash; Qu&eacute; Sucede con la Capa de Zincado</div>
+      <svg viewBox="0 0 1100 175" width="100%" height="175" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+
+        <!-- ===== LEFT PANEL: CORRECT — HOT ENTRY ===== -->
+        <rect x="15" y="8" width="510" height="160" rx="10" stroke="var(--emerald)" stroke-width="1.8"/>
+        <g transform="translate(40,20)">
+          <circle cx="0" cy="0" r="10" stroke="var(--emerald)" stroke-width="1.4" fill="none"/>
+          <polyline points="-5,0 -2,4 6,-5" stroke="var(--emerald)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <text x="58" y="25" font-family="Barlow Condensed,sans-serif" font-weight="900" font-size="15" fill="var(--emerald)" letter-spacing=".06em">CORRECTO &mdash; ENTRADA CALIENTE</text>
+        <text x="310" y="24" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--muted)" text-anchor="middle">Corriente ON &rarr; Pieza entra al ba&ntilde;o</text>
+        <g transform="translate(480,14)">
+          <polygon points="0,-6 -4,1 0,0 -2,7 4,-1 0,0 2,-6" fill="var(--amber)" opacity=".8"/>
+          <text x="10" y="2" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="10" fill="var(--amber)">ON</text>
+        </g>
+
+        <rect x="60" y="110" width="420" height="32" rx="2" fill="var(--slate)" opacity=".25"/>
+        <text x="270" y="130" font-family="JetBrains Mono,monospace" font-size="11" fill="var(--muted)" text-anchor="middle" letter-spacing=".06em">SUSTRATO DE ALUMINIO</text>
+
+        <rect x="60" y="100" width="420" height="10" rx="1" fill="var(--amber)" opacity=".2" stroke="var(--amber)" stroke-width="1.4"/>
+        <g fill="var(--amber)" opacity=".5">
+          <circle cx="70" cy="105" r="1"/><circle cx="80" cy="105" r="1"/><circle cx="90" cy="105" r="1"/><circle cx="100" cy="105" r="1"/><circle cx="110" cy="105" r="1"/><circle cx="120" cy="105" r="1"/><circle cx="130" cy="105" r="1"/><circle cx="140" cy="105" r="1"/><circle cx="150" cy="105" r="1"/><circle cx="160" cy="105" r="1"/><circle cx="170" cy="105" r="1"/><circle cx="180" cy="105" r="1"/><circle cx="190" cy="105" r="1"/><circle cx="200" cy="105" r="1"/><circle cx="210" cy="105" r="1"/><circle cx="220" cy="105" r="1"/><circle cx="230" cy="105" r="1"/><circle cx="240" cy="105" r="1"/><circle cx="250" cy="105" r="1"/><circle cx="260" cy="105" r="1"/><circle cx="270" cy="105" r="1"/><circle cx="280" cy="105" r="1"/><circle cx="290" cy="105" r="1"/><circle cx="300" cy="105" r="1"/><circle cx="310" cy="105" r="1"/><circle cx="320" cy="105" r="1"/><circle cx="330" cy="105" r="1"/><circle cx="340" cy="105" r="1"/><circle cx="350" cy="105" r="1"/><circle cx="360" cy="105" r="1"/><circle cx="370" cy="105" r="1"/><circle cx="380" cy="105" r="1"/><circle cx="390" cy="105" r="1"/><circle cx="400" cy="105" r="1"/><circle cx="410" cy="105" r="1"/><circle cx="420" cy="105" r="1"/><circle cx="430" cy="105" r="1"/><circle cx="440" cy="105" r="1"/><circle cx="450" cy="105" r="1"/><circle cx="460" cy="105" r="1"/><circle cx="470" cy="105" r="1"/>
+        </g>
+
+        <rect x="60" y="88" width="420" height="12" rx="1" fill="var(--teal)" opacity=".2" stroke="var(--teal)" stroke-width="1.4"/>
+        <g fill="var(--teal)" opacity=".5">
+          <circle cx="70" cy="94" r="1"/><circle cx="80" cy="94" r="1"/><circle cx="90" cy="94" r="1"/><circle cx="100" cy="94" r="1"/><circle cx="110" cy="94" r="1"/><circle cx="120" cy="94" r="1"/><circle cx="130" cy="94" r="1"/><circle cx="140" cy="94" r="1"/><circle cx="150" cy="94" r="1"/><circle cx="160" cy="94" r="1"/><circle cx="170" cy="94" r="1"/><circle cx="180" cy="94" r="1"/><circle cx="190" cy="94" r="1"/><circle cx="200" cy="94" r="1"/><circle cx="210" cy="94" r="1"/><circle cx="220" cy="94" r="1"/><circle cx="230" cy="94" r="1"/><circle cx="240" cy="94" r="1"/><circle cx="250" cy="94" r="1"/><circle cx="260" cy="94" r="1"/><circle cx="270" cy="94" r="1"/><circle cx="280" cy="94" r="1"/><circle cx="290" cy="94" r="1"/><circle cx="300" cy="94" r="1"/><circle cx="310" cy="94" r="1"/><circle cx="320" cy="94" r="1"/><circle cx="330" cy="94" r="1"/><circle cx="340" cy="94" r="1"/><circle cx="350" cy="94" r="1"/><circle cx="360" cy="94" r="1"/><circle cx="370" cy="94" r="1"/><circle cx="380" cy="94" r="1"/><circle cx="390" cy="94" r="1"/><circle cx="400" cy="94" r="1"/><circle cx="410" cy="94" r="1"/><circle cx="420" cy="94" r="1"/><circle cx="430" cy="94" r="1"/><circle cx="440" cy="94" r="1"/><circle cx="450" cy="94" r="1"/><circle cx="460" cy="94" r="1"/><circle cx="470" cy="94" r="1"/>
+        </g>
+
+        <line x1="490" y1="88" x2="490" y2="100" stroke="var(--teal)" stroke-width="1" opacity=".7"/>
+        <line x1="486" y1="88" x2="494" y2="88" stroke="var(--teal)" stroke-width="1" opacity=".7"/>
+        <line x1="486" y1="100" x2="494" y2="100" stroke="var(--teal)" stroke-width="1" opacity=".7"/>
+        <text x="498" y="97" font-family="JetBrains Mono,monospace" font-size="7" fill="var(--teal)">Cu</text>
+        <line x1="490" y1="100" x2="490" y2="110" stroke="var(--amber)" stroke-width="1" opacity=".7"/>
+        <line x1="486" y1="100" x2="494" y2="100" stroke="var(--amber)" stroke-width="1" opacity=".7"/>
+        <line x1="486" y1="110" x2="494" y2="110" stroke="var(--amber)" stroke-width="1" opacity=".7"/>
+        <text x="498" y="108" font-family="JetBrains Mono,monospace" font-size="7" fill="var(--amber)">Zn</text>
+
+        <text x="270" y="155" font-family="Inter,sans-serif" font-size="10" fill="var(--emerald)" text-anchor="middle" font-weight="600">Zincado preservado &bull; Cu uniforme &bull; Adhesi&oacute;n fuerte</text>
+
+        <g stroke="var(--teal)" stroke-width="1.2" opacity=".5">
+          <line x1="120" y1="42" x2="120" y2="82"/><polygon points="116,78 120,86 124,78" fill="var(--teal)" opacity=".5"/>
+          <line x1="200" y1="42" x2="200" y2="82"/><polygon points="196,78 200,86 204,78" fill="var(--teal)" opacity=".5"/>
+          <line x1="280" y1="42" x2="280" y2="82"/><polygon points="276,78 280,86 284,78" fill="var(--teal)" opacity=".5"/>
+          <line x1="360" y1="42" x2="360" y2="82"/><polygon points="356,78 360,86 364,78" fill="var(--teal)" opacity=".5"/>
+          <line x1="440" y1="42" x2="440" y2="82"/><polygon points="436,78 440,86 444,78" fill="var(--teal)" opacity=".5"/>
+        </g>
+        <text x="270" y="50" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="10" fill="var(--teal)" text-anchor="middle" letter-spacing=".04em" opacity=".7">ELECTRODEP&Oacute;SITO (CONTROLADO)</text>
+
+        <!-- ===== RIGHT PANEL: INCORRECT — COLD ENTRY ===== -->
+        <rect x="575" y="8" width="510" height="160" rx="10" stroke="var(--coral)" stroke-width="1.8"/>
+        <g transform="translate(600,20)">
+          <circle cx="0" cy="0" r="10" stroke="var(--coral)" stroke-width="1.4" fill="none"/>
+          <line x1="-5" y1="-5" x2="5" y2="5" stroke="var(--coral)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="5" y1="-5" x2="-5" y2="5" stroke="var(--coral)" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <text x="618" y="25" font-family="Barlow Condensed,sans-serif" font-weight="900" font-size="15" fill="var(--coral)" letter-spacing=".06em">INCORRECTO &mdash; ENTRADA FR&Iacute;A</text>
+        <text x="870" y="24" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--muted)" text-anchor="middle">Pieza entra al ba&ntilde;o &rarr; Corriente ON (tarde)</text>
+        <g transform="translate(1040,14)">
+          <polygon points="0,-6 -4,1 0,0 -2,7 4,-1 0,0 2,-6" fill="var(--coral)" opacity=".4"/>
+          <line x1="-6" y1="6" x2="6" y2="-6" stroke="var(--coral)" stroke-width="1.6"/>
+          <text x="10" y="2" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="10" fill="var(--coral)">OFF</text>
+        </g>
+
+        <rect x="620" y="110" width="420" height="32" rx="2" fill="var(--slate)" opacity=".25"/>
+        <text x="830" y="130" font-family="JetBrains Mono,monospace" font-size="11" fill="var(--muted)" text-anchor="middle" letter-spacing=".06em">SUSTRATO DE ALUMINIO</text>
+
+        <rect x="620" y="100" width="80" height="10" rx="1" fill="var(--amber)" opacity=".15" stroke="var(--amber)" stroke-width="1" stroke-dasharray="4 3"/>
+        <rect x="720" y="100" width="60" height="10" rx="1" fill="var(--amber)" opacity=".1" stroke="var(--amber)" stroke-width="1" stroke-dasharray="4 3"/>
+        <rect x="810" y="100" width="50" height="10" rx="1" fill="var(--amber)" opacity=".08" stroke="var(--amber)" stroke-width="1" stroke-dasharray="4 3"/>
+        <rect x="890" y="100" width="70" height="10" rx="1" fill="var(--amber)" opacity=".12" stroke="var(--amber)" stroke-width="1" stroke-dasharray="4 3"/>
+        <rect x="980" y="100" width="50" height="10" rx="1" fill="var(--amber)" opacity=".06" stroke="var(--amber)" stroke-width="1" stroke-dasharray="4 3"/>
+
+        <g stroke="var(--amber)" stroke-width="0.8" opacity=".5">
+          <line x1="710" y1="100" x2="710" y2="85"/><polygon points="707,88 710,82 713,88" fill="var(--amber)" opacity=".5"/>
+          <line x1="790" y1="100" x2="790" y2="88"/><polygon points="787,91 790,85 793,91" fill="var(--amber)" opacity=".5"/>
+          <line x1="870" y1="100" x2="870" y2="83"/><polygon points="867,86 870,80 873,86" fill="var(--amber)" opacity=".5"/>
+          <line x1="970" y1="100" x2="970" y2="87"/><polygon points="967,90 970,84 973,90" fill="var(--amber)" opacity=".5"/>
+        </g>
+        <text x="830" y="68" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="9" fill="var(--amber)" text-anchor="middle" letter-spacing=".04em" opacity=".7">Zn DISOLVI&Eacute;NDOSE &uarr; (DESPLAZAMIENTO POR INMERSI&Oacute;N)</text>
+
+        <ellipse cx="645" cy="95" rx="12" ry="7" fill="var(--coral)" opacity=".2" stroke="var(--coral)" stroke-width="1.2"/>
+        <ellipse cx="690" cy="92" rx="8" ry="9" fill="var(--coral)" opacity=".15" stroke="var(--coral)" stroke-width="1.2"/>
+        <ellipse cx="750" cy="94" rx="15" ry="8" fill="var(--coral)" opacity=".2" stroke="var(--coral)" stroke-width="1.2"/>
+        <ellipse cx="830" cy="91" rx="10" ry="10" fill="var(--coral)" opacity=".18" stroke="var(--coral)" stroke-width="1.2"/>
+        <ellipse cx="880" cy="96" rx="6" ry="5" fill="var(--coral)" opacity=".12" stroke="var(--coral)" stroke-width="1.2"/>
+        <ellipse cx="935" cy="93" rx="14" ry="8" fill="var(--coral)" opacity=".2" stroke="var(--coral)" stroke-width="1.2"/>
+        <ellipse cx="1000" cy="95" rx="9" ry="7" fill="var(--coral)" opacity=".15" stroke="var(--coral)" stroke-width="1.2"/>
+
+        <text x="1048" y="97" font-family="JetBrains Mono,monospace" font-size="7" fill="var(--coral)">Cu</text>
+        <text x="1048" y="108" font-family="JetBrains Mono,monospace" font-size="7" fill="var(--amber)" opacity=".5">Zn?</text>
+
+        <text x="830" y="155" font-family="Inter,sans-serif" font-size="10" fill="var(--coral)" text-anchor="middle" font-weight="600">Zincado destruido &bull; Cu poroso y no uniforme &bull; Falla de adhesi&oacute;n</text>
+
+      </svg>
+    </div>
+
+    <!-- TROUBLESHOOTING -->
+    <div>
+      <h3 class="section-title">Soluci&oacute;n de Problemas <span class="sub">Problemas del golpe de cobre</span></h3>
+      <div class="trouble-grid">
+        <div class="trouble-card glass">
+          <h5>Mala Adhesi&oacute;n / Ampollas</h5>
+          <p>Las piezas entraron al ba&ntilde;o sin corriente (entrada en fr&iacute;o). El zincato se disolvi&oacute; antes de que el cobre se depositara. Verifique el procedimiento de entrada en caliente. Tambi&eacute;n revise el cianuro libre &mdash; si es muy bajo, la deposici&oacute;n por inmersi&oacute;n puede ocurrir incluso con corriente.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>Dep&oacute;sito Oscuro o Quemado</h5>
+          <p>Densidad de corriente muy alta o cianuro libre muy bajo. Reduzca la corriente. Verifique los niveles de NaCN &mdash; el cianuro libre debe ser 11&ndash;15 g/L. Tambi&eacute;n verifique que la temperatura est&eacute; dentro del rango.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>Sin Dep&oacute;sito / Cobertura Delgada</h5>
+          <p>Concentraci&oacute;n de cobre agotada. Analice el nivel de CuCN y reponga. Tambi&eacute;n revise las conexiones el&eacute;ctricas &mdash; un mal contacto en el bastidor impedir&aacute; el flujo de corriente a las piezas afectadas.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>Dep&oacute;sito Rugoso</h5>
+          <p>Carbonato muy alto (&gt;15 g/L) o contaminaci&oacute;n por part&iacute;culas. Verifique el nivel de Na&#8322;CO&#8323;. Trate con carb&oacute;n si se sospecha contaminaci&oacute;n org&aacute;nica. Filtre la soluci&oacute;n continuamente.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAFETY -->
+    <div class="warn-card glass">
+      <div class="warn-label">&#9888; Seguridad</div>
+      <div class="warn-text"><strong>BA&Ntilde;O DE CIANURO &mdash; KCN y NaCN son letales por ingesti&oacute;n, inhalaci&oacute;n y absorci&oacute;n cut&aacute;nea.</strong> Este es el primer ba&ntilde;o de cianuro en la l&iacute;nea de proceso. <strong>NUNCA mezcle soluciones de cianuro con &aacute;cido &mdash; esto genera gas de cianuro de hidr&oacute;geno (HCN) mortal.</strong> Mantenga el pH del ba&ntilde;o &gt;10 en todo momento. Opere con ventilaci&oacute;n de ranura a m&iacute;nimo 100 fpm de velocidad frontal. Los monitores de HCN deben estar instalados y calibrados. El kit de ant&iacute;doto de cianuro debe estar accesible en 30 segundos. Use guantes resistentes a qu&iacute;micos, careta y delantal. Conozca la ubicaci&oacute;n de la ducha de emergencia y la estaci&oacute;n lavaojos.</div>
+    </div>
+
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer poster-footer">
+    <p class="footer-disclaimer">Referencia t&eacute;cnica &uacute;nicamente. Verifique todos los par&aacute;metros con la hoja t&eacute;cnica de su proveedor de productos qu&iacute;micos, las especificaciones del cliente y los requisitos reglamentarios aplicables antes de su uso en producci&oacute;n.</p>
+    <p class="footer-title">Paso 11 &mdash; Golpe de Cianuro de Cobre (Entrada en Caliente) &mdash; Serie de Enchapado de Barra Colectora Al &rarr; Cu &rarr; Ag</p>
+    <span class="footer-brand">Plating Posters Inc &middot; Serie de Referencia de Acabado de Metales &middot; PP-11-T / v1.0 / 2026</span>
+  </footer>
+
+</div>
+</div>
+</div>
+
+<div class="tweaks">
+  <div style="display:flex;gap:8px;align-items:center;">
+    <span style="color:rgba(240,237,232,.5);font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Edici&oacute;n</span>
+    <button id="btnDark" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:#E8A020;color:#1A1F2E;border:1px solid #E8A020;" onclick="setEdition('')">Dark</button>
+    <button id="btnLight" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:transparent;color:#F0EDE8;border:1px solid rgba(255,255,255,.2);" onclick="setEdition('light')">Light</button>
+  </div>
+  <button onclick="window.print()" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:transparent;color:#F0EDE8;border:1px solid rgba(255,255,255,.2);">Imprimir / PDF</button>
+</div>
+
+<script>
+const posterWrap=document.getElementById('posterWrap');
+const poster=document.getElementById('poster');
+function scalePoster(){const sW=(window.innerWidth-24)/1200;const sH=(window.innerHeight-24)/1800;const s=Math.min(sW,sH);posterWrap.style.transform='scale('+s+')';posterWrap.style.transformOrigin='top center';posterWrap.style.width='1200px';posterWrap.style.height=(1800*s)+'px';}
+function setEdition(e){if(e)poster.dataset.edition=e;else delete poster.dataset.edition;document.getElementById('btnDark').style.background=e?'transparent':'#E8A020';document.getElementById('btnDark').style.color=e?'#F0EDE8':'#1A1F2E';document.getElementById('btnDark').style.borderColor=e?'rgba(255,255,255,.2)':'#E8A020';document.getElementById('btnLight').style.background=e?'#E8A020':'transparent';document.getElementById('btnLight').style.color=e?'#1A1F2E':'#F0EDE8';document.getElementById('btnLight').style.borderColor=e?'#E8A020':'rgba(255,255,255,.2)';}
+scalePoster();window.addEventListener('resize',scalePoster);
+</script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al-Cu-Ag Busbar &mdash; Step 11 Copper Cyanide Strike &mdash; Technical | Plating Posters Inc</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Barlow:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#1A1F2E;--navy:#0D1020;--text:#F0EDE8;--muted:rgba(240,237,232,.62);
+  --faint:rgba(240,237,232,.38);
+  --amber:#E8A020;--teal:#2EC4B6;--emerald:#27AE60;--coral:#E05C5C;
+  --slate:#3A4055;--callout:#1E2435;--altrow:#252B3D;
+  --glass-bg:rgba(30,36,53,.55);--glass-border:rgba(255,255,255,.12);
+  --glass-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(0,0,0,.2),0 4px 12px rgba(0,0,0,.25);
+}
+.poster[data-edition="light"]{
+  --bg:#F5F4F0;--navy:#DDD8CE;--text:#1B2030;--muted:rgba(27,32,48,.66);
+  --faint:rgba(27,32,48,.42);
+  --amber:#B8770D;--teal:#1A8C82;--emerald:#1E8449;--coral:#B7322F;
+  --slate:#C5C0B5;--callout:#ECEAE1;--altrow:#E4E1D6;
+  --glass-bg:rgba(255,253,247,.66);--glass-border:rgba(27,32,48,.10);
+  --glass-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 4px 12px rgba(27,32,48,.08);
+}
+html,body{margin:0;padding:0;background:#0a0c14;}
+.stage{width:100vw;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;overflow:visible;padding:12px 0;box-sizing:border-box;}
+.poster-wrap{transform-origin:center center;}
+.poster{
+  width:1200px;height:1800px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(1200px 800px at 15% 8%,rgba(46,196,182,.14),transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%,rgba(232,160,32,.12),transparent 55%),
+    radial-gradient(900px 900px at 50% 80%,rgba(224,92,92,.10),transparent 60%),
+    var(--bg);
+  font-family:'Inter',sans-serif;color:var(--text);
+  display:flex;flex-direction:column;padding:32px;box-sizing:border-box;
+}
+.glass{background-color:var(--glass-bg);background-image:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));border:1px solid var(--glass-border);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:var(--glass-shadow);border-radius:12px;}
+.tack{position:absolute;width:24px;height:24px;border-radius:50%;border:1.5px solid rgba(232,160,32,.28);z-index:2;pointer-events:none;}
+.tack::before,.tack::after{content:"";position:absolute;background:rgba(232,160,32,.28);}
+.tack::before{left:50%;top:-3px;bottom:-3px;width:1px;transform:translateX(-50%);}
+.tack::after{top:50%;left:-3px;right:-3px;height:1px;transform:translateY(-50%);}
+.tack.tl{top:12px;left:12px;}.tack.tr{top:12px;right:12px;}.tack.bl{bottom:12px;left:12px;}.tack.br{bottom:12px;right:12px;}
+
+.poster-header{flex-shrink:0;}
+.poster-body{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:6px;justify-content:space-between;}
+.poster-footer{flex-shrink:0;margin-top:4px;}
+
+.header-band{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:8px;}
+.header-left{flex:1;min-width:0;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--amber);letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px;display:flex;align-items:center;gap:12px;}
+.eyebrow::before{content:"";display:inline-block;width:30px;height:3px;background:var(--amber);}
+.headline{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:72px;color:var(--text);line-height:.92;margin:4px 0;letter-spacing:-.01em;text-transform:uppercase;}
+.headline em{font-style:normal;color:var(--amber);}
+.subhead{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--teal);margin:0 0 3px;letter-spacing:.02em;text-transform:uppercase;}
+.tagline{font-family:'Inter',sans-serif;font-style:italic;font-size:11px;color:var(--muted);line-height:1.35;max-width:700px;margin:0;}
+.logo-card{flex-shrink:0;padding:12px 10px;display:flex;flex-direction:column;align-items:center;gap:8px;align-self:flex-start;}
+.logo-tile{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,#E8A020,#2EC4B6);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 4px rgba(0,0,0,.15),0 4px 14px rgba(0,0,0,.35);}
+.logo-tile span{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;color:#1A1F2E;letter-spacing:.02em;line-height:1;}
+.logo-word{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em;text-transform:uppercase;line-height:1;text-align:center;white-space:nowrap;}
+.logo-word .a{color:var(--text);}.logo-word .b{color:var(--amber);}
+.logo-inc{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.05em;text-transform:lowercase;color:var(--muted);margin-top:-2px;}
+
+.orient-strip{display:flex;align-items:center;gap:4px;padding:6px 10px;margin-bottom:0;flex-wrap:wrap;}
+.orient-stage{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:5px 8px;border-radius:5px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;letter-spacing:.05em;text-transform:uppercase;background:rgba(58,64,85,.4);border:1px solid rgba(255,255,255,.06);color:var(--muted);}
+.orient-stage .sn{font-family:'JetBrains Mono',monospace;font-size:7px;opacity:.7;letter-spacing:.08em;}
+.orient-stage.active{background:rgba(232,160,32,.22);border-color:rgba(232,160,32,.5);color:var(--amber);box-shadow:0 0 12px rgba(232,160,32,.15);}
+.orient-arrow{color:var(--faint);font-size:11px;flex:none;}
+
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin:0 0 4px;display:flex;align-items:center;gap:8px;}
+.section-title::before{content:"";width:5px;height:5px;background:var(--amber);border-radius:50%;}
+.section-title .sub{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:var(--muted);margin-left:auto;font-weight:500;}
+
+.rule-card{display:flex;align-items:center;gap:18px;padding:10px 20px;background:rgba(232,160,32,.07);}
+.rule-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:var(--amber);line-height:1;letter-spacing:-.02em;}
+.rule-body{flex:1;}
+.rule-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;color:var(--amber);letter-spacing:.08em;text-transform:uppercase;}
+.rule-text{font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);line-height:1.4;margin-top:3px;}
+
+.insight-card{padding:10px 18px;border-left:3px solid var(--teal);background:rgba(46,196,182,.06);border-radius:0 12px 12px 0;}
+.insight-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.insight-text{font-family:'Inter',sans-serif;font-size:12px;color:var(--text);line-height:1.5;}
+
+.data-table{width:100%;border-collapse:collapse;}
+.data-table th{font-family:'Barlow',sans-serif;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);padding:6px 12px;text-align:left;background:rgba(13,16,32,.35);border-bottom:1px solid var(--glass-border);}
+.poster[data-edition="light"] .data-table th{background:rgba(27,32,48,.06);}
+.data-table td{padding:5px 12px;color:var(--text);line-height:1.35;border-bottom:1px solid rgba(255,255,255,.05);font-family:'Inter',sans-serif;font-size:11.5px;}
+.data-table tr:last-child td{border-bottom:none;}
+.data-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+.poster[data-edition="light"] .data-table tr:nth-child(even) td{background:rgba(27,32,48,.025);}
+.data-table .mono{font-family:'JetBrains Mono',monospace;font-size:11px;}
+
+.warn-card{padding:10px 18px;border-left:3px solid var(--coral);background:rgba(224,92,92,.06);border-radius:0 12px 12px 0;}
+.warn-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;color:var(--coral);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.warn-text{font-family:'Inter',sans-serif;font-size:12px;color:var(--text);line-height:1.5;}
+.warn-text strong{color:var(--coral);font-weight:700;}
+
+.trouble-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.trouble-card{padding:8px 14px;border-radius:10px;border-left:3px solid var(--coral);display:flex;flex-direction:column;gap:3px;}
+.trouble-card h5{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;color:var(--coral);margin:0;text-transform:uppercase;letter-spacing:.06em;line-height:1.1;}
+.trouble-card p{font-size:10.5px;color:var(--muted);margin:0;line-height:1.35;}
+
+.context-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.context-card{padding:10px 16px;}
+.context-card h4{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;margin:0 0 6px;letter-spacing:.04em;text-transform:uppercase;}
+.context-card h4.teal{color:var(--teal);}
+.context-card h4.amber{color:var(--amber);}
+.context-card h4.coral{color:var(--coral);}
+.context-card p{font-size:11px;line-height:1.4;color:var(--text);margin:0;}
+.context-card .detail{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-top:4px;}
+
+
+
+.footer{padding:10px 20px;background-color:rgba(13,16,32,.85);background-image:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,0));border:1px solid rgba(255,255,255,.10);border-radius:8px;text-align:center;display:flex;flex-direction:column;gap:2px;}
+.poster[data-edition="light"] .footer{background-color:rgba(221,216,206,.95);border-color:rgba(27,32,48,.10);}
+.footer-disclaimer{font-family:'Inter',sans-serif;font-size:8.5px;line-height:1.35;color:var(--faint);margin:0 auto;max-width:900px;}
+.footer-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;color:var(--text);letter-spacing:.04em;text-transform:uppercase;margin:0;}
+.footer-brand{font-family:'JetBrains Mono',monospace;font-size:8.5px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;}
+
+.tweaks{position:fixed;bottom:16px;right:16px;z-index:100;background:rgba(13,16,32,.92);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:10px 14px;display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:#F0EDE8;}
+@media print{
+  @page{size:12.5in 18.75in;margin:0;}
+  html,body{background:#1A1F2E !important;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+  *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+  .stage{position:static;padding:0;display:block;overflow:visible;}
+  .poster-wrap{transform:none !important;width:auto !important;height:auto !important;}
+  .poster{box-shadow:none !important;width:1200px !important;height:1800px !important;overflow:hidden !important;}
+  .glass,.trouble-card,.insight-card,.warn-card,.context-card{backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}
+  .tweaks{display:none !important;}
+}
+</style>
+</head>
+<body>
+<div class="stage">
+<div class="poster-wrap" id="posterWrap">
+<div class="poster" id="poster" data-edition="light">
+  <span class="tack tl" aria-hidden="true"></span><span class="tack tr" aria-hidden="true"></span>
+  <span class="tack bl" aria-hidden="true"></span><span class="tack br" aria-hidden="true"></span>
+
+  <!-- HEADER -->
+  <div class="poster-header">
+    <header class="header-band">
+      <div class="header-left">
+        <div class="eyebrow"><span>Plating Posters Inc &nbsp;&middot;&nbsp; Al-Cu-Ag Busbar Series &nbsp;&middot;&nbsp; Step 11 of 19</span></div>
+        <h1 class="headline">COPPER CYANIDE<br><em>STRIKE</em></h1>
+        <h2 class="subhead">Thin Adherent Copper Seed Layer &mdash; Hot Entry Required</h2>
+        <p class="tagline">Deposit a thin (1&ndash;3 &micro;m) highly adherent copper seed layer over the zincate coating. The cyanide complex prevents immersion displacement that would destroy adhesion. Current must be ON before parts enter the bath.</p>
+      </div>
+      <aside class="glass logo-card">
+        <div class="logo-tile"><span>PP</span></div>
+        <div class="logo-word"><span class="a">Plating</span> <span class="b">Posters</span></div>
+        <div class="logo-inc">www.platingposters.com</div>
+      </aside>
+    </header>
+
+    <div class="orient-strip glass">
+      <div class="orient-stage"><span class="sn">01</span>Clean</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">02</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">03</span>Etch</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">04</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">05</span>Zinc&nbsp;1</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">06</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">07</span>Strip</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">08</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">09</span>Zinc&nbsp;2</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">10</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage active"><span class="sn">11</span>Cu&nbsp;Str</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">12</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">13</span>Cu&nbsp;Plt</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">14</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">15</span>Ag&nbsp;Str</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">16</span>Ag&nbsp;Plt</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">17</span>Rinse</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">18</span>A-Tar</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">19</span>Dry</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="poster-body">
+
+    <!-- RULE CARD -->
+    <div class="glass rule-card">
+      <div class="rule-num">HOT ENTRY</div>
+      <div class="rule-body">
+        <div class="rule-label">Current ON Before Parts Enter Bath</div>
+        <div class="rule-text">Apply current to the rack before immersing parts. If parts sit in the cyanide strike without current, the zincate layer dissolves and adhesion is permanently destroyed. Free cyanide must remain high relative to copper metal to suppress immersion deposition. This is a non-negotiable process requirement.</div>
+      </div>
+    </div>
+
+    <!-- CHEMISTRY TABLE -->
+    <div>
+      <h3 class="section-title">Bath Chemistry <span class="sub">Copper cyanide strike</span></h3>
+      <div class="glass" style="padding:0;overflow:hidden;border-radius:10px;">
+        <table class="data-table">
+          <thead><tr><th>Component</th><th>Range</th><th>Function</th></tr></thead>
+          <tbody>
+            <tr><td>Copper Cyanide (CuCN)</td><td class="mono">22&ndash;30 g/L</td><td>Source of copper metal (Cu metal: 15&ndash;20 g/L)</td></tr>
+            <tr><td>Sodium Cyanide (NaCN) &mdash; Total</td><td class="mono">34&ndash;45 g/L</td><td>Complexes copper, provides conductivity</td></tr>
+            <tr><td>Free NaCN</td><td class="mono">11&ndash;15 g/L</td><td>Maintains cyanide complex stability &mdash; critical for immersion suppression</td></tr>
+            <tr><td>Sodium Hydroxide (NaOH)</td><td class="mono">3&ndash;8 g/L</td><td>Maintains alkalinity, improves conductivity</td></tr>
+            <tr><td>Sodium Carbonate (Na&#8322;CO&#8323;)</td><td class="mono">&lt;15 g/L</td><td>Contaminant &mdash; monitor and control. Builds from CO&#8322; absorption and cyanide oxidation</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- OPERATING PARAMETERS -->
+    <div>
+      <h3 class="section-title">Operating Parameters <span class="sub">Electrolytic &mdash; hot entry</span></h3>
+      <div class="glass" style="padding:0;overflow:hidden;border-radius:10px;">
+        <table class="data-table">
+          <thead><tr><th>Parameter</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Temperature</td><td class="mono">32&ndash;43&deg;C (90&ndash;110&deg;F)</td><td>Moderate temperature &mdash; do not overheat</td></tr>
+            <tr><td>Current Density</td><td class="mono">1&ndash;3 A/dm&sup2; (10&ndash;30 ASF)</td><td>Low CD for thin, adherent seed layer</td></tr>
+            <tr><td>Time</td><td class="mono">1&ndash;3 minutes</td><td>Deposits 1&ndash;3 &micro;m copper seed</td></tr>
+            <tr><td>Voltage</td><td class="mono">3&ndash;6 V</td><td>Adjust to maintain target current density</td></tr>
+            <tr><td>Anode</td><td class="mono">Steel (inert)</td><td>NOT copper &mdash; steel anodes prevent uncontrolled copper addition</td></tr>
+            <tr><td>Entry Method</td><td class="mono">HOT ENTRY &mdash; current ON first</td><td>Mandatory &mdash; prevents immersion displacement of zincate</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PROCESS INSIGHT -->
+    <div class="insight-card glass">
+      <div class="insight-label">Why Hot Entry Is Mandatory</div>
+      <div class="insight-text">Free cyanide must be high relative to copper metal to suppress immersion deposition. Without applied current, copper ions in solution will spontaneously displace the zinc layer through an uncontrolled immersion reaction. This destroys the carefully built zincate adhesion layer. By applying current before immersion, electrodeposition dominates and copper deposits uniformly over the intact zincate, creating a strongly adherent seed layer for the full copper plate that follows.</div>
+    </div>
+
+    <!-- CONTEXT CARDS -->
+    <div class="context-grid">
+      <div class="context-card glass">
+        <h4 class="teal">Anode Selection</h4>
+        <p>Steel (inert) anodes are used in the strike bath. Copper anodes would dissolve and continuously add copper to the bath, making concentration control impossible. With inert anodes, copper is replenished only by CuCN additions, allowing precise control of the Cu:CN ratio.</p>
+        <div class="detail">Monitor copper metal concentration regularly. Replenish CuCN as copper depletes through plating.</div>
+      </div>
+      <div class="context-card glass">
+        <h4 class="amber">Carbonate Control</h4>
+        <p>Sodium carbonate accumulates from CO&#8322; absorption and cyanide oxidation at the anode. Keep below 15 g/L. High carbonate reduces conductivity, narrows the operating window, and can cause rough deposits. Remove by cooling crystallization if levels exceed limits.</p>
+        <div class="detail">Na&#8322;CO&#8323; &lt;15 g/L &mdash; test weekly in production environments.</div>
+      </div>
+    </div>
+
+    <!-- HOT ENTRY vs COLD ENTRY CROSS-SECTION -->
+    <div class="glass" style="padding:16px 20px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);text-align:center;margin-bottom:8px;">Hot Entry vs. Cold Entry &mdash; What Happens to the Zincate Layer</div>
+      <svg viewBox="0 0 1100 175" width="100%" height="175" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+
+        <!-- ===== LEFT PANEL: CORRECT — HOT ENTRY ===== -->
+        <rect x="15" y="8" width="510" height="160" rx="10" stroke="var(--emerald)" stroke-width="1.8"/>
+
+        <!-- Checkmark badge -->
+        <g transform="translate(40,20)">
+          <circle cx="0" cy="0" r="10" stroke="var(--emerald)" stroke-width="1.4" fill="none"/>
+          <polyline points="-5,0 -2,4 6,-5" stroke="var(--emerald)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <text x="58" y="25" font-family="Barlow Condensed,sans-serif" font-weight="900" font-size="15" fill="var(--emerald)" letter-spacing=".06em">CORRECT &mdash; HOT ENTRY</text>
+
+        <!-- Timeline: Current ON → Part enters bath -->
+        <text x="310" y="24" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--muted)" text-anchor="middle">Current ON &rarr; Part enters bath</text>
+
+        <!-- Lightning bolt icon for current -->
+        <g transform="translate(480,14)">
+          <polygon points="0,-6 -4,1 0,0 -2,7 4,-1 0,0 2,-6" fill="var(--amber)" opacity=".8"/>
+          <text x="10" y="2" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="10" fill="var(--amber)">ON</text>
+        </g>
+
+        <!-- Cross-section layers -->
+        <!-- Aluminum substrate -->
+        <rect x="60" y="110" width="420" height="32" rx="2" fill="var(--slate)" opacity=".25"/>
+        <text x="270" y="130" font-family="JetBrains Mono,monospace" font-size="11" fill="var(--muted)" text-anchor="middle" letter-spacing=".06em">ALUMINUM SUBSTRATE</text>
+
+        <!-- Zincate layer (intact, uniform) -->
+        <rect x="60" y="100" width="420" height="10" rx="1" fill="var(--amber)" opacity=".2" stroke="var(--amber)" stroke-width="1.4"/>
+        <!-- Fine uniform grain dots -->
+        <g fill="var(--amber)" opacity=".5">
+          <circle cx="70" cy="105" r="1"/><circle cx="80" cy="105" r="1"/><circle cx="90" cy="105" r="1"/>
+          <circle cx="100" cy="105" r="1"/><circle cx="110" cy="105" r="1"/><circle cx="120" cy="105" r="1"/>
+          <circle cx="130" cy="105" r="1"/><circle cx="140" cy="105" r="1"/><circle cx="150" cy="105" r="1"/>
+          <circle cx="160" cy="105" r="1"/><circle cx="170" cy="105" r="1"/><circle cx="180" cy="105" r="1"/>
+          <circle cx="190" cy="105" r="1"/><circle cx="200" cy="105" r="1"/><circle cx="210" cy="105" r="1"/>
+          <circle cx="220" cy="105" r="1"/><circle cx="230" cy="105" r="1"/><circle cx="240" cy="105" r="1"/>
+          <circle cx="250" cy="105" r="1"/><circle cx="260" cy="105" r="1"/><circle cx="270" cy="105" r="1"/>
+          <circle cx="280" cy="105" r="1"/><circle cx="290" cy="105" r="1"/><circle cx="300" cy="105" r="1"/>
+          <circle cx="310" cy="105" r="1"/><circle cx="320" cy="105" r="1"/><circle cx="330" cy="105" r="1"/>
+          <circle cx="340" cy="105" r="1"/><circle cx="350" cy="105" r="1"/><circle cx="360" cy="105" r="1"/>
+          <circle cx="370" cy="105" r="1"/><circle cx="380" cy="105" r="1"/><circle cx="390" cy="105" r="1"/>
+          <circle cx="400" cy="105" r="1"/><circle cx="410" cy="105" r="1"/><circle cx="420" cy="105" r="1"/>
+          <circle cx="430" cy="105" r="1"/><circle cx="440" cy="105" r="1"/><circle cx="450" cy="105" r="1"/>
+          <circle cx="460" cy="105" r="1"/><circle cx="470" cy="105" r="1"/>
+        </g>
+
+        <!-- Copper strike layer (uniform, adherent) -->
+        <rect x="60" y="88" width="420" height="12" rx="1" fill="var(--teal)" opacity=".2" stroke="var(--teal)" stroke-width="1.4"/>
+        <g fill="var(--teal)" opacity=".5">
+          <circle cx="70" cy="94" r="1"/><circle cx="80" cy="94" r="1"/><circle cx="90" cy="94" r="1"/>
+          <circle cx="100" cy="94" r="1"/><circle cx="110" cy="94" r="1"/><circle cx="120" cy="94" r="1"/>
+          <circle cx="130" cy="94" r="1"/><circle cx="140" cy="94" r="1"/><circle cx="150" cy="94" r="1"/>
+          <circle cx="160" cy="94" r="1"/><circle cx="170" cy="94" r="1"/><circle cx="180" cy="94" r="1"/>
+          <circle cx="190" cy="94" r="1"/><circle cx="200" cy="94" r="1"/><circle cx="210" cy="94" r="1"/>
+          <circle cx="220" cy="94" r="1"/><circle cx="230" cy="94" r="1"/><circle cx="240" cy="94" r="1"/>
+          <circle cx="250" cy="94" r="1"/><circle cx="260" cy="94" r="1"/><circle cx="270" cy="94" r="1"/>
+          <circle cx="280" cy="94" r="1"/><circle cx="290" cy="94" r="1"/><circle cx="300" cy="94" r="1"/>
+          <circle cx="310" cy="94" r="1"/><circle cx="320" cy="94" r="1"/><circle cx="330" cy="94" r="1"/>
+          <circle cx="340" cy="94" r="1"/><circle cx="350" cy="94" r="1"/><circle cx="360" cy="94" r="1"/>
+          <circle cx="370" cy="94" r="1"/><circle cx="380" cy="94" r="1"/><circle cx="390" cy="94" r="1"/>
+          <circle cx="400" cy="94" r="1"/><circle cx="410" cy="94" r="1"/><circle cx="420" cy="94" r="1"/>
+          <circle cx="430" cy="94" r="1"/><circle cx="440" cy="94" r="1"/><circle cx="450" cy="94" r="1"/>
+          <circle cx="460" cy="94" r="1"/><circle cx="470" cy="94" r="1"/>
+        </g>
+
+        <!-- Layer labels (right side brackets) -->
+        <line x1="490" y1="88" x2="490" y2="100" stroke="var(--teal)" stroke-width="1" opacity=".7"/>
+        <line x1="486" y1="88" x2="494" y2="88" stroke="var(--teal)" stroke-width="1" opacity=".7"/>
+        <line x1="486" y1="100" x2="494" y2="100" stroke="var(--teal)" stroke-width="1" opacity=".7"/>
+        <text x="498" y="97" font-family="JetBrains Mono,monospace" font-size="7" fill="var(--teal)">Cu</text>
+
+        <line x1="490" y1="100" x2="490" y2="110" stroke="var(--amber)" stroke-width="1" opacity=".7"/>
+        <line x1="486" y1="100" x2="494" y2="100" stroke="var(--amber)" stroke-width="1" opacity=".7"/>
+        <line x1="486" y1="110" x2="494" y2="110" stroke="var(--amber)" stroke-width="1" opacity=".7"/>
+        <text x="498" y="108" font-family="JetBrains Mono,monospace" font-size="7" fill="var(--amber)">Zn</text>
+
+        <!-- Labels below cross-section -->
+        <text x="270" y="155" font-family="Inter,sans-serif" font-size="10" fill="var(--emerald)" text-anchor="middle" font-weight="600">Zincate preserved &bull; Cu deposits uniformly &bull; Strong adhesion</text>
+
+        <!-- Downward electrodeposition arrows -->
+        <g stroke="var(--teal)" stroke-width="1.2" opacity=".5">
+          <line x1="120" y1="42" x2="120" y2="82"/><polygon points="116,78 120,86 124,78" fill="var(--teal)" opacity=".5"/>
+          <line x1="200" y1="42" x2="200" y2="82"/><polygon points="196,78 200,86 204,78" fill="var(--teal)" opacity=".5"/>
+          <line x1="280" y1="42" x2="280" y2="82"/><polygon points="276,78 280,86 284,78" fill="var(--teal)" opacity=".5"/>
+          <line x1="360" y1="42" x2="360" y2="82"/><polygon points="356,78 360,86 364,78" fill="var(--teal)" opacity=".5"/>
+          <line x1="440" y1="42" x2="440" y2="82"/><polygon points="436,78 440,86 444,78" fill="var(--teal)" opacity=".5"/>
+        </g>
+        <text x="270" y="50" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="10" fill="var(--teal)" text-anchor="middle" letter-spacing=".04em" opacity=".7">ELECTRODEPOSITION (CONTROLLED)</text>
+
+        <!-- ===== RIGHT PANEL: INCORRECT — COLD ENTRY ===== -->
+        <rect x="575" y="8" width="510" height="160" rx="10" stroke="var(--coral)" stroke-width="1.8"/>
+
+        <!-- X badge -->
+        <g transform="translate(600,20)">
+          <circle cx="0" cy="0" r="10" stroke="var(--coral)" stroke-width="1.4" fill="none"/>
+          <line x1="-5" y1="-5" x2="5" y2="5" stroke="var(--coral)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="5" y1="-5" x2="-5" y2="5" stroke="var(--coral)" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <text x="618" y="25" font-family="Barlow Condensed,sans-serif" font-weight="900" font-size="15" fill="var(--coral)" letter-spacing=".06em">INCORRECT &mdash; COLD ENTRY</text>
+
+        <!-- Timeline: Part enters bath → Current ON (too late) -->
+        <text x="870" y="24" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--muted)" text-anchor="middle">Part enters bath &rarr; Current ON (too late)</text>
+
+        <!-- Crossed-out lightning bolt -->
+        <g transform="translate(1040,14)">
+          <polygon points="0,-6 -4,1 0,0 -2,7 4,-1 0,0 2,-6" fill="var(--coral)" opacity=".4"/>
+          <line x1="-6" y1="6" x2="6" y2="-6" stroke="var(--coral)" stroke-width="1.6"/>
+          <text x="10" y="2" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="10" fill="var(--coral)">OFF</text>
+        </g>
+
+        <!-- Cross-section layers -->
+        <!-- Aluminum substrate -->
+        <rect x="620" y="110" width="420" height="32" rx="2" fill="var(--slate)" opacity=".25"/>
+        <text x="830" y="130" font-family="JetBrains Mono,monospace" font-size="11" fill="var(--muted)" text-anchor="middle" letter-spacing=".06em">ALUMINUM SUBSTRATE</text>
+
+        <!-- Zincate layer (dissolving, broken, gaps) -->
+        <rect x="620" y="100" width="80" height="10" rx="1" fill="var(--amber)" opacity=".15" stroke="var(--amber)" stroke-width="1" stroke-dasharray="4 3"/>
+        <rect x="720" y="100" width="60" height="10" rx="1" fill="var(--amber)" opacity=".1" stroke="var(--amber)" stroke-width="1" stroke-dasharray="4 3"/>
+        <rect x="810" y="100" width="50" height="10" rx="1" fill="var(--amber)" opacity=".08" stroke="var(--amber)" stroke-width="1" stroke-dasharray="4 3"/>
+        <rect x="890" y="100" width="70" height="10" rx="1" fill="var(--amber)" opacity=".12" stroke="var(--amber)" stroke-width="1" stroke-dasharray="4 3"/>
+        <rect x="980" y="100" width="50" height="10" rx="1" fill="var(--amber)" opacity=".06" stroke="var(--amber)" stroke-width="1" stroke-dasharray="4 3"/>
+
+        <!-- Dissolution arrows (Zn leaving upward) -->
+        <g stroke="var(--amber)" stroke-width="0.8" opacity=".5">
+          <line x1="710" y1="100" x2="710" y2="85"/><polygon points="707,88 710,82 713,88" fill="var(--amber)" opacity=".5"/>
+          <line x1="790" y1="100" x2="790" y2="88"/><polygon points="787,91 790,85 793,91" fill="var(--amber)" opacity=".5"/>
+          <line x1="870" y1="100" x2="870" y2="83"/><polygon points="867,86 870,80 873,86" fill="var(--amber)" opacity=".5"/>
+          <line x1="970" y1="100" x2="970" y2="87"/><polygon points="967,90 970,84 973,90" fill="var(--amber)" opacity=".5"/>
+        </g>
+        <text x="830" y="68" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="9" fill="var(--amber)" text-anchor="middle" letter-spacing=".04em" opacity=".7">Zn DISSOLVING &uarr; (IMMERSION DISPLACEMENT)</text>
+
+        <!-- Copper nodules (scattered, non-uniform blobs) -->
+        <ellipse cx="645" cy="95" rx="12" ry="7" fill="var(--coral)" opacity=".2" stroke="var(--coral)" stroke-width="1.2"/>
+        <ellipse cx="690" cy="92" rx="8" ry="9" fill="var(--coral)" opacity=".15" stroke="var(--coral)" stroke-width="1.2"/>
+        <ellipse cx="750" cy="94" rx="15" ry="8" fill="var(--coral)" opacity=".2" stroke="var(--coral)" stroke-width="1.2"/>
+        <ellipse cx="830" cy="91" rx="10" ry="10" fill="var(--coral)" opacity=".18" stroke="var(--coral)" stroke-width="1.2"/>
+        <ellipse cx="880" cy="96" rx="6" ry="5" fill="var(--coral)" opacity=".12" stroke="var(--coral)" stroke-width="1.2"/>
+        <ellipse cx="935" cy="93" rx="14" ry="8" fill="var(--coral)" opacity=".2" stroke="var(--coral)" stroke-width="1.2"/>
+        <ellipse cx="1000" cy="95" rx="9" ry="7" fill="var(--coral)" opacity=".15" stroke="var(--coral)" stroke-width="1.2"/>
+
+        <!-- Layer labels (right side) -->
+        <text x="1048" y="97" font-family="JetBrains Mono,monospace" font-size="7" fill="var(--coral)">Cu</text>
+        <text x="1048" y="108" font-family="JetBrains Mono,monospace" font-size="7" fill="var(--amber)" opacity=".5">Zn?</text>
+
+        <!-- Labels below cross-section -->
+        <text x="830" y="155" font-family="Inter,sans-serif" font-size="10" fill="var(--coral)" text-anchor="middle" font-weight="600">Zincate destroyed &bull; Cu porous &amp; non-uniform &bull; Adhesion failure</text>
+
+      </svg>
+    </div>
+
+    <!-- TROUBLESHOOTING -->
+    <div>
+      <h3 class="section-title">Troubleshooting <span class="sub">Copper strike issues</span></h3>
+      <div class="trouble-grid">
+        <div class="trouble-card glass">
+          <h5>Poor Adhesion / Blistering</h5>
+          <p>Parts entered bath without current (cold entry). Zincate dissolved before copper deposited. Verify hot entry procedure. Also check free cyanide &mdash; if too low, immersion deposition can occur even with current.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>Dark or Burned Deposit</h5>
+          <p>Current density too high or free cyanide too low. Reduce current. Check NaCN levels &mdash; free cyanide should be 11&ndash;15 g/L. Also verify temperature is within range.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>No Deposit / Thin Coverage</h5>
+          <p>Copper concentration depleted. Test CuCN level and replenish. Also check electrical connections &mdash; poor contact on the rack will prevent current flow to affected parts.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>Rough Deposit</h5>
+          <p>Carbonate too high (&gt;15 g/L) or particulate contamination. Check Na&#8322;CO&#8323; level. Carbon-treat if organic contamination suspected. Filter solution continuously.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAFETY -->
+    <div class="warn-card glass">
+      <div class="warn-label">&#9888; Safety</div>
+      <div class="warn-text"><strong>CYANIDE BATH &mdash; KCN and NaCN are lethal by ingestion, inhalation, and skin absorption.</strong> This is the first cyanide bath in the process line. <strong>NEVER mix cyanide solutions with acid &mdash; this generates deadly hydrogen cyanide (HCN) gas.</strong> Maintain bath pH &gt;10 at all times. Operate under slot ventilation at minimum 100 fpm face velocity. HCN monitors must be installed and calibrated. Cyanide antidote kit must be accessible within 30 seconds. Wear chemical-resistant gloves, face shield, and apron. Know the location of the emergency shower and eyewash station.</div>
+    </div>
+
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer poster-footer">
+    <p class="footer-disclaimer">Technical reference only. Verify all parameters against your chemistry supplier&rsquo;s TDS, customer specifications, and applicable regulatory requirements before production use.</p>
+    <p class="footer-title">Step 11 &mdash; Copper Cyanide Strike (Hot Entry) &mdash; Al &rarr; Cu &rarr; Ag Busbar Plating Series</p>
+    <span class="footer-brand">Plating Posters Inc &middot; Metal Finishing Reference Series &middot; PP-11-T / v1.0 / 2026</span>
+  </footer>
+
+</div>
+</div>
+</div>
+
+<div class="tweaks">
+  <div style="display:flex;gap:8px;align-items:center;">
+    <span style="color:rgba(240,237,232,.5);font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Edition</span>
+    <button id="btnDark" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:#E8A020;color:#1A1F2E;border:1px solid #E8A020;" onclick="setEdition('')">Dark</button>
+    <button id="btnLight" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:transparent;color:#F0EDE8;border:1px solid rgba(255,255,255,.2);" onclick="setEdition('light')">Light</button>
+  </div>
+  <button onclick="window.print()" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:transparent;color:#F0EDE8;border:1px solid rgba(255,255,255,.2);">Print / PDF</button>
+</div>
+
+<script>
+const posterWrap=document.getElementById('posterWrap');
+const poster=document.getElementById('poster');
+function scalePoster(){const sW=(window.innerWidth-24)/1200;const sH=(window.innerHeight-24)/1800;const s=Math.min(sW,sH);posterWrap.style.transform='scale('+s+')';posterWrap.style.transformOrigin='top center';posterWrap.style.width='1200px';posterWrap.style.height=(1800*s)+'px';}
+function setEdition(e){if(e)poster.dataset.edition=e;else delete poster.dataset.edition;document.getElementById('btnDark').style.background=e?'transparent':'#E8A020';document.getElementById('btnDark').style.color=e?'#F0EDE8':'#1A1F2E';document.getElementById('btnDark').style.borderColor=e?'rgba(255,255,255,.2)':'#E8A020';document.getElementById('btnLight').style.background=e?'#E8A020':'transparent';document.getElementById('btnLight').style.color=e?'#1A1F2E':'#F0EDE8';document.getElementById('btnLight').style.borderColor=e?'#E8A020':'rgba(255,255,255,.2)';}
+scalePoster();window.addEventListener('resize',scalePoster);
+</script>
+</body>
+</html>
