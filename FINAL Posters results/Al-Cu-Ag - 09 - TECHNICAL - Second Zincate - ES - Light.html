@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barra Colectora Al-Cu-Ag &mdash; Paso 09 Segundo Zincado &mdash; T&eacute;cnico | Plating Posters Inc</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Barlow:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#1A1F2E;--navy:#0D1020;--text:#F0EDE8;--muted:rgba(240,237,232,.62);
+  --faint:rgba(240,237,232,.38);
+  --amber:#E8A020;--teal:#2EC4B6;--emerald:#27AE60;--coral:#E05C5C;
+  --slate:#3A4055;--callout:#1E2435;--altrow:#252B3D;
+  --glass-bg:rgba(30,36,53,.55);--glass-border:rgba(255,255,255,.12);
+  --glass-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(0,0,0,.2),0 4px 12px rgba(0,0,0,.25);
+}
+.poster[data-edition="light"]{
+  --bg:#F5F4F0;--navy:#DDD8CE;--text:#1B2030;--muted:rgba(27,32,48,.66);
+  --faint:rgba(27,32,48,.42);
+  --amber:#B8770D;--teal:#1A8C82;--emerald:#1E8449;--coral:#B7322F;
+  --slate:#C5C0B5;--callout:#ECEAE1;--altrow:#E4E1D6;
+  --glass-bg:rgba(255,253,247,.66);--glass-border:rgba(27,32,48,.10);
+  --glass-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 4px 12px rgba(27,32,48,.08);
+}
+html,body{margin:0;padding:0;background:#0a0c14;}
+.stage{width:100vw;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;overflow:visible;padding:12px 0;box-sizing:border-box;}
+.poster-wrap{transform-origin:center center;}
+.poster{
+  width:1200px;height:1800px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(1200px 800px at 15% 8%,rgba(46,196,182,.14),transparent 60%),
+    radial-gradient(1000px 700px at 90% 25%,rgba(232,160,32,.12),transparent 55%),
+    radial-gradient(900px 900px at 50% 80%,rgba(224,92,92,.10),transparent 60%),
+    var(--bg);
+  font-family:'Inter',sans-serif;color:var(--text);
+  display:flex;flex-direction:column;padding:32px;box-sizing:border-box;
+}
+.glass{background-color:var(--glass-bg);background-image:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));border:1px solid var(--glass-border);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:var(--glass-shadow);border-radius:12px;}
+.tack{position:absolute;width:24px;height:24px;border-radius:50%;border:1.5px solid rgba(232,160,32,.28);z-index:2;pointer-events:none;}
+.tack::before,.tack::after{content:"";position:absolute;background:rgba(232,160,32,.28);}
+.tack::before{left:50%;top:-3px;bottom:-3px;width:1px;transform:translateX(-50%);}
+.tack::after{top:50%;left:-3px;right:-3px;height:1px;transform:translateY(-50%);}
+.tack.tl{top:12px;left:12px;}.tack.tr{top:12px;right:12px;}.tack.bl{bottom:12px;left:12px;}.tack.br{bottom:12px;right:12px;}
+.poster-header{flex-shrink:0;}
+.poster-body{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:6px;justify-content:space-between;}
+.poster-footer{flex-shrink:0;margin-top:4px;}
+.header-band{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:8px;}
+.header-left{flex:1;min-width:0;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--amber);letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px;display:flex;align-items:center;gap:12px;}
+.eyebrow::before{content:"";display:inline-block;width:30px;height:3px;background:var(--amber);}
+.headline{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:72px;color:var(--text);line-height:.92;margin:4px 0;letter-spacing:-.01em;text-transform:uppercase;}
+.headline em{font-style:normal;color:var(--amber);}
+.subhead{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;color:var(--teal);margin:0 0 3px;letter-spacing:.02em;text-transform:uppercase;}
+.tagline{font-family:'Inter',sans-serif;font-style:italic;font-size:11px;color:var(--muted);line-height:1.35;max-width:700px;margin:0;}
+.logo-card{flex-shrink:0;padding:12px 10px;display:flex;flex-direction:column;align-items:center;gap:8px;align-self:flex-start;}
+.logo-tile{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,#E8A020,#2EC4B6);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 4px rgba(0,0,0,.15),0 4px 14px rgba(0,0,0,.35);}
+.logo-tile span{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;color:#1A1F2E;letter-spacing:.02em;line-height:1;}
+.logo-word{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em;text-transform:uppercase;line-height:1;text-align:center;white-space:nowrap;}
+.logo-word .a{color:var(--text);}.logo-word .b{color:var(--amber);}
+.logo-inc{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.05em;text-transform:lowercase;color:var(--muted);margin-top:-2px;}
+.orient-strip{display:flex;align-items:center;gap:4px;padding:6px 10px;margin-bottom:0;flex-wrap:wrap;}
+.orient-stage{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:5px 8px;border-radius:5px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;letter-spacing:.05em;text-transform:uppercase;background:rgba(58,64,85,.4);border:1px solid rgba(255,255,255,.06);color:var(--muted);}
+.orient-stage .sn{font-family:'JetBrains Mono',monospace;font-size:7px;opacity:.7;letter-spacing:.08em;}
+.orient-stage.active{background:rgba(232,160,32,.22);border-color:rgba(232,160,32,.5);color:var(--amber);box-shadow:0 0 12px rgba(232,160,32,.15);}
+.orient-arrow{color:var(--faint);font-size:11px;flex:none;}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin:0 0 4px;display:flex;align-items:center;gap:8px;}
+.section-title::before{content:"";width:5px;height:5px;background:var(--amber);border-radius:50%;}
+.section-title .sub{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:var(--muted);margin-left:auto;font-weight:500;}
+.rule-card{display:flex;align-items:center;gap:18px;padding:10px 20px;background:rgba(232,160,32,.07);}
+.rule-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:var(--amber);line-height:1;letter-spacing:-.02em;}
+.rule-body{flex:1;}
+.rule-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;color:var(--amber);letter-spacing:.08em;text-transform:uppercase;}
+.rule-text{font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);line-height:1.4;margin-top:3px;}
+.insight-card{padding:10px 18px;border-left:3px solid var(--teal);background:rgba(46,196,182,.06);border-radius:0 12px 12px 0;}
+.insight-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.insight-text{font-family:'Inter',sans-serif;font-size:12px;color:var(--text);line-height:1.5;}
+.data-table{width:100%;border-collapse:collapse;}
+.data-table th{font-family:'Barlow',sans-serif;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);padding:6px 12px;text-align:left;background:rgba(13,16,32,.35);border-bottom:1px solid var(--glass-border);}
+.poster[data-edition="light"] .data-table th{background:rgba(27,32,48,.06);}
+.data-table td{padding:5px 12px;color:var(--text);line-height:1.35;border-bottom:1px solid rgba(255,255,255,.05);font-family:'Inter',sans-serif;font-size:11.5px;}
+.data-table tr:last-child td{border-bottom:none;}
+.data-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+.poster[data-edition="light"] .data-table tr:nth-child(even) td{background:rgba(27,32,48,.025);}
+.data-table .mono{font-family:'JetBrains Mono',monospace;font-size:11px;}
+.warn-card{padding:10px 18px;border-left:3px solid var(--coral);background:rgba(224,92,92,.06);border-radius:0 12px 12px 0;}
+.warn-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;color:var(--coral);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.warn-text{font-family:'Inter',sans-serif;font-size:12px;color:var(--text);line-height:1.5;}
+.warn-text strong{color:var(--coral);font-weight:700;}
+.trouble-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.trouble-card{padding:8px 14px;border-radius:10px;border-left:3px solid var(--coral);display:flex;flex-direction:column;gap:3px;}
+.trouble-card h5{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;color:var(--coral);margin:0;text-transform:uppercase;letter-spacing:.06em;line-height:1.1;}
+.trouble-card p{font-size:10.5px;color:var(--muted);margin:0;line-height:1.35;}
+.context-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.context-card{padding:10px 16px;}
+.context-card h4{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;margin:0 0 4px;letter-spacing:.04em;text-transform:uppercase;}
+.context-card h4.teal{color:var(--teal);}
+.context-card h4.amber{color:var(--amber);}
+.context-card h4.coral{color:var(--coral);}
+.context-card p{font-size:11px;line-height:1.4;color:var(--text);margin:0;}
+.context-card .detail{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-top:4px;}
+
+.footer{padding:10px 20px;background-color:rgba(13,16,32,.85);background-image:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,0));border:1px solid rgba(255,255,255,.10);border-radius:8px;text-align:center;display:flex;flex-direction:column;gap:2px;}
+.poster[data-edition="light"] .footer{background-color:rgba(221,216,206,.95);border-color:rgba(27,32,48,.10);}
+.footer-disclaimer{font-family:'Inter',sans-serif;font-size:8.5px;line-height:1.35;color:var(--faint);margin:0 auto;max-width:900px;}
+.footer-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;color:var(--text);letter-spacing:.04em;text-transform:uppercase;margin:0;}
+.footer-brand{font-family:'JetBrains Mono',monospace;font-size:8.5px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;}
+.tweaks{position:fixed;bottom:16px;right:16px;z-index:100;background:rgba(13,16,32,.92);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:10px 14px;display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:#F0EDE8;}
+@media print{
+  @page{size:12.5in 18.75in;margin:0;}
+  html,body{background:#1A1F2E !important;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+  *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+  .stage{position:static;padding:0;display:block;overflow:visible;}
+  .poster-wrap{transform:none !important;width:auto !important;height:auto !important;}
+  .poster{box-shadow:none !important;width:1200px !important;height:1800px !important;overflow:hidden !important;}
+  .glass,.trouble-card,.insight-card,.warn-card,.context-card{backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}
+  .tweaks{display:none !important;}
+}
+</style>
+</head>
+<body>
+<div class="stage">
+<div class="poster-wrap" id="posterWrap">
+<div class="poster" id="poster" data-edition="light">
+  <span class="tack tl" aria-hidden="true"></span><span class="tack tr" aria-hidden="true"></span>
+  <span class="tack bl" aria-hidden="true"></span><span class="tack br" aria-hidden="true"></span>
+
+  <div class="poster-header">
+    <header class="header-band">
+      <div class="header-left">
+        <div class="eyebrow"><span>Plating Posters Inc &nbsp;&middot;&nbsp; Serie Barra Colectora Al-Cu-Ag &nbsp;&middot;&nbsp; Paso 09 de 19</span></div>
+        <h1 class="headline">SEGUNDO<br><em>ZINCADO</em></h1>
+        <h2 class="subhead">Doble Zincado &mdash; La Capa de Confiabilidad de Adhesi&oacute;n</h2>
+        <p class="tagline">El segundo zincado es m&aacute;s delgado pero dr&aacute;sticamente m&aacute;s uniforme que el primero. Esto es lo que le da al proceso de doble zincado su confiabilidad de adhesi&oacute;n. La adhesi&oacute;n con un solo zincado es inconsistente &mdash; este paso es obligatorio para recubrimiento cr&iacute;tico de aluminio.</p>
+      </div>
+      <aside class="glass logo-card">
+        <div class="logo-tile"><span>PP</span></div>
+        <div class="logo-word"><span class="a">Plating</span> <span class="b">Posters</span></div>
+        <div class="logo-inc">www.platingposters.com</div>
+      </aside>
+    </header>
+
+    <div class="orient-strip glass">
+      <div class="orient-stage"><span class="sn">01</span>Limp</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">02</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">03</span>Ataq</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">04</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">05</span>Zinc&nbsp;1</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">06</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">07</span>Decap</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">08</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage active"><span class="sn">09</span>Zinc&nbsp;2</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">10</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">11</span>CuGol</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">12</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">13</span>CuEnch</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">14</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">15</span>AgGol</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">16</span>AgEnch</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">17</span>Enj</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">18</span>A-Des</div><div class="orient-arrow">&rsaquo;</div>
+      <div class="orient-stage"><span class="sn">19</span>Sec</div>
+    </div>
+  </div>
+
+  <div class="poster-body">
+
+    <div class="glass rule-card">
+      <div class="rule-num">0.10&ndash;0.25&nbsp;&micro;m</div>
+      <div class="rule-body">
+        <div class="rule-label">M&aacute;s Delgado Que el Primero, M&aacute;s Uniforme &mdash; Esta Es la Capa de Adhesi&oacute;n</div>
+        <div class="rule-text">El dep&oacute;sito del segundo zincado es aproximadamente la mitad del espesor del primero (0.10&ndash;0.25 vs. 0.25&ndash;0.50 &micro;m) pero tiene una estructura de grano dr&aacute;sticamente m&aacute;s fina y mejor uniformidad. El tiempo de inmersi&oacute;n es m&aacute;s corto (15&ndash;30 segundos vs. 30&ndash;60). El primer zincado acondicion&oacute; la superficie; el segundo proporciona la base real de adhesi&oacute;n para todas las capas superiores.</div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="section-title">Qu&iacute;mica del Ba&ntilde;o <span class="sub">Mismo ba&ntilde;o que el Paso 5</span></h3>
+      <div class="glass" style="padding:0;overflow:hidden;border-radius:10px;">
+        <table class="data-table">
+          <thead><tr><th>Componente</th><th>Concentraci&oacute;n</th><th>Funci&oacute;n</th></tr></thead>
+          <tbody>
+            <tr><td>Hidr&oacute;xido de Sodio (NaOH)</td><td class="mono">120&ndash;150 g/L (16&ndash;20 oz/gal)</td><td>Disuelve el Al&#8322;O&#8323; nativo para exponer aluminio desnudo para desplazamiento de zinc</td></tr>
+            <tr><td>&Oacute;xido de Zinc (ZnO)</td><td class="mono">20&ndash;30 g/L (2.7&ndash;4.0 oz/gal)</td><td>Fuente de zinc &mdash; se deposita por reacci&oacute;n de desplazamiento por inmersi&oacute;n</td></tr>
+            <tr><td>Sal de Rochelle (KNaC&#8324;H&#8324;O&#8326;)</td><td class="mono">45&ndash;55 g/L (6.0&ndash;7.3 oz/gal)</td><td>Agente complejante &mdash; controla la tasa de deposici&oacute;n de zinc y la estructura de grano</td></tr>
+            <tr><td>Nitrato de Sodio (NaNO&#8323;)</td><td class="mono">1&ndash;2 g/L (opcional)</td><td>Refinador de grano &mdash; promueve un dep&oacute;sito de zinc m&aacute;s fino y uniforme</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="section-title">Par&aacute;metros de Operaci&oacute;n <span class="sub">Proceso por inmersi&oacute;n &mdash; sin corriente</span></h3>
+      <div class="glass" style="padding:0;overflow:hidden;border-radius:10px;">
+        <table class="data-table">
+          <thead><tr><th>Par&aacute;metro</th><th>Valor</th><th>Notas</th></tr></thead>
+          <tbody>
+            <tr><td>Temperatura</td><td class="mono">18&ndash;27&deg;C (65&ndash;80&deg;F)</td><td>Temperatura ambiente &mdash; mismo ba&ntilde;o que el Paso 5</td></tr>
+            <tr><td>Tiempo de Inmersi&oacute;n</td><td class="mono">15&ndash;30 segundos</td><td>M&Aacute;S CORTO que el primer zincado (30&ndash;60s). No sobre-sumerja.</td></tr>
+            <tr><td>Agitaci&oacute;n</td><td class="mono">Mec&aacute;nica suave o movimiento de piezas</td><td>Suave &mdash; agitaci&oacute;n excesiva interrumpe la deposici&oacute;n uniforme de zinc</td></tr>
+            <tr><td>Apariencia (Buena)</td><td class="mono">Muy delgado, gris claro uniforme</td><td>M&aacute;s claro y m&aacute;s uniforme que el primer zincado. Estructura de grano m&aacute;s fina.</td></tr>
+            <tr><td>Espesor del Dep&oacute;sito</td><td class="mono">0.10&ndash;0.25 &micro;m</td><td>M&aacute;s delgado que el primer zincado (0.25&ndash;0.50 &micro;m) &mdash; esto es correcto</td></tr>
+            <tr><td>pH</td><td class="mono">&gt;13</td><td>Fuertemente alcalino &mdash; NaOH mantenido en rango operativo</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="context-grid">
+      <div class="context-card glass">
+        <h4 class="amber">Primer Zincado (Paso 5)</h4>
+        <p>Inmersi&oacute;n 30&ndash;60 segundos. Espesor del dep&oacute;sito 0.25&ndash;0.50 &micro;m. Apariencia: gris medio. Estructura cristalina m&aacute;s gruesa. Prop&oacute;sito: acondicionar la superficie de aluminio y eliminar &oacute;xido residual. Se retira en el Paso 7.</p>
+        <div class="detail">Dep&oacute;sito m&aacute;s grueso, grano m&aacute;s grueso &mdash; solo capa de acondicionamiento.</div>
+      </div>
+      <div class="context-card glass">
+        <h4 class="teal">Segundo Zincado (Paso 9 &mdash; Este Paso)</h4>
+        <p>Inmersi&oacute;n 15&ndash;30 segundos. Espesor del dep&oacute;sito 0.10&ndash;0.25 &micro;m. Apariencia: muy delgado, gris claro uniforme. Estructura cristalina mucho m&aacute;s fina. Prop&oacute;sito: proporcionar la base real de adhesi&oacute;n para cobre y plata. Esta capa permanece permanentemente.</p>
+        <div class="detail">Dep&oacute;sito m&aacute;s delgado, grano m&aacute;s fino &mdash; la verdadera capa de adhesi&oacute;n.</div>
+      </div>
+    </div>
+
+    <!-- DOUBLE-ZINCATE SURFACE EVOLUTION -->
+    <div class="glass" style="padding:16px 20px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);text-align:center;margin-bottom:8px;">Evoluci&oacute;n Superficial del Doble Zincado</div>
+      <svg viewBox="0 0 1100 175" width="100%" height="175" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+
+        <!-- ===== PANEL 1: After First Zincate ===== -->
+        <rect x="20" y="28" width="310" height="120" rx="8" stroke="var(--slate)" stroke-width="1" stroke-dasharray="4 3" opacity=".4"/>
+
+        <!-- Aluminum substrate -->
+        <rect x="50" y="88" width="250" height="32" rx="2" fill="var(--slate)" opacity=".25"/>
+        <text x="175" y="108" font-family="JetBrains Mono,monospace" font-size="11" fill="var(--muted)" text-anchor="middle" letter-spacing=".06em">ALUMINIO</text>
+
+        <!-- Irregular zinc layer (coarse, uneven blobs) -->
+        <path d="M50,88 L50,72 Q60,65 75,74 Q85,68 100,76 Q108,62 125,70 Q140,64 155,75 Q165,60 185,72 Q200,66 215,76 Q225,62 245,70 Q260,65 275,74 Q290,68 300,72 L300,88Z" fill="var(--amber)" opacity=".3" stroke="var(--amber)" stroke-width="1.4"/>
+        <!-- Grain texture (large irregular shapes = coarse) -->
+        <circle cx="80" cy="78" r="4" stroke="var(--amber)" stroke-width="0.8" fill="none" opacity=".5"/>
+        <circle cx="120" cy="74" r="5" stroke="var(--amber)" stroke-width="0.8" fill="none" opacity=".5"/>
+        <circle cx="165" cy="70" r="6" stroke="var(--amber)" stroke-width="0.8" fill="none" opacity=".5"/>
+        <circle cx="210" cy="76" r="4.5" stroke="var(--amber)" stroke-width="0.8" fill="none" opacity=".5"/>
+        <circle cx="255" cy="72" r="5" stroke="var(--amber)" stroke-width="0.8" fill="none" opacity=".5"/>
+
+        <!-- Labels -->
+        <text x="175" y="44" font-family="Barlow Condensed,sans-serif" font-weight="900" font-size="15" fill="var(--amber)" text-anchor="middle">DESPU&Eacute;S DEL PRIMER ZINCADO</text>
+        <text x="175" y="57" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--muted)" text-anchor="middle">Paso 5 &bull; 0.25&ndash;0.50 &micro;m</text>
+
+        <!-- Callout -->
+        <text x="175" y="138" font-family="Inter,sans-serif" font-size="10" fill="var(--coral)" text-anchor="middle" font-weight="600">Nucleaci&oacute;n gruesa, no uniforme</text>
+
+        <!-- ===== ARROW 1→2 ===== -->
+        <line x1="335" y1="85" x2="385" y2="85" stroke="var(--amber)" stroke-width="1.6"/>
+        <polygon points="382,80 392,85 382,90" fill="var(--amber)"/>
+        <text x="363" y="77" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="9" fill="var(--coral)" text-anchor="middle" letter-spacing=".04em">DECAPADO</text>
+
+        <!-- ===== PANEL 2: After Nitric Strip ===== -->
+        <rect x="395" y="28" width="310" height="120" rx="8" stroke="var(--slate)" stroke-width="1" stroke-dasharray="4 3" opacity=".4"/>
+
+        <!-- Aluminum substrate (smoother, micro-etched) -->
+        <rect x="425" y="88" width="250" height="32" rx="2" fill="var(--slate)" opacity=".25"/>
+        <text x="550" y="108" font-family="JetBrains Mono,monospace" font-size="11" fill="var(--muted)" text-anchor="middle" letter-spacing=".06em">ALUMINIO</text>
+
+        <!-- Micro-etched surface (stippled dots showing activation sites) -->
+        <g fill="var(--teal)" opacity=".5">
+          <circle cx="432" cy="86" r="1.2"/><circle cx="440" cy="87" r="1"/><circle cx="448" cy="85" r="1.3"/>
+          <circle cx="456" cy="87" r="1.1"/><circle cx="464" cy="86" r="1.2"/><circle cx="472" cy="85" r="1"/>
+          <circle cx="480" cy="87" r="1.3"/><circle cx="488" cy="86" r="1.1"/><circle cx="496" cy="85" r="1.2"/>
+          <circle cx="504" cy="87" r="1"/><circle cx="512" cy="86" r="1.3"/><circle cx="520" cy="85" r="1.1"/>
+          <circle cx="528" cy="87" r="1.2"/><circle cx="536" cy="86" r="1"/><circle cx="544" cy="85" r="1.3"/>
+          <circle cx="552" cy="87" r="1.1"/><circle cx="560" cy="86" r="1.2"/><circle cx="568" cy="85" r="1"/>
+          <circle cx="576" cy="87" r="1.3"/><circle cx="584" cy="86" r="1.1"/><circle cx="592" cy="85" r="1.2"/>
+          <circle cx="600" cy="87" r="1"/><circle cx="608" cy="86" r="1.3"/><circle cx="616" cy="85" r="1.1"/>
+          <circle cx="624" cy="87" r="1.2"/><circle cx="632" cy="86" r="1"/><circle cx="640" cy="85" r="1.3"/>
+          <circle cx="648" cy="87" r="1.1"/><circle cx="656" cy="86" r="1.2"/><circle cx="664" cy="85" r="1"/>
+        </g>
+        <!-- Surface line (smooth) -->
+        <line x1="425" y1="88" x2="675" y2="88" stroke="var(--teal)" stroke-width="1.4" opacity=".6"/>
+
+        <!-- Labels -->
+        <text x="550" y="44" font-family="Barlow Condensed,sans-serif" font-weight="900" font-size="15" fill="var(--coral)" text-anchor="middle">DESPU&Eacute;S DEL DECAPADO N&Iacute;TRICO</text>
+        <text x="550" y="57" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--muted)" text-anchor="middle">Paso 7 &bull; Zinc eliminado</text>
+
+        <!-- No zinc label -->
+        <text x="550" y="78" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="11" fill="var(--teal)" text-anchor="middle" letter-spacing=".04em" opacity=".7">SIN ZINC &mdash; Al ACTIVADO DESNUDO</text>
+
+        <!-- Callout -->
+        <text x="550" y="138" font-family="Inter,sans-serif" font-size="10" fill="var(--teal)" text-anchor="middle" font-weight="600">Superficie acondicionada &bull; sitios de activaci&oacute;n uniformes</text>
+
+        <!-- ===== ARROW 2→3 ===== -->
+        <line x1="710" y1="85" x2="760" y2="85" stroke="var(--amber)" stroke-width="1.6"/>
+        <polygon points="757,80 767,85 757,90" fill="var(--amber)"/>
+        <text x="738" y="77" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="9" fill="var(--amber)" text-anchor="middle" letter-spacing=".04em">ZINCADO</text>
+
+        <!-- ===== PANEL 3: After Second Zincate ===== -->
+        <rect x="770" y="28" width="310" height="120" rx="8" stroke="var(--slate)" stroke-width="1" stroke-dasharray="4 3" opacity=".4"/>
+
+        <!-- Aluminum substrate -->
+        <rect x="800" y="88" width="250" height="32" rx="2" fill="var(--slate)" opacity=".25"/>
+        <text x="925" y="108" font-family="JetBrains Mono,monospace" font-size="11" fill="var(--muted)" text-anchor="middle" letter-spacing=".06em">ALUMINIO</text>
+
+        <!-- Thin, uniform zinc layer (flat, even band) -->
+        <rect x="800" y="80" width="250" height="8" rx="1" fill="var(--emerald)" opacity=".25" stroke="var(--emerald)" stroke-width="1.4"/>
+        <!-- Fine grain texture (small uniform dots) -->
+        <g fill="var(--emerald)" opacity=".5">
+          <circle cx="808" cy="84" r="1"/><circle cx="815" cy="84" r="1"/><circle cx="822" cy="84" r="1"/>
+          <circle cx="829" cy="84" r="1"/><circle cx="836" cy="84" r="1"/><circle cx="843" cy="84" r="1"/>
+          <circle cx="850" cy="84" r="1"/><circle cx="857" cy="84" r="1"/><circle cx="864" cy="84" r="1"/>
+          <circle cx="871" cy="84" r="1"/><circle cx="878" cy="84" r="1"/><circle cx="885" cy="84" r="1"/>
+          <circle cx="892" cy="84" r="1"/><circle cx="899" cy="84" r="1"/><circle cx="906" cy="84" r="1"/>
+          <circle cx="913" cy="84" r="1"/><circle cx="920" cy="84" r="1"/><circle cx="927" cy="84" r="1"/>
+          <circle cx="934" cy="84" r="1"/><circle cx="941" cy="84" r="1"/><circle cx="948" cy="84" r="1"/>
+          <circle cx="955" cy="84" r="1"/><circle cx="962" cy="84" r="1"/><circle cx="969" cy="84" r="1"/>
+          <circle cx="976" cy="84" r="1"/><circle cx="983" cy="84" r="1"/><circle cx="990" cy="84" r="1"/>
+          <circle cx="997" cy="84" r="1"/><circle cx="1004" cy="84" r="1"/><circle cx="1011" cy="84" r="1"/>
+          <circle cx="1018" cy="84" r="1"/><circle cx="1025" cy="84" r="1"/><circle cx="1032" cy="84" r="1"/>
+          <circle cx="1039" cy="84" r="1"/>
+        </g>
+
+        <!-- Labels -->
+        <text x="925" y="44" font-family="Barlow Condensed,sans-serif" font-weight="900" font-size="15" fill="var(--emerald)" text-anchor="middle">DESPU&Eacute;S DEL SEGUNDO ZINCADO</text>
+        <text x="925" y="57" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--muted)" text-anchor="middle">Paso 9 &bull; 0.10&ndash;0.25 &micro;m</text>
+
+        <!-- Callout -->
+        <text x="925" y="138" font-family="Inter,sans-serif" font-size="10" fill="var(--emerald)" text-anchor="middle" font-weight="600">Capa de adhesi&oacute;n uniforme, de grano fino</text>
+
+        <!-- ===== BOTTOM LABEL ===== -->
+        <text x="550" y="170" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="12" fill="var(--text)" text-anchor="middle" letter-spacing=".06em" opacity=".7">POR QU&Eacute; FUNCIONA EL DOBLE ZINCADO: EL ACONDICIONAMIENTO PRODUCE NUCLEACI&Oacute;N SUPERIOR</text>
+
+        <!-- Dimension lines showing thickness comparison -->
+        <line x1="310" y1="70" x2="310" y2="88" stroke="var(--amber)" stroke-width="1" opacity=".6"/>
+        <line x1="306" y1="70" x2="314" y2="70" stroke="var(--amber)" stroke-width="1" opacity=".6"/>
+        <line x1="306" y1="88" x2="314" y2="88" stroke="var(--amber)" stroke-width="1" opacity=".6"/>
+        <line x1="1060" y1="80" x2="1060" y2="88" stroke="var(--emerald)" stroke-width="1" opacity=".6"/>
+        <line x1="1056" y1="80" x2="1064" y2="80" stroke="var(--emerald)" stroke-width="1" opacity=".6"/>
+        <line x1="1056" y1="88" x2="1064" y2="88" stroke="var(--emerald)" stroke-width="1" opacity=".6"/>
+
+        <!-- Checkmark on panel 3 -->
+        <g transform="translate(1055,42)">
+          <circle cx="0" cy="0" r="10" stroke="var(--emerald)" stroke-width="1.4" fill="none"/>
+          <polyline points="-5,0 -2,4 6,-5" stroke="var(--emerald)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+
+      </svg>
+    </div>
+
+    <div class="insight-card glass">
+      <div class="insight-label">Por Qu&eacute; el Segundo Zincado Es Superior</div>
+      <div class="insight-text">El primer ciclo de zincado (Pasos 5&ndash;7) acondiciona la superficie de aluminio desplazando &oacute;xido residual y creando una topograf&iacute;a superficial microsc&oacute;picamente uniforme. Cuando esta primera capa de zinc se retira, el aluminio expuesto es mucho m&aacute;s receptivo al desplazamiento de zinc que el aluminio virgen. El segundo zincado nuclea m&aacute;s uniformemente, con tama&ntilde;o de cristal m&aacute;s fino y menos vac&iacute;os. Esto se traduce directamente en mejor adhesi&oacute;n: el golpe de cobre (Paso 11) se une a una intercapa de zinc continua y de grano fino en lugar de una gruesa y potencialmente porosa.</div>
+    </div>
+
+    <div>
+      <h3 class="section-title">Soluci&oacute;n de Problemas <span class="sub">Problemas del segundo zincado</span></h3>
+      <div class="trouble-grid">
+        <div class="trouble-card glass">
+          <h5>El Dep&oacute;sito Se Ve Como el Primer Zincado</h5>
+          <p>Sobre-inmersi&oacute;n (demasiado tiempo en el tanque). El segundo zincado debe ser m&aacute;s claro y m&aacute;s delgado que el primero. Reduzca el tiempo hacia 15 segundos. Si el dep&oacute;sito es tan grueso como el primero, el acondicionamiento superficial del ciclo de decapado se est&aacute; anulando.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>&Aacute;reas Desnudas o Cobertura Incompleta</h5>
+          <p>&Oacute;xido reformado entre el decapado y este paso. Las piezas probablemente se secaron al aire durante la transferencia. Verifique que el tiempo de transferencia desde el enjuague (Paso 8) sea menor a 30 segundos sin exposici&oacute;n al aire. Puede necesitar volver a decapar y reprocesar desde el Paso 7.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>Manchas Oscuras o Decoloraci&oacute;n</h5>
+          <p>Contaminaci&oacute;n del ba&ntilde;o de zincado (hierro, arrastre de cobre). Misma soluci&oacute;n de problemas que el Paso 5. Trate el ba&ntilde;o con carb&oacute;n. Verifique la integridad del enjuague aguas arriba. Tambi&eacute;n verifique que el arrastre de &aacute;cido del enjuague del Paso 8 no est&eacute; deprimiendo el pH local.</p>
+        </div>
+        <div class="trouble-card glass">
+          <h5>Cobre o Plata Se Despega (Pasos 11+)</h5>
+          <p>Falla de adhesi&oacute;n del segundo zincado. Verifique que el doble zincado se haya realizado realmente (no simple). Confirme que el decapado (Paso 7) fue completo. Confirme que el segundo zincado fue delgado y uniforme. Verifique entrada en caliente en el golpe de cobre.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="warn-card glass">
+      <div class="warn-label">&#9888; Seguridad</div>
+      <div class="warn-text"><strong>La soluci&oacute;n de zincado es fuertemente alcalina (NaOH 120&ndash;150 g/L, pH &gt;13).</strong> Causa quemaduras qu&iacute;micas severas al contacto. Use careta facial, guantes resistentes a qu&iacute;micos, delantal y botas de goma. Si la soluci&oacute;n contacta la piel, enjuague inmediatamente con agua durante 15 minutos. <strong>El contacto con los ojos es una emergencia m&eacute;dica</strong> &mdash; enjuague con agua y busque atenci&oacute;n m&eacute;dica inmediata. Mantenga ventilaci&oacute;n de ranura en el tanque de zincado.</div>
+    </div>
+
+
+  </div>
+
+  <footer class="footer poster-footer">
+    <p class="footer-disclaimer">Referencia t&eacute;cnica &uacute;nicamente. Verifique todos los par&aacute;metros con la hoja t&eacute;cnica de su proveedor de productos qu&iacute;micos, las especificaciones del cliente y los requisitos reglamentarios aplicables antes de su uso en producci&oacute;n.</p>
+    <p class="footer-title">Paso 09 &mdash; Segundo Zincado (Doble Zincado) &mdash; Serie de Recubrimiento de Barra Colectora Al &rarr; Cu &rarr; Ag</p>
+    <span class="footer-brand">Plating Posters Inc &middot; Serie de Referencia de Acabado de Metales &middot; PP-09-T / v1.0 / 2026</span>
+  </footer>
+
+</div>
+</div>
+</div>
+
+<div class="tweaks">
+  <div style="display:flex;gap:8px;align-items:center;">
+    <span style="color:rgba(240,237,232,.5);font-size:11px;letter-spacing:.06em;text-transform:uppercase;">Edici&oacute;n</span>
+    <button id="btnDark" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:#E8A020;color:#1A1F2E;border:1px solid #E8A020;" onclick="setEdition('')">Dark</button>
+    <button id="btnLight" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:transparent;color:#F0EDE8;border:1px solid rgba(255,255,255,.2);" onclick="setEdition('light')">Light</button>
+  </div>
+  <button onclick="window.print()" style="padding:4px 11px;border-radius:5px;cursor:pointer;font-size:11px;background:transparent;color:#F0EDE8;border:1px solid rgba(255,255,255,.2);">Imprimir / PDF</button>
+</div>
+
+<script>
+const posterWrap=document.getElementById('posterWrap');
+const poster=document.getElementById('poster');
+function scalePoster(){const sW=(window.innerWidth-24)/1200;const sH=(window.innerHeight-24)/1800;const s=Math.min(sW,sH);posterWrap.style.transform='scale('+s+')';posterWrap.style.transformOrigin='top center';posterWrap.style.width='1200px';posterWrap.style.height=(1800*s)+'px';}
+function setEdition(e){if(e)poster.dataset.edition=e;else delete poster.dataset.edition;document.getElementById('btnDark').style.background=e?'transparent':'#E8A020';document.getElementById('btnDark').style.color=e?'#F0EDE8':'#1A1F2E';document.getElementById('btnDark').style.borderColor=e?'rgba(255,255,255,.2)':'#E8A020';document.getElementById('btnLight').style.background=e?'#E8A020':'transparent';document.getElementById('btnLight').style.color=e?'#1A1F2E':'#F0EDE8';document.getElementById('btnLight').style.borderColor=e?'#E8A020':'rgba(255,255,255,.2)';}
+scalePoster();window.addEventListener('resize',scalePoster);
+</script>
+</body>
+</html>
