@@ -23,7 +23,7 @@ html,body{margin:0;padding:0;background:#0a0c14;}.stage{width:100vw;height:100vh
 .compare-row{display:flex;gap:10px;}.compare-card{flex:1;padding:10px 12px;}.compare-head{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px;display:flex;align-items:center;gap:8px;}.compare-head.good{color:var(--emerald);}.compare-head.bad{color:var(--coral);}.compare-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:3px;}.compare-list li{font-size:11px;line-height:1.4;display:flex;gap:6px;align-items:flex-start;}.compare-list li::before{content:"";width:5px;height:5px;border-radius:50%;margin-top:5px;flex-shrink:0;}.compare-card.do .compare-list li::before{background:var(--emerald);}.compare-card.dont .compare-list li::before{background:var(--coral);}
 .trouble-table{width:100%;border-collapse:collapse;}.trouble-table th{font-family:'Barlow',sans-serif;font-weight:700;font-size:9px;color:var(--amber);letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;text-align:left;border-bottom:1px solid var(--glass-border);}.trouble-table td{font-family:'Inter',sans-serif;font-weight:500;font-size:10.5px;color:var(--text);padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.05);line-height:1.3;}.trouble-table td.muted{color:var(--muted);}.trouble-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}.poster[data-edition="light"] .trouble-table tr:nth-child(even) td{background:rgba(27,32,48,.025);}
 .safety-card{padding:10px 14px;background:rgba(224,92,92,.06);border-radius:12px;}.safety-text{font-family:'Inter',sans-serif;font-weight:500;font-size:11px;color:var(--text);line-height:1.4;}.safety-text strong{font-weight:700;color:var(--coral);}
-.next-banner{display:flex;align-items:center;gap:12px;padding:8px 14px;border-radius:999px;background:rgba(46,196,182,.08);border:1px solid rgba(46,196,182,.2);}.next-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;color:var(--teal);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;}.next-text{font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);}
+
 .footer-panel{padding:8px 18px;text-align:center;border-radius:10px;}.footer-disclaimer{font-family:'Inter',sans-serif;font-weight:400;font-size:9px;color:var(--muted);line-height:1.4;margin-bottom:3px;}.footer-title{font-family:'Barlow',sans-serif;font-weight:600;font-size:11px;color:var(--text);margin-bottom:2px;}.footer-brand{font-family:'JetBrains Mono',monospace;font-size:8.5px;color:var(--muted);}
 @media print{@page{size:9.375in 12.5in;margin:0;}html,body{background:#1A1F2E !important;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}*{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}.stage{position:static;display:block;overflow:visible;}.poster-wrap{transform:none !important;width:auto !important;height:auto !important;}.poster{box-shadow:none !important;width:900px !important;height:1200px !important;overflow:hidden !important;}.glass,.safety-card,.compare-card{backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}.tweaks{display:none !important;}}
 </style>
@@ -115,11 +115,6 @@ html,body{margin:0;padding:0;background:#0a0c14;}.stage{width:100vw;height:100vh
     <div class="glass safety-card">
       <div class="section-title coral">&#9888; Seguridad</div>
       <div class="safety-text"><strong>NaOH caliente (pH &gt;13) &mdash; quemaduras severas.</strong> Gas H&#x2082; en el c&aacute;todo es inflamable &mdash; no llamas a menos de 3 ft. Rectificador = alto amperaje &mdash; riesgo de descarga/arco el&eacute;ctrico. <strong>LOTO para cualquier trabajo en el rectificador.</strong> Lentes + careta, guantes qu&iacute;micos hasta el codo, mandil, botas qu&iacute;micas.</div>
-    </div>
-
-    <div class="next-banner">
-      <div class="next-label">Siguiente &rarr; Paso 06</div>
-      <div class="next-text">Enjuague &mdash; retire el arrastre c&aacute;ustico de inmediato. El residuo mancha el zinc y arruina el pasivado.</div>
     </div>
 
   </div>
