@@ -117,33 +117,26 @@ html,body{margin:0;padding:0;background:#0a0c14;}
 
     <!-- SVG: Diagrama de Flujo de Enjuague en Contracorriente -->
     <div class="svg-diagram">
-      <svg viewBox="0 0 280 100" width="280" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Tanque sucio -->
-        <rect x="10" y="20" width="110" height="60" rx="6" stroke="var(--muted)" stroke-width="1.6" fill="none"/>
-        <text x="65" y="16" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="10" fill="var(--muted)" letter-spacing=".06em">ETAPA SUCIA</text>
-        <!-- Llenado de agua -->
-        <rect x="12" y="38" width="106" height="40" rx="4" fill="var(--teal)" opacity=".08"/>
-        <!-- Tanque limpio -->
-        <rect x="160" y="20" width="110" height="60" rx="6" stroke="var(--teal)" stroke-width="1.6" fill="none"/>
-        <text x="215" y="16" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="10" fill="var(--teal)" letter-spacing=".06em">ETAPA LIMPIA</text>
-        <rect x="162" y="38" width="106" height="40" rx="4" fill="var(--teal)" opacity=".12"/>
-        <!-- Flecha de flujo de piezas (izquierda a derecha, teal) -->
-        <line x1="30" y1="42" x2="250" y2="42" stroke="var(--teal)" stroke-width="1.6" stroke-dasharray="6 3" marker-end="url(#arrParts02)"/>
-        <text x="140" y="38" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--teal)">FLUJO DE PIEZAS</text>
-        <!-- Flecha de flujo de agua (derecha a izquierda, blue/amber) -->
-        <line x1="250" y1="62" x2="30" y2="62" stroke="var(--amber)" stroke-width="1.6" stroke-dasharray="6 3" marker-end="url(#arrWater02)"/>
-        <text x="140" y="74" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--amber)">AGUA LIMPIA ENTRA</text>
-        <!-- Flecha de drenaje -->
-        <line x1="10" y1="85" x2="10" y2="96" stroke="var(--coral)" stroke-width="1.4" marker-end="url(#arrDrain02)"/>
-        <text x="14" y="98" font-family="JetBrains Mono,monospace" font-size="7" fill="var(--coral)">DRENAJE</text>
-        <!-- Agua fresca entra -->
-        <line x1="270" y1="55" x2="270" y2="44" stroke="var(--amber)" stroke-width="1.4" marker-end="url(#arrFresh02)"/>
-        <text x="270" y="66" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="var(--amber)">FRESCA</text>
+      <svg viewBox="0 0 1100 120" width="100%" height="auto" style="display:block;" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="24" width="440" height="72" rx="8" stroke="var(--muted)" stroke-width="1.8" fill="none"/>
+        <text x="260" y="18" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="16" fill="var(--muted)" letter-spacing=".08em">ETAPA SUCIA</text>
+        <rect x="43" y="46" width="434" height="48" rx="5" fill="var(--teal)" opacity=".08"/>
+        <rect x="620" y="24" width="440" height="72" rx="8" stroke="var(--teal)" stroke-width="1.8" fill="none"/>
+        <text x="840" y="18" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="16" fill="var(--teal)" letter-spacing=".08em">ETAPA LIMPIA</text>
+        <rect x="623" y="46" width="434" height="48" rx="5" fill="var(--teal)" opacity=".12"/>
+        <line x1="100" y1="52" x2="1000" y2="52" stroke="var(--teal)" stroke-width="2" stroke-dasharray="8 4" marker-end="url(#arrParts02)"/>
+        <text x="550" y="46" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="14" fill="var(--teal)" letter-spacing=".06em">FLUJO DE PIEZAS &#x2192;</text>
+        <line x1="1000" y1="76" x2="100" y2="76" stroke="var(--amber)" stroke-width="2" stroke-dasharray="8 4" marker-end="url(#arrWater02)"/>
+        <text x="550" y="90" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="14" fill="var(--amber)" letter-spacing=".06em">&#x2190; ENTRADA AGUA LIMPIA</text>
+        <line x1="40" y1="102" x2="40" y2="116" stroke="var(--coral)" stroke-width="1.8" marker-end="url(#arrDrain02)"/>
+        <text x="56" y="116" font-family="JetBrains Mono,monospace" font-size="13" fill="var(--coral)">DRENAJE</text>
+        <line x1="1060" y1="68" x2="1060" y2="52" stroke="var(--amber)" stroke-width="1.8" marker-end="url(#arrFresh02)"/>
+        <text x="1060" y="82" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="13" fill="var(--amber)">FRESCA</text>
         <defs>
-          <marker id="arrParts02" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--teal)"/></marker>
-          <marker id="arrWater02" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--amber)"/></marker>
-          <marker id="arrDrain02" viewBox="0 0 6 6" refX="3" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--coral)"/></marker>
-          <marker id="arrFresh02" viewBox="0 0 6 6" refX="3" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--amber)"/></marker>
+          <marker id="arrParts02" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--teal)"/></marker>
+          <marker id="arrWater02" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--amber)"/></marker>
+          <marker id="arrDrain02" viewBox="0 0 6 6" refX="3" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--coral)"/></marker>
+          <marker id="arrFresh02" viewBox="0 0 6 6" refX="3" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--amber)"/></marker>
         </defs>
       </svg>
     </div>

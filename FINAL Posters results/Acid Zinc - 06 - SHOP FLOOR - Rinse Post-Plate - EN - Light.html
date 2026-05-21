@@ -83,32 +83,26 @@ html,body{margin:0;padding:0;background:#0a0c14;}.stage{width:100vw;height:100vh
 
     <!-- SVG: Counter-Current Rinse Flow Diagram (resized for 900px) -->
     <div class="svg-diagram">
-      <svg viewBox="0 0 420 100" width="420" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Dirty tank -->
-        <rect x="15" y="20" width="165" height="60" rx="6" stroke="var(--muted)" stroke-width="1.6" fill="none"/>
-        <text x="97" y="16" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="10" fill="var(--muted)" letter-spacing=".06em">DIRTY STAGE</text>
-        <rect x="17" y="38" width="161" height="40" rx="4" fill="var(--teal)" opacity=".08"/>
-        <!-- Clean tank -->
-        <rect x="240" y="20" width="165" height="60" rx="6" stroke="var(--teal)" stroke-width="1.6" fill="none"/>
-        <text x="322" y="16" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="10" fill="var(--teal)" letter-spacing=".06em">CLEAN STAGE</text>
-        <rect x="242" y="38" width="161" height="40" rx="4" fill="var(--teal)" opacity=".12"/>
-        <!-- Parts flow arrow -->
-        <line x1="45" y1="42" x2="375" y2="42" stroke="var(--teal)" stroke-width="1.6" stroke-dasharray="6 3" marker-end="url(#arrParts06)"/>
-        <text x="210" y="38" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--teal)">PARTS FLOW</text>
-        <!-- Water flow arrow -->
-        <line x1="375" y1="62" x2="45" y2="62" stroke="var(--amber)" stroke-width="1.6" stroke-dasharray="6 3" marker-end="url(#arrWater06)"/>
-        <text x="210" y="74" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--amber)">CLEAN WATER IN</text>
-        <!-- Drain arrow -->
-        <line x1="15" y1="85" x2="15" y2="96" stroke="var(--coral)" stroke-width="1.4" marker-end="url(#arrDrain06)"/>
-        <text x="20" y="98" font-family="JetBrains Mono,monospace" font-size="7" fill="var(--coral)">DRAIN</text>
-        <!-- Fresh water in -->
-        <line x1="405" y1="55" x2="405" y2="44" stroke="var(--amber)" stroke-width="1.4" marker-end="url(#arrFresh06)"/>
-        <text x="405" y="66" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="var(--amber)">FRESH</text>
+      <svg viewBox="0 0 830 120" width="100%" height="auto" style="display:block;" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="24" width="330" height="72" rx="8" stroke="var(--muted)" stroke-width="1.8" fill="none"/>
+        <text x="195" y="18" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="14" fill="var(--muted)" letter-spacing=".08em">DIRTY STAGE</text>
+        <rect x="33" y="46" width="324" height="48" rx="5" fill="var(--teal)" opacity=".08"/>
+        <rect x="470" y="24" width="330" height="72" rx="8" stroke="var(--teal)" stroke-width="1.8" fill="none"/>
+        <text x="635" y="18" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="14" fill="var(--teal)" letter-spacing=".08em">CLEAN STAGE</text>
+        <rect x="473" y="46" width="324" height="48" rx="5" fill="var(--teal)" opacity=".12"/>
+        <line x1="80" y1="52" x2="750" y2="52" stroke="var(--teal)" stroke-width="2" stroke-dasharray="8 4" marker-end="url(#arrParts06)"/>
+        <text x="415" y="46" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="12" fill="var(--teal)" letter-spacing=".06em">PARTS FLOW &#x2192;</text>
+        <line x1="750" y1="76" x2="80" y2="76" stroke="var(--amber)" stroke-width="2" stroke-dasharray="8 4" marker-end="url(#arrWater06)"/>
+        <text x="415" y="90" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="12" fill="var(--amber)" letter-spacing=".06em">&#x2190; CLEAN WATER IN</text>
+        <line x1="30" y1="102" x2="30" y2="116" stroke="var(--coral)" stroke-width="1.8" marker-end="url(#arrDrain06)"/>
+        <text x="46" y="116" font-family="JetBrains Mono,monospace" font-size="11" fill="var(--coral)">DRAIN</text>
+        <line x1="800" y1="68" x2="800" y2="52" stroke="var(--amber)" stroke-width="1.8" marker-end="url(#arrFresh06)"/>
+        <text x="800" y="82" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="var(--amber)">FRESH</text>
         <defs>
-          <marker id="arrParts06" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--teal)"/></marker>
-          <marker id="arrWater06" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--amber)"/></marker>
-          <marker id="arrDrain06" viewBox="0 0 6 6" refX="3" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--coral)"/></marker>
-          <marker id="arrFresh06" viewBox="0 0 6 6" refX="3" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--amber)"/></marker>
+          <marker id="arrParts06" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--teal)"/></marker>
+          <marker id="arrWater06" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--amber)"/></marker>
+          <marker id="arrDrain06" viewBox="0 0 6 6" refX="3" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--coral)"/></marker>
+          <marker id="arrFresh06" viewBox="0 0 6 6" refX="3" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--amber)"/></marker>
         </defs>
       </svg>
     </div>

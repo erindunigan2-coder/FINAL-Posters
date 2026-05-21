@@ -69,6 +69,18 @@ html,body{margin:0;padding:0;background:#0a0c14;}.stage{width:100vw;height:100vh
       <div class="key-text">Every passivate has a critical pH window (typically 1.5&ndash;2.2 for trivalent clear/blue). Outside that window = too thin, too thick, wrong color, or non-adherent film. Always check pH before loading.</div>
     </div>
 
+    <!-- What You Must Do -->
+    <div class="glass section-card">
+      <div class="section-title">What You Must Do</div>
+      <div style="display:flex;flex-direction:column;gap:5px;">
+        <div style="display:flex;align-items:flex-start;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:var(--emerald);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:11px;color:#1A1F2E;">1</div><div style="font-size:11.5px;line-height:1.4;"><strong>Check pH and temperature</strong> before loading. Both must be in range per the table below.</div></div>
+        <div style="display:flex;align-items:flex-start;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:var(--emerald);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:11px;color:#1A1F2E;">2</div><div style="font-size:11.5px;line-height:1.4;"><strong>Immerse parts smoothly.</strong> No splashing. Keep parts moving &mdash; agitate or rotate the rack.</div></div>
+        <div style="display:flex;align-items:flex-start;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:var(--emerald);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:11px;color:#1A1F2E;">3</div><div style="font-size:11.5px;line-height:1.4;"><strong>Time the dip exactly.</strong> Too short = thin/no protection. Too long = thick/flaky/wrong color.</div></div>
+        <div style="display:flex;align-items:flex-start;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:var(--emerald);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:11px;color:#1A1F2E;">4</div><div style="font-size:11.5px;line-height:1.4;"><strong>Pull and inspect color.</strong> Compare against the color reference below. Uniform = good.</div></div>
+        <div style="display:flex;align-items:flex-start;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:var(--emerald);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:11px;color:#1A1F2E;">5</div><div style="font-size:11.5px;line-height:1.4;"><strong>Transfer to DI rinse immediately.</strong> Do not let passivate dry on the part.</div></div>
+      </div>
+    </div>
+
     <!-- Simplified Parameters: Temp, pH, Time only -->
     <div class="glass section-card" style="padding:10px 12px;">
       <div class="section-title">Passivate Parameters <span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.10em;color:var(--muted);margin-left:8px;">BY TYPE</span></div>
@@ -80,6 +92,33 @@ html,body{margin:0;padding:0;background:#0a0c14;}.stage{width:100vw;height:100vh
           <tr><td>Time</td><td>30&ndash;60 sec</td><td>45&ndash;90 sec</td><td>30&ndash;60 sec</td><td>10&ndash;30 sec</td></tr>
         </tbody>
       </table>
+    </div>
+
+    <!-- Passivate Color Reference -->
+    <div class="glass section-card" style="padding:10px 12px;">
+      <div class="section-title">Color Reference <span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.10em;color:var(--muted);margin-left:8px;">VISUAL QC</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;">
+        <div style="text-align:center;">
+          <div style="height:28px;border-radius:6px;background:linear-gradient(135deg,#C8D8E8,#A8C0D8);border:1px solid var(--glass-border);margin-bottom:4px;"></div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;color:var(--teal);letter-spacing:.04em;">TRI CLEAR/BLUE</div>
+          <div style="font-size:9.5px;color:var(--muted);line-height:1.3;">Light blue iridescent. Uniform sheen.</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="height:28px;border-radius:6px;background:linear-gradient(135deg,#D4B848,#C8A830);border:1px solid var(--glass-border);margin-bottom:4px;"></div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;color:var(--amber);letter-spacing:.04em;">TRI YELLOW</div>
+          <div style="font-size:9.5px;color:var(--muted);line-height:1.3;">Gold to olive. Even, no streaks.</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="height:28px;border-radius:6px;background:linear-gradient(135deg,#2A2A2A,#1A1A1A);border:1px solid var(--glass-border);margin-bottom:4px;"></div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;color:var(--text);letter-spacing:.04em;">TRI BLACK</div>
+          <div style="font-size:9.5px;color:var(--muted);line-height:1.3;">Deep matte black. No bronze patches.</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="height:28px;border-radius:6px;background:linear-gradient(135deg,#D4A830,#B89020);border:1px solid rgba(224,92,92,.4);margin-bottom:4px;"></div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;color:var(--coral);letter-spacing:.04em;">HEX YELLOW</div>
+          <div style="font-size:9.5px;color:var(--muted);line-height:1.3;">Bright yellow-gold. &#9762; Cr(VI).</div>
+        </div>
+      </div>
     </div>
 
     <!-- Final Rinse & Dry Addendum (Stage 8) -->

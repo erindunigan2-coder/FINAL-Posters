@@ -69,6 +69,18 @@ html,body{margin:0;padding:0;background:#0a0c14;}.stage{width:100vw;height:100vh
       <div class="key-text">Cada pasivado tiene una ventana crítica de pH (típicamente 1.5&ndash;2.2 para trivalente claro/azul). Fuera de esa ventana = película demasiado delgada, demasiado gruesa, color incorrecto o película no adherente. Siempre verifique el pH antes de cargar.</div>
     </div>
 
+    <!-- Lo Que Usted Debe Hacer -->
+    <div class="glass section-card">
+      <div class="section-title">Lo Que Usted Debe Hacer</div>
+      <div style="display:flex;flex-direction:column;gap:5px;">
+        <div style="display:flex;align-items:flex-start;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:var(--emerald);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:11px;color:#1A1F2E;">1</div><div style="font-size:11.5px;line-height:1.4;"><strong>Verifique el pH y la temperatura</strong> antes de cargar. Ambos deben estar dentro del rango según la tabla a continuación.</div></div>
+        <div style="display:flex;align-items:flex-start;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:var(--emerald);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:11px;color:#1A1F2E;">2</div><div style="font-size:11.5px;line-height:1.4;"><strong>Sumerja las piezas con suavidad.</strong> Sin salpicar. Mantenga las piezas en movimiento &mdash; agite o gire el bastidor.</div></div>
+        <div style="display:flex;align-items:flex-start;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:var(--emerald);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:11px;color:#1A1F2E;">3</div><div style="font-size:11.5px;line-height:1.4;"><strong>Controle el tiempo exacto de inmersión.</strong> Muy corto = sin protección. Muy largo = película gruesa/escamosa/color incorrecto.</div></div>
+        <div style="display:flex;align-items:flex-start;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:var(--emerald);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:11px;color:#1A1F2E;">4</div><div style="font-size:11.5px;line-height:1.4;"><strong>Retire e inspeccione el color.</strong> Compare con la referencia de color a continuación. Uniforme = bueno.</div></div>
+        <div style="display:flex;align-items:flex-start;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:var(--emerald);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:11px;color:#1A1F2E;">5</div><div style="font-size:11.5px;line-height:1.4;"><strong>Transfiera al enjuague con agua DI de inmediato.</strong> No permita que el pasivado se seque sobre la pieza.</div></div>
+      </div>
+    </div>
+
     <!-- Parámetros Simplificados: Temp, pH, Tiempo solamente -->
     <div class="glass section-card" style="padding:10px 12px;">
       <div class="section-title">Parámetros de Pasivado <span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.10em;color:var(--muted);margin-left:8px;">POR TIPO</span></div>
@@ -80,6 +92,33 @@ html,body{margin:0;padding:0;background:#0a0c14;}.stage{width:100vw;height:100vh
           <tr><td>Tiempo</td><td>30&ndash;60 seg</td><td>45&ndash;90 seg</td><td>30&ndash;60 seg</td><td>10&ndash;30 seg</td></tr>
         </tbody>
       </table>
+    </div>
+
+    <!-- Referencia de Color del Pasivado -->
+    <div class="glass section-card" style="padding:10px 12px;">
+      <div class="section-title">Referencia de Color <span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.10em;color:var(--muted);margin-left:8px;">QC VISUAL</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;">
+        <div style="text-align:center;">
+          <div style="height:28px;border-radius:6px;background:linear-gradient(135deg,#C8D8E8,#A8C0D8);border:1px solid var(--glass-border);margin-bottom:4px;"></div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;color:var(--teal);letter-spacing:.04em;">TRI CLARO/AZUL</div>
+          <div style="font-size:9.5px;color:var(--muted);line-height:1.3;">Azul claro iridiscente. Brillo uniforme.</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="height:28px;border-radius:6px;background:linear-gradient(135deg,#D4B848,#C8A830);border:1px solid var(--glass-border);margin-bottom:4px;"></div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;color:var(--amber);letter-spacing:.04em;">TRI AMARILLO</div>
+          <div style="font-size:9.5px;color:var(--muted);line-height:1.3;">Dorado a oliva. Parejo, sin rayas.</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="height:28px;border-radius:6px;background:linear-gradient(135deg,#2A2A2A,#1A1A1A);border:1px solid var(--glass-border);margin-bottom:4px;"></div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;color:var(--text);letter-spacing:.04em;">TRI NEGRO</div>
+          <div style="font-size:9.5px;color:var(--muted);line-height:1.3;">Negro mate profundo. Sin manchas bronceadas.</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="height:28px;border-radius:6px;background:linear-gradient(135deg,#D4A830,#B89020);border:1px solid rgba(224,92,92,.4);margin-bottom:4px;"></div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;color:var(--coral);letter-spacing:.04em;">HEX AMARILLO</div>
+          <div style="font-size:9.5px;color:var(--muted);line-height:1.3;">Amarillo-dorado brillante. &#9762; Cr(VI).</div>
+        </div>
+      </div>
     </div>
 
     <!-- Enjuague Final y Secado (Etapa 8) -->
